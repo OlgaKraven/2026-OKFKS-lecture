@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+outputs/
+tmp/
+public/qr/trzbd-materials.png
+public/brand/mascot/trzbd-database-rhino*
+config/teacher-profile.json
+.env
+.env.*
+!.env.example

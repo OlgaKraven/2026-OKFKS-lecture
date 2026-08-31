@@ -1,0 +1,28 @@
+{
+  "language": "ru-RU",
+  "allowedTerms": [
+    "МДК",
+    "OKFKS",
+    "GitHub",
+    "GitHub Pages",
+    "Playwright",
+    "TypeScript",
+    "React",
+    "Vite",
+    "localStorage",
+    "QR-код",
+    "IPR СМАРТ",
+    "EICAR",
+    "MTBF",
+    "MTTR",
+    "WCAG",
+    "frontend",
+    "backend",
+    "PowerShell",
+    "BitLocker",
+    "TLS",
+    "OWASP",
+    "WSTG"
+  ],
+  "ignoredScopes": ["URL", "program-code", "topic-identifiers", "file-names", "terminal-commands", "official-names", "author-surnames"]
+}
