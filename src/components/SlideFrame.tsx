@@ -1,5 +1,5 @@
 import { ExternalLink } from 'lucide-react'
-import type { ChangeEvent } from 'react'
+import type { ChangeEvent, CSSProperties } from 'react'
 import { getSource } from '../data/sourceRegistry'
 import type { CourseConfig, LectureTopic, Slide, TeacherProfile, TestAnswers } from '../types'
 
@@ -24,7 +24,8 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   const testAnswer = slide.test ? answers[slide.test.id] : undefined
   const sourceLinks = slide.sourceIds.map(getSource).filter((source) => Boolean(source))
   const showProfile = ['title', 'divider', 'questions'].includes(slide.kind)
-  const showMascot = ['title', 'questions', 'example'].includes(slide.kind)
+  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && !slide.visual)
+  const longTitle = slide.kind === 'title' && slide.title.length > 34
 
   const changeChoice = (event: ChangeEvent<HTMLInputElement>, index: number, multiple: boolean) => {
     if (!slide.test || !onAnswer) return
@@ -37,7 +38,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   }
 
   return (
-    <article className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''}`} aria-label={`Экран ${slide.number}: ${slide.title}`}>
+    <article className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''}`} aria-label={`Экран ${slide.number}: ${slide.title}`}>
       <img className="side-ornament" src={asset('brand/side-ornament.png')} alt="" aria-hidden="true" />
       <header className="slide-header">
         <div className="slide-brand">
@@ -52,6 +53,8 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
           <p className="slide-kicker">{slide.kicker}</p>
           <h2>{slide.title}</h2>
           {slide.body && <p className="slide-body-copy">{slide.body}</p>}
+          {slide.note && <aside className="write-note"><span>Запишите</span><strong>{slide.note}</strong></aside>}
+          {slide.transition && <p className="slide-transition">{slide.transition}</p>}
 
           {slide.number === 5 && (
             <div className="materials-panel">
@@ -60,10 +63,53 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
             </div>
           )}
 
-          {slide.bullets && (
+          {slide.qrCodes && slide.bullets && (
+            <div className="literature-layout">
+              <ul className="bibliography-list">
+                {slide.bullets.map((bullet, index) => <li key={`${slide.number}-${index}`}>{bullet}</li>)}
+              </ul>
+              <div className="literature-qr-grid" aria-label="QR-коды основной литературы">
+                {slide.qrCodes.map((item) => (
+                  <a className="literature-qr-card" key={item.url} href={item.url} target="_blank" rel="noreferrer">
+                    <img src={asset(item.assetPath)} alt={`QR-код: ${item.label}`} />
+                    <span><strong>{item.label}</strong><small>Открыть источник <ExternalLink size={12} /></small></span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {slide.bullets && !slide.qrCodes && (
             <ul className={slide.number === 3 || slide.number === 4 ? 'bibliography-list' : ''}>
               {slide.bullets.map((bullet, index) => <li key={`${slide.number}-${index}`}>{bullet}</li>)}
             </ul>
+          )}
+
+          {slide.visual?.type === 'bar' && (
+            <figure className="slide-visual bar-visual">
+              <figcaption>{slide.visual.title}</figcaption>
+              <div className="bar-list">
+                {slide.visual.items.map((item) => (
+                  <div className="bar-row" key={item.label}>
+                    <span>{item.label}</span>
+                    <div className="bar-track"><i style={{ '--bar-width': `${Math.min(100, (item.value / item.max) * 100)}%` } as CSSProperties} /></div>
+                    <strong>{item.displayValue}</strong>
+                  </div>
+                ))}
+              </div>
+              {slide.visual.caption && <p>{slide.visual.caption}</p>}
+            </figure>
+          )}
+
+          {slide.visual?.type === 'table' && (
+            <figure className="slide-visual table-visual">
+              <figcaption>{slide.visual.title}</figcaption>
+              <table>
+                <thead><tr>{slide.visual.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead>
+                <tbody>{slide.visual.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => <td key={`${rowIndex}-${cellIndex}`}>{cell}</td>)}</tr>)}</tbody>
+              </table>
+              {slide.visual.caption && <p>{slide.visual.caption}</p>}
+            </figure>
           )}
 
           {slide.code && (
@@ -73,7 +119,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
             </div>
           )}
 
-          {slide.links && slide.number !== 5 && (
+          {slide.links && slide.number !== 5 && !slide.qrCodes && (
             <div className="slide-links">
               {slide.links.map((link) => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label} <ExternalLink size={14} /></a>)}
             </div>

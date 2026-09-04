@@ -63,7 +63,7 @@ export function TeacherProfileDialog({ course, profile, onChange, open, onClose,
           Кафедра или лаборатория
           <input value={draft.organizationUnit} onChange={(event) => setDraft({ ...draft, organizationUnit: event.target.value })} aria-describedby="organization-help" />
         </label>
-        <p id="organization-help" className="field-help">Введите полное официальное название. Последовательный повтор типа подразделения будет убран.</p>
+        <p id="organization-help" className="field-help">Введи свои данные для титульного листа.</p>
         <div className="dialog-actions">
           <button type="button" className="button secondary" onClick={clear}>Очистить данные</button>
           <button type="submit" className="button primary">Сохранить</button>

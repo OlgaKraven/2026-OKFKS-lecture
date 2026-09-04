@@ -53,10 +53,26 @@ function App() {
   }
 
   if (isPrint) {
-    if (!topic) {
-      return <main className="route-error"><h1>Тема для печати не найдена</h1><p>Проверьте параметр topic в адресе.</p></main>
+    const scope = locationState.params.get('scope')
+    const printTopics = topic
+      ? [topic]
+      : scope === 'all'
+        ? topics
+        : scope?.startsWith('semester-')
+          ? topics.filter((item) => item.semester === Number(scope.replace('semester-', '')))
+          : []
+    if (!printTopics.length || (topicId && !topic)) {
+      return <main className="route-error"><h1>Лекции для сохранения не найдены</h1><p>Проверьте выбранную тему или семестр.</p></main>
     }
-    return <PrintDeck course={course} topic={topic} deck={buildDeck(topic, course)} profile={profile} variant={variant} />
+    return (
+      <PrintDeck
+        course={course}
+        items={printTopics.map((item) => ({ topic: item, deck: buildDeck(item, course) }))}
+        profile={profile}
+        variant={variant}
+        autoPrint={locationState.params.get('save') === '1'}
+      />
+    )
   }
 
   const openTopic = (selected: (typeof topics)[number]) => {

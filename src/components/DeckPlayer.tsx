@@ -123,6 +123,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
     const url = new URL(`${import.meta.env.BASE_URL}print`, window.location.origin)
     url.searchParams.set('topic', topic.id)
     url.searchParams.set('variant', 'teacher')
+    url.searchParams.set('save', '1')
     window.open(url, '_blank', 'noopener,noreferrer')
   }
   const goCatalog = () => {
@@ -177,7 +178,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
         <button className="button secondary" type="button" disabled={slideNumber === 1} onClick={() => setSlide(slideNumber - 1)}><ArrowLeft size={18} /> Назад</button>
         <button className="slide-counter" type="button" onClick={() => setTocOpen(true)} aria-label="Открыть содержание">{slideNumber} / {deck.length}</button>
         <div className="print-actions">
-          <button className="button ghost" type="button" onClick={printForTeacher}><FileDown size={17} /> Печать для преподавателя</button>
+          <button className="button ghost" type="button" onClick={printForTeacher}><FileDown size={17} /> Сохранить в PDF</button>
         </div>
         <button className="button primary" type="button" disabled={slideNumber === deck.length} onClick={() => setSlide(slideNumber + 1)}>Вперёд <ArrowRight size={18} /></button>
       </div>

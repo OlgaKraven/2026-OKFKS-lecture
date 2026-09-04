@@ -4,20 +4,15 @@ import jsQR from 'jsqr'
 import QRCode from 'qrcode'
 import sharp from 'sharp'
 
-const config = { id: 'okfks', url: 'https://disk.yandex.ru/d/Vz62H71Jub1GLA' }
+const configs = [
+  { id: 'okfks-materials', url: 'https://disk.yandex.ru/d/Vz62H71Jub1GLA', color: '#ED131C' },
+  { id: 'lit-main-01', url: 'https://www.iprbookshop.ru/books/156708/details', color: '#4561C8' },
+  { id: 'lit-main-02', url: 'https://www.iprbookshop.ru/books/156513/details', color: '#1C8D00' },
+]
 
 const outputDir = path.resolve('public', 'qr')
-const outputPath = path.join(outputDir, `${config.id}-materials.png`)
 const logoPath = path.resolve('public', 'brand', 'synergy-logo.png')
 await mkdir(outputDir, { recursive: true })
-
-const qr = await QRCode.toBuffer(config.url, {
-  type: 'png',
-  errorCorrectionLevel: 'H',
-  width: 1200,
-  margin: 4,
-  color: { dark: '#1C1C1C', light: '#FFFFFF' },
-})
 
 const markSize = 150
 const mark = await sharp(logoPath)
@@ -31,21 +26,34 @@ const whitePlate = await sharp({
   .png()
   .toBuffer()
 
-const framed = sharp({
-  create: { width: 1264, height: 1264, channels: 4, background: '#ED131C' },
-}).composite([
-  { input: qr, left: 32, top: 32 },
-  { input: whitePlate, left: 537, top: 537 },
-])
-await framed.png({ compressionLevel: 9 }).toFile(outputPath)
+for (const config of configs) {
+  const outputPath = path.join(outputDir, `${config.id}.png`)
+  const qr = await QRCode.toBuffer(config.url, {
+    type: 'png',
+    errorCorrectionLevel: 'H',
+    width: 1200,
+    margin: 4,
+    color: { dark: '#1C1C1C', light: '#FFFFFF' },
+  })
 
-const decodedImage = await sharp(outputPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
-const decoded = jsQR(
-  new Uint8ClampedArray(decodedImage.data),
-  decodedImage.info.width,
-  decodedImage.info.height,
-)
-if (!decoded || decoded.data !== config.url) {
-  throw new Error(`QR verification failed for ${config.id}`)
+  await sharp({
+    create: { width: 1264, height: 1264, channels: 4, background: config.color },
+  })
+    .composite([
+      { input: qr, left: 32, top: 32 },
+      { input: whitePlate, left: 537, top: 537 },
+    ])
+    .png({ compressionLevel: 9 })
+    .toFile(outputPath)
+
+  const decodedImage = await sharp(outputPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
+  const decoded = jsQR(
+    new Uint8ClampedArray(decodedImage.data),
+    decodedImage.info.width,
+    decodedImage.info.height,
+  )
+  if (!decoded || decoded.data !== config.url) {
+    throw new Error(`QR verification failed for ${config.id}`)
+  }
+  console.log(`QR verified: ${decoded.data} -> ${outputPath}`)
 }
-console.log(`QR verified: ${decoded.data} -> ${outputPath}`)

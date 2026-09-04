@@ -114,6 +114,21 @@ export type SlideKind =
   | 'summary'
   | 'questions'
 
+export type SlideVisual =
+  | {
+      type: 'bar'
+      title: string
+      items: { label: string; value: number; max: number; displayValue: string }[]
+      caption?: string
+    }
+  | {
+      type: 'table'
+      title: string
+      columns: string[]
+      rows: string[][]
+      caption?: string
+    }
+
 export type Slide = {
   number: number
   kind: SlideKind
@@ -124,6 +139,10 @@ export type Slide = {
   code?: string
   codeLabel?: string
   links?: { label: string; url: string }[]
+  qrCodes?: { label: string; url: string; assetPath: string }[]
+  note?: string
+  transition?: string
+  visual?: SlideVisual
   sourceIds: string[]
   questionNumber?: number
   test?: TestTask

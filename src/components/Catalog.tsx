@@ -1,4 +1,4 @@
-import { BookOpen, ExternalLink, Moon, Search, Sun, UserRoundPen } from 'lucide-react'
+import { BookOpen, ExternalLink, FileDown, Moon, Search, Sun, UserRoundPen } from 'lucide-react'
 import { useMemo, useRef, useState } from 'react'
 import type { CourseConfig, LectureTopic, TeacherProfile } from '../types'
 
@@ -16,6 +16,7 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
   const [search, setSearch] = useState('')
   const [semester, setSemester] = useState<number | 'all'>('all')
   const profileButtonRef = useRef<HTMLButtonElement>(null)
+  const setupProfileButtonRef = useRef<HTMLButtonElement>(null)
   const filtered = useMemo(() => {
     const query = search.trim().toLocaleLowerCase('ru-RU')
     return topics.filter((topic) => {
@@ -26,6 +27,13 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
   }, [search, semester, topics])
 
   const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+  const printCollectionUrl = (scope: number | 'all') => {
+    const url = new URL(`${import.meta.env.BASE_URL}print`, window.location.origin)
+    url.searchParams.set('scope', scope === 'all' ? 'all' : `semester-${scope}`)
+    url.searchParams.set('variant', 'student')
+    url.searchParams.set('save', '1')
+    return url.toString()
+  }
 
   return (
     <main className="catalog">
@@ -61,6 +69,27 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
         <div className="hero-mascot">
           <div className="chevron-backdrop" />
           <img src={asset('brand/mascot/okfks-rhino-catalog.png')} alt="Носорог — инженер по качеству и защите компьютерных систем" />
+        </div>
+      </section>
+
+      <section className="setup-panel" aria-labelledby="setup-title">
+        <div className="setup-copy">
+          <p className="eyebrow">Настройка перед занятием</p>
+          <h2 id="setup-title">Подготовьте титульный лист и лекции</h2>
+          <p>Введи свои данные для титульного листа. Лекции можно сохранить отдельно по семестрам или одним PDF.</p>
+        </div>
+        <button className="button secondary" type="button" ref={setupProfileButtonRef} onClick={() => onEditProfile(setupProfileButtonRef.current)}>
+          <UserRoundPen size={18} /> Данные преподавателя
+        </button>
+        <div className="lecture-downloads" role="group" aria-label="Скачать лекции в PDF">
+          <strong>Скачать лекции</strong>
+          <div>
+            {course.semesters.map((item) => (
+              <a className="button ghost" key={item} href={printCollectionUrl(item)} target="_blank" rel="noreferrer"><FileDown size={17} /> {item} семестр</a>
+            ))}
+            <a className="button primary" href={printCollectionUrl('all')} target="_blank" rel="noreferrer"><FileDown size={17} /> Все лекции</a>
+          </div>
+          <small>В открывшемся окне выберите «Сохранить как PDF».</small>
         </div>
       </section>
 
@@ -101,7 +130,6 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
       <footer className="catalog-footer">
         <span>{course.learningPlatform}</span>
         <span>{course.totals.totalHours} ч · {course.totals.finalAssessment}</span>
-        <a href={course.repository} target="_blank" rel="noreferrer">GitHub-репозиторий <ExternalLink size={14} /></a>
       </footer>
     </main>
   )
