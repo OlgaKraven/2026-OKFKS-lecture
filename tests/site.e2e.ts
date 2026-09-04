@@ -116,5 +116,13 @@ test('all printable slides fit without hidden or clipped content', async ({ page
     }))
     expect(defects, topic.id).toEqual([])
     await expect(page.locator('.source-links')).toHaveCount(0)
+    const undersizedText = await page.locator('.print-page').evaluateAll((pages) => pages.flatMap((item, pageIndex) => {
+      const selectors = ['.slide-body-copy', '.slide-copy > ul:not(.bibliography-list)', '.bar-row', '.table-visual table', '.topic-path li strong']
+      return selectors.flatMap((selector) => Array.from(item.querySelectorAll<HTMLElement>(selector)).flatMap((element) => {
+        const fontSize = Number.parseFloat(getComputedStyle(element).fontSize)
+        return fontSize < 15 ? [`${pageIndex + 1}:${selector}:${fontSize}px`] : []
+      }))
+    }))
+    expect(undersizedText, topic.id).toEqual([])
   }
 })

@@ -74,7 +74,7 @@ const visuals: Record<string, { questionIndex: number; visual: SlideVisual }> = 
   's07-03-reliability-threats-prevention': {
     questionIndex: 2,
     visual: {
-      type: 'table', title: 'Фактор → мера → свидетельство',
+      type: 'table', title: 'Фактор, мера и свидетельство',
       columns: ['Фактор', 'Мера', 'Что увидим'],
       rows: [
         ['Повреждённая строка', 'Валидация до записи', 'Отклонение без изменения состояния'],
@@ -122,7 +122,7 @@ const visuals: Record<string, { questionIndex: number; visual: SlideVisual }> = 
   's08-03-encryption-and-security-testing': {
     questionIndex: 1,
     visual: {
-      type: 'table', title: 'Два состояния данных — две проверки',
+      type: 'table', title: 'Состояния данных и способы проверки',
       columns: ['Состояние', 'Учебное средство', 'Проверка'],
       rows: [
         ['На носителе', 'Шифрование тома', 'Чтение без полномочия недоступно'],
@@ -137,47 +137,6 @@ const visualForQuestion = (topic: LectureTopic, questionIndex: number) => {
   const item = visuals[topic.id]
   return item?.questionIndex === questionIndex ? item.visual : undefined
 }
-
-const questionProcess = (question: LectureTopic['questions'][number]): SlideVisual => ({
-  type: 'process',
-  title: 'Логика решения',
-  steps: [
-    { label: 'Исходная ситуация', text: question.example },
-    { label: 'Правило', text: question.rule },
-    { label: 'Действие', text: question.decision },
-    { label: 'Приёмка', text: question.check },
-  ],
-})
-
-const decisionContrast = (question: LectureTopic['questions'][number]): SlideVisual => ({
-  type: 'contrast',
-  title: 'Решение и граница ошибки',
-  preferred: { label: 'Рабочее решение', text: question.decision },
-  avoid: { label: 'Типичная ошибка', text: question.pitfall },
-  criterion: { label: 'Критерий приёмки', text: question.check },
-})
-
-const exampleContext = (question: LectureTopic['questions'][number]): SlideVisual => ({
-  type: 'conceptMap',
-  title: 'Разбор учебной ситуации',
-  center: question.example,
-  branches: [
-    { label: 'Обоснованное действие', text: question.decision },
-    { label: 'Подтверждение', text: question.check },
-  ],
-})
-
-const practiceProcess = (question: LectureTopic['questions'][number]): SlideVisual => ({
-  type: 'process',
-  title: 'Последовательность работы',
-  steps: [
-    { label: 'Дано', text: question.example },
-    { label: 'Действие', text: question.decision },
-    { label: 'В отчёт', text: 'Исходные данные, выполненное действие и наблюдаемое свидетельство.' },
-    { label: 'Приёмка', text: question.check },
-    { label: 'Контроль риска', text: question.pitfall },
-  ],
-})
 
 const formatPoints = (points: number) => {
   const lastTwo = points % 100
@@ -286,24 +245,17 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     slides.push(
       { kind: 'divider', kicker: `Вопрос ${number}`, title: question.title, sourceIds, questionNumber: number },
       {
-        kind: 'concept', kicker: `Вопрос ${number} · определение`, title: `${question.title}: смысл понятия`, sourceIds, questionNumber: number,
-        visual: {
-          type: 'conceptMap', title: 'Связи понятия', center: question.focus,
-          branches: [
-            { label: 'Правило применения', text: question.rule },
-            { label: 'Проверка результата', text: question.check },
-          ],
-        },
+        kind: 'concept', kicker: `Вопрос ${number} · определение`, title: question.title,
+        note: question.focus, sourceIds, questionNumber: number,
       },
-      { kind: 'concept', kicker: `Вопрос ${number} · правило`, title: `${question.title}: логика применения`, visual: questionProcess(question), sourceIds, questionNumber: number },
+      { kind: 'concept', kicker: `Вопрос ${number} · правило применения`, title: question.title, body: question.rule, sourceIds, questionNumber: number },
       {
-        kind: 'example', kicker: `Вопрос ${number} · пример`, title: `${question.title}: исходные данные`,
-        body: evidenceVisual ? question.example : undefined,
-        visual: evidenceVisual ?? exampleContext(question), sourceIds, questionNumber: number,
+        kind: 'example', kicker: `Вопрос ${number} · учебная ситуация`, title: question.title,
+        body: question.example, visual: evidenceVisual, sourceIds, questionNumber: number,
       },
-      { kind: 'decision', kicker: `Вопрос ${number} · решение`, title: `${question.title}: обоснованное действие`, visual: decisionContrast(question), sourceIds, questionNumber: number },
-      { kind: 'warning', kicker: `Вопрос ${number} · риск`, title: `${question.title}: типичная ошибка`, body: question.pitfall, sourceIds, questionNumber: number },
-      { kind: 'check', kicker: `Вопрос ${number} · приёмка`, title: `${question.title}: критерий результата`, body: question.check, sourceIds, questionNumber: number },
+      { kind: 'decision', kicker: `Вопрос ${number} · обоснованное действие`, title: question.title, body: question.decision, sourceIds, questionNumber: number },
+      { kind: 'warning', kicker: `Вопрос ${number} · типичная ошибка`, title: question.title, body: question.pitfall, sourceIds, questionNumber: number },
+      { kind: 'check', kicker: `Вопрос ${number} · критерий результата`, title: question.title, body: question.check, sourceIds, questionNumber: number },
     )
   })
 
@@ -312,7 +264,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     slides.push({
       kind: 'practice', kicker: `Лабораторный маршрут · шаг ${index + 1} из 8`, title: question.title,
       body: `Лабораторная работа № ${lab.number}: ${lab.title}. ${lab.hours} ч · ${formatPoints(lab.points)}.`,
-      visual: practiceProcess(question),
+      bullets: [`Дано: ${question.example}`, `Действие: ${question.decision}`, 'В отчёт: исходные данные, выполненное действие и наблюдаемое свидетельство.', `Приёмка: ${question.check}`, `Контроль риска: ${question.pitfall}`],
       sourceIds, questionNumber: index + 1,
     })
   })
@@ -323,19 +275,13 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     {
       kind: 'summary', kicker: 'Итоги темы', title: 'Решения по вопросам 1–4',
       body: 'Сопоставьте первоначальный ответ с принятыми решениями и способом их проверки.',
-      visual: {
-        type: 'topicPath', title: 'Первая половина темы',
-        items: topic.questions.slice(0, 4).map((question) => ({ label: question.title, text: question.decision })),
-      },
+      bullets: topic.questions.slice(0, 4).map((question) => `${question.title}: ${question.decision}`),
       sourceIds,
     },
     {
       kind: 'summary', kicker: 'Итоги темы', title: 'Решения по вопросам 5–8',
       body: 'Каждое решение связано с исходными условиями, наблюдаемым свидетельством и критерием приёмки.',
-      visual: {
-        type: 'topicPath', title: 'Вторая половина темы',
-        items: topic.questions.slice(4).map((question) => ({ label: question.title, text: question.decision })),
-      },
+      bullets: topic.questions.slice(4).map((question) => `${question.title}: ${question.decision}`),
       sourceIds,
     },
     {

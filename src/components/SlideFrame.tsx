@@ -38,7 +38,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
 
   return (
     <article
-      className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''}`}
+      className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''} ${showMascot ? 'has-mascot' : ''}`}
       aria-label={`Экран ${slide.number}: ${slide.title}`}
       data-source-ids={slide.sourceIds.join(',')}
     >

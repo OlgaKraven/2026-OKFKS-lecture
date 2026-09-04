@@ -46,6 +46,8 @@ describe('course and deck invariants', () => {
     expect(deck.filter((slide) => slide.kind !== 'service' && slide.kind !== 'questions')).toHaveLength(81)
     expect(deck.filter((slide) => slide.kind === 'divider').map((slide) => slide.number)).toEqual([13, 20, 27, 34, 41, 48, 55, 62])
     expect(deck[85].title).toBe('Вопросы от аудитории')
+    expect(deck.filter((slide) => slide.visual).map((slide) => slide.number)).toHaveLength(2)
+    expect(deck.filter((slide) => slide.visual && slide.number !== 9).every((slide) => slide.kind === 'example')).toBe(true)
     deck.forEach((slide) => expect(slide.sourceIds.length).toBeGreaterThan(0))
   })
 
