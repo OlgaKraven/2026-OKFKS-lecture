@@ -3,12 +3,13 @@ import path from 'node:path'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 
 const variants = ['student', 'teacher']
+const expectedPages = 86
 let checked = 0
 
 const extractText = async (file) => {
   const data = new Uint8Array(await readFile(file))
   const document = await getDocument({ data, useWorkerFetch: false, isEvalSupported: false }).promise
-  if (document.numPages !== 85) throw new Error(`${file}: expected 85 pages, got ${document.numPages}`)
+  if (document.numPages !== expectedPages) throw new Error(`${file}: expected ${expectedPages} pages, got ${document.numPages}`)
   const pages = []
   for (let number = 1; number <= document.numPages; number += 1) {
     const page = await document.getPage(number)
@@ -33,4 +34,4 @@ for (const variant of variants) {
   }
 }
 
-console.log(`PDF checks passed: ${checked} files; 85 pages each; student answers absent; teacher answers and criteria present`)
+console.log(`PDF checks passed: ${checked} files; ${expectedPages} pages each; student answers absent; teacher answers and criteria present`)

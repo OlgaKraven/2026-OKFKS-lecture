@@ -39,13 +39,41 @@ describe('course and deck invariants', () => {
     })
   })
 
-  it.each(topics.map((topic) => [topic.id, topic] as const))('builds exactly 85 screens for %s', (_id, topic) => {
+  it.each(topics.map((topic) => [topic.id, topic] as const))('builds exactly 86 screens for %s', (_id, topic) => {
     const deck = buildDeck(topic, course)
-    expect(deck).toHaveLength(85)
+    expect(deck).toHaveLength(86)
     expect(countServiceSlides(deck)).toBe(5)
-    expect(deck.filter((slide) => ![2, 3, 4, 5, 85].includes(slide.number))).toHaveLength(80)
+    expect(deck.filter((slide) => slide.kind !== 'service' && slide.kind !== 'questions')).toHaveLength(81)
     expect(deck.filter((slide) => slide.kind === 'divider').map((slide) => slide.number)).toEqual([13, 20, 27, 34, 41, 48, 55, 62])
-    expect(deck[84].title).toBe('Вопросы от аудитории')
+    expect(deck[85].title).toBe('Вопросы от аудитории')
     deck.forEach((slide) => expect(slide.sourceIds.length).toBeGreaterThan(0))
+  })
+
+  it.each(topics.map((topic) => [topic.id, topic] as const))('preserves every approved topic and question field in %s', (_id, topic) => {
+    const deckText = JSON.stringify(buildDeck(topic, course))
+    expect(deckText).toContain(topic.sourceTitle)
+    topic.sourceContent.forEach((item) => expect(deckText).toContain(item))
+    topic.questions.forEach((question) => {
+      Object.values(question).forEach((value) => expect(deckText).toContain(value))
+    })
+  })
+
+  it('keeps production and editing labels out of audience-facing copy', () => {
+    const forbidden = /\b(слайд|новый слайд|раздел|блок|инфографика|визуализация|ключевой вывод|обновлённая версия|актуализировано|комментарий|примечание для дизайнера|вставить изображение|текст для слайда)\b/i
+    topics.forEach((topic) => {
+      buildDeck(topic, course).forEach((slide) => {
+        const audienceCopy = JSON.stringify({
+          title: slide.title,
+          kicker: slide.kicker,
+          body: slide.body,
+          bullets: slide.bullets,
+          note: slide.note,
+          transition: slide.transition,
+          visual: slide.visual,
+          test: slide.test,
+        })
+        expect(audienceCopy).not.toMatch(forbidden)
+      })
+    })
   })
 })

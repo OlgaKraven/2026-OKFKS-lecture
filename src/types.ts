@@ -128,6 +128,33 @@ export type SlideVisual =
       rows: string[][]
       caption?: string
     }
+  | {
+      type: 'conceptMap'
+      title: string
+      center: string
+      branches: { label: string; text: string }[]
+      caption?: string
+    }
+  | {
+      type: 'process'
+      title: string
+      steps: { label: string; text: string }[]
+      caption?: string
+    }
+  | {
+      type: 'contrast'
+      title: string
+      preferred: { label: string; text: string }
+      avoid: { label: string; text: string }
+      criterion: { label: string; text: string }
+      caption?: string
+    }
+  | {
+      type: 'topicPath'
+      title: string
+      items: { label: string; text: string }[]
+      caption?: string
+    }
 
 export type Slide = {
   number: number

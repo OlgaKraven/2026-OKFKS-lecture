@@ -66,7 +66,7 @@ try {
       await page.goto(url, { waitUntil: 'networkidle' })
       await page.waitForFunction(() => document.body.dataset.printReady === 'true', undefined, { timeout: 60_000 })
       const pageElements = await page.locator('.print-page').count()
-      if (pageElements !== 85) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages`)
+      if (!pageElements) throw new Error(`${topic}/${variant}: printable pages were not rendered`)
       const outputDir = path.resolve('outputs', 'pdf', variant)
       await mkdir(outputDir, { recursive: true })
       const outputPath = path.join(outputDir, `${topic}.pdf`)
@@ -79,8 +79,8 @@ try {
         outline: true,
       })
       const pdf = await PDFDocument.load(await readFile(outputPath))
-      if (pdf.getPageCount() !== 85) throw new Error(`${topic}/${variant}: PDF has ${pdf.getPageCount()} pages`)
-      console.log(`Exported ${variant}: ${topic} — 85 pages`)
+      if (pdf.getPageCount() !== pageElements) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages, PDF has ${pdf.getPageCount()}`)
+      console.log(`Exported ${variant}: ${topic} — ${pageElements} pages`)
     }
   }
 } finally {

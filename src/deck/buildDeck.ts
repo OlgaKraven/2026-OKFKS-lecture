@@ -138,6 +138,47 @@ const visualForQuestion = (topic: LectureTopic, questionIndex: number) => {
   return item?.questionIndex === questionIndex ? item.visual : undefined
 }
 
+const questionProcess = (question: LectureTopic['questions'][number]): SlideVisual => ({
+  type: 'process',
+  title: 'Логика решения',
+  steps: [
+    { label: 'Исходная ситуация', text: question.example },
+    { label: 'Правило', text: question.rule },
+    { label: 'Действие', text: question.decision },
+    { label: 'Приёмка', text: question.check },
+  ],
+})
+
+const decisionContrast = (question: LectureTopic['questions'][number]): SlideVisual => ({
+  type: 'contrast',
+  title: 'Решение и граница ошибки',
+  preferred: { label: 'Рабочее решение', text: question.decision },
+  avoid: { label: 'Типичная ошибка', text: question.pitfall },
+  criterion: { label: 'Критерий приёмки', text: question.check },
+})
+
+const exampleContext = (question: LectureTopic['questions'][number]): SlideVisual => ({
+  type: 'conceptMap',
+  title: 'Разбор учебной ситуации',
+  center: question.example,
+  branches: [
+    { label: 'Обоснованное действие', text: question.decision },
+    { label: 'Подтверждение', text: question.check },
+  ],
+})
+
+const practiceProcess = (question: LectureTopic['questions'][number]): SlideVisual => ({
+  type: 'process',
+  title: 'Последовательность работы',
+  steps: [
+    { label: 'Дано', text: question.example },
+    { label: 'Действие', text: question.decision },
+    { label: 'В отчёт', text: 'Исходные данные, выполненное действие и наблюдаемое свидетельство.' },
+    { label: 'Приёмка', text: question.check },
+    { label: 'Контроль риска', text: question.pitfall },
+  ],
+})
+
 const formatPoints = (points: number) => {
   const lastTwo = points % 100
   const last = points % 10
@@ -195,40 +236,45 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     },
     {
       kind: 'service', kicker: `${topic.semester}-й семестр`, title: course.semesterThemes[topic.semester],
-      body: 'Темы курса.', bullets: [topic.sourceTitle, ...topic.sourceContent], sourceIds,
+      bullets: [topic.sourceTitle, ...topic.sourceContent], sourceIds,
     },
     {
-      kind: 'service', kicker: 'Учебная навигация', title: 'Основная литература', bullets: mainLiterature.map((item) => item.label),
+      kind: 'service', kicker: 'Литература', title: 'Основная литература', bullets: mainLiterature.map((item) => item.label),
       links: mainLiterature.map((item) => ({ label: 'Открыть источник', url: item.url })),
       qrCodes: mainLiterature.map((item) => ({ label: item.shortLabel, url: item.url, assetPath: item.assetPath })),
       sourceIds: ['lit-main-01', 'lit-main-02'],
     },
     {
-      kind: 'service', kicker: 'Учебная навигация', title: 'Дополнительная литература', bullets: additionalLiterature.map((item) => item.label),
+      kind: 'service', kicker: 'Литература', title: 'Дополнительная литература', bullets: additionalLiterature.map((item) => item.label),
       links: additionalLiterature.map((item) => ({ label: 'Открыть источник', url: item.url })), sourceIds: ['lit-additional-01', 'lit-additional-02'],
     },
     {
-      kind: 'service', kicker: 'Материалы к занятиям', title: 'Просканируй меня',
+      kind: 'service', kicker: course.discipline, title: 'Материалы к занятиям',
       body: 'QR-код ведёт на папку с материалами.',
       links: [{ label: course.materialsUrl, url: course.materialsUrl }], sourceIds: ['okfks-materials', 'synergy-logo'],
     },
     {
-      kind: 'intro', kicker: 'Введение', title: 'Теория, которая понадобится', body: introductionTheory[topic.id],
-      transition: 'Сначала разберём понятия и правила, затем применим их к учебному кейсу.', sourceIds,
+      kind: 'intro', kicker: 'Введение', title: 'Основные понятия темы', body: introductionTheory[topic.id], sourceIds,
     },
-    { kind: 'intro', kicker: 'Цель занятия', title: topic.objective, body: `Итог работы: ${topic.projectArtifact}.`, sourceIds },
+    { kind: 'intro', kicker: topic.displayTitle, title: 'Цель занятия', body: topic.objective, bullets: [`Итог работы: ${topic.projectArtifact}.`], sourceIds },
     {
       kind: 'example', kicker: 'Учебный кейс', title: 'Исходная ситуация', body: topic.caseBrief,
       bullets: [`Роль группы: ${caseRoles[topic.id]}.`, 'Данные стенда синтетические; действующие пароли, ключи, токены и персональные данные не используются.', `Рабочий результат: ${topic.projectArtifact}.`], sourceIds,
     },
-    { kind: 'intro', kicker: 'Карта темы', title: 'Восемь смысловых вопросов', bullets: topic.questions.map((question, index) => `${index + 1}. ${question.title}`), sourceIds },
+    {
+      kind: 'intro', kicker: 'Карта темы', title: 'Вопросы темы', sourceIds,
+      visual: {
+        type: 'topicPath', title: 'Последовательность разбора',
+        items: topic.questions.map((question) => ({ label: question.title, text: '' })),
+      },
+    },
     {
       kind: 'concept', kicker: topic.codeLabel, title: 'Рабочая модель и безопасный пример',
       body: 'Перед действием проверьте разрешение, границы учебного стенда, версию средства и способ возврата. Команды вне разрешённой среды не выполняются.',
       code: topic.codeSample, codeLabel: topic.codeLabel, sourceIds,
     },
     {
-      kind: 'intro', kicker: 'Результаты обучения', title: 'После занятия ты сможешь',
+      kind: 'intro', kicker: topic.displayTitle, title: 'Результаты обучения',
       bullets: [`объяснить ключевые понятия темы «${topic.displayTitle}» простыми словами;`, `создать и обосновать артефакт: ${topic.projectArtifact};`, 'проверить решение позитивным, граничным и негативным сценарием;', 'отделить наблюдаемый факт от предположения и общего вывода.'], sourceIds,
     },
     { kind: 'check', kicker: 'Входная диагностика', title: topic.diagnostic, body: 'Сформулируй предварительный ответ. В конце темы сравни его с итогами занятия.', sourceIds },
@@ -236,15 +282,28 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
 
   topic.questions.forEach((question, index) => {
     const number = index + 1
-    const visual = visualForQuestion(topic, index)
+    const evidenceVisual = visualForQuestion(topic, index)
     slides.push(
-      { kind: 'divider', kicker: `ВОПРОС ${number}`, title: question.title, body: `Уточним смысл понятия «${question.title}», затем проверим его на данных учебного кейса.`, sourceIds, questionNumber: number },
-      { kind: 'concept', kicker: `Вопрос ${number} · под запись`, title: 'Краткое определение', note: question.focus, sourceIds, questionNumber: number },
-      { kind: 'concept', kicker: `Вопрос ${number} · теория`, title: 'Правило работы', body: question.rule, transition: `Переходим к кейсу: посмотрим, как «${question.title}» влияет на решение команды.`, sourceIds, questionNumber: number },
-      { kind: 'example', kicker: `Вопрос ${number} · учебный кейс`, title: 'Исходные данные и наблюдение', body: question.example, visual, sourceIds, questionNumber: number },
-      { kind: 'decision', kicker: `Вопрос ${number} · решение`, title: 'Что делает команда', body: question.decision, transition: 'Перед приёмкой результата проверим, какая ошибка способна исказить вывод.', sourceIds, questionNumber: number },
-      { kind: 'warning', kicker: `Вопрос ${number} · риск`, title: 'Типичная ошибка', body: question.pitfall, transition: 'Исправление принимается только после повторной проверки по заданному критерию.', sourceIds, questionNumber: number },
-      { kind: 'check', kicker: `Вопрос ${number} · контроль`, title: 'Как принять результат', body: question.check, sourceIds, questionNumber: number },
+      { kind: 'divider', kicker: `Вопрос ${number}`, title: question.title, sourceIds, questionNumber: number },
+      {
+        kind: 'concept', kicker: `Вопрос ${number} · определение`, title: `${question.title}: смысл понятия`, sourceIds, questionNumber: number,
+        visual: {
+          type: 'conceptMap', title: 'Связи понятия', center: question.focus,
+          branches: [
+            { label: 'Правило применения', text: question.rule },
+            { label: 'Проверка результата', text: question.check },
+          ],
+        },
+      },
+      { kind: 'concept', kicker: `Вопрос ${number} · правило`, title: `${question.title}: логика применения`, visual: questionProcess(question), sourceIds, questionNumber: number },
+      {
+        kind: 'example', kicker: `Вопрос ${number} · пример`, title: `${question.title}: исходные данные`,
+        body: evidenceVisual ? question.example : undefined,
+        visual: evidenceVisual ?? exampleContext(question), sourceIds, questionNumber: number,
+      },
+      { kind: 'decision', kicker: `Вопрос ${number} · решение`, title: `${question.title}: обоснованное действие`, visual: decisionContrast(question), sourceIds, questionNumber: number },
+      { kind: 'warning', kicker: `Вопрос ${number} · риск`, title: `${question.title}: типичная ошибка`, body: question.pitfall, sourceIds, questionNumber: number },
+      { kind: 'check', kicker: `Вопрос ${number} · приёмка`, title: `${question.title}: критерий результата`, body: question.check, sourceIds, questionNumber: number },
     )
   })
 
@@ -253,29 +312,42 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     slides.push({
       kind: 'practice', kicker: `Лабораторный маршрут · шаг ${index + 1} из 8`, title: question.title,
       body: `Лабораторная работа № ${lab.number}: ${lab.title}. ${lab.hours} ч · ${formatPoints(lab.points)}.`,
-      bullets: [`Дано: ${question.example}`, `Сделайте: ${question.decision}`, 'В отчёт: исходные данные, выполненное действие и наблюдаемое свидетельство.', `Критерий приёмки: ${question.check}`, `Контроль риска: ${question.pitfall}`],
+      visual: practiceProcess(question),
       sourceIds, questionNumber: index + 1,
     })
   })
 
-  makeTests(topic).forEach((test, index) => slides.push({ kind: 'test', kicker: `Итоговое задание ${index + 1} из 6`, title: 'Проверь решение', sourceIds, test }))
+  makeTests(topic).forEach((test, index) => slides.push({ kind: 'test', kicker: `Итоговое задание ${index + 1} из 6`, title: 'Контрольное задание', sourceIds, test }))
 
   slides.push(
     {
-      kind: 'summary', kicker: 'Итоговая памятка', title: 'От условия к проверенному артефакту',
-      body: 'Сравните ваш первоначальный ответ с итогами занятия: что изменилось в терминах, аргументах и способе проверки?',
-      bullets: topic.questions.map((question) => `${question.title}: ${question.decision}`), sourceIds,
+      kind: 'summary', kicker: 'Итоги темы', title: 'Решения по вопросам 1–4',
+      body: 'Сопоставьте первоначальный ответ с принятыми решениями и способом их проверки.',
+      visual: {
+        type: 'topicPath', title: 'Первая половина темы',
+        items: topic.questions.slice(0, 4).map((question) => ({ label: question.title, text: question.decision })),
+      },
+      sourceIds,
     },
     {
-      kind: 'summary', kicker: 'Результат и следующий шаг', title: topic.projectArtifact, body: `Следующий шаг: ${topic.nextStep}.`,
+      kind: 'summary', kicker: 'Итоги темы', title: 'Решения по вопросам 5–8',
+      body: 'Каждое решение связано с исходными условиями, наблюдаемым свидетельством и критерием приёмки.',
+      visual: {
+        type: 'topicPath', title: 'Вторая половина темы',
+        items: topic.questions.slice(4).map((question) => ({ label: question.title, text: question.decision })),
+      },
+      sourceIds,
+    },
+    {
+      kind: 'summary', kicker: 'Результат занятия', title: 'Итоговый артефакт', body: `${topic.projectArtifact}. Следующий шаг: ${topic.nextStep}.`,
       bullets: ['Проверьте, что вывод опирается на исходные условия и наблюдаемое свидетельство.', 'Зафиксируйте ограничения результата и открытые вопросы.', 'Подготовьте артефакт и критерии приёмки к следующей работе.'], sourceIds,
     },
     { kind: 'questions', kicker: 'Финал занятия', title: 'Вопросы от аудитории', body: 'Сформулируй вопрос через исходные условия, наблюдение, ожидаемый результат и способ проверки.', bullets: ['Какой термин требует уточнения?', 'Какое свидетельство стоит разобрать ещё раз?', 'Как проверить вывод безопасно и воспроизводимо?'], sourceIds: ['rpd-okfks-text', 'okfks-rhino', 'synergy-logo'] },
   )
 
   const numbered = slides.map((slide, index) => ({ ...slide, number: index + 1 }))
-  if (numbered.length !== 85) throw new Error(`Deck invariant failed for ${topic.id}: expected 85 slides, got ${numbered.length}`)
+  if (numbered.length !== 86) throw new Error(`Deck invariant failed for ${topic.id}: expected 86 slides, got ${numbered.length}`)
   return numbered
 }
 
-export const countServiceSlides = (slides: Slide[]) => slides.filter((slide) => [2, 3, 4, 5, 85].includes(slide.number)).length
+export const countServiceSlides = (slides: Slide[]) => slides.filter((slide) => slide.kind === 'service' || slide.kind === 'questions').length

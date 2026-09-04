@@ -82,7 +82,7 @@ const coreSources: SourceRecord[] = [
   {
     id: 'okfks-rhino', title: 'Маскот — инженер по качеству и защите компьютерных систем', type: 'brand', purpose: 'Каталог, титульные, примеры и финал',
     location: 'public/brand/mascot/okfks-rhino.png', localCopy: 'public/brand/mascot/okfks-rhino.png', version: 'согласованный фирменный ресурс', checkedAt, official: true,
-    publication: 'Один вариант используется во всём проекте.', usedIn: ['каталог, титульные, примеры и экран 85'],
+    publication: 'Один вариант используется во всём проекте.', usedIn: ['каталог, титульные, исходные ситуации и экран 86'],
   },
 ]
 

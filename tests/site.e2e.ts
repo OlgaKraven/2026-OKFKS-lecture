@@ -1,5 +1,8 @@
 import { expect, test } from '@playwright/test'
 import { course, topics } from '../src/data/courseData'
+import { buildDeck } from '../src/deck/buildDeck'
+
+const deckLength = buildDeck(topics[0], course).length
 
 test('catalog contains approved topics and semester filters', async ({ page }) => {
   const errors: string[] = []
@@ -38,18 +41,18 @@ test('responsive catalog has no horizontal overflow at required sizes', async ({
 
 test('direct links, keyboard navigation and final screen work', async ({ page }) => {
   await page.goto(`./?topic=${topics[0].id}&slide=1`)
-  await expect(page.locator('.slide-counter')).toHaveText('1 / 85')
+  await expect(page.locator('.slide-counter')).toHaveText(`1 / ${deckLength}`)
   await page.keyboard.press('ArrowRight')
-  await expect(page.locator('.slide-counter')).toHaveText('2 / 85')
-  await page.goto(`./?topic=${topics[0].id}&slide=85`)
+  await expect(page.locator('.slide-counter')).toHaveText(`2 / ${deckLength}`)
+  await page.goto(`./?topic=${topics[0].id}&slide=${deckLength}`)
   await expect(page.getByRole('heading', { name: 'Вопросы от аудитории' })).toBeVisible()
   await expect(page.locator('.mascot-mask img').first()).toHaveJSProperty('complete', true)
 })
 
-test('every approved topic opens directly with exactly 85 screens', async ({ page }) => {
+test('every approved topic opens directly with the complete deck', async ({ page }) => {
   for (const topic of topics) {
     await page.goto(`./?topic=${topic.id}&slide=1`)
-    await expect(page.locator('.slide-counter'), topic.id).toHaveText('1 / 85')
+    await expect(page.locator('.slide-counter'), topic.id).toHaveText(`1 / ${buildDeck(topic, course).length}`)
     await expect(page.getByRole('heading', { name: topic.displayTitle })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Сохранить в PDF' })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Печать для студента' })).toHaveCount(0)
@@ -83,8 +86,8 @@ test('materials QR and printable route are complete', async ({ page }) => {
 
   await page.goto(`./print?topic=${topics[0].id}&variant=teacher`)
   await page.waitForFunction(() => document.body.dataset.printReady === 'true')
-  await expect(page.locator('.print-page')).toHaveCount(85)
-  await expect(page.locator('.print-page').nth(84).getByRole('heading', { name: 'Вопросы от аудитории' })).toBeVisible()
+  await expect(page.locator('.print-page')).toHaveCount(deckLength)
+  await expect(page.locator('.print-page').nth(deckLength - 1).getByRole('heading', { name: 'Вопросы от аудитории' })).toBeVisible()
 })
 
 test('semester PDF route combines all lectures from the selected semester', async ({ page }) => {
@@ -92,5 +95,26 @@ test('semester PDF route combines all lectures from the selected semester', asyn
   const semesterTopics = topics.filter((topic) => topic.semester === semester)
   await page.goto(`./print?scope=semester-${semester}&variant=student`)
   await page.waitForFunction(() => document.body.dataset.printReady === 'true')
-  await expect(page.locator('.print-page')).toHaveCount(semesterTopics.length * 85)
+  const expectedPages = semesterTopics.reduce((total, topic) => total + buildDeck(topic, course).length, 0)
+  await expect(page.locator('.print-page')).toHaveCount(expectedPages)
+})
+
+test('all printable slides fit without hidden or clipped content', async ({ page }) => {
+  await page.setViewportSize({ width: 1600, height: 900 })
+  for (const topic of topics) {
+    await page.goto(`./print?topic=${topic.id}&variant=teacher`)
+    await page.waitForFunction(() => document.body.dataset.printReady === 'true')
+    const defects = await page.locator('.print-page').evaluateAll((pages) => pages.flatMap((item, pageIndex) => {
+      const selectors = ['.slide-copy', '.slide-visual', '.test-task', '.code-block', '.literature-layout']
+      return selectors.flatMap((selector) => Array.from(item.querySelectorAll<HTMLElement>(selector)).flatMap((element) => {
+        const style = getComputedStyle(element)
+        const clipsVertically = !['visible', 'unset'].includes(style.overflowY)
+        const clipsHorizontally = !['visible', 'unset'].includes(style.overflowX)
+        const clipped = (clipsVertically && element.scrollHeight > element.clientHeight + 2) || (clipsHorizontally && element.scrollWidth > element.clientWidth + 2)
+        return clipped ? [`${pageIndex + 1}:${selector}:${element.scrollWidth}x${element.scrollHeight}/${element.clientWidth}x${element.clientHeight}`] : []
+      }))
+    }))
+    expect(defects, topic.id).toEqual([])
+    await expect(page.locator('.source-links')).toHaveCount(0)
+  }
 })

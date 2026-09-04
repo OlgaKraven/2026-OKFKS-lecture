@@ -35,8 +35,9 @@ function App() {
 
   const topicId = locationState.params.get('topic')
   const topic = topicId ? topics.find((item) => item.id === topicId) : undefined
+  const deck = topic ? buildDeck(topic, course) : undefined
   const rawSlide = Number(locationState.params.get('slide') || '1')
-  const initialSlide = Number.isInteger(rawSlide) && rawSlide >= 1 && rawSlide <= 85 ? rawSlide : 1
+  const initialSlide = Number.isInteger(rawSlide) && rawSlide >= 1 && rawSlide <= (deck?.length ?? 0) ? rawSlide : 1
   const isPrint = locationState.pathname.replace(/\/+$/, '').endsWith('/print')
   const variant = locationState.params.get('variant') === 'teacher' ? 'teacher' : 'student'
   const warning = topicId && !topic ? `Тема «${topicId}» не найдена. Открыт каталог курса.` : rawSlide !== initialSlide ? 'Некорректный номер экрана заменён на 1.' : undefined
@@ -93,7 +94,7 @@ function App() {
           key={topic.id + '-' + initialSlide}
           course={course}
           topic={topic}
-          deck={buildDeck(topic, course)}
+          deck={deck!}
           profile={profile}
           initialSlide={initialSlide}
           theme={theme}

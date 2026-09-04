@@ -1,7 +1,7 @@
 import { ExternalLink } from 'lucide-react'
-import type { ChangeEvent, CSSProperties } from 'react'
-import { getSource } from '../data/sourceRegistry'
+import type { ChangeEvent } from 'react'
 import type { CourseConfig, LectureTopic, Slide, TeacherProfile, TestAnswers } from '../types'
+import { SlideInfographic } from './SlideInfographic'
 
 type Props = {
   slide: Slide
@@ -22,9 +22,8 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   const isPrint = Boolean(printVariant)
   const showTeacherNotes = printVariant === 'teacher'
   const testAnswer = slide.test ? answers[slide.test.id] : undefined
-  const sourceLinks = slide.sourceIds.map(getSource).filter((source) => Boolean(source))
   const showProfile = ['title', 'divider', 'questions'].includes(slide.kind)
-  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && !slide.visual)
+  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && slide.number === 8)
   const longTitle = slide.kind === 'title' && slide.title.length > 34
 
   const changeChoice = (event: ChangeEvent<HTMLInputElement>, index: number, multiple: boolean) => {
@@ -38,7 +37,11 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   }
 
   return (
-    <article className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''}`} aria-label={`Экран ${slide.number}: ${slide.title}`}>
+    <article
+      className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''}`}
+      aria-label={`Экран ${slide.number}: ${slide.title}`}
+      data-source-ids={slide.sourceIds.join(',')}
+    >
       <img className="side-ornament" src={asset('brand/side-ornament.png')} alt="" aria-hidden="true" />
       <header className="slide-header">
         <div className="slide-brand">
@@ -85,32 +88,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
             </ul>
           )}
 
-          {slide.visual?.type === 'bar' && (
-            <figure className="slide-visual bar-visual">
-              <figcaption>{slide.visual.title}</figcaption>
-              <div className="bar-list">
-                {slide.visual.items.map((item) => (
-                  <div className="bar-row" key={item.label}>
-                    <span>{item.label}</span>
-                    <div className="bar-track"><i style={{ '--bar-width': `${Math.min(100, (item.value / item.max) * 100)}%` } as CSSProperties} /></div>
-                    <strong>{item.displayValue}</strong>
-                  </div>
-                ))}
-              </div>
-              {slide.visual.caption && <p>{slide.visual.caption}</p>}
-            </figure>
-          )}
-
-          {slide.visual?.type === 'table' && (
-            <figure className="slide-visual table-visual">
-              <figcaption>{slide.visual.title}</figcaption>
-              <table>
-                <thead><tr>{slide.visual.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead>
-                <tbody>{slide.visual.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => <td key={`${rowIndex}-${cellIndex}`}>{cell}</td>)}</tr>)}</tbody>
-              </table>
-              {slide.visual.caption && <p>{slide.visual.caption}</p>}
-            </figure>
-          )}
+          {slide.visual && <SlideInfographic visual={slide.visual} />}
 
           {slide.code && (
             <div className="code-block">
@@ -186,13 +164,6 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
       <footer className="slide-footer">
         <div className="profile-lines">
           {showProfile && profileLines(profile).map((line) => <span key={line}>{line}</span>)}
-        </div>
-        <div className="source-links" aria-label="Источники экрана">
-          {sourceLinks.map((source) => source && (
-            <a key={source.id} href={source.location.startsWith('http') ? source.location : undefined} title={source.title}>
-              {source.id}
-            </a>
-          ))}
         </div>
       </footer>
     </article>
