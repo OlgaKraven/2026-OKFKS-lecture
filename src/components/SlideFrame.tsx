@@ -23,7 +23,9 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   const showTeacherNotes = printVariant === 'teacher'
   const testAnswer = slide.test ? answers[slide.test.id] : undefined
   const showProfile = ['title', 'divider', 'questions'].includes(slide.kind)
-  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && slide.number === 8)
+  const isMaterialsSlide = slide.links?.some((link) => link.url === course.materialsUrl) && !slide.qrCodes
+  const isBibliography = slide.kicker === 'Литература'
+  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && slide.kicker === 'Сквозной кейс')
   const longTitle = slide.kind === 'title' && slide.title.length > 34
 
   const changeChoice = (event: ChangeEvent<HTMLInputElement>, index: number, multiple: boolean) => {
@@ -38,7 +40,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
 
   return (
     <article
-      className={`slide-frame kind-${slide.kind} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''} ${showMascot ? 'has-mascot' : ''}`}
+      className={`slide-frame kind-${slide.kind} layout-${slide.layout || 'standard'} ${compact ? 'compact' : ''} ${longTitle ? 'long-title' : ''} ${slide.visual ? 'has-visual' : ''} ${slide.studyBlocks ? 'has-study-blocks' : ''} ${showMascot ? 'has-mascot' : ''}`}
       aria-label={`Экран ${slide.number}: ${slide.title}`}
       data-source-ids={slide.sourceIds.join(',')}
     >
@@ -56,10 +58,20 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
           <p className="slide-kicker">{slide.kicker}</p>
           <h2>{slide.title}</h2>
           {slide.body && <p className="slide-body-copy">{slide.body}</p>}
-          {slide.note && <aside className="write-note"><span>Запишите</span><strong>{slide.note}</strong></aside>}
+          {slide.studyBlocks && (
+            <div className="study-blocks" aria-label="Опорный конспект">
+              {slide.studyBlocks.map((block, index) => (
+                <section className="study-block" key={`${slide.number}-${block.label}-${index}`}>
+                  <h3>{block.label}</h3>
+                  <p>{block.text}</p>
+                </section>
+              ))}
+            </div>
+          )}
+          {slide.note && <aside className="write-note"><span>{slide.noteLabel || 'Запишите'}</span><strong>{slide.note}</strong></aside>}
           {slide.transition && <p className="slide-transition">{slide.transition}</p>}
 
-          {slide.number === 5 && (
+          {isMaterialsSlide && (
             <div className="materials-panel">
               <img src={asset('qr/okfks-materials.png')} alt="QR-код: материалы МДК.04.02" />
               <a href={course.materialsUrl} target="_blank" rel="noreferrer">{course.materialsUrl} <ExternalLink size={16} /></a>
@@ -83,7 +95,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
           )}
 
           {slide.bullets && !slide.qrCodes && (
-            <ul className={slide.number === 3 || slide.number === 4 ? 'bibliography-list' : ''}>
+            <ul className={isBibliography ? 'bibliography-list' : ''}>
               {slide.bullets.map((bullet, index) => <li key={`${slide.number}-${index}`}>{bullet}</li>)}
             </ul>
           )}
@@ -97,7 +109,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
             </div>
           )}
 
-          {slide.links && slide.number !== 5 && !slide.qrCodes && (
+          {slide.links && !isMaterialsSlide && !slide.qrCodes && (
             <div className="slide-links">
               {slide.links.map((link) => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label} <ExternalLink size={14} /></a>)}
             </div>

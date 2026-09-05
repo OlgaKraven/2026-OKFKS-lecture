@@ -45,7 +45,7 @@ test('direct links, keyboard navigation and final screen work', async ({ page })
   await page.keyboard.press('ArrowRight')
   await expect(page.locator('.slide-counter')).toHaveText(`2 / ${deckLength}`)
   await page.goto(`./?topic=${topics[0].id}&slide=${deckLength}`)
-  await expect(page.getByRole('heading', { name: 'Вопросы от аудитории' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Что осталось непонятным после проверки памяти' })).toBeVisible()
   await expect(page.locator('.mascot-mask img').first()).toHaveJSProperty('complete', true)
 })
 
@@ -87,7 +87,7 @@ test('materials QR and printable route are complete', async ({ page }) => {
   await page.goto(`./print?topic=${topics[0].id}&variant=teacher`)
   await page.waitForFunction(() => document.body.dataset.printReady === 'true')
   await expect(page.locator('.print-page')).toHaveCount(deckLength)
-  await expect(page.locator('.print-page').nth(deckLength - 1).getByRole('heading', { name: 'Вопросы от аудитории' })).toBeVisible()
+  await expect(page.locator('.print-page').nth(deckLength - 1).getByRole('heading', { name: 'Что осталось непонятным после проверки памяти' })).toBeVisible()
 })
 
 test('semester PDF route combines all lectures from the selected semester', async ({ page }) => {
@@ -105,7 +105,7 @@ test('all printable slides fit without hidden or clipped content', async ({ page
     await page.goto(`./print?topic=${topic.id}&variant=teacher`)
     await page.waitForFunction(() => document.body.dataset.printReady === 'true')
     const defects = await page.locator('.print-page').evaluateAll((pages) => pages.flatMap((item, pageIndex) => {
-      const selectors = ['.slide-copy', '.slide-visual', '.test-task', '.code-block', '.literature-layout']
+      const selectors = ['.slide-copy', '.slide-visual', '.study-blocks', '.test-task', '.code-block', '.literature-layout']
       return selectors.flatMap((selector) => Array.from(item.querySelectorAll<HTMLElement>(selector)).flatMap((element) => {
         const style = getComputedStyle(element)
         const clipsVertically = !['visible', 'unset'].includes(style.overflowY)
@@ -117,7 +117,7 @@ test('all printable slides fit without hidden or clipped content', async ({ page
     expect(defects, topic.id).toEqual([])
     await expect(page.locator('.source-links')).toHaveCount(0)
     const undersizedText = await page.locator('.print-page').evaluateAll((pages) => pages.flatMap((item, pageIndex) => {
-      const selectors = ['.slide-body-copy', '.slide-copy > ul:not(.bibliography-list)', '.bar-row', '.table-visual table', '.topic-path li strong']
+      const selectors = ['.slide-body-copy', '.slide-copy > ul:not(.bibliography-list)', '.study-block h3', '.study-block p', '.slide-transition', '.bar-row', '.table-visual table', '.topic-path li strong']
       return selectors.flatMap((selector) => Array.from(item.querySelectorAll<HTMLElement>(selector)).flatMap((element) => {
         const fontSize = Number.parseFloat(getComputedStyle(element).fontSize)
         return fontSize < 15 ? [`${pageIndex + 1}:${selector}:${fontSize}px`] : []

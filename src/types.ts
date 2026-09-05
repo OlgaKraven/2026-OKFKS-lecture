@@ -135,6 +135,13 @@ export type SlideVisual =
       caption?: string
     }
 
+export type StudyBlock = {
+  label: string
+  text: string
+}
+
+export type SlideLayout = 'standard' | 'notebook' | 'sequence' | 'case' | 'columns' | 'contrast' | 'recall'
+
 export type Slide = {
   number: number
   kind: SlideKind
@@ -147,6 +154,9 @@ export type Slide = {
   links?: { label: string; url: string }[]
   qrCodes?: { label: string; url: string; assetPath: string }[]
   note?: string
+  noteLabel?: string
+  studyBlocks?: StudyBlock[]
+  layout?: SlideLayout
   transition?: string
   visual?: SlideVisual
   sourceIds: string[]

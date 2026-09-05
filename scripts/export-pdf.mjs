@@ -52,7 +52,7 @@ const waitForServer = async () => {
 let browser
 try {
   await waitForServer()
-  browser = await chromium.launch({ headless: true })
+  browser = await chromium.launch({ channel: 'chrome', headless: true })
   const context = await browser.newContext({ viewport: { width: 1600, height: 900 } })
   await context.addInitScript(({ key, value }) => {
     localStorage.setItem(key, JSON.stringify(value))

@@ -99,7 +99,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
   }
 
   const tests = useMemo(() => deck.filter((slide) => slide.test).map((slide) => slide.test!), [deck])
-  const scoredTests = tests.filter((test) => test.mode !== 'short')
+  const scoredTests = tests.filter((test) => test.mode !== 'short' && test.mode !== 'order')
   const score = scoredTests.filter((test) => {
     const answer = answers[test.id]
     if (!Array.isArray(answer) || !test.correctIndexes) return false
@@ -203,7 +203,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
           <button className="icon-button" type="button" onClick={closeResult} aria-label="Закрыть результаты">×</button>
         </div>
         <div className="score-card"><strong>{score} / {scoredTests.length}</strong><span>автоматически проверяемых заданий</span></div>
-        <p>Короткий ответ оценивается по критериям вручную: backend интеллектуальной проверки не подключён.</p>
+        <p>Последовательность и развёрнутый ответ оцениваются по критериям вручную; автоматическая смысловая проверка не подключена.</p>
         <div className="result-list">
           {tests.map((test) => <div key={test.id}><strong>{test.mode}</strong><span>{answers[test.id] === undefined ? 'Нет ответа' : 'Ответ сохранён'}</span><p>{test.explanation}</p></div>)}
         </div>
