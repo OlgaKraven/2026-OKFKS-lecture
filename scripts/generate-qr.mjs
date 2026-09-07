@@ -8,6 +8,8 @@ const configs = [
   { id: 'okfks-materials', url: 'https://disk.yandex.ru/d/Vz62H71Jub1GLA', color: '#ED131C' },
   { id: 'lit-main-01', url: 'https://www.iprbookshop.ru/books/156708/details', color: '#4561C8' },
   { id: 'lit-main-02', url: 'https://www.iprbookshop.ru/books/156513/details', color: '#1C8D00' },
+  { id: 'lit-additional-01', url: 'https://www.iprbookshop.ru/books/156620/details', color: '#4561C8' },
+  { id: 'lit-additional-02', url: 'https://www.iprbookshop.ru/books/144785/details', color: '#1C8D00' },
 ]
 
 const outputDir = path.resolve('public', 'qr')

@@ -15,7 +15,7 @@ type Props = {
 export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenTopic, onEditProfile, warning }: Props) {
   const [search, setSearch] = useState('')
   const [semester, setSemester] = useState<number | 'all'>('all')
-  const setupProfileButtonRef = useRef<HTMLButtonElement>(null)
+  const profileButtonRef = useRef<HTMLButtonElement>(null)
   const filtered = useMemo(() => {
     const query = search.trim().toLocaleLowerCase('ru-RU')
     return topics.filter((topic) => {
@@ -26,13 +26,6 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
   }, [search, semester, topics])
 
   const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
-  const printCollectionUrl = (scope: number | 'all') => {
-    const url = new URL(`${import.meta.env.BASE_URL}print`, window.location.origin)
-    url.searchParams.set('scope', scope === 'all' ? 'all' : `semester-${scope}`)
-    url.searchParams.set('variant', 'student')
-    url.searchParams.set('save', '1')
-    return url.toString()
-  }
   const printTopicUrl = (topicId: string) => {
     const url = new URL(`${import.meta.env.BASE_URL}print`, window.location.origin)
     url.searchParams.set('topic', topicId)
@@ -49,6 +42,9 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
           <span><strong>МДК.04.02</strong><small>Обеспечение качества функционирования компьютерных систем</small></span>
         </a>
         <nav aria-label="Действия каталога">
+          <button className="button ghost" type="button" ref={profileButtonRef} onClick={() => onEditProfile(profileButtonRef.current)}>
+            <UserRoundPen size={18} /> Данные преподавателя
+          </button>
           <button className="icon-button" type="button" onClick={() => onThemeChange(theme === 'light' ? 'dark' : 'light')} aria-label={theme === 'light' ? 'Включить тёмную тему' : 'Включить светлую тему'}>
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
@@ -72,26 +68,6 @@ export function Catalog({ course, topics, profile, theme, onThemeChange, onOpenT
         <div className="hero-mascot">
           <div className="chevron-backdrop" />
           <img src={asset('brand/mascot/okfks-rhino-catalog.png')} alt="Носорог — инженер по качеству и защите компьютерных систем" />
-        </div>
-      </section>
-
-      <section className="setup-panel" aria-labelledby="setup-title">
-        <div className="setup-copy">
-          <p className="eyebrow">Настройка перед занятием</p>
-          <h2 id="setup-title">Подготовьте титульный лист и лекции</h2>
-          <p>Введи свои данные для титульного листа. Лекции можно сохранить отдельно по семестрам или одним PDF.</p>
-        </div>
-        <button className="button secondary" type="button" ref={setupProfileButtonRef} onClick={() => onEditProfile(setupProfileButtonRef.current)}>
-          <UserRoundPen size={18} /> Данные преподавателя
-        </button>
-        <div className="lecture-downloads" role="group" aria-label="Сохранить лекции в PDF">
-          <strong>Сохранить лекции в PDF</strong>
-          <div>
-            {course.semesters.map((item) => (
-              <a className="button ghost" key={item} href={printCollectionUrl(item)} target="_blank" rel="noreferrer"><FileDown size={17} /> {item} семестр</a>
-            ))}
-            <a className="button primary" href={printCollectionUrl('all')} target="_blank" rel="noreferrer"><FileDown size={17} /> Все лекции</a>
-          </div>
         </div>
       </section>
 

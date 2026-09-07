@@ -85,13 +85,14 @@ export type SourceRecord = {
   usedIn: string[]
 }
 
-export type TestMode = 'single' | 'multiple' | 'boolean' | 'classification' | 'order' | 'calculation' | 'matching' | 'short'
+export type TestMode = 'single' | 'multiple' | 'boolean' | 'classification' | 'order' | 'calculation' | 'matching' | 'word' | 'short'
 
 export type TestTask = {
   id: string
   mode: TestMode
   prompt: string
   options?: string[]
+  pairs?: { left: string; right: string }[]
   correctAnswer: string
   correctIndexes?: number[]
   explanation: string
@@ -164,4 +165,4 @@ export type Slide = {
   test?: TestTask
 }
 
-export type TestAnswers = Record<string, string | number[]>
+export type TestAnswers = Record<string, string | number[] | string[]>

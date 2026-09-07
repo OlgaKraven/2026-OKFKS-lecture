@@ -3,6 +3,7 @@ import { course, laboratories, semesterWorkloads, topics, validateCourseData } f
 import { learningHeadlines } from '../src/data/learningHeadlines'
 import { buildDeck, countServiceSlides } from '../src/deck/buildDeck'
 import { normalizeOrganizationUnit } from '../src/lib/teacherProfile'
+import { evaluateTest } from '../src/lib/testScoring'
 
 describe('teacher profile normalization', () => {
   it.each([
@@ -40,15 +41,21 @@ describe('course and deck invariants', () => {
     })
   })
 
-  it.each(topics.map((topic) => [topic.id, topic] as const))('builds exactly 86 screens for %s', (_id, topic) => {
+  it.each(topics.map((topic) => [topic.id, topic] as const))('builds exactly 112 screens for %s', (_id, topic) => {
     const deck = buildDeck(topic, course)
-    expect(deck).toHaveLength(86)
+    expect(deck).toHaveLength(112)
     expect(countServiceSlides(deck)).toBe(5)
-    expect(deck.filter((slide) => slide.kind !== 'service' && slide.kind !== 'questions')).toHaveLength(81)
-    expect(deck.filter((slide) => slide.kind === 'divider').map((slide) => slide.number)).toEqual([13, 27, 41, 55])
-    expect(deck.filter((slide) => slide.kind === 'intro' && slide.kicker.startsWith('Связь внутри главы')).map((slide) => slide.number)).toEqual([20, 34, 48, 62])
-    expect(deck[85].kind).toBe('questions')
-    expect(deck[85].title).toBe('Что осталось непонятным после проверки памяти')
+    expect(deck.filter((slide) => slide.kind !== 'service' && slide.kind !== 'questions')).toHaveLength(107)
+    expect(deck.filter((slide) => slide.kind === 'divider').map((slide) => slide.number)).toEqual([13, 35, 57, 79])
+    expect(deck.filter((slide) => slide.kind === 'intro' && slide.kicker.startsWith('Связь внутри главы')).map((slide) => slide.number)).toEqual([24, 46, 68, 90])
+    expect(deck[111].kind).toBe('questions')
+    expect(deck[111].title).toBe('Что осталось непонятным после проверки памяти')
+    expect(deck[0].bullets).toBeUndefined()
+    expect(JSON.stringify(deck[0])).not.toMatch(/ч лекций|ч лабораторных работ|Лабораторные №|компетенции:/i)
+    expect(deck[2].title).toBe('Основная литература')
+    expect(deck[2].qrCodes).toHaveLength(2)
+    expect(deck[3].title).toBe('Дополнительная литература')
+    expect(deck[3].qrCodes).toHaveLength(2)
     expect(deck.filter((slide) => slide.visual).map((slide) => slide.number)).toHaveLength(2)
     expect(deck.filter((slide) => slide.visual && slide.number !== 9).every((slide) => slide.kind === 'example')).toBe(true)
     deck.forEach((slide) => expect(slide.sourceIds.length).toBeGreaterThan(0))
@@ -76,13 +83,22 @@ describe('course and deck invariants', () => {
     expect(new Set(deck.flatMap((slide) => slide.layout || []))).toEqual(new Set(['standard', 'notebook', 'sequence', 'case', 'columns', 'contrast', 'recall']))
 
     topic.questions.forEach((question, index) => {
-      const cluster = deck.slice(12 + index * 7, 19 + index * 7)
+      const clusterStart = 12 + index * 11
+      const cluster = deck.slice(clusterStart, clusterStart + 7)
+      const tests = deck.slice(clusterStart + 7, clusterStart + 11)
       expect(cluster).toHaveLength(7)
       expect(cluster[0].title).toBe(question.title)
       expect(new Set(cluster.map((slide) => slide.title)).size).toBe(7)
       expect(cluster.slice(1).every((slide) => slide.title !== question.title)).toBe(true)
       expect(cluster.some((slide) => slide.layout === 'recall')).toBe(true)
+      expect(tests).toHaveLength(4)
+      expect(tests.every((slide) => slide.kind === 'test' && slide.questionNumber === index + 1)).toBe(true)
+      expect(tests.map((slide) => slide.test?.mode)).toEqual(['single', 'word', 'matching', 'single'])
     })
+
+    expect(deck.filter((slide) => slide.test)).toHaveLength(32)
+    const correctChoicePositions = deck.filter((slide) => slide.test?.mode === 'single').map((slide) => slide.test!.correctIndexes![0])
+    expect(new Set(correctChoicePositions)).toEqual(new Set([0, 1, 2, 3]))
 
     const testText = JSON.stringify(deck.filter((slide) => slide.test))
     expect(testText).toContain(topic.questions[6].title)
@@ -117,5 +133,23 @@ describe('course and deck invariants', () => {
         expect(audienceCopy).not.toMatch(forbidden)
       })
     })
+  })
+})
+
+describe('automatic test scoring', () => {
+  const deck = buildDeck(topics[0], course)
+  const choice = deck.find((slide) => slide.test?.mode === 'single')!.test!
+  const word = deck.find((slide) => slide.test?.mode === 'word')!.test!
+  const matching = deck.find((slide) => slide.test?.mode === 'matching')!.test!
+
+  it('counts correct and incorrect choice answers', () => {
+    expect(evaluateTest(choice, choice.correctIndexes).status).toBe('correct')
+    expect(evaluateTest(choice, [(choice.correctIndexes![0] + 1) % choice.options!.length]).status).toBe('incorrect')
+  })
+
+  it('normalizes a written word and checks matching pairs', () => {
+    expect(evaluateTest(word, `  ${word.correctAnswer.toLocaleUpperCase('ru-RU')}  `).status).toBe('correct')
+    expect(evaluateTest(matching, matching.pairs!.map((pair) => pair.right)).status).toBe('correct')
+    expect(evaluateTest(matching, matching.pairs!.map((pair) => pair.right).reverse()).status).toBe('incorrect')
   })
 })

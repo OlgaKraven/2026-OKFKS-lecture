@@ -1,6 +1,6 @@
 import { laboratories } from '../data/courseData'
 import { learningHeadlines } from '../data/learningHeadlines'
-import type { CourseConfig, LectureTopic, Slide, SlideVisual, TestTask } from '../types'
+import type { CourseConfig, LectureTopic, Slide, SlideVisual, TestTask, TopicQuestion } from '../types'
 
 const mainLiterature = [
   {
@@ -20,11 +20,15 @@ const mainLiterature = [
 const additionalLiterature = [
   {
     label: 'Ермакова, А. Н. Управление ИТ-проектами. Ч.I : учебник / А. Н. Ермакова. — Ставрополь : АГРУС, 2024. — 196 с. — Текст : электронный // Образовательная платформа IPR СМАРТ : [сайт]. — URL: https://www.iprbookshop.ru/books/156620/details',
+    shortLabel: 'Управление ИТ-проектами. Ч.I',
     url: 'https://www.iprbookshop.ru/books/156620/details',
+    assetPath: 'qr/lit-additional-01.png',
   },
   {
     label: 'Швечкова, О. Г. Информационная безопасность. Ч.1. Теоретические основы : учебник / О. Г. Швечкова, С. И. Бабаев. — Москва : КУРС, 2024. — 144 с. — ISBN 978-5-907352-37-7. — Текст : электронный // Образовательная платформа IPR СМАРТ : [сайт]. — URL: https://www.iprbookshop.ru/books/144785/details',
+    shortLabel: 'Информационная безопасность. Ч.1',
     url: 'https://www.iprbookshop.ru/books/144785/details',
+    assetPath: 'qr/lit-additional-02.png',
   },
 ]
 
@@ -317,15 +321,6 @@ const laboratoryStages = [
   },
 ] as const
 
-const selfCheckFrames = [
-  ['Выбор по условию', 'Найдите действие, которое можно обосновать'],
-  ['Сборка доказательства', 'Соедините правило и признак результата'],
-  ['Проверка суждения', 'Распознайте неверное обобщение'],
-  ['Продолжение кейса', 'Выберите следующий проверяемый шаг'],
-  ['Восстановление логики', 'Соберите порядок работы без подсказки'],
-  ['Объяснение своими словами', 'Свяжите последние вопросы в один вывод'],
-] as const
-
 const formatPoints = (points: number) => {
   const lastTwo = points % 100
   const last = points % 10
@@ -333,43 +328,64 @@ const formatPoints = (points: number) => {
   return `${points} ${word}`
 }
 
-const makeTests = (topic: LectureTopic): TestTask[] => {
-  const [q1, q2, q3, q4, q5, q6, q7, q8] = topic.questions
-  const specialMode = topic.id.includes('metrics') ? 'calculation' : topic.id.includes('quality') ? 'classification' : 'matching'
+const rotate = <T,>(items: T[], offset: number) => {
+  const shift = offset % items.length
+  return [...items.slice(shift), ...items.slice(0, shift)]
+}
+
+const choiceTest = (id: string, prompt: string, correct: string, distractors: string[], offset: number, explanation: string): TestTask => {
+  const options = rotate([correct, ...distractors], offset)
+  return {
+    id, mode: 'single', prompt, options, correctIndexes: [options.indexOf(correct)], correctAnswer: correct,
+    explanation, hint: 'Выберите вариант, который следует из рассмотренного вопроса.', criteria: 'Выбран ответ, совпадающий с правилом и проверкой из текущего вопроса.',
+  }
+}
+
+const wordFromFocus = (focus: string) => {
+  const words = focus.match(/[А-Яа-яЁёA-Za-z-]{5,}/g) || []
+  return [...words].sort((a, b) => b.length - a.length)[0] || words[0] || 'ответ'
+}
+
+const makeQuestionTests = (topic: LectureTopic, question: TopicQuestion, questionIndex: number): TestTask[] => {
+  const number = questionIndex + 1
+  const word = wordFromFocus(question.focus)
+  const maskedFocus = question.focus.replace(word, '_____')
+  const pairs = [
+    { left: question.rule, right: 'Правило' },
+    { left: question.decision, right: 'Решение' },
+    { left: question.check, right: 'Проверка' },
+  ]
   return [
+    choiceTest(
+      `${topic.id}-q${number}-choice-rule`,
+      `Какое правило относится к вопросу «${question.title}»?`,
+      question.rule,
+      [question.pitfall, question.decision, question.check],
+      questionIndex % 4,
+      `Правило текущего вопроса: ${question.rule}`,
+    ),
     {
-      id: `${topic.id}-single`, mode: 'single', prompt: `Какое решение следует принять в ситуации «${q1.title}»?`,
-      options: [q1.decision, q1.pitfall, 'Скрыть исходные условия', 'Сделать вывод без критерия'], correctIndexes: [0], correctAnswer: q1.decision,
-      explanation: `Решение следует из правила: ${q1.rule}`, hint: 'Выберите действие с наблюдаемым результатом.', criteria: 'Действие связано с условием и способом проверки.',
+      id: `${topic.id}-q${number}-word`, mode: 'word',
+      prompt: `Впишите пропущенное слово: «${maskedFocus}»`, correctAnswer: word,
+      explanation: `Полная формулировка: ${question.focus}`, hint: `Первая буква: «${word[0]}».`,
+      criteria: 'Слово совпадает без учёта регистра и лишних пробелов.',
     },
     {
-      id: `${topic.id}-multiple`, mode: 'multiple', prompt: `Какие два элемента делают вывод по вопросу «${q2.title}» проверяемым?`,
-      options: [q2.rule, q2.check, q2.pitfall, 'Непроверяемая оценка'], correctIndexes: [0, 1], correctAnswer: `${q2.rule}; ${q2.check}`,
-      explanation: 'Правило задаёт действие, а критерий показывает, какой результат можно принять.', hint: 'Нужны правило и проверка.', criteria: 'Отмечены оба подтверждаемых элемента без типичной ошибки.',
+      id: `${topic.id}-q${number}-matching`, mode: 'matching',
+      prompt: `Установите соответствия для вопроса «${question.title}».`, pairs,
+      options: rotate(pairs.map((pair) => pair.right), (questionIndex + 1) % pairs.length),
+      correctAnswer: pairs.map((pair) => `${pair.right}: ${pair.left}`).join('; '),
+      explanation: 'Правило задаёт способ действия, решение применяет его, а проверка подтверждает результат.',
+      hint: 'Различайте правило, решение и проверку.', criteria: 'Для каждой формулировки выбрана правильная роль.',
     },
-    {
-      id: `${topic.id}-boolean`, mode: 'boolean', prompt: `Верно ли утверждение: «${q3.pitfall}»?`,
-      options: ['Верно', 'Неверно'], correctIndexes: [1], correctAnswer: 'Неверно', explanation: `Рабочее правило: ${q3.rule}`,
-      hint: 'Проверьте, сохраняются ли исходные условия и доказательства.', criteria: 'Ответ «Неверно» обоснован риском из темы.',
-    },
-    {
-      id: `${topic.id}-special`, mode: specialMode, prompt: `Выберите обоснованное продолжение ситуации «${q4.example}».`,
-      options: [q4.decision, q4.pitfall, 'Скрыть отклонение', 'Признать любой результат успешным'],
-      correctIndexes: [0], correctAnswer: q4.decision, explanation: 'Решение связано с исходным условием и допускает проверку.',
-      hint: 'Ищите действие без подмены факта предположением.', criteria: 'Выбрано действие, ведущее к проверяемому результату.',
-    },
-    {
-      id: `${topic.id}-order`, mode: 'order', prompt: `Восстановите порядок перехода от вопроса «${q5.title}» к вопросу «${q6.title}».`,
-      options: ['1. Зафиксировать исходные условия', '2. Применить согласованное правило', '3. Получить и сохранить результат', '4. Выполнить контрольную проверку'],
-      correctIndexes: [0, 1, 2, 3], correctAnswer: `1 → 2 → 3 → 4; решение: ${q5.decision}; контроль: ${q6.check}`, explanation: 'Критерий задаётся заранее, а контроль связывает два последовательных вопроса темы.',
-      hint: 'Начните с условий, закончите проверкой.', criteria: 'Все четыре шага образуют воспроизводимый порядок.',
-    },
-    {
-      id: `${topic.id}-short`, mode: 'short', prompt: `Свяжите вопросы «${q7.title}» и «${q8.title}»: что нужно зафиксировать до итогового вывода?`,
-      correctAnswer: `${q7.check} Затем: ${q8.check}`, explanation: `Ориентиры: ${q7.decision}; ${q8.decision}`,
-      hint: 'Назовите условия данных, свидетельство, ограничение и критерий.',
-      criteria: 'В ответе есть опора на оба вопроса и границы применимости вывода.',
-    },
+    choiceTest(
+      `${topic.id}-q${number}-choice-check`,
+      `Как проверить понимание вопроса «${question.title}»?`,
+      question.check,
+      [question.pitfall, question.example, question.focus],
+      (questionIndex + 2) % 4,
+      `Проверка текущего вопроса: ${question.check}`,
+    ),
   ]
 }
 
@@ -379,7 +395,6 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
   const slides: Omit<Slide, 'number'>[] = [
     {
       kind: 'title', kicker: `${course.discipline} · ${topic.semester}-й семестр`, title: topic.displayTitle,
-      bullets: [`${topic.lectureHours} ч лекций · ${topic.laboratoryHours} ч лабораторных работ`, `Лабораторные № ${topic.labNumbers.join(', ')} · компетенции: ${topic.competencies.join(' · ')}`],
       sourceIds: ['rpd-okfks-text', 'okfks-rhino', 'synergy-logo'],
     },
     {
@@ -394,11 +409,13 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
     },
     {
       kind: 'service', kicker: 'Литература', title: 'Дополнительная литература', bullets: additionalLiterature.map((item) => item.label),
-      links: additionalLiterature.map((item) => ({ label: 'Открыть источник', url: item.url })), sourceIds: ['lit-additional-01', 'lit-additional-02'],
+      links: additionalLiterature.map((item) => ({ label: 'Открыть источник', url: item.url })),
+      qrCodes: additionalLiterature.map((item) => ({ label: item.shortLabel, url: item.url, assetPath: item.assetPath })),
+      sourceIds: ['lit-additional-01', 'lit-additional-02'],
     },
     {
-      kind: 'service', kicker: course.discipline, title: 'Материалы к занятиям',
-      body: 'QR-код ведёт на папку с материалами.',
+      kind: 'service', kicker: 'Материалы к занятиям', title: 'Презентации, задания и исходные файлы',
+      body: 'Отсканируйте QR-код или откройте ссылку на общую папку курса.',
       links: [{ label: course.materialsUrl, url: course.materialsUrl }], sourceIds: ['okfks-materials', 'synergy-logo'],
     },
     {
@@ -493,6 +510,11 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
         sourceIds, questionNumber: number,
       },
     )
+    makeQuestionTests(topic, question, index).forEach((test, testIndex) => slides.push({
+      kind: 'test', kicker: `Самопроверка · вопрос ${number} · ${testIndex + 1} из 4`,
+      title: testIndex === 0 ? 'Выберите правило' : testIndex === 1 ? 'Восстановите слово' : testIndex === 2 ? 'Установите соответствия' : 'Выберите способ проверки',
+      sourceIds, questionNumber: number, test,
+    }))
   })
 
   topic.questions.forEach((question, index) => {
@@ -515,10 +537,6 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
       layout: index % 2 === 0 ? 'sequence' : 'case', sourceIds, questionNumber: index + 1,
     })
   })
-
-  makeTests(topic).forEach((test, index) => slides.push({
-    kind: 'test', kicker: `${selfCheckFrames[index][0]} · ${index + 1} из 6`, title: selfCheckFrames[index][1], sourceIds, test,
-  }))
 
   slides.push(
     {
@@ -545,7 +563,7 @@ export const buildDeck = (topic: LectureTopic, course: CourseConfig): Slide[] =>
   )
 
   const numbered = slides.map((slide, index) => ({ ...slide, number: index + 1 }))
-  if (numbered.length !== 86) throw new Error(`Deck invariant failed for ${topic.id}: expected 86 slides, got ${numbered.length}`)
+  if (numbered.length !== 112) throw new Error(`Deck invariant failed for ${topic.id}: expected 112 slides, got ${numbered.length}`)
   return numbered
 }
 

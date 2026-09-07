@@ -16,6 +16,7 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { CourseConfig, LectureTopic, Slide, TeacherProfile, TestAnswers } from '../types'
 import { clearResults, loadAnswers, saveAnswers, saveProgress } from '../lib/storage'
+import { evaluateTest } from '../lib/testScoring'
 import { SlideFrame } from './SlideFrame'
 
 type Props = {
@@ -92,7 +93,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
     if (!resultOpen && dialog.open) dialog.close()
   }, [resultOpen])
 
-  const updateAnswers = (testId: string, value: string | number[]) => {
+  const updateAnswers = (testId: string, value: TestAnswers[string]) => {
     const nextAnswers = { ...answers, [testId]: value }
     setAnswers(nextAnswers)
     saveAnswers(course, topic.id, nextAnswers)
@@ -100,11 +101,10 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
 
   const tests = useMemo(() => deck.filter((slide) => slide.test).map((slide) => slide.test!), [deck])
   const scoredTests = tests.filter((test) => test.mode !== 'short' && test.mode !== 'order')
-  const score = scoredTests.filter((test) => {
-    const answer = answers[test.id]
-    if (!Array.isArray(answer) || !test.correctIndexes) return false
-    return answer.length === test.correctIndexes.length && [...answer].sort().every((value, index) => value === [...test.correctIndexes!].sort()[index])
-  }).length
+  const testResults = scoredTests.map((test) => ({ test, result: evaluateTest(test, answers[test.id]) }))
+  const correctCount = testResults.filter(({ result }) => result.status === 'correct').length
+  const incorrectCount = testResults.filter(({ result }) => result.status === 'incorrect').length
+  const unansweredCount = testResults.filter(({ result }) => result.status === 'unanswered').length
 
   const closeToc = () => {
     setTocOpen(false)
@@ -202,10 +202,21 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
           <div><p className="eyebrow">Самопроверка</p><h2 id="result-title">Результат</h2></div>
           <button className="icon-button" type="button" onClick={closeResult} aria-label="Закрыть результаты">×</button>
         </div>
-        <div className="score-card"><strong>{score} / {scoredTests.length}</strong><span>автоматически проверяемых заданий</span></div>
-        <p>Последовательность и развёрнутые ответы преподаватель проверяет по указанным критериям.</p>
+        <div className="score-summary" aria-label="Итоги самопроверки">
+          <div className="score-card correct"><strong>{correctCount}</strong><span>правильно</span></div>
+          <div className="score-card incorrect"><strong>{incorrectCount}</strong><span>с ошибкой</span></div>
+          <div className="score-card unanswered"><strong>{unansweredCount}</strong><span>без ответа</span></div>
+        </div>
+        <p>Выбор ответа, пропущенные слова и соответствия проверяются автоматически.</p>
         <div className="result-list">
-          {tests.map((test) => <div key={test.id}><strong>{test.mode}</strong><span>{answers[test.id] === undefined ? 'Нет ответа' : 'Ответ сохранён'}</span><p>{test.explanation}</p></div>)}
+          {testResults.map(({ test, result }, index) => (
+            <div key={test.id} className={`result-item ${result.status}`}>
+              <strong>Задание {index + 1}</strong>
+              <span>{result.status === 'correct' ? 'Правильно' : result.status === 'incorrect' ? 'Ошибка' : 'Нет ответа'}</span>
+              <p>{test.prompt}</p>
+              {result.status === 'incorrect' && <><p><b>Ваш ответ:</b> {result.answerText || 'нет ответа'}</p><p><b>Правильный ответ:</b> {test.correctAnswer}</p></>}
+            </div>
+          ))}
         </div>
         <div className="dialog-actions">
           <button className="button secondary" type="button" onClick={() => { clearResults(course, topic.id); setAnswers({}) }}>Сбросить результаты</button>

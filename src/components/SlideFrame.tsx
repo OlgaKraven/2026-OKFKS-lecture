@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react'
 import type { ChangeEvent } from 'react'
 import type { CourseConfig, LectureTopic, Slide, TeacherProfile, TestAnswers } from '../types'
+import { evaluateTest } from '../lib/testScoring'
 import { SlideInfographic } from './SlideInfographic'
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
   topic: LectureTopic
   profile: TeacherProfile
   answers?: TestAnswers
-  onAnswer?: (testId: string, value: string | number[]) => void
+  onAnswer?: (testId: string, value: TestAnswers[string]) => void
   printVariant?: 'student' | 'teacher'
   compact?: boolean
 }
@@ -22,10 +23,11 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
   const isPrint = Boolean(printVariant)
   const showTeacherNotes = printVariant === 'teacher'
   const testAnswer = slide.test ? answers[slide.test.id] : undefined
+  const testResult = slide.test ? evaluateTest(slide.test, testAnswer) : undefined
   const showProfile = ['title', 'divider', 'questions'].includes(slide.kind)
   const isMaterialsSlide = slide.links?.some((link) => link.url === course.materialsUrl) && !slide.qrCodes
   const isBibliography = slide.kicker === 'Литература'
-  const showMascot = ['title', 'questions'].includes(slide.kind) || (slide.kind === 'example' && slide.kicker === 'Сквозной кейс')
+  const showMascot = slide.kind === 'title'
   const longTitle = slide.kind === 'title' && slide.title.length > 34
 
   const changeChoice = (event: ChangeEvent<HTMLInputElement>, index: number, multiple: boolean) => {
@@ -34,7 +36,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
       onAnswer(slide.test.id, [index])
       return
     }
-    const current = Array.isArray(testAnswer) ? testAnswer : []
+    const current = Array.isArray(testAnswer) && testAnswer.every((item) => typeof item === 'number') ? testAnswer : []
     onAnswer(slide.test.id, event.target.checked ? [...new Set([...current, index])] : current.filter((item) => item !== index))
   }
 
@@ -73,8 +75,14 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
 
           {isMaterialsSlide && (
             <div className="materials-panel">
-              <img src={asset('qr/okfks-materials.png')} alt="QR-код: материалы МДК.04.02" />
-              <a href={course.materialsUrl} target="_blank" rel="noreferrer">{course.materialsUrl} <ExternalLink size={16} /></a>
+              <a className="materials-qr-card" href={course.materialsUrl} target="_blank" rel="noreferrer">
+                <img src={asset('qr/okfks-materials.png')} alt="QR-код: материалы МДК.04.02" />
+                <strong>Отсканируйте меня</strong>
+              </a>
+              <div className="materials-link-card">
+                <span>Ссылка на материалы</span>
+                <a href={course.materialsUrl} target="_blank" rel="noreferrer">{course.materialsUrl} <ExternalLink size={16} /></a>
+              </div>
             </div>
           )}
 
@@ -83,7 +91,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
               <ul className="bibliography-list">
                 {slide.bullets.map((bullet, index) => <li key={`${slide.number}-${index}`}>{bullet}</li>)}
               </ul>
-              <div className="literature-qr-grid" aria-label="QR-коды основной литературы">
+              <div className="literature-qr-grid" aria-label={`QR-коды: ${slide.title}`}>
                 {slide.qrCodes.map((item) => (
                   <a className="literature-qr-card" key={item.url} href={item.url} target="_blank" rel="noreferrer">
                     <img src={asset(item.assetPath)} alt={`QR-код: ${item.label}`} />
@@ -118,13 +126,13 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
           {slide.test && (
             <section className="test-task" aria-labelledby={`test-${slide.test.id}`}>
               <h3 id={`test-${slide.test.id}`}>{slide.test.prompt}</h3>
-              {slide.test.options && slide.test.mode !== 'order' && (
+              {slide.test.options && !['order', 'matching'].includes(slide.test.mode) && (
                 <div className="test-options">
                   {slide.test.options.map((option, index) => {
                     const multiple = slide.test?.mode === 'multiple'
-                    const checked = Array.isArray(testAnswer) && testAnswer.includes(index)
+                    const checked = Array.isArray(testAnswer) && testAnswer.some((item) => item === index)
                     return (
-                      <label key={option}>
+                      <label key={`${index}-${option}`}>
                         <input
                           type={multiple ? 'checkbox' : 'radio'}
                           name={slide.test?.id}
@@ -132,6 +140,7 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
                           disabled={isPrint}
                           onChange={(event) => changeChoice(event, index, multiple)}
                         />
+                        <strong className="option-letter" aria-hidden="true">{String.fromCharCode(1040 + index)}</strong>
                         <span>{option}</span>
                       </label>
                     )
@@ -146,6 +155,39 @@ export function SlideFrame({ slide, course, topic, profile, answers = {}, onAnsw
               )}
               {slide.test.mode === 'short' && !isPrint && (
                 <label className="short-answer">Твой ответ<textarea value={typeof testAnswer === 'string' ? testAnswer : ''} onChange={(event) => onAnswer?.(slide.test!.id, event.target.value)} /></label>
+              )}
+              {slide.test.mode === 'word' && !isPrint && (
+                <label className="word-answer">Пропущенное слово<input value={typeof testAnswer === 'string' ? testAnswer : ''} onChange={(event) => onAnswer?.(slide.test!.id, event.target.value)} autoComplete="off" /></label>
+              )}
+              {slide.test.mode === 'matching' && slide.test.pairs && (
+                <div className="matching-task">
+                  {slide.test.pairs.map((pair, index) => {
+                    const current = Array.isArray(testAnswer) && testAnswer.every((item) => typeof item === 'string') ? testAnswer : []
+                    return (
+                      <label key={`${index}-${pair.left}`}>
+                        <span>{pair.left}</span>
+                        <select
+                          value={current[index] || ''}
+                          disabled={isPrint}
+                          onChange={(event) => {
+                            const next = Array.from({ length: slide.test!.pairs!.length }, (_, pairIndex) => current[pairIndex] || '')
+                            next[index] = event.target.value
+                            onAnswer?.(slide.test!.id, next)
+                          }}
+                        >
+                          <option value="">Выберите роль</option>
+                          {slide.test!.options?.map((option) => <option key={option} value={option}>{option}</option>)}
+                        </select>
+                      </label>
+                    )
+                  })}
+                </div>
+              )}
+              {!isPrint && testResult && testResult.status !== 'unanswered' && (
+                <div className={`answer-feedback ${testResult.status}`} role="status">
+                  <strong>{testResult.status === 'correct' ? 'Правильно' : 'Есть ошибка'}</strong>
+                  {testResult.status === 'incorrect' && <p>Проверьте ответ и попробуйте ещё раз. Точное место ошибки показано в разделе «Результат».</p>}
+                </div>
               )}
               <details className="test-hint" open={showTeacherNotes}>
                 <summary>Подсказка</summary>
