@@ -100,7 +100,6 @@ img { max-width: 100%; }
 .lecture-downloads > strong { font-size: 0.9rem; }
 .lecture-downloads > div { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .lecture-downloads .button { min-height: 2.55rem; padding: 0.58rem 0.78rem; text-decoration: none; font-size: 0.82rem; }
-.lecture-downloads small { color: var(--muted); line-height: 1.35; }
 
 .catalog-tools { max-width: 92rem; margin: 1.4rem auto; padding: 0.8rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); display: flex; gap: 0.7rem; align-items: center; box-shadow: 0 0.8rem 2.2rem rgb(28 28 28 / 0.06); }
 .search-field { flex: 1 1 23rem; display: flex; align-items: center; gap: 0.65rem; padding: 0 0.85rem; border: 1px solid var(--border); border-radius: 0.75rem; background: var(--surface-2); }
@@ -122,8 +121,9 @@ img { max-width: 100%; }
 .semester-tag { padding: 0.35rem 0.6rem; border-radius: 999px; background: var(--surface-2); color: var(--muted); font-size: 0.75rem; font-weight: 800; }
 .topic-card h2 { margin: 1.3rem 0 0.75rem; font-size: clamp(1.35rem, 2vw, 1.85rem); line-height: 1.05; letter-spacing: -0.025em; }
 .topic-card > p { margin: 0; color: var(--muted); line-height: 1.48; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
-.topic-card-footer { margin-top: auto; padding-top: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; position: relative; z-index: 1; }
-.topic-card-footer > span { color: var(--muted); font-size: 0.78rem; font-weight: 750; }
+.topic-card-footer { margin-top: auto; padding-top: 1.2rem; position: relative; z-index: 1; }
+.topic-card-actions { display: flex; align-items: center; justify-content: flex-end; gap: 0.55rem; }
+.topic-card-actions .button { min-height: 2.55rem; padding: 0.58rem 0.82rem; text-decoration: none; font-size: 0.82rem; }
 .empty-state { max-width: 92rem; margin: 2rem auto; padding: 3rem; text-align: center; border: 1px dashed var(--border); border-radius: 1rem; }
 .catalog-footer { max-width: 92rem; margin: 2rem auto 0; padding-top: 1.2rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: 0.82rem; }
 .catalog-footer a { margin-left: auto; display: inline-flex; align-items: center; gap: 0.3rem; }
@@ -399,6 +399,8 @@ dialog::backdrop { background: rgb(10 10 12 / 0.7); backdrop-filter: blur(0.25re
   .topic-grid { grid-template-columns: 1fr; }
   .topic-card { min-height: 18rem; }
   .topic-card > p { -webkit-line-clamp: 4; }
+  .topic-card-actions { align-items: stretch; flex-direction: column-reverse; }
+  .topic-card-actions .button { width: 100%; }
   .catalog-footer { display: grid; }
   .catalog-footer a { margin-left: 0; }
   .deck-shell { padding-inline: 0.45rem; }

@@ -203,7 +203,7 @@ export function DeckPlayer({ course, topic, deck, profile, initialSlide, theme, 
           <button className="icon-button" type="button" onClick={closeResult} aria-label="Закрыть результаты">×</button>
         </div>
         <div className="score-card"><strong>{score} / {scoredTests.length}</strong><span>автоматически проверяемых заданий</span></div>
-        <p>Последовательность и развёрнутый ответ оцениваются по критериям вручную; автоматическая смысловая проверка не подключена.</p>
+        <p>Последовательность и развёрнутые ответы преподаватель проверяет по указанным критериям.</p>
         <div className="result-list">
           {tests.map((test) => <div key={test.id}><strong>{test.mode}</strong><span>{answers[test.id] === undefined ? 'Нет ответа' : 'Ответ сохранён'}</span><p>{test.explanation}</p></div>)}
         </div>
