@@ -1,0 +1,338 @@
+[
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q1",
+    "term": "Качество функционирования",
+    "explanation": "Качество описывает, насколько система в заданных условиях удовлетворяет установленным потребностям."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q2",
+    "term": "Зачем измерять качество",
+    "explanation": "Результаты нужны разработчику, эксплуатанту, заказчику и пользователю для разных решений."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q3",
+    "term": "Многоуровневая модель качества",
+    "explanation": "Модель связывает общие характеристики, подхарактеристики и измеримые показатели."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q4",
+    "term": "Ошибка, дефект и отказ",
+    "explanation": "Ошибка — неверное действие или состояние; дефект находится в артефакте; отказ наблюдается как нарушение требуемой функции."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q5",
+    "term": "Первичные и вторичные ошибки",
+    "explanation": "Первичное нарушение запускает цепочку, вторичное возникает как следствие распространения."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q6",
+    "term": "Проявление ошибок в эксплуатации",
+    "explanation": "Скрытая ошибка проявляется только при определённых данных, нагрузке или состоянии среды."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q7",
+    "term": "Сбор и классификация событий",
+    "explanation": "Единая схема записи делает события сопоставимыми и пригодными для анализа."
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q8",
+    "term": "Интерпретация статистики",
+    "explanation": "Частота и распределение показывают наблюдаемую картину, но не автоматически объясняют причины."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q1",
+    "term": "Исходные данные",
+    "explanation": "Для расчёта нужны границы наблюдения, наработка, число учитываемых отказов и длительности восстановления."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q2",
+    "term": "Наработка на отказ",
+    "explanation": "MTBF в учебном расчёте показывает среднюю наработку, приходящуюся на учитываемый отказ."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q3",
+    "term": "Среднее время восстановления",
+    "explanation": "MTTR показывает среднюю длительность восстановления по учтённым случаям."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q4",
+    "term": "Подготовка журнала",
+    "explanation": "Расчётная таблица должна устранять пересечения, дубли и неоднозначные отметки времени."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q5",
+    "term": "Коэффициент готовности",
+    "explanation": "Установившаяся оценка готовности связывает среднюю наработку и среднее восстановление."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q6",
+    "term": "Единицы и период",
+    "explanation": "Единицы определяют смысл показателя, а период — границы применимости вывода."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q7",
+    "term": "Сопоставление с требованием",
+    "explanation": "Соответствие устанавливают сравнением рассчитанного значения с заранее заданным порогом."
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q8",
+    "term": "Ошибки вывода",
+    "explanation": "Дубли, пропуски, неверные границы и малая выборка искажают результат."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q1",
+    "term": "Дестабилизирующий фактор",
+    "explanation": "Фактор — условие или воздействие, способное нарушить требуемое функционирование."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q2",
+    "term": "Причинно-следственная цепочка",
+    "explanation": "Цепочка показывает переход от фактора через состояние и дефектное поведение к отказу."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q3",
+    "term": "Контроль входных данных",
+    "explanation": "Валидация отклоняет данные, не удовлетворяющие формату, диапазону и взаимным ограничениям."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q4",
+    "term": "Проверка состояния",
+    "explanation": "Предусловия подтверждают готовность зависимости и допустимость операции."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q5",
+    "term": "Ограничение последствий",
+    "explanation": "Изоляция, транзакционность и деградация не устраняют причину, но уменьшают область влияния."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q6",
+    "term": "Временная избыточность",
+    "explanation": "Повтор использует дополнительное время для преодоления кратковременного сбоя."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q7",
+    "term": "Информационная и программная избыточность",
+    "explanation": "Контрольные данные помогают обнаружить искажение, альтернативная реализация — проверить результат другим способом."
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q8",
+    "term": "Цена избыточности",
+    "explanation": "Выигрыш сопоставляют с ресурсами, производительностью, сопровождением и новыми отказами."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q1",
+    "term": "События журнала",
+    "explanation": "Журнал фиксирует дискретные факты с контекстом, временем, уровнем и источником."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q2",
+    "term": "Счётчики и записи",
+    "explanation": "Счётчик показывает числовое состояние во времени, запись журнала описывает отдельное событие."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q3",
+    "term": "Показатели загрузки",
+    "explanation": "Загрузка процессора, памяти, диска и очередей полезна только в контексте функции системы."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q4",
+    "term": "Постоянный контроль",
+    "explanation": "На постоянный контроль выносят показатели, которые раннее предупреждают значимый риск и допускают действие."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q5",
+    "term": "Предотказное состояние",
+    "explanation": "Это наблюдаемое ухудшение, при котором отказ ещё не наступил, но риск вырос."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q6",
+    "term": "Анализ без ложной причинности",
+    "explanation": "Совместное появление событий создаёт гипотезу, но не доказательство причины."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q7",
+    "term": "Реестр рисков",
+    "explanation": "Реестр связывает событие, вероятность, последствия, владельца, меру и остаточный риск."
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q8",
+    "term": "Модуль адаптации",
+    "explanation": "Адаптация меняет режим работы по наблюдаемому состоянию и сама создаёт сложность."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q1",
+    "term": "Угроза компьютерной системе",
+    "explanation": "Угроза — потенциальная причина нежелательного воздействия на актив, а не уже случившийся отказ."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q2",
+    "term": "Классификация угроз",
+    "explanation": "Классификация помогает группировать сценарии по источнику, намерению, объекту и воздействию."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q3",
+    "term": "Источники угроз",
+    "explanation": "Источник может быть внешним, внутренним, природным или техногенным; наличие источника не означает злого умысла."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q4",
+    "term": "Модель нарушителя",
+    "explanation": "Модель описывает тип субъекта, доступ, знания, ресурсы и цели в границах системы."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q5",
+    "term": "Модель угроз как документ",
+    "explanation": "Документ фиксирует область, активы, архитектуру, предположения, сценарии, меры и остаточные вопросы."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q6",
+    "term": "Классы вредоносных программ",
+    "explanation": "Классы описывают поведение и способ распространения, но реальные образцы могут сочетать признаки."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q7",
+    "term": "Пути проникновения",
+    "explanation": "Проникновение использует канал доставки и условие, позволяющее выполнить или обработать содержимое."
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q8",
+    "term": "Безопасное обнаружение",
+    "explanation": "Обнаружение опирается на штатные сигналы, хэши, журналы и безопасные тестовые артефакты."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q1",
+    "term": "Компоненты антивирусной защиты",
+    "explanation": "Защита включает механизм обнаружения, обновления, проверку в реальном времени, сканирование, карантин и журналирование."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q2",
+    "term": "Режимы работы",
+    "explanation": "Постоянная защита, проверка по запросу и периодические задания решают разные задачи."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q3",
+    "term": "Сравнение средств",
+    "explanation": "Сравнение воспроизводимо, когда среда, версия, критерии и набор безопасных испытаний одинаковы."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q4",
+    "term": "Назначение сетевого экрана",
+    "explanation": "Сетевой экран разрешает или запрещает сетевое взаимодействие по заданным признакам и направлению."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q5",
+    "term": "Проектирование правил",
+    "explanation": "Правило задаёт направление, профиль, адреса, протокол, порты, программу и действие."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q6",
+    "term": "Аутентификация и полномочия",
+    "explanation": "Аутентификация подтверждает заявленную идентичность, учётная запись связывает её с системой, полномочия определяют действия."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q7",
+    "term": "Парольная политика",
+    "explanation": "Политика определяет требования к созданию, использованию и защите секретов в конкретной среде."
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q8",
+    "term": "Минимально необходимые права",
+    "explanation": "Субъект получает только действия и ресурсы, необходимые для роли и периода работы."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q1",
+    "term": "Задача шифрования",
+    "explanation": "Шифрование снижает риск раскрытия данных без ключа, но не заменяет контроль доступа, целостность, резервирование и управление ключами."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q2",
+    "term": "Хранение и передача",
+    "explanation": "При хранении защищают данные на носителе, при передаче — канал и взаимодействующие стороны."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q3",
+    "term": "Алгоритм, протокол, ключ и средство",
+    "explanation": "Алгоритм задаёт преобразование, протокол — взаимодействие, ключ — параметр криптографической операции, средство — конкретная реализация. Ключи бывают открытыми и секретными."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q4",
+    "term": "Управление учебными ключами",
+    "explanation": "Жизненный цикл включает создание, хранение, доступ, резервирование, смену и уничтожение."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q5",
+    "term": "Проверка результата",
+    "explanation": "Проверка должна показать недоступность без полномочия и корректное восстановление с разрешением."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q6",
+    "term": "Набор проверок защиты",
+    "explanation": "Тесты выводятся из требований, модели угроз и границ системы."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q7",
+    "term": "Проверка по регламенту",
+    "explanation": "Регламент задаёт область, полномочия, среду, порядок, остановку и формат доказательств."
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q8",
+    "term": "Заключение и меры",
+    "explanation": "Заключение отделяет наблюдение, критерий, оценку риска и рекомендуемое действие."
+  }
+]

@@ -1,89 +1,77 @@
 import { spawn } from 'node:child_process'
-import { mkdir, readFile } from 'node:fs/promises'
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 import path from 'node:path'
 import { chromium } from '@playwright/test'
 import { PDFDocument } from 'pdf-lib'
+import { PNG } from 'pngjs'
+import jsQR from 'jsqr'
+import sharp from 'sharp'
 
-const basePath = '/2026-OKFKS-lecture/'
-const port = 5294
-const source = await readFile(path.resolve('src', 'data', 'courseData.ts'), 'utf8')
-const allTopics = [...source.matchAll(/id:\s*'(s\d{2}-[^']+)'/g)].map((match) => match[1])
 const args = process.argv.slice(2)
-const valueAfter = (flag) => {
-  const index = args.indexOf(flag)
-  return index >= 0 ? args[index + 1] : undefined
-}
-const requestedTopic = valueAfter('--topic')
-const requestedVariant = valueAfter('--variant')
-if (requestedTopic && !allTopics.includes(requestedTopic)) throw new Error(`Unknown topic: ${requestedTopic}`)
-if (requestedVariant && !['student', 'teacher'].includes(requestedVariant)) throw new Error(`Unknown variant: ${requestedVariant}`)
-const topics = requestedTopic ? [requestedTopic] : allTopics
-const variants = requestedVariant ? [requestedVariant] : ['student', 'teacher']
-if (!fs.existsSync(path.resolve('dist', 'index.html'))) throw new Error('dist is missing. Run npm run build first.')
-
-const profilePath = path.resolve('config', 'teacher-profile.json')
-let profile = { fullName: '', position: '', organizationUnit: '' }
-if (fs.existsSync(profilePath)) profile = JSON.parse(await readFile(profilePath, 'utf8'))
-
-const viteBin = path.resolve('node_modules', 'vite', 'bin', 'vite.js')
-const server = spawn(process.execPath, [viteBin, 'preview', '--host', '127.0.0.1', '--port', String(port), '--strictPort'], {
-  cwd: process.cwd(),
-  stdio: ['ignore', 'pipe', 'pipe'],
-  windowsHide: true,
-})
-let serverLog = ''
-server.stdout.on('data', (chunk) => { serverLog += chunk.toString() })
-server.stderr.on('data', (chunk) => { serverLog += chunk.toString() })
-
-const baseUrl = `http://127.0.0.1:${port}${basePath}`
-const waitForServer = async () => {
-  for (let attempt = 0; attempt < 80; attempt += 1) {
-    try {
-      const response = await fetch(baseUrl)
-      if (response.ok) return
-    } catch {
-      // The preview server may still be starting.
-    }
-    await new Promise((resolve) => setTimeout(resolve, 250))
-  }
-  throw new Error(`Preview server did not start. ${serverLog}`)
-}
-let browser
+const arg = (name, fallback) => args.includes(name) ? args[args.indexOf(name) + 1] : fallback
+if (arg('--variant', 'student') !== 'student') throw Error('Публичный экспорт поддерживает только student. Сценарий выдаётся отдельным TeacherPack.')
+const output = path.resolve(arg('--output', 'outputs/pdf/student'))
+const course = JSON.parse(await fs.readFile('dist/course.json', 'utf8'))
+const topic = arg('--topic', '')
+const lectures = course.lectures.filter(l => !topic || l.id === topic)
+if (!lectures.length) throw Error(`Unknown topic ${topic}`)
+const port = arg('--port', '5398')
+const base = `http://127.0.0.1:${port}/2026-OKFKS-lecture/`
+const server = spawn(process.execPath, ['node_modules/vite/bin/vite.js', 'preview', '--host', '127.0.0.1', '--port', port, '--strictPort'], { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] })
+let log = '', browser
+server.stdout.on('data', b => { log += b }); server.stderr.on('data', b => { log += b })
+const reports = []
 try {
-  await waitForServer()
-  browser = await chromium.launch({ channel: 'chrome', headless: true })
-  const context = await browser.newContext({ viewport: { width: 1600, height: 900 } })
-  await context.addInitScript(({ key, value }) => {
-    localStorage.setItem(key, JSON.stringify(value))
-  }, { key: 'okfks.teacherProfile', value: profile })
-  const page = await context.newPage()
-  await page.emulateMedia({ media: 'print', reducedMotion: 'reduce' })
-
-  for (const topic of topics) {
-    for (const variant of variants) {
-      const url = `${baseUrl}print?topic=${encodeURIComponent(topic)}&variant=${variant}`
-      await page.goto(url, { waitUntil: 'networkidle' })
-      await page.waitForFunction(() => document.body.dataset.printReady === 'true', undefined, { timeout: 60_000 })
-      const pageElements = await page.locator('.print-page').count()
-      if (!pageElements) throw new Error(`${topic}/${variant}: printable pages were not rendered`)
-      const outputDir = path.resolve('outputs', 'pdf', variant)
-      await mkdir(outputDir, { recursive: true })
-      const outputPath = path.join(outputDir, `${topic}.pdf`)
-      await page.pdf({
-        path: outputPath,
-        printBackground: true,
-        preferCSSPageSize: true,
-        displayHeaderFooter: false,
-        tagged: true,
-        outline: true,
-      })
-      const pdf = await PDFDocument.load(await readFile(outputPath))
-      if (pdf.getPageCount() !== pageElements) throw new Error(`${topic}/${variant}: DOM has ${pageElements} pages, PDF has ${pdf.getPageCount()}`)
-      console.log(`Exported ${variant}: ${topic} — ${pageElements} pages`)
-    }
+  for (let i = 0; i < 80; i++) {
+    if (server.exitCode !== null) throw Error(log)
+    if (await fetch(base).then(r => r.ok).catch(() => false)) break
+    await new Promise(resolve => setTimeout(resolve, 250))
   }
+  if (server.exitCode !== null) throw Error(log)
+  browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'chrome', headless: true })
+  const page = await browser.newPage({ viewport: { width: 1600, height: 1000 } })
+  const errors = []
+  page.on('pageerror', error => errors.push(error.message))
+  await fs.mkdir(output, { recursive: true })
+  for (const lecture of lectures) {
+    await page.goto(`${base}?mode=print&scope=${lecture.id}`)
+    await page.waitForFunction(count => document.querySelectorAll('.print-page').length === count, lecture.slides.length)
+    await page.waitForFunction(() => document.fonts.check('16px Raleway'))
+    await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(image => image.decode())) })
+    await page.waitForFunction(() => document.querySelectorAll('.resource-qr').length === 5)
+    await page.evaluate(async () => Promise.all([...document.images].map(image => image.decode())))
+    const qr = await page.locator('.resource-qr').evaluateAll(images => images.map(img => ({ svg: img.outerHTML, expected: img.parentElement.querySelector('a')?.href })))
+    for (const code of qr) {
+      const svg = code.svg.includes('xmlns=') ? code.svg : code.svg.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"')
+      const png = PNG.sync.read(await sharp(Buffer.from(svg)).resize(512, 512).png().toBuffer())
+      const decoded = jsQR(new Uint8ClampedArray(png.data), png.width, png.height)
+      if (!code.expected || decoded?.data !== code.expected) throw Error(`QR mismatch: ${code.expected}`)
+    }
+    await page.emulateMedia({ media: 'print' })
+    const layout = await page.locator('.slide-frame').evaluateAll(frames => frames.map(frame => {
+      const copy = frame.querySelector('.slide-copy')
+      const r = copy.getBoundingClientRect(), footer = frame.querySelector('.slide-footer').getBoundingClientRect()
+      const content = [...copy.children].map(x => x.getBoundingClientRect())
+      const bottom = Math.max(...content.map(x => x.bottom))
+      const svgOverflow = [...copy.querySelectorAll('svg')].flatMap(svg => {
+        const vb = svg.viewBox.baseVal
+        return [...svg.querySelectorAll('text')].filter(t => { const b = t.getBBox(); return b.x < -1 || b.x + b.width > vb.width + 1 || b.y + b.height > vb.height + 1 }).map(t => t.textContent)
+      })
+      const overlap = content.some((rect, i) => i > 0 && rect.top < content[i - 1].bottom - 2)
+      return { id: frame.dataset.slideId, overflow: Math.max(0, bottom - footer.top, copy.scrollHeight - copy.clientHeight), rightOverflow: Math.max(0, ...content.map(x => x.right - r.right)), overlap, svgOverflow }
+    }).filter(x => x.overflow > 2 || x.rightOverflow > 2 || x.overlap || x.svgOverflow.length))
+    const file = path.join(output, `${lecture.id}.pdf`)
+    await page.pdf({ path: file, printBackground: true, preferCSSPageSize: true })
+    const pdf = await PDFDocument.load(await fs.readFile(file))
+    if (pdf.getPageCount() !== lecture.slides.length) throw Error(`Page count: ${lecture.id}: ${pdf.getPageCount()}`)
+    if (errors.length) throw Error(errors.join('\n'))
+    reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), qrDecoded: qr.length, layout })
+    console.log(JSON.stringify(reports.at(-1)))
+  }
+  await fs.mkdir('reports', { recursive: true })
+  await fs.writeFile('reports/pdf-qa.json', JSON.stringify(reports, null, 2))
 } finally {
-  await browser?.close()
+  if (browser) await browser.close()
   server.kill()
 }
+if (reports.some(r => r.layout.length)) process.exitCode = 1

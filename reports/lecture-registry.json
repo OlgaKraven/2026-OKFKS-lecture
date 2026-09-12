@@ -1,0 +1,93 @@
+[
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "title": "Качество функционирования и отказы",
+    "semester": 7,
+    "lectureHours": 6,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 115,
+    "officialMinutes": 270
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "title": "Расчёт показателей надёжности",
+    "semester": 7,
+    "lectureHours": 4,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 114,
+    "officialMinutes": 180
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "title": "Угрозы надёжности и их предотвращение",
+    "semester": 7,
+    "lectureHours": 6,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 111,
+    "officialMinutes": 270
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "title": "Наблюдение за работающей системой",
+    "semester": 7,
+    "lectureHours": 4,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 112,
+    "officialMinutes": 180
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "title": "Угрозы и вредоносные программы",
+    "semester": 8,
+    "lectureHours": 4,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 112,
+    "officialMinutes": 180
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "title": "Средства защиты",
+    "semester": 8,
+    "lectureHours": 6,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 112,
+    "officialMinutes": 270
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "title": "Шифрование и проверка защищённости",
+    "semester": 8,
+    "lectureHours": 2,
+    "slides": 112,
+    "questions": 8,
+    "tests": 32,
+    "visuals": 17,
+    "contentVersion": "2.0.0-template-aba617d",
+    "estimatedMinutes": 113,
+    "officialMinutes": 90
+  }
+]

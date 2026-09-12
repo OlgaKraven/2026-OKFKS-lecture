@@ -10,3 +10,9 @@ config/teacher-profile.json
 .env
 .env.*
 !.env.example
+
+private/
+work/
+output/
+
+.playwright-cli/

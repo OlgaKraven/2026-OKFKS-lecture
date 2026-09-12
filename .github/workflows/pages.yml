@@ -1,6 +1,8 @@
 name: Deploy OKFKS lectures to GitHub Pages
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
@@ -33,20 +35,29 @@ jobs:
         run: npm run typecheck
       - name: Unit tests
         run: npm run test
-      - name: Spellcheck
-        run: npm run spellcheck
+      - name: Validate migrated content
+        run: npm run validate:content
       - name: Build
         run: npm run build
-      - name: Browser tests
-        run: npm run test:e2e
+      - name: Privacy check
+        run: npm run check:privacy
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Verify browser print and PDF pages
+        env:
+          BROWSER_CHANNEL: chromium
+        run: npm run export:pdf
       - name: Configure Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v6
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

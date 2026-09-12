@@ -1,0 +1,1178 @@
+[
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q1",
+    "title": "Качество функционирования",
+    "outcome": "Для признака указаны объект, условие, метрика и критерий принятия.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s013",
+      "s07-01-quality-and-failures-s014",
+      "s07-01-quality-and-failures-s015",
+      "s07-01-quality-and-failures-s016",
+      "s07-01-quality-and-failures-s017",
+      "s07-01-quality-and-failures-s018",
+      "s07-01-quality-and-failures-s019"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q1-choice-rule",
+      "s07-01-quality-and-failures-q1-choice-check",
+      "s07-01-quality-and-failures-q1-word",
+      "s07-01-quality-and-failures-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q2",
+    "title": "Зачем измерять качество",
+    "outcome": "Для каждой метрики назван получатель и последующее действие.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s024",
+      "s07-01-quality-and-failures-s025",
+      "s07-01-quality-and-failures-s026",
+      "s07-01-quality-and-failures-s027",
+      "s07-01-quality-and-failures-s028",
+      "s07-01-quality-and-failures-s029",
+      "s07-01-quality-and-failures-s030"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q2-choice-rule",
+      "s07-01-quality-and-failures-q2-choice-check",
+      "s07-01-quality-and-failures-q2-word",
+      "s07-01-quality-and-failures-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q3",
+    "title": "Многоуровневая модель качества",
+    "outcome": "У каждого уровня есть связь с верхней целью и нижним наблюдением.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s035",
+      "s07-01-quality-and-failures-s036",
+      "s07-01-quality-and-failures-s037",
+      "s07-01-quality-and-failures-s038",
+      "s07-01-quality-and-failures-s039",
+      "s07-01-quality-and-failures-s040",
+      "s07-01-quality-and-failures-s041"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q3-choice-rule",
+      "s07-01-quality-and-failures-q3-choice-check",
+      "s07-01-quality-and-failures-q3-word",
+      "s07-01-quality-and-failures-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q4",
+    "title": "Ошибка, дефект и отказ",
+    "outcome": "Категория обоснована фактом, а причинная связь отделена от гипотезы.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s046",
+      "s07-01-quality-and-failures-s047",
+      "s07-01-quality-and-failures-s048",
+      "s07-01-quality-and-failures-s049",
+      "s07-01-quality-and-failures-s050",
+      "s07-01-quality-and-failures-s051",
+      "s07-01-quality-and-failures-s052"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q4-choice-rule",
+      "s07-01-quality-and-failures-q4-choice-check",
+      "s07-01-quality-and-failures-q4-word",
+      "s07-01-quality-and-failures-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q5",
+    "title": "Первичные и вторичные ошибки",
+    "outcome": "Цепочка подтверждена корреляцией, состоянием и воспроизводимым сценарием.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s057",
+      "s07-01-quality-and-failures-s058",
+      "s07-01-quality-and-failures-s059",
+      "s07-01-quality-and-failures-s060",
+      "s07-01-quality-and-failures-s061",
+      "s07-01-quality-and-failures-s062",
+      "s07-01-quality-and-failures-s063"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q5-choice-rule",
+      "s07-01-quality-and-failures-q5-choice-check",
+      "s07-01-quality-and-failures-q5-word",
+      "s07-01-quality-and-failures-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q6",
+    "title": "Проявление ошибок в эксплуатации",
+    "outcome": "Сценарий можно безопасно повторить на синтетических данных.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s068",
+      "s07-01-quality-and-failures-s069",
+      "s07-01-quality-and-failures-s070",
+      "s07-01-quality-and-failures-s071",
+      "s07-01-quality-and-failures-s072",
+      "s07-01-quality-and-failures-s073",
+      "s07-01-quality-and-failures-s074"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q6-choice-rule",
+      "s07-01-quality-and-failures-q6-choice-check",
+      "s07-01-quality-and-failures-q6-word",
+      "s07-01-quality-and-failures-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q7",
+    "title": "Сбор и классификация событий",
+    "outcome": "Другой участник получает ту же категорию по опубликованному правилу.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s079",
+      "s07-01-quality-and-failures-s080",
+      "s07-01-quality-and-failures-s081",
+      "s07-01-quality-and-failures-s082",
+      "s07-01-quality-and-failures-s083",
+      "s07-01-quality-and-failures-s084",
+      "s07-01-quality-and-failures-s085"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q7-choice-rule",
+      "s07-01-quality-and-failures-q7-choice-check",
+      "s07-01-quality-and-failures-q7-word",
+      "s07-01-quality-and-failures-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "questionId": "s07-01-quality-and-failures-q8",
+    "title": "Интерпретация статистики",
+    "outcome": "Вывод содержит знаменатель, границы данных и уровень уверенности.",
+    "explanationIds": [
+      "s07-01-quality-and-failures-s090",
+      "s07-01-quality-and-failures-s091",
+      "s07-01-quality-and-failures-s092",
+      "s07-01-quality-and-failures-s093",
+      "s07-01-quality-and-failures-s094",
+      "s07-01-quality-and-failures-s095",
+      "s07-01-quality-and-failures-s096"
+    ],
+    "taskIds": [
+      "s07-01-quality-and-failures-q8-choice-rule",
+      "s07-01-quality-and-failures-q8-choice-check",
+      "s07-01-quality-and-failures-q8-word",
+      "s07-01-quality-and-failures-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q1",
+    "title": "Исходные данные",
+    "outcome": "Все строки относятся к одной совокупности и имеют корректные временные границы.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s013",
+      "s07-02-reliability-metrics-s014",
+      "s07-02-reliability-metrics-s015",
+      "s07-02-reliability-metrics-s016",
+      "s07-02-reliability-metrics-s017",
+      "s07-02-reliability-metrics-s018",
+      "s07-02-reliability-metrics-s019"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q1-choice-rule",
+      "s07-02-reliability-metrics-q1-choice-check",
+      "s07-02-reliability-metrics-q1-word",
+      "s07-02-reliability-metrics-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q2",
+    "title": "Наработка на отказ",
+    "outcome": "Обратный расчёт MTBF × N возвращает исходную наработку.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s024",
+      "s07-02-reliability-metrics-s025",
+      "s07-02-reliability-metrics-s026",
+      "s07-02-reliability-metrics-s027",
+      "s07-02-reliability-metrics-s028",
+      "s07-02-reliability-metrics-s029",
+      "s07-02-reliability-metrics-s030"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q2-choice-rule",
+      "s07-02-reliability-metrics-q2-choice-check",
+      "s07-02-reliability-metrics-q2-word",
+      "s07-02-reliability-metrics-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q3",
+    "title": "Среднее время восстановления",
+    "outcome": "Сумма восстановлений и количество случаев совпадают с журналом.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s035",
+      "s07-02-reliability-metrics-s036",
+      "s07-02-reliability-metrics-s037",
+      "s07-02-reliability-metrics-s038",
+      "s07-02-reliability-metrics-s039",
+      "s07-02-reliability-metrics-s040",
+      "s07-02-reliability-metrics-s041"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q3-choice-rule",
+      "s07-02-reliability-metrics-q3-choice-check",
+      "s07-02-reliability-metrics-q3-word",
+      "s07-02-reliability-metrics-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q4",
+    "title": "Подготовка журнала",
+    "outcome": "Каждая строка расчёта ссылается на исходное событие и правило преобразования.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s046",
+      "s07-02-reliability-metrics-s047",
+      "s07-02-reliability-metrics-s048",
+      "s07-02-reliability-metrics-s049",
+      "s07-02-reliability-metrics-s050",
+      "s07-02-reliability-metrics-s051",
+      "s07-02-reliability-metrics-s052"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q4-choice-rule",
+      "s07-02-reliability-metrics-q4-choice-check",
+      "s07-02-reliability-metrics-q4-word",
+      "s07-02-reliability-metrics-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q5",
+    "title": "Коэффициент готовности",
+    "outcome": "Значение находится в диапазоне от 0 до 1 и воспроизводится по исходным данным.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s057",
+      "s07-02-reliability-metrics-s058",
+      "s07-02-reliability-metrics-s059",
+      "s07-02-reliability-metrics-s060",
+      "s07-02-reliability-metrics-s061",
+      "s07-02-reliability-metrics-s062",
+      "s07-02-reliability-metrics-s063"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q5-choice-rule",
+      "s07-02-reliability-metrics-q5-choice-check",
+      "s07-02-reliability-metrics-q5-word",
+      "s07-02-reliability-metrics-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q6",
+    "title": "Единицы и период",
+    "outcome": "Размерность результата и период наблюдения явно подписаны.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s068",
+      "s07-02-reliability-metrics-s069",
+      "s07-02-reliability-metrics-s070",
+      "s07-02-reliability-metrics-s071",
+      "s07-02-reliability-metrics-s072",
+      "s07-02-reliability-metrics-s073",
+      "s07-02-reliability-metrics-s074"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q6-choice-rule",
+      "s07-02-reliability-metrics-q6-choice-check",
+      "s07-02-reliability-metrics-q6-word",
+      "s07-02-reliability-metrics-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q7",
+    "title": "Сопоставление с требованием",
+    "outcome": "Показаны исходный порог, неокруглённое значение и оператор сравнения.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s079",
+      "s07-02-reliability-metrics-s080",
+      "s07-02-reliability-metrics-s081",
+      "s07-02-reliability-metrics-s082",
+      "s07-02-reliability-metrics-s083",
+      "s07-02-reliability-metrics-s084",
+      "s07-02-reliability-metrics-s085"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q7-choice-rule",
+      "s07-02-reliability-metrics-q7-choice-check",
+      "s07-02-reliability-metrics-q7-word",
+      "s07-02-reliability-metrics-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "questionId": "s07-02-reliability-metrics-q8",
+    "title": "Ошибки вывода",
+    "outcome": "Независимый пересчёт совпадает, а ограничения перечислены.",
+    "explanationIds": [
+      "s07-02-reliability-metrics-s090",
+      "s07-02-reliability-metrics-s091",
+      "s07-02-reliability-metrics-s092",
+      "s07-02-reliability-metrics-s093",
+      "s07-02-reliability-metrics-s094",
+      "s07-02-reliability-metrics-s095",
+      "s07-02-reliability-metrics-s096"
+    ],
+    "taskIds": [
+      "s07-02-reliability-metrics-q8-choice-rule",
+      "s07-02-reliability-metrics-q8-choice-check",
+      "s07-02-reliability-metrics-q8-word",
+      "s07-02-reliability-metrics-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q1",
+    "title": "Дестабилизирующий фактор",
+    "outcome": "Карточка связывает условие с конкретной функцией и отказом.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s013",
+      "s07-03-reliability-threats-prevention-s014",
+      "s07-03-reliability-threats-prevention-s015",
+      "s07-03-reliability-threats-prevention-s016",
+      "s07-03-reliability-threats-prevention-s017",
+      "s07-03-reliability-threats-prevention-s018",
+      "s07-03-reliability-threats-prevention-s019"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q1-choice-rule",
+      "s07-03-reliability-threats-prevention-q1-choice-check",
+      "s07-03-reliability-threats-prevention-q1-word",
+      "s07-03-reliability-threats-prevention-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q2",
+    "title": "Причинно-следственная цепочка",
+    "outcome": "Для каждого перехода указан способ проверки.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s024",
+      "s07-03-reliability-threats-prevention-s025",
+      "s07-03-reliability-threats-prevention-s026",
+      "s07-03-reliability-threats-prevention-s027",
+      "s07-03-reliability-threats-prevention-s028",
+      "s07-03-reliability-threats-prevention-s029",
+      "s07-03-reliability-threats-prevention-s030"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q2-choice-rule",
+      "s07-03-reliability-threats-prevention-q2-choice-check",
+      "s07-03-reliability-threats-prevention-q2-word",
+      "s07-03-reliability-threats-prevention-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q3",
+    "title": "Контроль входных данных",
+    "outcome": "Некорректный ввод не меняет состояние и оставляет диагностическую запись.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s035",
+      "s07-03-reliability-threats-prevention-s036",
+      "s07-03-reliability-threats-prevention-s037",
+      "s07-03-reliability-threats-prevention-s038",
+      "s07-03-reliability-threats-prevention-s039",
+      "s07-03-reliability-threats-prevention-s040",
+      "s07-03-reliability-threats-prevention-s041"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q3-choice-rule",
+      "s07-03-reliability-threats-prevention-q3-choice-check",
+      "s07-03-reliability-threats-prevention-q3-word",
+      "s07-03-reliability-threats-prevention-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q4",
+    "title": "Проверка состояния",
+    "outcome": "При нарушении предусловия операция не начинается или откатывается.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s046",
+      "s07-03-reliability-threats-prevention-s047",
+      "s07-03-reliability-threats-prevention-s048",
+      "s07-03-reliability-threats-prevention-s049",
+      "s07-03-reliability-threats-prevention-s050",
+      "s07-03-reliability-threats-prevention-s051",
+      "s07-03-reliability-threats-prevention-s052"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q4-choice-rule",
+      "s07-03-reliability-threats-prevention-q4-choice-check",
+      "s07-03-reliability-threats-prevention-q4-word",
+      "s07-03-reliability-threats-prevention-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q5",
+    "title": "Ограничение последствий",
+    "outcome": "После отказа известно, что выполнено, отменено и требует повторения.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s057",
+      "s07-03-reliability-threats-prevention-s058",
+      "s07-03-reliability-threats-prevention-s059",
+      "s07-03-reliability-threats-prevention-s060",
+      "s07-03-reliability-threats-prevention-s061",
+      "s07-03-reliability-threats-prevention-s062",
+      "s07-03-reliability-threats-prevention-s063"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q5-choice-rule",
+      "s07-03-reliability-threats-prevention-q5-choice-check",
+      "s07-03-reliability-threats-prevention-q5-word",
+      "s07-03-reliability-threats-prevention-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q6",
+    "title": "Временная избыточность",
+    "outcome": "Число попыток ограничено, дубли отсутствуют, причина сохранена.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s068",
+      "s07-03-reliability-threats-prevention-s069",
+      "s07-03-reliability-threats-prevention-s070",
+      "s07-03-reliability-threats-prevention-s071",
+      "s07-03-reliability-threats-prevention-s072",
+      "s07-03-reliability-threats-prevention-s073",
+      "s07-03-reliability-threats-prevention-s074"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q6-choice-rule",
+      "s07-03-reliability-threats-prevention-q6-choice-check",
+      "s07-03-reliability-threats-prevention-q6-word",
+      "s07-03-reliability-threats-prevention-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q7",
+    "title": "Информационная и программная избыточность",
+    "outcome": "Для меры указаны обнаруживаемые ошибки и неподконтрольные случаи.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s079",
+      "s07-03-reliability-threats-prevention-s080",
+      "s07-03-reliability-threats-prevention-s081",
+      "s07-03-reliability-threats-prevention-s082",
+      "s07-03-reliability-threats-prevention-s083",
+      "s07-03-reliability-threats-prevention-s084",
+      "s07-03-reliability-threats-prevention-s085"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q7-choice-rule",
+      "s07-03-reliability-threats-prevention-q7-choice-check",
+      "s07-03-reliability-threats-prevention-q7-word",
+      "s07-03-reliability-threats-prevention-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "questionId": "s07-03-reliability-threats-prevention-q8",
+    "title": "Цена избыточности",
+    "outcome": "Решение содержит измеримый выигрыш, цену и условие пересмотра.",
+    "explanationIds": [
+      "s07-03-reliability-threats-prevention-s090",
+      "s07-03-reliability-threats-prevention-s091",
+      "s07-03-reliability-threats-prevention-s092",
+      "s07-03-reliability-threats-prevention-s093",
+      "s07-03-reliability-threats-prevention-s094",
+      "s07-03-reliability-threats-prevention-s095",
+      "s07-03-reliability-threats-prevention-s096"
+    ],
+    "taskIds": [
+      "s07-03-reliability-threats-prevention-q8-choice-rule",
+      "s07-03-reliability-threats-prevention-q8-choice-check",
+      "s07-03-reliability-threats-prevention-q8-word",
+      "s07-03-reliability-threats-prevention-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q1",
+    "title": "События журнала",
+    "outcome": "Запись помогает восстановить сценарий и не раскрывает секреты.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s013",
+      "s07-04-observing-operating-system-s014",
+      "s07-04-observing-operating-system-s015",
+      "s07-04-observing-operating-system-s016",
+      "s07-04-observing-operating-system-s017",
+      "s07-04-observing-operating-system-s018",
+      "s07-04-observing-operating-system-s019"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q1-choice-rule",
+      "s07-04-observing-operating-system-q1-choice-check",
+      "s07-04-observing-operating-system-q1-word",
+      "s07-04-observing-operating-system-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q2",
+    "title": "Счётчики и записи",
+    "outcome": "По данным видны и динамика, и конкретные отклонения.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s024",
+      "s07-04-observing-operating-system-s025",
+      "s07-04-observing-operating-system-s026",
+      "s07-04-observing-operating-system-s027",
+      "s07-04-observing-operating-system-s028",
+      "s07-04-observing-operating-system-s029",
+      "s07-04-observing-operating-system-s030"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q2-choice-rule",
+      "s07-04-observing-operating-system-q2-choice-check",
+      "s07-04-observing-operating-system-q2-word",
+      "s07-04-observing-operating-system-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q3",
+    "title": "Показатели загрузки",
+    "outcome": "Показатель связан со временем ответа и режимом нагрузки.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s035",
+      "s07-04-observing-operating-system-s036",
+      "s07-04-observing-operating-system-s037",
+      "s07-04-observing-operating-system-s038",
+      "s07-04-observing-operating-system-s039",
+      "s07-04-observing-operating-system-s040",
+      "s07-04-observing-operating-system-s041"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q3-choice-rule",
+      "s07-04-observing-operating-system-q3-choice-check",
+      "s07-04-observing-operating-system-q3-word",
+      "s07-04-observing-operating-system-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q4",
+    "title": "Постоянный контроль",
+    "outcome": "Сигнал имеет низкую неоднозначность и понятную реакцию.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s046",
+      "s07-04-observing-operating-system-s047",
+      "s07-04-observing-operating-system-s048",
+      "s07-04-observing-operating-system-s049",
+      "s07-04-observing-operating-system-s050",
+      "s07-04-observing-operating-system-s051",
+      "s07-04-observing-operating-system-s052"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q4-choice-rule",
+      "s07-04-observing-operating-system-q4-choice-check",
+      "s07-04-observing-operating-system-q4-word",
+      "s07-04-observing-operating-system-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q5",
+    "title": "Предотказное состояние",
+    "outcome": "Правило проверено на истории без чрезмерных ложных срабатываний.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s057",
+      "s07-04-observing-operating-system-s058",
+      "s07-04-observing-operating-system-s059",
+      "s07-04-observing-operating-system-s060",
+      "s07-04-observing-operating-system-s061",
+      "s07-04-observing-operating-system-s062",
+      "s07-04-observing-operating-system-s063"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q5-choice-rule",
+      "s07-04-observing-operating-system-q5-choice-check",
+      "s07-04-observing-operating-system-q5-word",
+      "s07-04-observing-operating-system-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q6",
+    "title": "Анализ без ложной причинности",
+    "outcome": "Вывод отделяет наблюдение, гипотезу и подтверждение.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s068",
+      "s07-04-observing-operating-system-s069",
+      "s07-04-observing-operating-system-s070",
+      "s07-04-observing-operating-system-s071",
+      "s07-04-observing-operating-system-s072",
+      "s07-04-observing-operating-system-s073",
+      "s07-04-observing-operating-system-s074"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q6-choice-rule",
+      "s07-04-observing-operating-system-q6-choice-check",
+      "s07-04-observing-operating-system-q6-word",
+      "s07-04-observing-operating-system-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q7",
+    "title": "Реестр рисков",
+    "outcome": "Каждая приоритетная запись приводит к контролируемой мере.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s079",
+      "s07-04-observing-operating-system-s080",
+      "s07-04-observing-operating-system-s081",
+      "s07-04-observing-operating-system-s082",
+      "s07-04-observing-operating-system-s083",
+      "s07-04-observing-operating-system-s084",
+      "s07-04-observing-operating-system-s085"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q7-choice-rule",
+      "s07-04-observing-operating-system-q7-choice-check",
+      "s07-04-observing-operating-system-q7-word",
+      "s07-04-observing-operating-system-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "questionId": "s07-04-observing-operating-system-q8",
+    "title": "Модуль адаптации",
+    "outcome": "Есть условия включения, пределы, журнал решения и возврат в нормальный режим.",
+    "explanationIds": [
+      "s07-04-observing-operating-system-s090",
+      "s07-04-observing-operating-system-s091",
+      "s07-04-observing-operating-system-s092",
+      "s07-04-observing-operating-system-s093",
+      "s07-04-observing-operating-system-s094",
+      "s07-04-observing-operating-system-s095",
+      "s07-04-observing-operating-system-s096"
+    ],
+    "taskIds": [
+      "s07-04-observing-operating-system-q8-choice-rule",
+      "s07-04-observing-operating-system-q8-choice-check",
+      "s07-04-observing-operating-system-q8-word",
+      "s07-04-observing-operating-system-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q1",
+    "title": "Угроза компьютерной системе",
+    "outcome": "В карточке отдельно названы актив, источник, путь и последствие.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s013",
+      "s08-01-threats-and-malware-s014",
+      "s08-01-threats-and-malware-s015",
+      "s08-01-threats-and-malware-s016",
+      "s08-01-threats-and-malware-s017",
+      "s08-01-threats-and-malware-s018",
+      "s08-01-threats-and-malware-s019"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q1-choice-rule",
+      "s08-01-threats-and-malware-q1-choice-check",
+      "s08-01-threats-and-malware-q1-word",
+      "s08-01-threats-and-malware-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q2",
+    "title": "Классификация угроз",
+    "outcome": "Каждая категория приводит к проверяемому набору сценариев.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s024",
+      "s08-01-threats-and-malware-s025",
+      "s08-01-threats-and-malware-s026",
+      "s08-01-threats-and-malware-s027",
+      "s08-01-threats-and-malware-s028",
+      "s08-01-threats-and-malware-s029",
+      "s08-01-threats-and-malware-s030"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q2-choice-rule",
+      "s08-01-threats-and-malware-q2-choice-check",
+      "s08-01-threats-and-malware-q2-word",
+      "s08-01-threats-and-malware-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q3",
+    "title": "Источники угроз",
+    "outcome": "Для источника указаны возможности, ограничения и основание.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s035",
+      "s08-01-threats-and-malware-s036",
+      "s08-01-threats-and-malware-s037",
+      "s08-01-threats-and-malware-s038",
+      "s08-01-threats-and-malware-s039",
+      "s08-01-threats-and-malware-s040",
+      "s08-01-threats-and-malware-s041"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q3-choice-rule",
+      "s08-01-threats-and-malware-q3-choice-check",
+      "s08-01-threats-and-malware-q3-word",
+      "s08-01-threats-and-malware-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q4",
+    "title": "Модель нарушителя",
+    "outcome": "Каждый профиль связан минимум с одним сценарием и границей доверия.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s046",
+      "s08-01-threats-and-malware-s047",
+      "s08-01-threats-and-malware-s048",
+      "s08-01-threats-and-malware-s049",
+      "s08-01-threats-and-malware-s050",
+      "s08-01-threats-and-malware-s051",
+      "s08-01-threats-and-malware-s052"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q4-choice-rule",
+      "s08-01-threats-and-malware-q4-choice-check",
+      "s08-01-threats-and-malware-q4-word",
+      "s08-01-threats-and-malware-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q5",
+    "title": "Модель угроз как документ",
+    "outcome": "Другой участник понимает, что включено и почему.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s057",
+      "s08-01-threats-and-malware-s058",
+      "s08-01-threats-and-malware-s059",
+      "s08-01-threats-and-malware-s060",
+      "s08-01-threats-and-malware-s061",
+      "s08-01-threats-and-malware-s062",
+      "s08-01-threats-and-malware-s063"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q5-choice-rule",
+      "s08-01-threats-and-malware-q5-choice-check",
+      "s08-01-threats-and-malware-q5-word",
+      "s08-01-threats-and-malware-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q6",
+    "title": "Классы вредоносных программ",
+    "outcome": "Категория подтверждена описанными действиями.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s068",
+      "s08-01-threats-and-malware-s069",
+      "s08-01-threats-and-malware-s070",
+      "s08-01-threats-and-malware-s071",
+      "s08-01-threats-and-malware-s072",
+      "s08-01-threats-and-malware-s073",
+      "s08-01-threats-and-malware-s074"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q6-choice-rule",
+      "s08-01-threats-and-malware-q6-choice-check",
+      "s08-01-threats-and-malware-q6-word",
+      "s08-01-threats-and-malware-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q7",
+    "title": "Пути проникновения",
+    "outcome": "Все входы системы отражены в модели и имеют контроль.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s079",
+      "s08-01-threats-and-malware-s080",
+      "s08-01-threats-and-malware-s081",
+      "s08-01-threats-and-malware-s082",
+      "s08-01-threats-and-malware-s083",
+      "s08-01-threats-and-malware-s084",
+      "s08-01-threats-and-malware-s085"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q7-choice-rule",
+      "s08-01-threats-and-malware-q7-choice-check",
+      "s08-01-threats-and-malware-q7-word",
+      "s08-01-threats-and-malware-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "questionId": "s08-01-threats-and-malware-q8",
+    "title": "Безопасное обнаружение",
+    "outcome": "Среда изолирована, артефакт безопасен, результат воспроизводим и удалён по регламенту.",
+    "explanationIds": [
+      "s08-01-threats-and-malware-s090",
+      "s08-01-threats-and-malware-s091",
+      "s08-01-threats-and-malware-s092",
+      "s08-01-threats-and-malware-s093",
+      "s08-01-threats-and-malware-s094",
+      "s08-01-threats-and-malware-s095",
+      "s08-01-threats-and-malware-s096"
+    ],
+    "taskIds": [
+      "s08-01-threats-and-malware-q8-choice-rule",
+      "s08-01-threats-and-malware-q8-choice-check",
+      "s08-01-threats-and-malware-q8-word",
+      "s08-01-threats-and-malware-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q1",
+    "title": "Компоненты антивирусной защиты",
+    "outcome": "Каждый заявленный компонент имеет наблюдаемый статус и тест.",
+    "explanationIds": [
+      "s08-02-protection-controls-s013",
+      "s08-02-protection-controls-s014",
+      "s08-02-protection-controls-s015",
+      "s08-02-protection-controls-s016",
+      "s08-02-protection-controls-s017",
+      "s08-02-protection-controls-s018",
+      "s08-02-protection-controls-s019"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q1-choice-rule",
+      "s08-02-protection-controls-q1-choice-check",
+      "s08-02-protection-controls-q1-word",
+      "s08-02-protection-controls-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q2",
+    "title": "Режимы работы",
+    "outcome": "Для каждого режима указан триггер, охват и журнал результата.",
+    "explanationIds": [
+      "s08-02-protection-controls-s024",
+      "s08-02-protection-controls-s025",
+      "s08-02-protection-controls-s026",
+      "s08-02-protection-controls-s027",
+      "s08-02-protection-controls-s028",
+      "s08-02-protection-controls-s029",
+      "s08-02-protection-controls-s030"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q2-choice-rule",
+      "s08-02-protection-controls-q2-choice-check",
+      "s08-02-protection-controls-q2-word",
+      "s08-02-protection-controls-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q3",
+    "title": "Сравнение средств",
+    "outcome": "Другой участник повторяет процедуру и получает сопоставимые данные.",
+    "explanationIds": [
+      "s08-02-protection-controls-s035",
+      "s08-02-protection-controls-s036",
+      "s08-02-protection-controls-s037",
+      "s08-02-protection-controls-s038",
+      "s08-02-protection-controls-s039",
+      "s08-02-protection-controls-s040",
+      "s08-02-protection-controls-s041"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q3-choice-rule",
+      "s08-02-protection-controls-q3-choice-check",
+      "s08-02-protection-controls-q3-word",
+      "s08-02-protection-controls-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q4",
+    "title": "Назначение сетевого экрана",
+    "outcome": "Разрешённый поток проходит, запрещённый отклоняется, остальные правила учтены.",
+    "explanationIds": [
+      "s08-02-protection-controls-s046",
+      "s08-02-protection-controls-s047",
+      "s08-02-protection-controls-s048",
+      "s08-02-protection-controls-s049",
+      "s08-02-protection-controls-s050",
+      "s08-02-protection-controls-s051",
+      "s08-02-protection-controls-s052"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q4-choice-rule",
+      "s08-02-protection-controls-q4-choice-check",
+      "s08-02-protection-controls-q4-word",
+      "s08-02-protection-controls-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q5",
+    "title": "Проектирование правил",
+    "outcome": "Правило соответствует схеме потока и удаляется или возвращается по плану.",
+    "explanationIds": [
+      "s08-02-protection-controls-s057",
+      "s08-02-protection-controls-s058",
+      "s08-02-protection-controls-s059",
+      "s08-02-protection-controls-s060",
+      "s08-02-protection-controls-s061",
+      "s08-02-protection-controls-s062",
+      "s08-02-protection-controls-s063"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q5-choice-rule",
+      "s08-02-protection-controls-q5-choice-check",
+      "s08-02-protection-controls-q5-word",
+      "s08-02-protection-controls-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q6",
+    "title": "Аутентификация и полномочия",
+    "outcome": "Действия связываются с конкретной записью и ограниченной ролью.",
+    "explanationIds": [
+      "s08-02-protection-controls-s068",
+      "s08-02-protection-controls-s069",
+      "s08-02-protection-controls-s070",
+      "s08-02-protection-controls-s071",
+      "s08-02-protection-controls-s072",
+      "s08-02-protection-controls-s073",
+      "s08-02-protection-controls-s074"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q6-choice-rule",
+      "s08-02-protection-controls-q6-choice-check",
+      "s08-02-protection-controls-q6-word",
+      "s08-02-protection-controls-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q7",
+    "title": "Парольная политика",
+    "outcome": "Протокол содержит правило и результат, но не значение пароля.",
+    "explanationIds": [
+      "s08-02-protection-controls-s079",
+      "s08-02-protection-controls-s080",
+      "s08-02-protection-controls-s081",
+      "s08-02-protection-controls-s082",
+      "s08-02-protection-controls-s083",
+      "s08-02-protection-controls-s084",
+      "s08-02-protection-controls-s085"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q7-choice-rule",
+      "s08-02-protection-controls-q7-choice-check",
+      "s08-02-protection-controls-q7-word",
+      "s08-02-protection-controls-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "questionId": "s08-02-protection-controls-q8",
+    "title": "Минимально необходимые права",
+    "outcome": "Разрешённые действия успешны, лишние отклоняются без побочного эффекта.",
+    "explanationIds": [
+      "s08-02-protection-controls-s090",
+      "s08-02-protection-controls-s091",
+      "s08-02-protection-controls-s092",
+      "s08-02-protection-controls-s093",
+      "s08-02-protection-controls-s094",
+      "s08-02-protection-controls-s095",
+      "s08-02-protection-controls-s096"
+    ],
+    "taskIds": [
+      "s08-02-protection-controls-q8-choice-rule",
+      "s08-02-protection-controls-q8-choice-check",
+      "s08-02-protection-controls-q8-word",
+      "s08-02-protection-controls-q8-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q1",
+    "title": "Задача шифрования",
+    "outcome": "Указаны актив, состояние, ключ и граница защиты.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s013",
+      "s08-03-encryption-and-security-testing-s014",
+      "s08-03-encryption-and-security-testing-s015",
+      "s08-03-encryption-and-security-testing-s016",
+      "s08-03-encryption-and-security-testing-s017",
+      "s08-03-encryption-and-security-testing-s018",
+      "s08-03-encryption-and-security-testing-s019"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q1-choice-rule",
+      "s08-03-encryption-and-security-testing-q1-choice-check",
+      "s08-03-encryption-and-security-testing-q1-word",
+      "s08-03-encryption-and-security-testing-q1-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q2",
+    "title": "Хранение и передача",
+    "outcome": "Тесты отдельно подтверждают состояние носителя и соединения.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s024",
+      "s08-03-encryption-and-security-testing-s025",
+      "s08-03-encryption-and-security-testing-s026",
+      "s08-03-encryption-and-security-testing-s027",
+      "s08-03-encryption-and-security-testing-s028",
+      "s08-03-encryption-and-security-testing-s029",
+      "s08-03-encryption-and-security-testing-s030"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q2-choice-rule",
+      "s08-03-encryption-and-security-testing-q2-choice-check",
+      "s08-03-encryption-and-security-testing-q2-word",
+      "s08-03-encryption-and-security-testing-q2-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q3",
+    "title": "Алгоритм, протокол, ключ и средство",
+    "outcome": "Для каждого элемента указана роль и источник документации.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s035",
+      "s08-03-encryption-and-security-testing-s036",
+      "s08-03-encryption-and-security-testing-s037",
+      "s08-03-encryption-and-security-testing-s038",
+      "s08-03-encryption-and-security-testing-s039",
+      "s08-03-encryption-and-security-testing-s040",
+      "s08-03-encryption-and-security-testing-s041"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q3-choice-rule",
+      "s08-03-encryption-and-security-testing-q3-choice-check",
+      "s08-03-encryption-and-security-testing-q3-word",
+      "s08-03-encryption-and-security-testing-q3-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q4",
+    "title": "Управление учебными ключами",
+    "outcome": "Поиск по комплекту не обнаруживает действующих секретов.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s046",
+      "s08-03-encryption-and-security-testing-s047",
+      "s08-03-encryption-and-security-testing-s048",
+      "s08-03-encryption-and-security-testing-s049",
+      "s08-03-encryption-and-security-testing-s050",
+      "s08-03-encryption-and-security-testing-s051",
+      "s08-03-encryption-and-security-testing-s052"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q4-choice-rule",
+      "s08-03-encryption-and-security-testing-q4-choice-check",
+      "s08-03-encryption-and-security-testing-q4-word",
+      "s08-03-encryption-and-security-testing-q4-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q5",
+    "title": "Проверка результата",
+    "outcome": "Есть позитивный и негативный результат и проверка целостности.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s057",
+      "s08-03-encryption-and-security-testing-s058",
+      "s08-03-encryption-and-security-testing-s059",
+      "s08-03-encryption-and-security-testing-s060",
+      "s08-03-encryption-and-security-testing-s061",
+      "s08-03-encryption-and-security-testing-s062",
+      "s08-03-encryption-and-security-testing-s063"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q5-choice-rule",
+      "s08-03-encryption-and-security-testing-q5-choice-check",
+      "s08-03-encryption-and-security-testing-q5-word",
+      "s08-03-encryption-and-security-testing-q5-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q6",
+    "title": "Набор проверок защиты",
+    "outcome": "Все критичные требования покрыты, а лишние действия отсутствуют.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s068",
+      "s08-03-encryption-and-security-testing-s069",
+      "s08-03-encryption-and-security-testing-s070",
+      "s08-03-encryption-and-security-testing-s071",
+      "s08-03-encryption-and-security-testing-s072",
+      "s08-03-encryption-and-security-testing-s073",
+      "s08-03-encryption-and-security-testing-s074"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q6-choice-rule",
+      "s08-03-encryption-and-security-testing-q6-choice-check",
+      "s08-03-encryption-and-security-testing-q6-word",
+      "s08-03-encryption-and-security-testing-q6-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q7",
+    "title": "Проверка по регламенту",
+    "outcome": "Все действия соответствуют области, а среда возвращена в исходное состояние.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s079",
+      "s08-03-encryption-and-security-testing-s080",
+      "s08-03-encryption-and-security-testing-s081",
+      "s08-03-encryption-and-security-testing-s082",
+      "s08-03-encryption-and-security-testing-s083",
+      "s08-03-encryption-and-security-testing-s084",
+      "s08-03-encryption-and-security-testing-s085"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q7-choice-rule",
+      "s08-03-encryption-and-security-testing-q7-choice-check",
+      "s08-03-encryption-and-security-testing-q7-word",
+      "s08-03-encryption-and-security-testing-q7-matching"
+    ]
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "questionId": "s08-03-encryption-and-security-testing-q8",
+    "title": "Заключение и меры",
+    "outcome": "Каждый вывод ограничен областью и связан со свидетельством и повторной проверкой.",
+    "explanationIds": [
+      "s08-03-encryption-and-security-testing-s090",
+      "s08-03-encryption-and-security-testing-s091",
+      "s08-03-encryption-and-security-testing-s092",
+      "s08-03-encryption-and-security-testing-s093",
+      "s08-03-encryption-and-security-testing-s094",
+      "s08-03-encryption-and-security-testing-s095",
+      "s08-03-encryption-and-security-testing-s096"
+    ],
+    "taskIds": [
+      "s08-03-encryption-and-security-testing-q8-choice-rule",
+      "s08-03-encryption-and-security-testing-q8-choice-check",
+      "s08-03-encryption-and-security-testing-q8-word",
+      "s08-03-encryption-and-security-testing-q8-matching"
+    ]
+  }
+]
