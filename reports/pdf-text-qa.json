@@ -1,0 +1,44 @@
+[
+  {
+    "lectureId": "s07-01-quality-and-failures",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s07-02-reliability-metrics",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s07-03-reliability-threats-prevention",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s07-04-observing-operating-system",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s08-01-threats-and-malware",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s08-02-protection-controls",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  },
+  {
+    "lectureId": "s08-03-encryption-and-security-testing",
+    "pages": 112,
+    "titlesInOrder": true,
+    "noFullPrivateScripts": true
+  }
+]

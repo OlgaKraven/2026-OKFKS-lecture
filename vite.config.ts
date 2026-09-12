@@ -5,12 +5,5 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/2026-OKFKS-lecture/',
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(process.cwd(), 'index.html'),
-        print: resolve(process.cwd(), 'print/index.html'),
-      },
-    },
-  },
+  build: { rollupOptions: { input: { main: resolve(process.cwd(), 'index.html'), print: resolve(process.cwd(), 'print/index.html') } } },
 })
