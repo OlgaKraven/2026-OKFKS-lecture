@@ -822,7 +822,7 @@
     "lectureId": "s08-01-threats-and-malware",
     "questionId": "s08-01-threats-and-malware-q8",
     "title": "Безопасное обнаружение",
-    "outcome": "Среда изолирована, артефакт безопасен, результат воспроизводим и удалён по регламенту.",
+    "outcome": "Среда изолирована, артефакт безопасен, реакция воспроизводима; артефакт удалён по регламенту, протокол сохранён.",
     "explanationIds": [
       "s08-01-threats-and-malware-s090",
       "s08-01-threats-and-malware-s091",
@@ -1074,7 +1074,7 @@
     "lectureId": "s08-03-encryption-and-security-testing",
     "questionId": "s08-03-encryption-and-security-testing-q4",
     "title": "Управление учебными ключами",
-    "outcome": "Поиск по комплекту не обнаруживает действующих секретов.",
+    "outcome": "Восстановление проверено; отчёт не содержит секретов, доступ к резерву ключа ограничен.",
     "explanationIds": [
       "s08-03-encryption-and-security-testing-s046",
       "s08-03-encryption-and-security-testing-s047",

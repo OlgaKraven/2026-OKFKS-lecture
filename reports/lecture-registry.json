@@ -8,8 +8,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 115,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 127,
     "officialMinutes": 270
   },
   {
@@ -21,8 +21,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 114,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 126,
     "officialMinutes": 180
   },
   {
@@ -34,8 +34,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 111,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 123,
     "officialMinutes": 270
   },
   {
@@ -47,8 +47,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 112,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 123,
     "officialMinutes": 180
   },
   {
@@ -60,8 +60,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 112,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 123,
     "officialMinutes": 180
   },
   {
@@ -73,8 +73,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 112,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 124,
     "officialMinutes": 270
   },
   {
@@ -86,8 +86,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.0-template-aba617d",
-    "estimatedMinutes": 113,
+    "contentVersion": "2.0.1-content-review-20260918",
+    "estimatedMinutes": 124,
     "officialMinutes": 90
   }
 ]

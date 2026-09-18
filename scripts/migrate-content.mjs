@@ -3,6 +3,7 @@ import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import ts from 'typescript'
 import { context } from '../authoring/context.mjs'
+import { buildTeacherNote } from '../authoring/build-teacher-note.mjs'
 
 // Compile the preserved authoring sources; they are never imported by the site.
 const sourceRoot = 'authoring/legacy/src'
@@ -26,7 +27,7 @@ const { sourceRegistry } = await import(pathToFileURL(path.resolve(compiledRoot,
 const { buildDeck } = await import(pathToFileURL(path.resolve(compiledRoot, 'deck/buildDeck.js')))
 topics[6].questions[2].focus = 'Алгоритм задаёт преобразование, протокол — взаимодействие, ключ — параметр криптографической операции, средство — конкретная реализация. Ключи бывают открытыми и секретными.'
 topics[6].questions[2].pitfall = 'Выдавать название алгоритма за полный сценарий защиты.'
-const version = '2.0.0-template-aba617d'
+const version = '2.0.1-content-review-20260918'
 context[1][7] = [
   'Неполная запись ограничивает вывод даже при безошибочной арифметике. Незавершённое восстановление нельзя записать как нулевое или незаметно исключить. Оценка по завершённым случаям и характеристика всей текущей выборки — разные утверждения.',
   'К учебной выборке с тремя завершёнными восстановлениями за 6 ч добавился четвёртый отказ; его восстановление ещё продолжается.',
@@ -173,7 +174,7 @@ for (let ti = 0; ti < topics.length; ti++) {
     '6-49': 'В отчёте сохраняют идентификатор, а не значение ключа',
   }
   for (const old of oldSlides) { const title = titleCorrections[`${ti}-${old.number}`]; if (title) slides.find(s => s.id === idOf(topic, old)).title = title }
-  if (ti === 0) slides.find(s => s.id.endsWith('-s093')).body = 'Учебная выборка: 200 операций за один период. На диаграмме — частоты отдельных типов событий; это не автоматически число независимых отказов.'
+  if (ti === 0) slides.find(s => s.id.endsWith('-s093')).body = 'Учебная выборка: 200 операций за один период. На диаграмме — числа событий отдельных типов; это не автоматически число независимых отказов.'
   if (ti === 3) slides.find(s => s.id.endsWith('-s027')).body = 'Учебные измерения времени ответа: 180, 420 и 870 мс. Для объяснения тенденции нужны события журнала тех же интервалов и экземпляра.'
   // The engine's SVG composition has three rows (kicker, heading, figure).
   // Explanatory text belongs in the figure caption, not a fourth overlapping row.
@@ -182,33 +183,11 @@ for (let ti = 0; ti < topics.length; ti++) {
   for (const old of oldSlides) {
     const s = slides.find(s => s.id === idOf(topic, old))
     mapping.push({ lectureId: topic.id, sourceFile: 'authoring/legacy/src/deck/buildDeck.ts', oldNumber: old.number, oldTitle: old.title, slideIds: [s.id], change: old.test?.id.endsWith('choice-check') ? 'Повторный single заменён на multiple по тем же действию и критерию' : old.questionNumber && old.number < 101 && !old.test ? 'Общие поручения и несвязанные ритмические блоки заменены предметным объяснением и разобранным примером из authoring/context.mjs; исходные формулировки доступны в legacy' : s.kind !== old.kind ? `Макет ${old.kind} → ${s.kind}` : 'Перенос содержания', sourceIds: old.sourceIds })
-    const at = slides.indexOf(s), q = topic.questions[(old.questionNumber || 1) - 1]
     const key = s.task && bank.keys[s.task.id]
-    let script = [s.body, s.notebook, ...(s.bullets || [])].filter(Boolean).join(' ')
-    if (s.rows) script += ` Сопоставим два подхода. ${s.rows.map(row => row.map((value, i) => `${s.columns[i]}: ${value}`).join(' ')).join(' ')}`
-    if (s.visual) {
-      const v = s.visual
-      script += v.type === 'process' ? ` Читаем схему от условий к результату. ${v.items.map(i => `${i.title}: ${i.text}`).join(' ')} ${v.caption}` : v.type === 'beforeAfter' ? ` Слева ошибочный подход: ${v.before.fields[0].value} Справа обоснованное действие: ${v.after.fields[0].value} ${v.changes.join(' ')} ${v.caption}` : v.type === 'bars' ? ` Сравним значения на шкале от нуля: ${v.items.map(i => `${i.label}: ${i.value} ${v.unit}`).join('; ')}. ${v.caption}` : ` Сопоставим строки таблицы: ${v.rows.map(row => row.map((value, i) => `${v.columns[i]}: ${value}`).join('; ')).join('. ')}. ${v.caption}`
-    }
-    if (s.kind === 'title') script = `Тема нашего занятия — «${topic.displayTitle}». ${topic.objective}. Начнём с источников, затем разберём ситуацию: ${topic.caseBrief}`
-    if (s.kind === 'literature') script = s.readingGroup === 'primary' ? 'В основном списке два учебника: по архитектуре вычислительных систем и по управлению качеством. Первый даёт контекст устройства системы, второй — язык требований и оценки качества. Полные библиографические описания и ссылки приведены на экране.' : 'Дополнительный список связывает работу над ИТ-проектом с теоретическими основами информационной безопасности. Эти источники помогают различать организацию работы и свойства защиты. Используем указанные издания; конкретные страницы в исходных материалах не заданы.'
-    if (s.kind === 'materials') script = 'Здесь ссылка на общую папку курса. Её можно открыть непосредственно или по QR-коду. Состав папки в исходном проекте не проверен, поэтому конкретные файлы сейчас не перечисляем.'
-    if (s.kind === 'agenda') script = `Двигаемся в таком порядке: ${topic.questions.map((q, i) => `${i + 1}. ${q.title}`).join('; ')}. К концу этой последовательности ${topic.objective.charAt(0).toLowerCase() + topic.objective.slice(1)}.`
-    if (s.kind === 'questions') script = `Вернёмся к входному вопросу: ${topic.diagnostic} Теперь для ответа есть предметные основания: ${context[ti][0][0]} В итоговом разборе важно не потерять ограничение: ${context[ti][7][4]} Предложите уточнение по нашей ситуации: ${topic.caseBrief} Мы завершаем тему результатом «${topic.projectArtifact}». Если вопрос пока не решён, сформулируем, каких наблюдений не хватает для вывода, и запишем следующий шаг: ${topic.nextStep}.`
-    if (s.kind === 'section') script = `${s.body} ${q.focus} К завершению блока мы сможем объяснить, почему принято такое решение: ${context[ti][old.questionNumber - 1][3]}`
-    if (s.task) script = `${s.task.prompt} Сначала сформулируйте ответ самостоятельно, затем нажмите «Проверить». ${key.explanation}`
-    if (old.questionNumber && !s.task && s.kind !== 'section') script += ` ${context[ti][old.questionNumber - 1][5]}`
-    const next = slides[at + 1]
-    if (next) script += ` Далее — «${next.title}».`
-    const words = script.split(/\s+/).length
-    pack.notes[s.id] = {
-      script,
-      preparation: `${topic.sourceTitle}. ${old.sourceIds.map(id => sourceRegistry.find(x => x.id === id)?.title || id).join('; ')}. ${s.visual ? 'Схема читается по подписанным элементам; числовой пример является учебным.' : ''}`,
-      notebook: s.notebook ? `Запишите: ${s.notebook}` : s.task ? 'Сначала ответьте без конспекта; после проверки запишите причину ошибки, если она была.' : '',
-      questions: old.questionNumber ? context[ti][old.questionNumber - 1][5] : '',
-      answer: key ? `${key.explanation}\n${Object.values(key.optionExplanations || {}).join('\n')}${key.pairs ? '\n' + s.task.items.map(i => `${i.text} → ${s.task.options.find(o => o.id === key.pairs[i.id]).text}`).join('\n') : ''}${key.accepted ? '\nДопустимый ответ: ' + key.accepted.join(' / ') : ''}` : '',
-      estimatedSeconds: Math.round(words / 2.1 + (s.task ? 60 : s.notebook ? 45 : s.visual ? 35 : 10)),
-    }
+    const group = oldSlides.filter(item => item.questionNumber === old.questionNumber && item.number < 101)
+    pack.notes[s.id] = buildTeacherNote({
+      ti, topic, old, slide: s, key, contexts: context[ti], groupPosition: group.indexOf(old),
+    })
   }
   registry.push({ lectureId: topic.id, title: topic.displayTitle, semester: topic.semester, lectureHours: topic.lectureHours, slides: slides.length, questions: topic.questions.length, tests: slides.filter(s => s.task).length, visuals: slides.filter(s => s.visual || s.rows).length, contentVersion: version, estimatedMinutes: Math.round(slides.reduce((n, s) => n + pack.notes[s.id].estimatedSeconds, 0) / 60), officialMinutes: topic.lectureHours * 45 })
 }
@@ -224,5 +203,5 @@ await json('authoring/glossary.json', glossary)
 await json('authoring/course-map.json', { topics, semesterWorkloads, laboratories, selfStudy, source: 'PROMPT.md, предоставленный текст РПД; исторические команды не исполняются' })
 await json('authoring/source-registry.json', sourceRegistry)
 await json('reports/lecture-registry.json', registry)
-await fs.writeFile('private/teacher.md', course.lectures.map(l => `# ${l.title}\n\n` + l.slides.map(s => `## ${s.id} — ${s.title}\n\n${pack.notes[s.id].script}\n\n${pack.notes[s.id].notebook}\n\n${pack.notes[s.id].answer}`).join('\n\n')).join('\n\n'))
+await fs.writeFile('private/teacher.md', course.lectures.map(l => `# ${l.title}\n\n` + l.slides.map(s => `## ${s.id} — ${s.title}\n\n${pack.notes[s.id].script}\n\n${pack.notes[s.id].notebook}\n\n### Подготовка\n\n${pack.notes[s.id].preparation}\n\n### Вопрос аудитории\n\n${pack.notes[s.id].questions}\n\n### Ожидаемый ответ и разбор\n\n${pack.notes[s.id].answer}`).join('\n\n')).join('\n\n'))
 console.log(JSON.stringify({ lectures: course.lectures.length, slides: mapping.length, tasks: Object.keys(bank.keys).length, teacherPack: packPath }, null, 2))

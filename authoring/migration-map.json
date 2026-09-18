@@ -522,7 +522,7 @@
     "lectureId": "s07-01-quality-and-failures",
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 38,
-    "oldTitle": "Надёжность подтверждают доступность и восстанавливаемость",
+    "oldTitle": "Доступность и восстанавливаемость описывают стороны надёжности",
     "slideIds": [
       "s07-01-quality-and-failures-s038"
     ],
