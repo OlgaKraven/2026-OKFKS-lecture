@@ -16,11 +16,11 @@
     "export:pdf": "node scripts/export-pdf.mjs"
   },
   "dependencies": {
+    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.3.tgz",
     "lucide-react": "^1.38.0",
     "motion": "^13.1.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.2.tgz"
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
@@ -33,8 +33,8 @@
     "jsqr": "^1.4.0",
     "oxlint": "^1.79.0",
     "pdf-lib": "^1.17.1",
-    "pngjs": "^7.0.0",
     "pdfjs-dist": "^6.3.289",
+    "pngjs": "^7.0.0",
     "qrcode": "^1.5.4",
     "sharp": "^0.35.4",
     "typescript": "~6.0.2",

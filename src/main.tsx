@@ -1,21 +1,26 @@
 import { createRoot } from 'react-dom/client'
 import { LectureSite, validateCourse } from '@olgakraven/lecture-engine'
+import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
-import { installTeacherNotes } from './teacherNotes'
+import { prepareTeacherNotes } from './teacherNotes'
+import { NotesStatus } from './NotesStatus'
 
-fetch(`${import.meta.env.BASE_URL}course.json`).then(response => {
+fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
   return response.json()
 }).then(async course => {
   validateCourse(course)
   const mode = new URL(location.href).searchParams.get('mode')
-  if (mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)) {
+  const showNotesStatus = mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)
+  let notesError = ''
+  let teacherNotes: Record<string, Note> | undefined
+  if (showNotesStatus) {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}teaching/notes.json?v=${encodeURIComponent(course.contentVersion)}`)
+      const response = await fetch(`${import.meta.env.BASE_URL}teaching/notes.json?v=${encodeURIComponent(course.contentVersion)}`, { cache: 'no-cache' })
       if (!response.ok) throw new Error('Не удалось загрузить заметки с сайта')
-      installTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), localStorage)
+      teacherNotes = prepareTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), { getItem: key => localStorage.getItem(key) })
     } catch (error) {
-      // The lecture remains usable; manual import is still available in the presenter.
+      notesError = 'Не удалось получить заметки с сайта. Нажмите «Повторить загрузку».'
       console.warn('Автоматическая загрузка заметок недоступна:', error)
     }
   }
@@ -45,5 +50,8 @@ fetch(`${import.meta.env.BASE_URL}course.json`).then(response => {
     history.replaceState({}, '', url)
   }
   document.title = `${course.code} · ${course.discipline}`
-  createRoot(document.getElementById('root')!).render(<LectureSite course={course} base={import.meta.env.BASE_URL} />)
+  createRoot(document.getElementById('root')!).render(<>
+    {showNotesStatus && <NotesStatus course={course} error={notesError} />}
+    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} />
+  </>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })

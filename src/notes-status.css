@@ -1,0 +1,7 @@
+.notes-status { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px; background: #eef6ff; color: #142f50; border-bottom: 1px solid #bacfe5; font: 14px/1.4 system-ui, sans-serif; }
+.notes-status div { display: grid; gap: 2px; }
+.notes-status button { border: 1px solid #214f80; border-radius: 8px; padding: 10px 16px; background: #214f80; color: white; cursor: pointer; font: inherit; white-space: nowrap; }
+.notes-status button:focus-visible { outline: 3px solid #e29822; outline-offset: 3px; }
+.notes-status-error { background: #fff3de; color: #633f0b; }
+@media (max-width: 640px) { .notes-status { align-items: stretch; flex-direction: column; padding: 12px 16px; } }
+@media print { .notes-status { display: none; } }
