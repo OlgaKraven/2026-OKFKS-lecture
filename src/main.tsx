@@ -1,12 +1,24 @@
 import { createRoot } from 'react-dom/client'
 import { LectureSite, validateCourse } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
+import { installTeacherNotes } from './teacherNotes'
 
 fetch(`${import.meta.env.BASE_URL}course.json`).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
   return response.json()
-}).then(course => {
+}).then(async course => {
   validateCourse(course)
+  const mode = new URL(location.href).searchParams.get('mode')
+  if (mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)) {
+    try {
+      const response = await fetch(`${import.meta.env.BASE_URL}teaching/notes.json?v=${encodeURIComponent(course.contentVersion)}`)
+      if (!response.ok) throw new Error('Не удалось загрузить заметки с сайта')
+      installTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), localStorage)
+    } catch (error) {
+      // The lecture remains usable; manual import is still available in the presenter.
+      console.warn('Автоматическая загрузка заметок недоступна:', error)
+    }
+  }
   // Migrate only the known profile fields, and do not overwrite newer settings.
   try {
     const key = `lecture:${import.meta.env.BASE_URL}:${course.id}:profile`

@@ -194,6 +194,8 @@ for (let ti = 0; ti < topics.length; ti++) {
 async function json(file, data) { await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n') }
 await json('public/course.json', course)
 await json('public/assessment.json', bank)
+// Author-approved published notes; local teacher edits remain in private/ and the browser.
+await json('public/teaching/notes.json', pack)
 // Never overwrite an edited private pack. A new generated draft is explicitly separate.
 const packPath = await fs.access('private/teacher-pack.json').then(() => 'private/teacher-pack.generated.json').catch(() => 'private/teacher-pack.json')
 await json(packPath, pack)

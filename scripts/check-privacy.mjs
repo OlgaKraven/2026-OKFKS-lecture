@@ -7,12 +7,23 @@ await walk('dist')
 const text = []
 for (const file of files) {
   assert.ok(!/private|teacher-pack|\.map$|authoring|legacy/i.test(file), `Private output path: ${file}`)
-  if (/\.(js|json|html|css)$/.test(file)) text.push(await fs.readFile(file, 'utf8'))
+  if (/\.(js|json|html|css)$/.test(file) && path.relative('dist', file).replaceAll('\\', '/') !== 'teaching/notes.json') text.push(await fs.readFile(file, 'utf8'))
 }
 const bundle = text.join('\n')
 const course = JSON.parse(await fs.readFile('dist/course.json', 'utf8'))
 const forbidden = /"(?:script|preparation|notes|correctAnswer|correctIndexes)"\s*:/
 assert.ok(!forbidden.test(JSON.stringify(course)))
+// The author explicitly publishes the baseline notes as a separate resource.
+// They must not be embedded into slides, scripts or the audience payload.
+const published = JSON.parse(await fs.readFile('dist/teaching/notes.json', 'utf8'))
+const authored = JSON.parse(await fs.readFile('public/teaching/notes.json', 'utf8'))
+assert.deepEqual(published, authored)
+assert.equal(published.courseId, course.id)
+assert.equal(published.contentVersion, course.contentVersion)
+assert.deepEqual(Object.keys(published.notes).sort(), course.lectures.flatMap(l => l.slides.map(s => s.id)).sort())
+for (const note of Object.values(published.notes)) {
+  assert.ok(!bundle.includes(note.script) && !bundle.includes(JSON.stringify(note.script).slice(1, -1)), 'Teacher script embedded outside the published notes resource')
+}
 const packFiles = await fs.readdir('private').catch(() => [])
 let checked = 0
 for (const file of packFiles.filter(f => /^teacher-pack.*\.json$/.test(f))) {
