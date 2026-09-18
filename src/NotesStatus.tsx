@@ -12,10 +12,10 @@ export function NotesStatus({ course, error }: { course: Course, error: string }
     location.assign(url.href)
   }
   return <aside className={`notes-status ${error ? 'notes-status-error' : ''}`} aria-label="Заметки преподавателя">
-    <div>
-      <strong>{error ? 'Заметки не загрузились' : 'Заметки преподавателя загружены'}</strong>
-      <span>{error || 'Сценарии, вопросы и ответы доступны в панели преподавателя для всех 784 слайдов.'}</span>
-    </div>
+    {error && <div>
+      <strong>Заметки не загрузились</strong>
+      <span>{error}</span>
+    </div>}
     {error
       ? <button type="button" onClick={() => location.reload()}>Повторить загрузку</button>
       : <button type="button" onClick={open}>Открыть заметки</button>}
