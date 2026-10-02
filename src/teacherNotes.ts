@@ -1,5 +1,27 @@
 import type { Course, Note, TeacherPack } from '@olgakraven/lecture-engine'
 
+// Previously auto-loaded fields should not conceal additions published within
+// the same content version. Compare exact fingerprints; preserve manual edits.
+export async function prepareUpdatedTeacherNotes(course: Course, base: string, value: unknown, storage: Pick<Storage,'getItem'>) {
+  const prepared=prepareTeacherNotes(course,base,value,storage)
+  const pack=value as TeacherPack & {previousNoteHashes?:Record<string,Partial<Record<keyof Note,string[]>>>}
+  if(!pack.previousNoteHashes)return prepared
+  const fields=['script','preparation','questions','answer'] as const
+  await Promise.all(Object.entries(pack.previousNoteHashes).map(async([id,hashes])=>{
+    if(!prepared[id])return
+    // Clone before changing: never mutate the publication or the stored object.
+    const note={...prepared[id]}
+    await Promise.all(fields.map(async field=>{
+      if(!Array.isArray(hashes[field]))return
+      const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(note[field]))
+      const hash=[...new Uint8Array(digest)].map(n=>n.toString(16).padStart(2,'0')).join('')
+      if(hashes[field].includes(hash))note[field]=pack.notes[id][field]
+    }))
+    prepared[id]=note
+  }))
+  return prepared
+}
+
 export function prepareTeacherNotes(course: Course, base: string, value: unknown, storage: Pick<Storage, 'getItem'>) {
   const pack = value as TeacherPack
   if (!pack || pack.schemaVersion !== 1 || pack.courseId !== course.id || pack.contentVersion !== course.contentVersion || !pack.notes || typeof pack.notes !== 'object') {

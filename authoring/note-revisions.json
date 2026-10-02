@@ -1,0 +1,338 @@
+{
+  "s07-01-quality-and-failures-s001": {
+    "script": [
+      "367fc8c4dd1e5f9541684909714d12db875362f3acfb625701063629054a660b"
+    ],
+    "preparation": [
+      "c591e5521d211ceaa191b87684111e1abe97d8a41eb776badec2290bd8b7f75b"
+    ],
+    "questions": [
+      "2a6bba847a9391d7d38b6c5ebc714dd2d32da307fdb93f15fb9b7d63e6321a2b"
+    ],
+    "answer": [
+      "5c13c2802b8646fe012cbe15aefd77e5b3fcdf61602c0e5ff6a6c886c9a1b791"
+    ]
+  },
+  "s07-01-quality-and-failures-s049": {
+    "script": [
+      "3d9f36def2c8915719e7566997d49367560a93823661f83ef308c8930622f3c6"
+    ],
+    "preparation": [
+      "3c219e6e19593f1a388199e19ff64a18b22801ece06ddb4f45eb2f65812b1bd9"
+    ],
+    "questions": [
+      "8d4cf6f3815789228aaa28b0e4afe2536acc0fc2f43ded02bacbae520eb3b0d8"
+    ],
+    "answer": [
+      "1ac53c02f83b58c9a23408344b379a2f09e8f01fc99814ab87c33a2b48846b78"
+    ]
+  },
+  "s07-01-quality-and-failures-s071": {
+    "script": [
+      "7c81c142236de5a9f273a98dac987ab29ccbeefc487da5aeedf76e229066e976"
+    ],
+    "preparation": [
+      "5b712563f3915ad4008ef021c6b23d0dd25c92e7b6e7f7954b75879874be63cd"
+    ],
+    "questions": [
+      "816272a6aa02732f8c131a19589d934b4f787aed7c641c868e27ce78b6199dff"
+    ],
+    "answer": [
+      "dac1d66171a5923ce0600dc3b69a6278d8cde51c5719e5e3ab4970db00f350f4"
+    ]
+  },
+  "s07-01-quality-and-failures-s082": {
+    "script": [
+      "59fc57f1fedfb39137af98d41d8bb8b1c2a56ce66bcaa477aad7d0403cee74a5"
+    ],
+    "preparation": [
+      "562927deb1897a30bbb6a327541baa64e6d00134d63ea365d0f051d83865c9a5"
+    ],
+    "questions": [
+      "c8eff24c10ff26fe869c2975d47683a2db8e855fc780879276e961b7286071e3"
+    ],
+    "answer": [
+      "fed2e7a97b6ef2df5e2dc9d8baa641fe41182f13dd4a1eabce19930db3842b1c"
+    ]
+  },
+  "s07-03-reliability-threats-prevention-s001": {
+    "script": [
+      "060f66d69e6292d83d165fbba0647b8e18c206b031e23027fb98c4ca4963545a"
+    ],
+    "preparation": [
+      "34f04494649f443ff379e6f596f06dbf17d4eb7ad608485cc4a82bb15a61f7e9"
+    ],
+    "questions": [
+      "47993514801a80561ed448ee1959cb505f5e24a081f78ca1044ff91f097a7f5d"
+    ],
+    "answer": [
+      "dd860c22fcee9175394711199e441924565bad6819e9e682b747a3547a6422f8"
+    ]
+  },
+  "s07-03-reliability-threats-prevention-s027": {
+    "script": [
+      "228ad3a0385675a8557afac510166a5ee26da536ce9171fafe794f95ac2f33f7"
+    ],
+    "preparation": [
+      "1492b01c4b6234e66bfe05deda994d49fdadf02f23c6f438082ea11f36350e23"
+    ],
+    "questions": [
+      "c9b366aeede818eb191e1455d963b73e5145b9fb0b3a58a298f85b852be45b90"
+    ],
+    "answer": [
+      "ccc911ac2312fbc50afecd6b6a45f1ca176c23900f19fb7059953f8634e64192"
+    ]
+  },
+  "s07-03-reliability-threats-prevention-s060": {
+    "script": [
+      "9313532c3fa1f099054b4a31e959e2d1994d87a77029ba0a6a199c3a64996d04"
+    ],
+    "preparation": [
+      "c98322f2b07631b257f421e3e2bc27e43d801b051566e14cbd1347669fa66239"
+    ],
+    "questions": [
+      "7cc19311e312a0e8cabb6f0b3e42717a76fa48cb0aeabf0ab776cf237a698624"
+    ],
+    "answer": [
+      "9fc541e986ccd5b5aadb732ee214892016ba338e065afe2cb9cf034074907447"
+    ]
+  },
+  "s07-03-reliability-threats-prevention-s093": {
+    "script": [
+      "452ec185e41699330102593e4549b445a8ada30c165b05b330b3a52fe0ad9f22"
+    ],
+    "preparation": [
+      "4dcfd36bf6628433bdc68263ce64efa3fe21b66867031d805f96f670ff407c1d"
+    ],
+    "questions": [
+      "d99e3c2d903051b4f5b4e37e42540340c70a759a7250af585b9cc76fd2e1fd3a"
+    ],
+    "answer": [
+      "7aa43ac46d99e24fd8b6be509373c9a83e92e01af375eec7ab2287ca9104b36f"
+    ]
+  },
+  "s07-04-observing-operating-system-s001": {
+    "script": [
+      "bfcf62c98e4a85cbe0ad0946dc3d72fcccbfbccd199cfa571dd4b942c3add1a3"
+    ],
+    "preparation": [
+      "3bc4240fb3e8682fa312f3fed2a72d6841a8ca641781d5c12eb43b43f203a9b5"
+    ],
+    "questions": [
+      "ee96c82b59265afc893319b4e7c0b07240d305407ae86ab10d2a5218a6634fab"
+    ],
+    "answer": [
+      "53323100d192589cebb563d290b1724d6dc095643271fc142a0ba9c5f1605bf5"
+    ]
+  },
+  "s07-04-observing-operating-system-s027": {
+    "script": [
+      "21e6c7f9665960b6ba2054e4af65a93eb9029c60fb2795f356a4c8de9a23d165"
+    ],
+    "preparation": [
+      "29922c908bf36bad9e6cabd52e0d792d1f50051f1b984eae960ae6e9e44f9194"
+    ],
+    "questions": [
+      "7391d60a2da29850413f4df914a52a0442d6abf9abd5d76242c013ac7c9cc4fb"
+    ],
+    "answer": [
+      "21e6c7f9665960b6ba2054e4af65a93eb9029c60fb2795f356a4c8de9a23d165"
+    ]
+  },
+  "s07-04-observing-operating-system-s038": {
+    "script": [
+      "e0aad1aadd151e980a4d5e4bbcc284bbce38d6be6236b96721b60afc3dae6c49"
+    ],
+    "preparation": [
+      "dfa5eca6f07c545c1db550ad24abaffa79afa5c6a39ded4d73b82ed82bbfc267"
+    ],
+    "questions": [
+      "1aa27ae5c8c4142f77029f81bec6fd60b523ca13acc00a50c6f4af6de5acc269"
+    ],
+    "answer": [
+      "b6ff00a56c5e5e785824c0eed6d5b4b2ff0c2695dd09b670c0801ceee3c7b18e"
+    ]
+  },
+  "s07-04-observing-operating-system-s071": {
+    "script": [
+      "517b5fff24d30c97ecc518ebc4c920132f9394863c6be82a0d25b02992fe0832"
+    ],
+    "preparation": [
+      "77f737416211c52e9c4115063995dbe22474fe118f50fec3e155af7da396f5f3"
+    ],
+    "questions": [
+      "4c55af3ddffe2a255949181b68b296453479593c118275c26f51905bc7a683c9"
+    ],
+    "answer": [
+      "7e7f6b1872df3bd63dae7dc5848a3c32feb6f24fd9b3a5fb3b0c1fd58dcc87fb"
+    ]
+  },
+  "s08-01-threats-and-malware-s001": {
+    "script": [
+      "d59ef2032729be2390fdf3d6f2a5c46be7a64f0223c02b2a77f255219bcbaeaf"
+    ],
+    "preparation": [
+      "a223aaf5b35c8c0377aa1e9c1a40444f5a8aac803c35ce5b20b2eb2f3c173e00"
+    ],
+    "questions": [
+      "83bed3795119c0ee6f74be2042bc9725627f29a2f0dcb83c71333566d7d2ec9e"
+    ],
+    "answer": [
+      "ac56a4bda111d9e085d1cce15e54f71425b21c41a48bec2fe6c7b61abfdfa6a0"
+    ]
+  },
+  "s08-01-threats-and-malware-s027": {
+    "script": [
+      "ae47def85449324d9243a238d40b44fcb4e08bbf35eb6045465658352555b14a"
+    ],
+    "preparation": [
+      "b2f604d3d77dc8c227a656f46774b2b639c530911e9137cd92e22f082e69585b"
+    ],
+    "questions": [
+      "7391d60a2da29850413f4df914a52a0442d6abf9abd5d76242c013ac7c9cc4fb"
+    ],
+    "answer": [
+      "ae47def85449324d9243a238d40b44fcb4e08bbf35eb6045465658352555b14a"
+    ]
+  },
+  "s08-01-threats-and-malware-s049": {
+    "script": [
+      "8651c6fade0676b3fc1d47ffe0772d1a7a3df555ed35c4fc1edacdfd759266cc"
+    ],
+    "preparation": [
+      "599b2032b4af7b5925d4518e38c2b921f204c8bfbe62bea8964021808c317b95"
+    ],
+    "questions": [
+      "6ed7f275d1595ee4fc84f1889f96a0def9804631903bbe3ef3df8a0e8fdda69b"
+    ],
+    "answer": [
+      "fa2ecf53cbadf0f95663b375df2f1f8eff8793d56a63d4f2c672a6bff75bf26d"
+    ]
+  },
+  "s08-01-threats-and-malware-s082": {
+    "script": [
+      "78a5c8cc47baed90666854690a2b67699852c89b13bf016c4e5d0c67b2e7974f"
+    ],
+    "preparation": [
+      "eea466d649ebc2ab070faf133a568a80d156363baa840f84c3f71b4703da6681"
+    ],
+    "questions": [
+      "af3688d2fd4e9c9595f882296e599bb650bcd3dd2d3882513002dc03ecdfdce9"
+    ],
+    "answer": [
+      "633cb094e0f9e7ac07db009c75f65f76b56d1287548ea627784e45b4ed467344"
+    ]
+  },
+  "s08-02-protection-controls-s001": {
+    "script": [
+      "d6a2abddf2a760208254fb83c64ee1e0b100fee37ed0acdc626eb2cf2e40c510"
+    ],
+    "preparation": [
+      "56c692feb6fd9a10d61d3082d0e38b5e643ec454fd9b3b8a9f5603debba9b019"
+    ],
+    "questions": [
+      "04a9a7a6a7e176f2d0697c90ec754c6e93935e3af6c2b3c4a2f02c5591cde385"
+    ],
+    "answer": [
+      "bc70f42565efdbdacff2bc84efa7874068bf0e4febc50c655d6b1b6822b17bce"
+    ]
+  },
+  "s08-02-protection-controls-s049": {
+    "script": [
+      "9df61dd2ec59367f1ededd1303337dc38db8abc96d8468ed2aeba067030fceda"
+    ],
+    "preparation": [
+      "6569d71dbedd08126d6c176483472829ba2582631351f3f884c33886fe20ba10"
+    ],
+    "questions": [
+      "57c5ebb53444617cf9ff8474326ce9bb3ae6a07a5af98b61b3edd2ba7b564c43"
+    ],
+    "answer": [
+      "a3e194ffc9a04bb12f777af87b2a5b49b93e76ec346571f0f703b405bf191263"
+    ]
+  },
+  "s08-02-protection-controls-s060": {
+    "script": [
+      "841e4ef9db301ccd75f36ef94954cc45e7049b05a55a77a51e90616e38cd40ca"
+    ],
+    "preparation": [
+      "9718ec4602c134b97f7e3db13e7f55d21fc2811ce0e3b247be22612a1749f9c6"
+    ],
+    "questions": [
+      "222813e619be60c30df734c397a3a8ec2fc06c9e85828b5519cc6880f83a5b54"
+    ],
+    "answer": [
+      "fb8c8e1f9e42aa79a26d6877799b94d5784e75c318af397dd2ecfb683d32e8fb"
+    ]
+  },
+  "s08-02-protection-controls-s071": {
+    "script": [
+      "38ec7c8cd35d45400a528e382548f55d91e7bf12aa74cf81d8fcecb1eec4089b"
+    ],
+    "preparation": [
+      "8d4542551dd240bb1ded66c85e05eca5de40eea591d75894f7c37d390e2fcb78"
+    ],
+    "questions": [
+      "a6a79ce0ae2dd5866051ce0884c80877ddfc6b2cf97d70ee642c1d3ba6045f9a"
+    ],
+    "answer": [
+      "fce9f8062ecb3749f77a64c3870182cc17a69e23fa791eb5dc9ab2a80055d017"
+    ]
+  },
+  "s08-03-encryption-and-security-testing-s001": {
+    "script": [
+      "d4b6be9ad2ab32cb82f07a1951705fbb55a50b080e1feb5ada03d43430f97171"
+    ],
+    "preparation": [
+      "47cefa99f62dc195fda7764d91f3320ce6f4a31d9fae5b2c36b323cd8e2ef7f6"
+    ],
+    "questions": [
+      "1b3a398785fd18d69caefd250dd1c7c79033fa050f076ab97e358dfc5e243009"
+    ],
+    "answer": [
+      "0676c5fe66f9ccdf1605da02262067ae9191a6b43c9079379c9d4d3870ae48b1"
+    ]
+  },
+  "s08-03-encryption-and-security-testing-s027": {
+    "script": [
+      "b6d687d6e73ebe75e6f0516172205a71696f88a1313721768fd0db8b247471ce"
+    ],
+    "preparation": [
+      "b8e593839628a40eec6d637767347a8430a67d546a7b9ca7166bb4bbb5f02d47"
+    ],
+    "questions": [
+      "7391d60a2da29850413f4df914a52a0442d6abf9abd5d76242c013ac7c9cc4fb"
+    ],
+    "answer": [
+      "b6d687d6e73ebe75e6f0516172205a71696f88a1313721768fd0db8b247471ce"
+    ]
+  },
+  "s08-03-encryption-and-security-testing-s060": {
+    "script": [
+      "02bb24680c1422eb4312a414a7b2744a0e8021411bde6bc94cca619b4c03436e"
+    ],
+    "preparation": [
+      "4fe6344b751654a199d7ce454632d50c2861a88e89a40bcb0e922ef53cea3557"
+    ],
+    "questions": [
+      "2c64050d8a5846042c284c10da70371f4d08b942896273d6e7e461fb7cb1c1e2"
+    ],
+    "answer": [
+      "5c3be08e56482c5ac3c76e44acf64b35a64a0bc28ee62c512ad7d6e39e28276b"
+    ]
+  },
+  "s08-03-encryption-and-security-testing-s093": {
+    "script": [
+      "ec2a39475377c005549027eaeaed9e011b3b942680a88ba7289023b1538787c1"
+    ],
+    "preparation": [
+      "32c4aab6d2ecd1d1d8346a432aa745a3d6308caefb77a8e10b8213848fc6ab75"
+    ],
+    "questions": [
+      "0c4a0407bcd78c7def2aaf0fdadd2d2f54472e6fd252b01194a1478c6081d0d4"
+    ],
+    "answer": [
+      "ec226c5ad29d78ffce7ba4ef4c256387f0090b1498bdde3f22568dc379244a11"
+    ]
+  }
+}

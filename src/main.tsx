@@ -2,11 +2,12 @@ import { createRoot } from 'react-dom/client'
 import { LectureSite, validateCourse } from '@olgakraven/lecture-engine'
 import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
-import { prepareTeacherNotes } from './teacherNotes'
+import { prepareUpdatedTeacherNotes } from './teacherNotes'
 import { NotesStatus } from './NotesStatus'
 import { migrateCompatibleSession } from './compatibility'
 import './content-fixes.css'
 import { ReliabilityLab } from './lab/ReliabilityLab'
+import { WorkshopLab } from './lab/WorkshopLab'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
@@ -15,7 +16,8 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   validateCourse(course)
   const mode = new URL(location.href).searchParams.get('mode')
   if (mode === 'lab') {
-    createRoot(document.getElementById('root')!).render(<ReliabilityLab base={import.meta.env.BASE_URL} />)
+    const workshop=new URL(location.href).searchParams.get('workshop')
+    createRoot(document.getElementById('root')!).render(workshop?<WorkshopLab base={import.meta.env.BASE_URL} id={workshop}/>:<ReliabilityLab base={import.meta.env.BASE_URL} />)
     return
   }
   const showNotesStatus = mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)
@@ -39,7 +41,7 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
     try {
       const response = await fetch(`${import.meta.env.BASE_URL}teaching/notes.json?v=${encodeURIComponent(course.contentVersion)}`, { cache: 'no-cache' })
       if (!response.ok) throw new Error('Не удалось загрузить заметки с сайта')
-      teacherNotes = prepareTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), { getItem: key => localStorage.getItem(key) })
+      teacherNotes = await prepareUpdatedTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), { getItem: key => localStorage.getItem(key) })
     } catch (error) {
       notesError = 'Не удалось получить заметки с сайта. Нажмите «Повторить загрузку».'
       console.warn('Автоматическая загрузка заметок недоступна:', error)
