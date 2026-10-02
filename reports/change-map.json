@@ -1,0 +1,6226 @@
+{
+  "previousVersion": "2.0.1-content-review-20260918",
+  "contentVersion": "2.0.2-compatible-enrichment-20261002",
+  "slides": [
+    {
+      "id": "s07-01-quality-and-failures-s001",
+      "title": "Качество функционирования и отказы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s002",
+      "title": "Надёжность и качество в эксплуатации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s012",
+      "title": "Можно ли считать каждое сообщение об ошибке отказом системы?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s013",
+      "title": "Качество функционирования",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s014",
+      "title": "Качество связывает систему с потребностями и условиями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s015",
+      "title": "Измеримый признак начинается с роли и условий эксплуатации",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s016",
+      "title": "Две секунды превращают ожидание пользователя в критерий",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s018",
+      "title": "Один общий балл скрывает разные свойства качества",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s019",
+      "title": "Объект, условие, метрика и критерий заданы вместе",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s024",
+      "title": "Зачем измерять качество",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s025",
+      "title": "Участникам нужны показатели для разных решений",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s026",
+      "title": "Показатель ценен только вместе с последующим решением",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s027",
+      "title": "Эксплуатант и владелец процесса видят разные последствия",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s029",
+      "title": "Бесполезна метрика, по которой никто не принимает решений",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s030",
+      "title": "У каждой метрики есть получатель и следующее действие",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s035",
+      "title": "Многоуровневая модель качества",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s036",
+      "title": "Качество раскрывается от характеристики до показателя",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s037",
+      "title": "От цели качества переходят к свойству и свидетельству",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s038",
+      "title": "Доступность и восстанавливаемость описывают стороны надёжности",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s040",
+      "title": "Одна метрика не описывает качество системы целиком",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s041",
+      "title": "Каждый уровень модели связан с целью и наблюдением",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s046",
+      "title": "Ошибка, дефект и отказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s047",
+      "title": "Ошибка, дефект и отказ относятся к разным уровням",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s048",
+      "title": "Категорию определяют по месту проявления и доказательствам",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s049",
+      "title": "Неверная проверка превращает дефект в отказ операции",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s051",
+      "title": "Строка Error сама по себе ещё не означает отказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s052",
+      "title": "Факт обосновывает категорию, гипотеза — причинную связь",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s057",
+      "title": "Первичные и вторичные ошибки",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s058",
+      "title": "Вторичные ошибки возникают вслед за первичным нарушением",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s059",
+      "title": "Время события ещё не доказывает причинную связь",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s060",
+      "title": "Повреждённая конфигурация запускает ошибки зависимого модуля",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s062",
+      "title": "Первая запись по времени не всегда является первопричиной",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s063",
+      "title": "Причинность подтверждают состояние, корреляция и повторение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s068",
+      "title": "Проявление ошибок в эксплуатации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s069",
+      "title": "Скрытая ошибка зависит от данных, нагрузки и среды",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s070",
+      "title": "Условия активации важны не меньше самого результата",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s071",
+      "title": "Граница диапазона проявляет ошибку на предельном значении",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s073",
+      "title": "Исправление симптома стирает условия возникновения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s074",
+      "title": "Сценарий воспроизводится на синтетических данных",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s079",
+      "title": "Сбор и классификация событий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s080",
+      "title": "Единая запись превращает события в сопоставимые данные",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s081",
+      "title": "Минимальная запись сохраняет контекст и доказательство",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s082",
+      "title": "Сообщения группируют по операции с сохранением исходных записей",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s084",
+      "title": "Категории нельзя менять без истории решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s085",
+      "title": "Опубликованное правило даёт одинаковую классификацию",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s090",
+      "title": "Интерпретация статистики",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s091",
+      "title": "Распределение событий описывает картину, но не причины",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s092",
+      "title": "Статистике нужны период, объём и правило группировки",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s093",
+      "title": "Частоты событий читают вместе с числом операций",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s095",
+      "title": "Абсолютные числа несопоставимы при разной нагрузке",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s096",
+      "title": "Вывод указывает знаменатель, границы и уверенность",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-01-quality-and-failures-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s001",
+      "title": "Расчёт показателей надёжности",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s002",
+      "title": "Надёжность и качество в эксплуатации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s012",
+      "title": "Достаточно ли сообщить итоговый процент готовности без исходных значений и единиц?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s013",
+      "title": "Исходные данные",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s014",
+      "title": "Расчёту нужны период, наработка, отказы и восстановления",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s015",
+      "title": "Полноту журнала проверяют до вычислений",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s016",
+      "title": "120 часов и три отказа относятся к одному стенду",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s018",
+      "title": "Разные системы нельзя складывать без нормализации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s019",
+      "title": "Все строки имеют общую совокупность и временные границы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s024",
+      "title": "Наработка на отказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s025",
+      "title": "MTBF показывает среднюю наработку на учтённый отказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s026",
+      "title": "Формула T/N применима при N > 0 и определённом T",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s027",
+      "title": "120 часов и три отказа дают MTBF 40 часов",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s029",
+      "title": "Среднее время не гарантирует интервал без отказа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s030",
+      "title": "Обратный расчёт возвращает исходную наработку",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s035",
+      "title": "Среднее время восстановления",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s036",
+      "title": "MTTR усредняет длительность завершённых восстановлений",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s037",
+      "title": "Единое правило задаёт границы каждого восстановления",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s038",
+      "title": "Шесть часов на три случая дают MTTR два часа",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s040",
+      "title": "Календарный простой и активная работа — не одно и то же",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s041",
+      "title": "Сумма времени и число случаев совпадают с журналом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s043",
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s046",
+      "title": "Подготовка журнала",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s047",
+      "title": "Чистый журнал исключает дубли и пересечения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s048",
+      "title": "События связывают с отказами до расчёта интервалов",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s049",
+      "title": "Повторные уведомления получают один номер инцидента",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s051",
+      "title": "Спорные записи нельзя удалять без объяснения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s052",
+      "title": "Каждая строка расчёта ведёт к исходному событию",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s057",
+      "title": "Коэффициент готовности",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s058",
+      "title": "Готовность связывает среднее время работы и восстановления",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s059",
+      "title": "В формуле готовности используются одинаковые единицы",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s060",
+      "title": "MTBF 40 ч и MTTR 2 ч дают готовность 95,24 %",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s062",
+      "title": "Раннее округление и смешение единиц искажают расчёт",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s063",
+      "title": "Готовность воспроизводится и лежит в диапазоне от 0 до 1",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s065",
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s068",
+      "title": "Единицы и период",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s069",
+      "title": "Единица и период ограничивают смысл показателя",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s070",
+      "title": "Все интервалы приводятся к одной единице заранее",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s071",
+      "title": "360 минут превращаются в шесть часов до расчёта",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s073",
+      "title": "Минуты и часы нельзя подставлять в одну формулу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s074",
+      "title": "Размерность и период наблюдения подписаны явно",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s076",
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s079",
+      "title": "Сопоставление с требованием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s080",
+      "title": "Соответствие определяется сравнением с заданным порогом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s081",
+      "title": "Порог и оператор фиксируются до округления",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s082",
+      "title": "0,9524 выполняет требование не ниже 0,95",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s084",
+      "title": "Точность нельзя менять ради нужного результата",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s085",
+      "title": "Сравнение показывает порог, значение и оператор",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s090",
+      "title": "Ошибки вывода",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s091",
+      "title": "Дубли, пропуски и малая выборка искажают показатели",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s092",
+      "title": "Итог требует арифметической и смысловой проверки",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s093",
+      "title": "Незакрытый простой делает оценку MTTR предварительной",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s095",
+      "title": "Короткий период не подтверждает устойчивую характеристику",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s096",
+      "title": "Независимый пересчёт совпадает, ограничения перечислены",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s001",
+      "title": "Угрозы надёжности и их предотвращение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s002",
+      "title": "Надёжность и качество в эксплуатации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s012",
+      "title": "Всегда ли дополнительная копия или повтор операции повышают надёжность?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s013",
+      "title": "Дестабилизирующий фактор",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s014",
+      "title": "Дестабилизирующий фактор способен нарушить функцию",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s015",
+      "title": "Фактор описывают через источник, объект и механизм",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s016",
+      "title": "Обрыв связи угрожает согласованности операции записи",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s018",
+      "title": "Нежелательное событие без механизма ещё не угроза",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s019",
+      "title": "Фактор связан с конкретной функцией и отказом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s024",
+      "title": "Причинно-следственная цепочка",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s025",
+      "title": "Цепочка ведёт от фактора к наблюдаемому отказу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s026",
+      "title": "Каждый переход требует наблюдения или проверяемой гипотезы",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s027",
+      "title": "Повреждённая строка останавливает импорт через исключение",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s029",
+      "title": "Корреляция не превращается в доказанную причину",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s030",
+      "title": "У каждого перехода есть способ проверки",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s035",
+      "title": "Контроль входных данных",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s036",
+      "title": "Валидация отсекает форматные и логические нарушения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s037",
+      "title": "Вход проверяется до изменения состояния системы",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s038",
+      "title": "Пустой идентификатор отклоняется до записи",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s040",
+      "title": "Молчаливое исправление скрывает неверный ввод",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s041",
+      "title": "Некорректные данные не меняют состояние и оставляют запись",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s046",
+      "title": "Проверка состояния",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s047",
+      "title": "Предусловия показывают, готова ли система к операции",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s048",
+      "title": "Состояние проверяется как можно ближе к действию",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s049",
+      "title": "Импорт начинается после проверки каталога и свободного места",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s051",
+      "title": "Одной проверки при запуске недостаточно",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s052",
+      "title": "Нарушение предусловия останавливает операцию или ведёт к откату",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s057",
+      "title": "Ограничение последствий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s058",
+      "title": "Изоляция уменьшает последствия, но не устраняет причину",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s059",
+      "title": "Сначала задают допустимый ущерб и границу изоляции",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s060",
+      "title": "Ошибочная строка уходит в карантин без остановки остальных",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s062",
+      "title": "Продолжение любой ценой скрывает частичный результат",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s063",
+      "title": "После отказа ясно, что выполнено, отменено и ждёт повтора",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s068",
+      "title": "Временная избыточность",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s069",
+      "title": "Повтор расходует время ради преодоления краткого сбоя",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s070",
+      "title": "Безопасный повтор ограничен и учитывает идемпотентность",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s071",
+      "title": "Чтение повторяется один раз после сбоя связи",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s073",
+      "title": "Бесконечный повтор неидемпотентной записи создаёт риск",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s074",
+      "title": "Попытки ограничены, дубли отсутствуют, причина сохранена",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s079",
+      "title": "Информационная и программная избыточность",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s080",
+      "title": "Контрольные данные выявляют искажение, реализация сверяет итог",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s081",
+      "title": "Копия той же ошибки не создаёт независимости",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s082",
+      "title": "Хэш выявляет изменение, но не делает копии независимыми",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s084",
+      "title": "Второй файл на том же носителе не становится резервом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s085",
+      "title": "Для меры названы обнаруживаемые и неподконтрольные случаи",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s090",
+      "title": "Цена избыточности",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s091",
+      "title": "Избыточность добавляет ресурсы, сложность и новые отказы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s092",
+      "title": "Снижение риска сравнивают с полной стоимостью меры",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s093",
+      "title": "Повтор повышает нагрузку и требует защиты от дублей",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s095",
+      "title": "Большее число копий не всегда повышает надёжность",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s096",
+      "title": "Решение фиксирует выигрыш, цену и условие пересмотра",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s001",
+      "title": "Наблюдение за работающей системой",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s002",
+      "title": "Надёжность и качество в эксплуатации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s012",
+      "title": "Доказывает ли одновременный рост загрузки и появление ошибки, что загрузка стала причиной отказа?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s013",
+      "title": "События журнала",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s014",
+      "title": "Журнал сохраняет дискретные факты и их контекст",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s015",
+      "title": "В журнал попадают нужные события — не секреты",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s016",
+      "title": "Начало, корреляция и результат связывают операцию",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s018",
+      "title": "Пароли и полный ввод пользователя журналу не нужны",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s019",
+      "title": "Запись восстанавливает сценарий и не раскрывает секреты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s024",
+      "title": "Счётчики и записи",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s025",
+      "title": "Счётчик показывает динамику, журнал — отдельное событие",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s026",
+      "title": "Формат данных выбирают под вопрос анализа",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s027",
+      "title": "Ряд времени ответа дополняют событиями журнала",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s029",
+      "title": "Одно накопленное число не заменяет подробный журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s030",
+      "title": "Наблюдение должно показывать и динамику, и отклонения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s035",
+      "title": "Показатели загрузки",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s036",
+      "title": "Загрузка ресурсов имеет смысл только в контексте функции",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s037",
+      "title": "Сначала задают норму и ограничение ресурса",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s038",
+      "title": "Рост очереди при стабильном CPU ещё не объясняет причину",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s040",
+      "title": "Не каждый пик загрузки является отказом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s041",
+      "title": "Показатель связывают со временем ответа и режимом нагрузки",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s046",
+      "title": "Постоянный контроль",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s047",
+      "title": "Постоянный контроль заранее предупреждает значимый риск",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s048",
+      "title": "У сигнала есть порог, окно, подтверждение и ответственный",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s049",
+      "title": "Тренд свободного места предупреждает о критической границе",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s051",
+      "title": "Контроль всех доступных показателей создаёт шум",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s052",
+      "title": "Полезный сигнал однозначен и ведёт к понятной реакции",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s057",
+      "title": "Предотказное состояние",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s058",
+      "title": "Предотказное состояние — ухудшение до наступления отказа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s059",
+      "title": "Динамика и сочетание признаков важнее одной точки",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s060",
+      "title": "Рост очереди и задержки обосновывает раннее предупреждение",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s062",
+      "title": "Одно предупреждение журнала ещё не означает предотказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s063",
+      "title": "Правило проверяют на истории и ложных срабатываниях",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s068",
+      "title": "Анализ без ложной причинности",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s069",
+      "title": "Совпадение событий создаёт гипотезу, а не доказательство",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s070",
+      "title": "Причину проверяют порядком, механизмом, альтернативами и повтором",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s071",
+      "title": "Повтор связал ошибку с повреждённым файлом, а не с CPU",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s073",
+      "title": "Самый заметный график не доказывает корневую причину",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s074",
+      "title": "Наблюдение, гипотеза и подтверждение записываются раздельно",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s079",
+      "title": "Реестр рисков",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s080",
+      "title": "Реестр связывает риск, владельца, меру и остаточный риск",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s081",
+      "title": "Единая шкала делает оценки сопоставимыми",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s082",
+      "title": "Риск заполнения диска требует сигнала и плана освобождения",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s084",
+      "title": "Недостаточно записать риск без действия и ответственного",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s085",
+      "title": "Приоритетный риск должен приводить к контролируемой мере",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s090",
+      "title": "Модуль адаптации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s091",
+      "title": "Адаптация меняет режим работы и добавляет сложность",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s092",
+      "title": "Разработка оправдана выгодой, повторяемостью и обратимостью",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s093",
+      "title": "При переполнении очереди приём задач временно ограничивается",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s095",
+      "title": "Шумный одиночный сигнал не должен менять параметры",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s096",
+      "title": "У адаптации есть условия, пределы, журнал и возврат в норму",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s001",
+      "title": "Угрозы и вредоносные программы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s002",
+      "title": "Защита компьютерных систем",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s012",
+      "title": "Является ли уязвимость уже произошедшей угрозой или инцидентом?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s013",
+      "title": "Угроза компьютерной системе",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s014",
+      "title": "Угроза — потенциальная причина воздействия, а не отказ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s015",
+      "title": "Сценарий связывает источник, возможность, актив и последствие",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s016",
+      "title": "Внешний отправитель может передать опасный файл",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s018",
+      "title": "Угроза, уязвимость, событие и инцидент — разные понятия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s019",
+      "title": "Карточка называет актив, источник, путь и последствие",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s024",
+      "title": "Классификация угроз",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s025",
+      "title": "Угрозы группируют по источнику, намерению и воздействию",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s026",
+      "title": "Один сценарий допускает несколько независимых признаков",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s027",
+      "title": "Границы доверия связывают риск с контролем",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s029",
+      "title": "Классификационная метка не является мерой защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s030",
+      "title": "Категория должна вести к проверяемым сценариям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s035",
+      "title": "Источники угроз",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s036",
+      "title": "Источник угрозы не всегда действует умышленно",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s037",
+      "title": "Источник описывают через доступ, знания и путь воздействия",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s038",
+      "title": "Ошибка оператора и внешний нарушитель создают разные сценарии",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s040",
+      "title": "Не каждый пользователь является нарушителем",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s041",
+      "title": "Возможности и ограничения источника требуют обоснования",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s046",
+      "title": "Модель нарушителя",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s047",
+      "title": "Модель нарушителя описывает доступ, знания, ресурсы и цели",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s048",
+      "title": "В модель входят только нужные сценарию характеристики",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s049",
+      "title": "Публичная форма доступна без локальной учётной записи",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s051",
+      "title": "Возможности нарушителя должны соответствовать архитектуре",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s052",
+      "title": "Профиль связывается со сценарием и границей доверия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s057",
+      "title": "Модель угроз как документ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s058",
+      "title": "Модель угроз фиксирует область, активы, сценарии и меры",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s059",
+      "title": "Версия модели должна соответствовать версии системы",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s060",
+      "title": "Новый канал загрузки меняет набор входных сценариев",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s062",
+      "title": "Список угроз без границ и предположений неполон",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s063",
+      "title": "Область модели должна быть понятна другому участнику",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s068",
+      "title": "Классы вредоносных программ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s069",
+      "title": "Класс описывает поведение и способ распространения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s070",
+      "title": "Наблюдаемые свойства важнее названия файла",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s071",
+      "title": "Самораспространение и изменение данных отмечают отдельно",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s073",
+      "title": "Расширение файла не определяет класс программы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s074",
+      "title": "Категория подтверждается описанными действиями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s079",
+      "title": "Пути проникновения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s080",
+      "title": "Путь проникновения соединяет канал доставки и условие запуска",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s081",
+      "title": "Для каждого входа проверяют источник, права и обработчик",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s082",
+      "title": "Файл проверяют до открытия в изолированной среде",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s084",
+      "title": "Почта — не единственный путь: есть обновления и носители",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s085",
+      "title": "Все входы системы должны иметь контроль",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s090",
+      "title": "Безопасное обнаружение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s091",
+      "title": "Обнаружение опирается на сигналы, хэши и журналы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s092",
+      "title": "Проверка исключает действующий вредоносный код",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s093",
+      "title": "Изолированный стенд использует безопасный сценарий",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s095",
+      "title": "Ради демонстрации нельзя отключать или обходить защиту",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s096",
+      "title": "Безопасный результат воспроизводим и удаляется по регламенту",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s001",
+      "title": "Средства защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s002",
+      "title": "Защита компьютерных систем",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s012",
+      "title": "Доказывает ли наличие установленного средства защиты, что нужный сценарий действительно контролируется?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s013",
+      "title": "Компоненты антивирусной защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s014",
+      "title": "Антивирусная защита объединяет взаимосвязанные функции",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s015",
+      "title": "Название продукта не подтверждает состояние его функций",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s016",
+      "title": "Defender оценивают по документированным компонентам",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s018",
+      "title": "Один успешный скан не доказывает полной защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s019",
+      "title": "Каждый заявленный компонент подтверждён статусом и тестом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s024",
+      "title": "Режимы работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s025",
+      "title": "Постоянная, ручная и плановая проверки решают разные задачи",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s026",
+      "title": "Режим и момент срабатывания задают смысл результата",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s027",
+      "title": "Файл и каталог проверяются в разных режимах",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s029",
+      "title": "Ручное сканирование нельзя смешивать с постоянной защитой",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s030",
+      "title": "Для режима фиксируют триггер, охват и запись в журнале",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s035",
+      "title": "Сравнение средств",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s036",
+      "title": "Сравнение требует одной среды и единых критериев",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s037",
+      "title": "Критерии и их веса определяют до испытаний",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s038",
+      "title": "Средства A и B: сравнение результатов в одной среде",
+      "changedFields": [
+        "title",
+        "body",
+        "columns",
+        "rows"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s040",
+      "title": "Рекламные списки функций не заменяют испытания",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s041",
+      "title": "Повтор процедуры должен давать сопоставимые данные",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s046",
+      "title": "Назначение сетевого экрана",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s047",
+      "title": "Сетевой экран управляет потоками по признакам и направлению",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s048",
+      "title": "Каждое правило выводится из разрешённого потока и угроз",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s049",
+      "title": "Тестовый порт открыт только для лабораторной подсети",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s051",
+      "title": "Сетевой экран не всегда анализирует содержимое приложения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s052",
+      "title": "Разрешённое проходит, запрещённое отклоняется",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s057",
+      "title": "Проектирование правил",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s058",
+      "title": "Правило описывает все признаки сетевого потока",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s059",
+      "title": "Минимальная область учитывает профиль и приоритет",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s060",
+      "title": "Одна программа получает один порт в профиле Private",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s062",
+      "title": "Широкое разрешение «для проверки» нельзя оставлять",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s063",
+      "title": "Правило сверяется со схемой потока и планом возврата",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s068",
+      "title": "Аутентификация и полномочия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s069",
+      "title": "Вход в систему не означает право на каждый ресурс",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s070",
+      "title": "Аутентификацию проверяют отдельно от полномочий",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s071",
+      "title": "Оператор входит без получения прав администратора",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s073",
+      "title": "Общая учётная запись не связывает действие с субъектом",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s074",
+      "title": "Действия связаны с конкретной записью и ролью",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s079",
+      "title": "Парольная политика",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s080",
+      "title": "Политика задаёт создание, использование и защиту секретов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s081",
+      "title": "Действие правила проверяют на тестовых учётных записях",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s082",
+      "title": "Слабый синтетический пароль должен быть отклонён",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s084",
+      "title": "Реальные пароли не входят в протокол проверки",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s085",
+      "title": "Протокол хранит правило и результат, но не пароль",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s090",
+      "title": "Минимально необходимые права",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s091",
+      "title": "Роль получает только необходимые действия и ресурсы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s092",
+      "title": "Модель прав начинается с запрета, а не с разрешения",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s093",
+      "title": "Наблюдатель читает отчёт, но не меняет настройки",
+      "changedFields": [
+        "kicker",
+        "body",
+        "bullets",
+        "columns",
+        "rows"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s095",
+      "title": "Права администратора нельзя копировать ради удобства",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s096",
+      "title": "Разрешённое выполняется, лишнее отклоняется без последствий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-02-protection-controls-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-02-protection-controls-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s001",
+      "title": "Шифрование и проверка защищённости",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s003",
+      "title": "Основная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s004",
+      "title": "Дополнительная литература",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s005",
+      "title": "Материалы к занятиям",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s009",
+      "title": "Вопросы темы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s002",
+      "title": "Защита компьютерных систем",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s006",
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s007",
+      "title": "К концу занятия у вас будет рабочее решение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s008",
+      "title": "От исходной ситуации — к доказанному выводу",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s010",
+      "title": "Практика проходит только в разрешённой среде",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s011",
+      "title": "Конспект строим по связям, а не по числу страниц",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s012",
+      "title": "Можно ли доказать защищённость данных только тем, что файл или соединение помечены как зашифрованные?",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s013",
+      "title": "Задача шифрования",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s014",
+      "title": "Шифрование снижает риск раскрытия, но не решает всё",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s015",
+      "title": "Сценарий задают данные, состояние, противник и расшифрование",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s016",
+      "title": "Файл защищают от чтения при утрате учебного носителя",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s017",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s018",
+      "title": "Шифрование не предотвращает любые изменения и удаление",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s019",
+      "title": "Актив, состояние, ключ и граница защиты указаны явно",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s020",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s023",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s021",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s022",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s024",
+      "title": "Хранение и передача",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s025",
+      "title": "Хранение защищает носитель, передача — канал и стороны",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s026",
+      "title": "Каждому состоянию нужны свои средство, ключи и проверка",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s027",
+      "title": "BitLocker защищает том, TLS — соединение",
+      "changedFields": [
+        "body",
+        "columns",
+        "rows"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s028",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s029",
+      "title": "Шифрование диска не заменяет защиту после входа и в канале",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s030",
+      "title": "Носитель и соединение подтверждаются отдельными тестами",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s031",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s034",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s032",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s033",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s035",
+      "title": "Алгоритм, протокол, ключ и средство",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s036",
+      "title": "Алгоритм, протокол, ключ и средство выполняют разные роли",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s037",
+      "title": "Отчёт фиксирует уровень утверждения и версию реализации",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s038",
+      "title": "Заполненная техническая карта защищённого обмена",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets",
+        "columns",
+        "rows"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s039",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s040",
+      "title": "Название алгоритма не описывает весь сценарий защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s041",
+      "title": "Роль элемента подтверждается источником документации",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s042",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s045",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s043",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s044",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s046",
+      "title": "Управление учебными ключами",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s047",
+      "title": "Ключ проходит создание, хранение, смену и уничтожение",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s048",
+      "title": "Секреты не попадают в код, снимки экрана, журналы и PDF",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s049",
+      "title": "В отчёте сохраняют идентификатор, а не значение ключа",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s050",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s051",
+      "title": "Паролю и закрытому ключу не место в репозитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s052",
+      "title": "Поиск по комплекту не должен находить действующие секреты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s053",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s056",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s054",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s055",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s057",
+      "title": "Проверка результата",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s058",
+      "title": "Проверка сочетает отказ без полномочий и восстановление с ними",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s059",
+      "title": "Синтетические данные, хэш и тест отказа дают доказательства",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s060",
+      "title": "Совпавший хэш подтверждает корректное восстановление",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s061",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s062",
+      "title": "Новое расширение файла ещё не доказывает шифрование",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s063",
+      "title": "Нужны позитивный, негативный тесты и контроль целостности",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s064",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s067",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s065",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s066",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s068",
+      "title": "Набор проверок защиты",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s069",
+      "title": "Набор тестов выводится из требований, угроз и границ",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s070",
+      "title": "Условие, шаги, ожидание и возврат делают тест проверяемым",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s071",
+      "title": "Доступ, отказ лишней роли и соединение проверяют отдельно",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s072",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s073",
+      "title": "Случайный набор инструментов не заменяет критерии",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s074",
+      "title": "Критичные требования покрыты без лишних действий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s075",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s078",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s076",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s077",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s079",
+      "title": "Проверка по регламенту",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s080",
+      "title": "Регламент задаёт область, полномочия, остановку и доказательства",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s081",
+      "title": "Непредвиденное воздействие требует остановки проверки",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s082",
+      "title": "Проверка идёт на снимке стенда с синтетическими данными",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s083",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s084",
+      "title": "Производственный ресурс нельзя проверять без разрешения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s085",
+      "title": "Границы соблюдены, исходное состояние восстановлено",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s086",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s089",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s087",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s088",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s090",
+      "title": "Заключение и меры",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s091",
+      "title": "Заключение разделяет наблюдение, критерий, риск и действие",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s092",
+      "title": "Мера получает владельца, срок и повторный тест",
+      "changedFields": [
+        "visual"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s093",
+      "title": "Лишнее право ведёт к корректировке роли и повторному тесту",
+      "changedFields": [
+        "kicker",
+        "body"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s094",
+      "title": "Проверим вывод при изменении условия",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s095",
+      "title": "Ограниченные тесты не доказывают полную защищённость",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s096",
+      "title": "Вывод ограничен областью и подтверждён свидетельством",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s097",
+      "title": "Примените правило к ситуации",
+      "changedFields": [
+        "title",
+        "task"
+      ],
+      "notebook": "Сохранён",
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s100",
+      "title": "Выберите два ответа",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s098",
+      "title": "Восстановите слово",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s099",
+      "title": "Установите соответствия",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s101",
+      "title": "Сначала оформите паспорт работы",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s102",
+      "title": "Соберите исходные данные без домыслов",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s103",
+      "title": "Назначьте критерий до выполнения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s104",
+      "title": "Выполняйте действие и ведите журнал",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s105",
+      "title": "Добавьте граничный или негативный сценарий",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s106",
+      "title": "Разберите отклонение, а не скрывайте его",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s107",
+      "title": "Сопоставьте свидетельство с критерием",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s108",
+      "title": "Завершите отчёт выводом и ограничениями",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s109",
+      "title": "Первые четыре опоры собираются в единую модель",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s110",
+      "title": "Последние четыре опоры задают границы решения",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s112",
+      "title": "Вопросы от аудитории",
+      "changedFields": [],
+      "notebook": "Сохранён",
+      "action": "Без изменений"
+    }
+  ]
+}

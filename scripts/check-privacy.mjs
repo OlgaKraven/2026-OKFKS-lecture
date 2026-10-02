@@ -25,10 +25,12 @@ for (const note of Object.values(published.notes)) {
   assert.ok(!bundle.includes(note.script) && !bundle.includes(JSON.stringify(note.script).slice(1, -1)), 'Teacher script embedded outside the published notes resource')
 }
 const packFiles = await fs.readdir('private').catch(() => [])
+const compatibility = JSON.parse(await fs.readFile('dist/teaching/compatibility.json', 'utf8'))
 let checked = 0
 for (const file of packFiles.filter(f => /^teacher-pack.*\.json$/.test(f))) {
   const pack = JSON.parse(await fs.readFile(path.join('private', file), 'utf8'))
-  assert.equal(pack.courseId, course.id); assert.equal(pack.contentVersion, course.contentVersion)
+  assert.equal(pack.courseId, course.id)
+  assert.ok([course.contentVersion, compatibility.previousVersion].includes(pack.contentVersion), 'Unrecognized private pack version')
   for (const note of Object.values(pack.notes)) {
     assert.ok(!bundle.includes(note.script) && !bundle.includes(JSON.stringify(note.script).slice(1, -1)), 'Private script leaked into dist')
     checked++

@@ -1,0 +1,12 @@
+/* Keep all cells visible on small screens; printing retains normal tables. */
+@media screen {
+  .slide-copy .comparison-table { width: 100%; table-layout: fixed; }
+  .slide-copy .comparison-table th, .slide-copy .comparison-table td {
+    overflow-wrap: anywhere; word-break: normal;
+  }
+}
+@media screen and (max-width: 640px) {
+  .slide-copy .comparison-table th, .slide-copy .comparison-table td { padding: 10px 7px; }
+}
+.notes-status { flex-wrap: wrap; }
+.notes-status a { color: inherit; text-underline-offset: 3px; }
