@@ -2048,7 +2048,11 @@
           "id": "s07-02-reliability-metrics-s001",
           "kind": "title",
           "title": "Расчёт показателей надёжности",
-          "kicker": "МДК.04.02 Обеспечение качества функционирования компьютерных систем · 7-й семестр"
+          "kicker": "МДК.04.02 Обеспечение качества функционирования компьютерных систем · 7-й семестр",
+          "supplement": {
+            "label": "Интерактивное дополнение",
+            "href": "?mode=lab&activity=timeline&originSlide=s07-02-reliability-metrics-s001"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s003",
@@ -2074,7 +2078,11 @@
           "id": "s07-02-reliability-metrics-s009",
           "kind": "agenda",
           "title": "Вопросы темы",
-          "kicker": "Карта темы"
+          "kicker": "Карта темы",
+          "supplement": {
+            "label": "Интерактивное дополнение",
+            "href": "?mode=lab&activity=timeline&originSlide=s07-02-reliability-metrics-s009"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s002",
@@ -2409,7 +2417,11 @@
             "Суммируем 20 + 50 + 50 = 120 ч. Делим на N = 3: MTBF = 40 ч. Обратная проверка: 40 × 3 = 120 ч.",
             "Средняя наработка равна 40 ч на отказ. Фактический первый интервал 20 ч уже показывает, почему это не гарантия."
           ],
-          "source": "Авторский учебный разбор · МДК.04.02"
+          "source": "Авторский учебный разбор · МДК.04.02",
+          "supplement": {
+            "label": "Интерактив: лента",
+            "href": "?mode=lab&activity=timeline&originSlide=s07-02-reliability-metrics-s027"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s028",
@@ -2622,7 +2634,11 @@
             "Сумма R = 1 + 2 + 3 = 6 ч. Число завершённых случаев равно 3. MTTR = 6/3 = 2 ч.",
             "Среднее восстановление равно двум часам при принятом определении границ. Один незаконченный случай учитывают отдельно."
           ],
-          "source": "Авторский учебный разбор · МДК.04.02"
+          "source": "Авторский учебный разбор · МДК.04.02",
+          "supplement": {
+            "label": "Интерактив: лента",
+            "href": "?mode=lab&activity=timeline&originSlide=s07-02-reliability-metrics-s038"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s039",
@@ -3060,7 +3076,11 @@
             ],
             "caption": "40/(40+2) ≈ 0,9524, или 95,24 % после округления. Учебные данные. 40 / (40 + 2) ≈ 0,9524. Учебное требование выполнено на выбранном периоде."
           },
-          "source": "Авторский учебный разбор · МДК.04.02"
+          "source": "Авторский учебный разбор · МДК.04.02",
+          "supplement": {
+            "label": "Интерактив: симулятор",
+            "href": "?mode=lab&activity=simulator&originSlide=s07-02-reliability-metrics-s060"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s061",
@@ -3273,7 +3293,11 @@
             "360/60 = 6 ч. Среднее восстановление при трёх случаях: 6/3 = 2 ч. Теперь обе величины в формуле готовности выражены в часах.",
             "В ведомости оставляем исходные 360 мин и приведённые 6 ч, чтобы преобразование можно было проверить."
           ],
-          "source": "Авторский учебный разбор · МДК.04.02"
+          "source": "Авторский учебный разбор · МДК.04.02",
+          "supplement": {
+            "label": "Интерактив: найди ошибку",
+            "href": "?mode=lab&activity=game&originSlide=s07-02-reliability-metrics-s071"
+          }
         },
         {
           "id": "s07-02-reliability-metrics-s072",
@@ -12048,7 +12072,11 @@
           "id": "s08-03-encryption-and-security-testing-s009",
           "kind": "agenda",
           "title": "Вопросы темы",
-          "kicker": "Карта темы"
+          "kicker": "Карта темы",
+          "supplement": {
+            "label": "Маршрут на 90 минут",
+            "href": "teaching/route.html"
+          }
         },
         {
           "id": "s08-03-encryption-and-security-testing-s002",

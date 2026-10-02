@@ -13,7 +13,12 @@ const activities = [
   { id:'game', title:'Найди ошибку', subtitle:'Обосновать решение', icon:Search, slide:'s071' },
 ] as const
 const format = (n:number, digits=2) => n.toLocaleString('ru-RU',{maximumFractionDigits:digits})
-const lessonLink = (base:string, slide:string) => `${base}?lecture=${lecture}&slide=${lecture}-${slide}`
+const lessonLink = (base:string, slide:string) => {
+  const origin=new URL(location.href).searchParams.get('originSlide') || ''
+  const number=Number(origin.slice(-3))
+  const valid=origin.startsWith(`${lecture}-s`) && /^\d{3}$/.test(origin.slice(lecture.length+2)) && number>=1 && number<=112
+  return `${base}?${new URLSearchParams({lecture,slide:valid?origin:`${lecture}-${slide}`})}`
+}
 const storageKey='okfks:reliability-workshop:pilot-1'
 
 function Timeline({ cycles, active, onSelect }: { cycles:Cycle[]; active:number; onSelect:(n:number)=>void }) {
