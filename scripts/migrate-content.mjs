@@ -201,6 +201,8 @@ for (let ti = 0; ti < topics.length; ti++) {
 const { addReliabilityPilotNotes, addReliabilityPilotLinks } = await import('../authoring/reliability-pilot.mjs')
 addReliabilityPilotNotes(pack)
 addReliabilityPilotLinks(course)
+const { addWorkshops } = await import('../authoring/workshop-integration.mjs')
+await addWorkshops(course, pack)
 async function json(file, data) { await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n') }
 await json('public/course.json', course)
 await json('public/assessment.json', bank)

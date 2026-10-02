@@ -5,9 +5,11 @@
     {
       "id": "s07-01-quality-and-failures-s001",
       "title": "Качество функционирования и отказы",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s003",
@@ -384,7 +386,8 @@
       "title": "Неверная проверка превращает дефект в отказ операции",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -564,7 +567,8 @@
       "title": "Граница диапазона проявляет ошибку на предельном значении",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -654,7 +658,8 @@
       "title": "Сообщения группируют по операции с сохранением исходных записей",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -1793,9 +1798,11 @@
     {
       "id": "s07-03-reliability-threats-prevention-s001",
       "title": "Угрозы надёжности и их предотвращение",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s003",
@@ -1992,7 +1999,8 @@
       "title": "Повреждённая строка останавливает импорт через исключение",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -2259,7 +2267,8 @@
       "title": "Ошибочная строка уходит в карантин без остановки остальных",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -2529,7 +2538,8 @@
       "title": "Повтор повышает нагрузку и требует защиты от дублей",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -2678,9 +2688,11 @@
     {
       "id": "s07-04-observing-operating-system-s001",
       "title": "Наблюдение за работающей системой",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s003",
@@ -2875,9 +2887,11 @@
     {
       "id": "s07-04-observing-operating-system-s027",
       "title": "Ряд времени ответа дополняют событиями журнала",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s028",
@@ -2964,7 +2978,8 @@
       "title": "Рост очереди при стабильном CPU ещё не объясняет причину",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -3234,7 +3249,8 @@
       "title": "Повтор связал ошибку с повреждённым файлом, а не с CPU",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -3563,9 +3579,11 @@
     {
       "id": "s08-01-threats-and-malware-s001",
       "title": "Угрозы и вредоносные программы",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s003",
@@ -3760,9 +3778,11 @@
     {
       "id": "s08-01-threats-and-malware-s027",
       "title": "Границы доверия связывают риск с контролем",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s028",
@@ -3939,7 +3959,8 @@
       "title": "Публичная форма доступна без локальной учётной записи",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -4209,7 +4230,8 @@
       "title": "Файл проверяют до открытия в изолированной среде",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -4448,9 +4470,11 @@
     {
       "id": "s08-02-protection-controls-s001",
       "title": "Средства защиты",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s003",
@@ -4829,7 +4853,8 @@
       "title": "Тестовый порт открыт только для лабораторной подсети",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -4919,7 +4944,8 @@
       "title": "Одна программа получает один порт в профиле Private",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -5009,7 +5035,8 @@
       "title": "Оператор входит без получения прав администратора",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -5341,9 +5368,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s001",
       "title": "Шифрование и проверка защищённости",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s003",
@@ -5543,7 +5572,8 @@
       "changedFields": [
         "body",
         "columns",
-        "rows"
+        "rows",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -5817,7 +5847,8 @@
       "title": "Совпавший хэш подтверждает корректное восстановление",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -6087,7 +6118,8 @@
       "title": "Лишнее право ведёт к корректировке роли и повторному тесту",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"

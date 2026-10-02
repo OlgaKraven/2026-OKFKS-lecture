@@ -4,6 +4,7 @@ import { calculateReliability, referenceCycles, segments, mistakes, freshState, 
 import type { Cycle, LabState } from './reliability'
 import '@olgakraven/lecture-engine/style.css'
 import './reliability-project.css'
+import { WorkshopDirectory } from './WorkshopDirectory'
 
 const lecture='s07-02-reliability-metrics'
 type ActivityId = 'timeline' | 'simulator' | 'game'
@@ -107,6 +108,7 @@ export function ReliabilityLab({base, assets}:{base:string;assets?:{logo:string;
       <footer className="slide-footer"><span>Авторский учебный разбор · МДК.04.02</span><span>Мастерская надёжности</span></footer>
     </article>
     <footer className="lab-footer"><span>Пилот · Только учебные данные · Прогресс на этом устройстве</span><button type="button" onClick={reset}><RotateCcw size={16}/> Начать мастерскую заново</button></footer>
+    <WorkshopDirectory base={base}/>
     <section className="lab-print"><h1>Мастерская надёжности · Тема 2</h1><h2>1. Журнал: пример лекции</h2><table><thead><tr><th>Цикл</th><th>Работа, ч</th><th>Восстановление, ч</th></tr></thead><tbody>{referenceCycles.map((c,i)=><tr key={i}><td>{i+1}</td><td>{c.work}</td><td>{c.repair}</td></tr>)}</tbody></table><p>T = 120 ч, R = 6 ч, N = 3, период 126 ч. MTBF = 40 ч; MTTR = 2 ч; K = 120 / 126 ≈ 95,24 %. Все восстановления завершены.</p><h2>2. Изменённые условия</h2><p>Работа: 20, 50, 50 ч; восстановления: {state.repairs.map(v=>format(v)).join('; ')} ч.</p><p>MTBF = {format(calculateReliability(cycles).mtbf)} ч; MTTR = {format(calculateReliability(cycles).mttr)} ч; готовность = {format(calculateReliability(cycles).availability*100,4)} %. Порог {format(state.threshold,1)} %: {meetsRequirement(calculateReliability(cycles).availability,state.threshold)?'выполнен':'не выполнен'} до округления.</p><h2>3. Найди ошибку — разобранные решения</h2>{mistakes.map(c=><div key={c.id}><h3>{c.title}</h3><p>{c.context}</p><p>Ошибочная запись: {c.formula}</p><p><b>Разбор:</b> {c.explanation}</p></div>)}<p>Учебная модель завершённых циклов; средние не гарантируют время следующего отказа. Интерактивный источник: {base}?mode=lab</p></section>
   </main>
 }
