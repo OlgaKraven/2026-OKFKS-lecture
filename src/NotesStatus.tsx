@@ -24,6 +24,7 @@ export function NotesStatus({ course, error, previousVersion, archiveAvailable, 
       catch { alert('Не удалось прочитать прежние результаты. Данные не удалены.') }
     }}>Сохранить прежние результаты</button>}
     <a href={`${import.meta.env.BASE_URL}teaching/route.html`} target="_blank" rel="noopener">Маршрут последней темы</a>
+    <a href={`${import.meta.env.BASE_URL}?mode=lab&activity=timeline`}>Мастерская надёжности</a>
     {error && <div>
       <strong>Заметки не загрузились</strong>
       <span>{error}</span>

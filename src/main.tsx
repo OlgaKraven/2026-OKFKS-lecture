@@ -6,6 +6,7 @@ import { prepareTeacherNotes } from './teacherNotes'
 import { NotesStatus } from './NotesStatus'
 import { migrateCompatibleSession } from './compatibility'
 import './content-fixes.css'
+import { ReliabilityLab } from './lab/ReliabilityLab'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
@@ -13,6 +14,10 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
 }).then(async course => {
   validateCourse(course)
   const mode = new URL(location.href).searchParams.get('mode')
+  if (mode === 'lab') {
+    createRoot(document.getElementById('root')!).render(<ReliabilityLab base={import.meta.env.BASE_URL} />)
+    return
+  }
   const showNotesStatus = mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)
   let previousVersion = ''
   let archiveAvailable = false
