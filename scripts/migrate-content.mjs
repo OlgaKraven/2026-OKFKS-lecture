@@ -2,8 +2,10 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import ts from 'typescript'
+import { createHash } from 'node:crypto'
 import { context } from '../authoring/context.mjs'
 import { buildTeacherNote } from '../authoring/build-teacher-note.mjs'
+import { applyEnrichment } from '../authoring/enrichment.mjs'
 
 // Compile the preserved authoring sources; they are never imported by the site.
 const sourceRoot = 'authoring/legacy/src'
@@ -27,7 +29,8 @@ const { sourceRegistry } = await import(pathToFileURL(path.resolve(compiledRoot,
 const { buildDeck } = await import(pathToFileURL(path.resolve(compiledRoot, 'deck/buildDeck.js')))
 topics[6].questions[2].focus = 'Алгоритм задаёт преобразование, протокол — взаимодействие, ключ — параметр криптографической операции, средство — конкретная реализация. Ключи бывают открытыми и секретными.'
 topics[6].questions[2].pitfall = 'Выдавать название алгоритма за полный сценарий защиты.'
-const version = '2.0.1-content-review-20260918'
+const version = '2.0.2-compatible-enrichment-20261002'
+const baseline = JSON.parse(await fs.readFile('authoring/baseline-20260918.json', 'utf8'))
 context[1][7] = [
   'Неполная запись ограничивает вывод даже при безошибочной арифметике. Незавершённое восстановление нельзя записать как нулевое или незаметно исключить. Оценка по завершённым случаям и характеристика всей текущей выборки — разные утверждения.',
   'К учебной выборке с тремя завершёнными восстановлениями за 6 ч добавился четвёртый отказ; его восстановление ещё продолжается.',
@@ -176,6 +179,10 @@ for (let ti = 0; ti < topics.length; ti++) {
   for (const old of oldSlides) { const title = titleCorrections[`${ti}-${old.number}`]; if (title) slides.find(s => s.id === idOf(topic, old)).title = title }
   if (ti === 0) slides.find(s => s.id.endsWith('-s093')).body = 'Учебная выборка: 200 операций за один период. На диаграмме — числа событий отдельных типов; это не автоматически число независимых отказов.'
   if (ti === 3) slides.find(s => s.id.endsWith('-s027')).body = 'Учебные измерения времени ответа: 180, 420 и 870 мс. Для объяснения тенденции нужны события журнала тех же интервалов и экземпляра.'
+  for (let qi = 0; qi < topic.questions.length; qi++) {
+    const group = oldSlides.filter(s => s.questionNumber === qi + 1 && s.number < 101).map(old => slides.find(s => s.id === idOf(topic, old)))
+    applyEnrichment({ ti, qi, q: topic.questions[qi], group, bank })
+  }
   // The engine's SVG composition has three rows (kicker, heading, figure).
   // Explanatory text belongs in the figure caption, not a fourth overlapping row.
   for (const s of slides) if (s.visual && s.body) { s.visual.caption = `${s.body} ${s.visual.caption}`; delete s.body }
@@ -205,5 +212,48 @@ await json('authoring/glossary.json', glossary)
 await json('authoring/course-map.json', { topics, semesterWorkloads, laboratories, selfStudy, source: 'PROMPT.md, предоставленный текст РПД; исторические команды не исполняются' })
 await json('authoring/source-registry.json', sourceRegistry)
 await json('reports/lecture-registry.json', registry)
+const oldSlides = baseline.course.lectures.flatMap(l => l.slides)
+const newSlides = course.lectures.flatMap(l => l.slides)
+const previousById = new Map(oldSlides.map(s => [s.id, s]))
+const unchangedTaskIds = newSlides.filter(s => s.task && JSON.stringify(s.task) === JSON.stringify(previousById.get(s.id)?.task)
+  && JSON.stringify(bank.keys[s.task.id]) === JSON.stringify(baseline.bank.keys[s.task.id])).map(s => s.task.id)
+const migration = { courseId: course.id, previousVersion: baseline.course.contentVersion, contentVersion: version, unchangedTaskIds, noteHashes: baseline.noteHashes,
+  noteSeconds:Object.fromEntries(Object.entries(pack.notes).map(([id,n])=>[id,n.estimatedSeconds])) }
+await json('public/teaching/compatibility.json', migration)
+const changes = newSlides.map(s => {
+  const before = previousById.get(s.id)
+  const fields = [...new Set([...Object.keys(before), ...Object.keys(s)])].filter(f => JSON.stringify(before[f]) !== JSON.stringify(s[f]))
+  if (before.notebook !== s.notebook) throw Error(`Notebook anchor changed: ${s.id}`)
+  return { id:s.id, title:s.title, changedFields:fields, notebook:'Сохранён', action:fields.length ? 'Дополнение пояснений или задания; опорная запись сохраняется' : 'Без изменений' }
+})
+await json('reports/change-map.json', { previousVersion:baseline.course.contentVersion, contentVersion:version, slides:changes })
+const last = course.lectures.at(-1)
+const core = last.slides.filter(s => {
+  const n = Number(s.id.slice(-3))
+  return [1,6,7,8,9,12,109,111,112].includes(n) || n >= 13 && n <= 100 && !s.task
+    || s.task?.type === 'single' && [2,5,8].some(q => s.task.id.includes(`-q${q}-`))
+})
+const routeMinutes = Math.ceil(core.reduce((sum,s)=>sum+pack.notes[s.id].estimatedSeconds,0)/60)
+if (routeMinutes > 85) throw Error(`Core route too long: ${routeMinutes} minutes`)
+const route = { lectureId:last.id, title:last.title, durationMinutes:90, estimatedCoreMinutes:routeMinutes,
+  reserveMinutes:90-routeMinutes, requiredSlideIds:core.map(s=>s.id),
+  independentSlideIds:last.slides.filter(s=>!core.includes(s)).map(s=>s.id),
+  notice:'Оценка по сценарию; резерв отведён на ответы и обсуждение. Слайды сохранены, обязательный маршрут выделен отдельно.' }
+await json('public/teaching/route.json', route)
+for (const s of last.slides) pack.notes[s.id].preparation += core.includes(s)
+  ? '\nМаршрут на 90 минут: обязательный слайд. Резерв для обсуждения распределяет преподаватель.'
+  : '\nМаршрут на 90 минут: дополнительное закрепление или подготовка вне обязательного показа.'
+await json('public/teaching/notes.json', pack)
+await json(packPath, pack)
+registry.at(-1).requiredRouteMinutes = routeMinutes
+registry.at(-1).discussionReserveMinutes = route.reserveMinutes
+await json('reports/lecture-registry.json', registry)
+const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+const list = ids => ids.map(id => `<li><a href="../?lecture=${last.id}&amp;slide=${id}">${escape(last.slides.find(s=>s.id===id).title)}</a> <small>${id.slice(-4)}</small></li>`).join('')
+await fs.writeFile('public/teaching/route.html', `<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Маршрут занятия</title><style>body{font:17px/1.6 system-ui;max-width:900px;margin:auto;padding:24px}a{color:#14558c}li{margin:8px 0}small{color:#64748b}</style><h1>${escape(last.title)}: 90 минут</h1><p>Расчётная работа со слайдами — ${routeMinutes} мин; резерв на обсуждение — ${route.reserveMinutes} мин. Все восемь вопросов включены. Полный набор остаётся доступен.</p><h2>Обязательный маршрут</h2><p>Идите по ссылкам в указанном порядке; обычная кнопка «Вперёд» показывает также дополнительные слайды. В аудитории выбраны три ситуационных задания: проверка стороны TLS, свидетельства шифрования и повторная проверка исправления.</p><ol>${list(route.requiredSlideIds)}</ol><h2>Дополнительное закрепление</h2><p>Остальные задания и этапы лабораторного отчёта выполняются отдельно. Литературу и материалы можно открыть перед занятием.</p><ol>${list(route.independentSlideIds)}</ol></html>`)
+const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex')
+await json('reports/compatibility-check.json', { previousVersion:baseline.course.contentVersion, contentVersion:version,
+  slides:newSlides.length, unchangedSlideOrder:course.lectures.every((l,i)=>digest(l.slides.map(s=>s.id))===digest(baseline.course.lectures[i].slides.map(s=>s.id))),
+  notebookAnchorsPreserved:oldSlides.filter(s=>s.notebook).length, unchangedTaskIds:unchangedTaskIds.length, changedSlides:changes.filter(s=>s.changedFields.length).length })
 await fs.writeFile('private/teacher.md', course.lectures.map(l => `# ${l.title}\n\n` + l.slides.map(s => `## ${s.id} — ${s.title}\n\n${pack.notes[s.id].script}\n\n${pack.notes[s.id].notebook}\n\n### Подготовка\n\n${pack.notes[s.id].preparation}\n\n### Вопрос аудитории\n\n${pack.notes[s.id].questions}\n\n### Ожидаемый ответ и разбор\n\n${pack.notes[s.id].answer}`).join('\n\n')).join('\n\n'))
 console.log(JSON.stringify({ lectures: course.lectures.length, slides: mapping.length, tasks: Object.keys(bank.keys).length, teacherPack: packPath }, null, 2))

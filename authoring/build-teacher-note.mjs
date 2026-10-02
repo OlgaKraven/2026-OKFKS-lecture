@@ -13,7 +13,11 @@ const diagnosticAnswers = [
 function figureText(slide) {
   const v = slide.visual
   if (v?.type === 'bars') return `На диаграмме: ${v.items.map(i => `${i.label} — ${i.value} ${v.unit}`).join('; ')}. ${v.caption} Сравните значения, затем назовите вывод, которого эти данные не позволяют сделать.`
+  if (v?.type === 'tree') return `Дерево: ${v.root}. ${v.branches.map(b => `${b.title}: ${b.items.join('; ')}`).join('. ')}. ${v.caption}`
+  if (v && ['process','timeline','cycle'].includes(v.type)) return `Пройдите шаги: ${v.items.map(i=>`${i.title}: ${i.text}`).join('; ')}. ${v.caption}`
+  if (v?.type === 'network') return `Границы: ${v.nodes.map(n=>`${n.title}: ${n.text}`).join('; ')}. Переходы: ${v.edges.map(e=>e.label).join('; ')}. ${v.caption}`
   const table = slide.rows ? slide : v?.type === 'table' ? v : null
+  if (v && ['comparison','matrix'].includes(v.type)) return `Разберите таблицу: ${v.rows.map(row=>row.join(' — ')).join('; ')}. ${v.caption}`
   if (table) return `Разберите строки таблицы: ${table.rows.map(row => row.map((value, i) => `${table.columns[i]} — ${value}`).join('; ')).join('. ')}. Попросите объяснить связь между столбцами на одной выбранной строке.`
   return ''
 }
@@ -32,12 +36,12 @@ export function buildTeacherNote({ ti, topic, old, slide, key, contexts, groupPo
       const task = slide.task
       const solution = task.type === 'matching'
         ? task.items.map(i => `${i.text} → ${task.options.find(o => o.id === key.pairs[i.id]).text}`).join('\n')
-        : task.type === 'short' ? key.accepted.join(' / ')
+        : task.type === 'short' ? key.numeric ? String(key.numeric.value) : key.accepted.join(' / ')
           : task.options.filter(o => key.correct.includes(o.id)).map(o => o.text).join('\n')
       script = `Дайте время на самостоятельный ответ: ${task.prompt}\n\nПосле выбора разберите основание: ${key.explanation}`
-      if (task.type === 'single') script += `\n\nОбщее правило переносится между ситуациями; действие относится к конкретному решению, а критерий описывает результат. На нашем примере: ${reasoning}`
+      if (task.type === 'single') script += `\n\nПопросите объяснить, какое условие делает выбранный вывод обоснованным, и почему альтернативы нарушают условие или расширяют границу вывода.`
       if (task.type === 'multiple') script += `\n\nСвяжите два выбранных пункта: сначала «${q.decision}», затем проверяем «${q.check}». Объясните, почему описание ситуации и типичная ошибка не заменяют эту пару.`
-      if (task.type === 'short') script += `\n\nВосстановление слова проверяет узнавание формулировки. Чтобы проверить понимание, задайте устный вопрос: ${transfer}`
+      if (task.type === 'short') script += key.numeric ? `\n\nПроверьте подстановку, единицы и округление. ${key.explanation}` : `\n\nПринимаются перечисленные смысловые варианты. Для проверки понимания задайте вопрос: ${transfer}`
       if (task.type === 'matching') script += `\n\nПример задаёт исходные условия; правило — способ рассуждения; решение — действие; проверка — признак результата. Попросите объяснить одну пару без чтения её названия.`
       answer = `Ключ задания:\n${solution}\n\nОбоснование:\n${key.explanation}\n${Object.values(key.optionExplanations || {}).join('\n')}\n\nУстный перенос:\n${expected}`
       notebook = `После проверки запишите исправленное рассуждение по вопросу «${q.title}», если была ошибка; буква варианта без причины не нужна.`
@@ -49,9 +53,9 @@ export function buildTeacherNote({ ti, topic, old, slide, key, contexts, groupPo
       const scripts = [
         `Начните с ситуации: ${setup}\n\nПредложите назвать первое необходимое наблюдение. Зафиксируйте предположения группы, пока не оценивая их. В этом блоке нужно прийти к проверяемому результату: ${q.check}`,
         `${explain}\n\nУстное пояснение на изменённом условии: ${transfer} ${expected}`,
-        `Проведите группу по схеме от исходных условий к выводу. ${reasoning}\n\nИменно этот переход обосновывает правило: ${q.rule} Граница рассуждения: ${error}`,
+        `${figureText(slide)}\n\nРаскройте полный ход: ${reasoning} Граница рассуждения: ${error}`,
         figureText(slide) || `Разберите исходные условия: ${setup}\n\nДо раскрытия результата предложите выполнить расчёт или назвать ожидаемый исход. Ход разбора: ${reasoning}\n\nИтог: ${result}`,
-        `Теперь сформулируем решение: ${q.decision}\n\nНа наших данных оно приводит к следующему: ${result} Для приёмки нужен наблюдаемый критерий: ${q.check}\n\nПроверьте перенос решения: ${transfer} ${expected}`,
+        `Поставьте новую задачу: ${slide.body}\n\nСначала дайте группе сравнить условия с исходным примером. Не сообщайте итог до ответа. Затем разберите: ${expected}\n\nСвяжите ответ с опорной записью: ${q.check}`,
         `Предложите объяснить, почему ошибочный подход кажется правдоподобным: ${q.pitfall}\n\nРазберите его последствие: ${error} Верните группу к корректному действию: ${q.decision}\n\nКонтрпример для обсуждения: ${transfer} ${expected}`,
         `Попросите ответить без чтения конспекта: ${transfer}\n\nПосле паузы сопоставьте ответ с рассуждением: ${expected}\n\nЗакрепите границу применения: ${discussion}`,
       ]

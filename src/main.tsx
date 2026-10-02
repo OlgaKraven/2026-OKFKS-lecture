@@ -4,6 +4,8 @@ import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
 import { prepareTeacherNotes } from './teacherNotes'
 import { NotesStatus } from './NotesStatus'
+import { migrateCompatibleSession } from './compatibility'
+import './content-fixes.css'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
@@ -12,6 +14,20 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   validateCourse(course)
   const mode = new URL(location.href).searchParams.get('mode')
   const showNotesStatus = mode !== 'audience' && mode !== 'print' && !/\/print\/?$/.test(location.pathname)
+  let previousVersion = ''
+  let archiveAvailable = false
+  let compatibilityError = ''
+  if (showNotesStatus) {
+    try {
+      const response = await fetch(`${import.meta.env.BASE_URL}teaching/compatibility.json`, { cache:'no-cache' })
+      if (!response.ok) throw new Error('Карта обновления недоступна')
+      const result = await migrateCompatibleSession(course, import.meta.env.BASE_URL, await response.json(), localStorage)
+      previousVersion = result.previousVersion
+      archiveAvailable = result.archiveAvailable
+    } catch {
+      compatibilityError = 'Не удалось перенести сохранённые данные. Прежние записи остаются на устройстве.'
+    }
+  }
   let notesError = ''
   let teacherNotes: Record<string, Note> | undefined
   if (showNotesStatus) {
@@ -51,7 +67,7 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   }
   document.title = `${course.code} · ${course.discipline}`
   createRoot(document.getElementById('root')!).render(<>
-    {showNotesStatus && <NotesStatus course={course} error={notesError} />}
+    {showNotesStatus && <NotesStatus course={course} error={notesError} previousVersion={previousVersion} archiveAvailable={archiveAvailable} compatibilityError={compatibilityError} />}
     <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} />
   </>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })
