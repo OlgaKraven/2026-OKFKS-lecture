@@ -13,3 +13,14 @@ export function addReliabilityPilotNotes(pack) {
     note.answer+=`\n\nОриентир мастерской: ${item.answer}`
   }
 }
+
+export function addReliabilityPilotLinks(course) {
+  const lecture=course.lectures.find(l=>l.id==='s07-02-reliability-metrics')
+  const entries=[['001','timeline','Интерактивное дополнение'],['009','timeline','Интерактивное дополнение'],['027','timeline','Интерактив: лента'],['038','timeline','Интерактив: лента'],['060','simulator','Интерактив: симулятор'],['071','game','Интерактив: найди ошибку']]
+  for(const [number,activity,label] of entries) {
+    const slide=lecture.slides.find(s=>s.id.endsWith(`-s${number}`))
+    slide.supplement={label,href:`?${new URLSearchParams({mode:'lab',activity,originSlide:slide.id})}`}
+  }
+  const route=course.lectures.at(-1).slides.find(s=>s.id.endsWith('-s009'))
+  route.supplement={label:'Маршрут на 90 минут',href:'teaching/route.html'}
+}

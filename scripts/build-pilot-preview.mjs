@@ -6,6 +6,9 @@ const output=path.resolve(args.includes('--output')?args[args.indexOf('--output'
 await build({configFile:'vite.pilot.config.ts'})
 let js=await fs.readFile('work/pilot-standalone/pilot.js','utf8')
 let css=await fs.readFile('work/pilot-standalone/2026-okfks-lecture.css','utf8')
+const courseBase=new URL(args.includes('--course-base')?args[args.indexOf('--course-base')+1]:'https://olgakraven.github.io/2026-OKFKS-lecture/')
+if(!['http:','https:'].includes(courseBase.protocol))throw Error('Ожидается HTTP(S)-адрес курса')
+js=js.replaceAll('__OKFKS_PILOT_BASE__',courseBase.href)
 const dataUrl=async(file,mime)=>`data:${mime};base64,${(await fs.readFile(file)).toString('base64')}`
 js=js.replaceAll('__OKFKS_PILOT_LOGO__',await dataUrl('public/brand/synergy-logo.png','image/png'))
   .replaceAll('__OKFKS_PILOT_ORNAMENT__',await dataUrl('public/brand/side-ornament.png','image/png'))

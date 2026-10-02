@@ -17,7 +17,7 @@
     "build:pilot": "node scripts/build-pilot-preview.mjs"
   },
   "dependencies": {
-    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.3.tgz",
+    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.4.tgz",
     "lucide-react": "^1.38.0",
     "motion": "^13.1.1",
     "react": "^19.2.8",

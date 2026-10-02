@@ -890,9 +890,11 @@
     {
       "id": "s07-02-reliability-metrics-s001",
       "title": "Расчёт показателей надёжности",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s003",
@@ -918,9 +920,11 @@
     {
       "id": "s07-02-reliability-metrics-s009",
       "title": "Вопросы темы",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s002",
@@ -1089,7 +1093,8 @@
       "title": "120 часов и три отказа дают MTBF 40 часов",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -1179,7 +1184,8 @@
       "title": "Шесть часов на три случая дают MTTR два часа",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -1360,9 +1366,11 @@
     {
       "id": "s07-02-reliability-metrics-s060",
       "title": "MTBF 40 ч и MTTR 2 ч дают готовность 95,24 %",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s061",
@@ -1452,7 +1460,8 @@
       "title": "360 минут превращаются в шесть часов до расчёта",
       "changedFields": [
         "kicker",
-        "body"
+        "body",
+        "supplement"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -5360,9 +5369,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s009",
       "title": "Вопросы темы",
-      "changedFields": [],
+      "changedFields": [
+        "supplement"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s002",

@@ -198,8 +198,9 @@ for (let ti = 0; ti < topics.length; ti++) {
   }
   registry.push({ lectureId: topic.id, title: topic.displayTitle, semester: topic.semester, lectureHours: topic.lectureHours, slides: slides.length, questions: topic.questions.length, tests: slides.filter(s => s.task).length, visuals: slides.filter(s => s.visual || s.rows).length, contentVersion: version, estimatedMinutes: Math.round(slides.reduce((n, s) => n + pack.notes[s.id].estimatedSeconds, 0) / 60), officialMinutes: topic.lectureHours * 45 })
 }
-const { addReliabilityPilotNotes } = await import('../authoring/reliability-pilot.mjs')
+const { addReliabilityPilotNotes, addReliabilityPilotLinks } = await import('../authoring/reliability-pilot.mjs')
 addReliabilityPilotNotes(pack)
+addReliabilityPilotLinks(course)
 async function json(file, data) { await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n') }
 await json('public/course.json', course)
 await json('public/assessment.json', bank)
