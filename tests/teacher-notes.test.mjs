@@ -1,7 +1,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
-import { prepareTeacherNotes } from '../src/teacherNotes.ts'
+import { prepareTeacherNotes, prepareUpdatedTeacherNotes } from '../src/teacherNotes.ts'
+import {createHash} from 'node:crypto'
 
 const course = JSON.parse(fs.readFileSync('public/course.json', 'utf8'))
 const pack = JSON.parse(fs.readFileSync('public/teaching/notes.json', 'utf8'))
@@ -10,6 +11,20 @@ const storage = () => {
   const values = new Map()
   return { getItem: k => values.get(k) ?? null, setItem: (k, v) => values.set(k, v) }
 }
+test('a same-version publication refreshes known automatic fields and preserves manual fields without writing storage',async()=>{
+  const store=storage(), revised=structuredClone(pack),id=course.lectures[0].slides[0].id
+  const previous='Автоматический сценарий прежнего выпуска'
+  revised.previousNoteHashes={[id]:{script:[createHash('sha256').update(previous).digest('hex')]}}
+  const local={...pack.notes[id],script:previous,questions:'Мой вопрос этой группе'}
+  const original=JSON.stringify({[id]:local});store.setItem(key,original)
+  const updated=await prepareUpdatedTeacherNotes(course,'/2026-OKFKS-lecture/',revised,store)
+  assert.equal(updated[id].script,pack.notes[id].script)
+  assert.equal(updated[id].questions,local.questions)
+  assert.equal(store.getItem(key),original)
+  local.script='Мой изменённый сценарий'
+  store.setItem(key,JSON.stringify({[id]:local}))
+  assert.equal((await prepareUpdatedTeacherNotes(course,'/2026-OKFKS-lecture/',revised,store))[id].script,local.script)
+})
 test('published notes install all slides and preserve teacher edits on repeat visits', () => {
   const store = storage()
   const saved = prepareTeacherNotes(course, '/2026-OKFKS-lecture/', pack, store)

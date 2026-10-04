@@ -1,5 +1,5 @@
 diff --git a/package.json b/package.json
-index bc6aa4e..532131d 100644
+index bc6aa4e..ab0f203 100644
 --- a/package.json
 +++ b/package.json
 @@ -1,7 +1,7 @@
@@ -7,7 +7,7 @@ index bc6aa4e..532131d 100644
    "name": "@olgakraven/lecture-engine",
    "private": true,
 -  "version": "0.1.0",
-+  "version": "0.1.1-okfks.3",
++  "version": "0.1.1-okfks.4",
    "type": "module",
    "scripts": {
      "dev": "vite",
@@ -61,6 +61,25 @@ index 0f57999..f99e5a2 100644
   <div className="dialog-actions"><button className="button primary" type="submit">Сохранить настройки</button></div></form></Modal>
  }
  
+diff --git a/src/engine/SlideView.tsx b/src/engine/SlideView.tsx
+index c01ac92..19e7130 100644
+--- a/src/engine/SlideView.tsx
++++ b/src/engine/SlideView.tsx
+@@ -1,12 +1,12 @@
+ import {Resources} from './Resources'
+ import type {Course,Lecture,Profile,Slide} from './model'
+-import {assetUrl} from './model'
++import {assetUrl,supplementUrl} from './model'
+ import {Infographic} from './Infographic'
+ import {TaskView} from './Assessment'
+ export function SlideView({course,lecture,slide,profile,base,number,interactive=false}:{course:Course;lecture:Lecture;slide:Slide;profile:Profile;base:string;number:number;interactive?:boolean}){
+  return <article className={`slide-frame kind-${slide.kind} ${slide.visual||slide.steps||slide.rows?'has-visual':''}`} data-slide-id={slide.id}>
+  <img className="side-ornament" src={assetUrl(course.ornament,base)} alt=""/>
+- <header className="slide-header"><div className="slide-brand"><img src={assetUrl(course.logo,base)} alt="Логотип"/><span>{course.code} · {lecture.semester}-й семестр</span></div><span className="slide-number">{String(number).padStart(2,'0')}</span></header>
++ <header className="slide-header"><div className="slide-brand"><img src={assetUrl(course.logo,base)} alt="Логотип"/><span>{course.code} · {lecture.semester}-й семестр</span></div><div className="slide-header-actions">{slide.supplement&&<a className="button secondary slide-supplement" href={supplementUrl(slide.supplement.href,base)} target="_blank" rel="noopener">{slide.supplement.label} ↗</a>}<span className="slide-number">{String(number).padStart(2,'0')}</span></div></header>
+  <div className="slide-content"><div className="slide-copy"><p className="slide-kicker">{slide.kicker}</p><h2>{slide.title}</h2>
+  {(slide.kind==='literature'||slide.kind==='materials')&&<Resources course={course} slide={slide} base={base}/>}
+  {slide.kind==='agenda'&&<ol className="topic-agenda">{lecture.slides.filter(s=>s.kind==='section').map((s,i)=><li key={s.id}><span>{String(i+1).padStart(2,'0')}</span><strong>{s.title}</strong></li>)}</ol>}
 diff --git a/src/engine/Teaching.tsx b/src/engine/Teaching.tsx
 index 7886dcf..075525e 100644
 --- a/src/engine/Teaching.tsx
@@ -89,10 +108,10 @@ index 7886dcf..075525e 100644
   const [selected,setSelected]=useState(shown.slideId);const [black,setBlack]=useState(shown.black);const [replay,setReplay]=useState(0)
   const [pointerEnabled,setPointerEnabled]=useState(false);const [pointer,setPointer]=useState<{x:number;y:number}|null>(null);const [assessment,setAssessment]=useState<Record<string,Attempt>>({});const receiveAssessment=useCallback((value:Record<string,Attempt>)=>setAssessment(value),[])
 diff --git a/src/engine/layout-final.css b/src/engine/layout-final.css
-index 4334fd3..8791231 100644
+index 4334fd3..a185996 100644
 --- a/src/engine/layout-final.css
 +++ b/src/engine/layout-final.css
-@@ -31,3 +31,22 @@
+@@ -31,3 +31,30 @@
  .mini-stage .reading-entry p,.mini-stage .reading-entry a,.mini-stage .resource-empty,.mini-stage .materials-resource{font-size:2.1cqw}.mini-stage .materials-resource{gap:2cqw;margin-top:2cqw}
  
  .topic-agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;list-style:none!important;padding:0!important;margin:1.5rem 0 0!important}.topic-agenda li{display:flex;align-items:baseline;gap:1.1rem;border-top:1px solid #c9cad0;padding:.65rem 0;line-height:1.4;min-width:0}.topic-agenda li>span{color:#e60016;font-size:1.35em;font-weight:800;flex:none}.topic-agenda li>strong{font-size:1rem;overflow-wrap:break-word}.mini-stage .topic-agenda{gap:0 2cqw;margin-top:2cqw!important}.mini-stage .topic-agenda li{gap:1cqw;padding:.7cqw 0;font-size:2.3cqw}.mini-stage .topic-agenda li>strong{font-size:2.1cqw}@media(max-width:600px){.topic-agenda{grid-template-columns:1fr}.mini-stage .topic-agenda{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -115,3 +134,44 @@ index 4334fd3..8791231 100644
 +  .print-page .infographic figcaption { font-size:18px; line-height:1.4; }
 +  .print-page .comparison-table { font-size:21px; line-height:1.4; }
 +}
++
++/* Generic optional supplement entry, without changing slide content geometry. */
++.slide-header-actions{display:flex;align-items:center;gap:.75rem;min-width:0}
++.slide-supplement.button{min-height:2rem;padding:.4rem .7rem;font-size:.75rem;text-decoration:none;border-color:var(--blue);color:var(--blue);white-space:nowrap}
++.mini-stage .slide-header-actions{gap:1cqw}
++.mini-stage .slide-supplement.button{min-height:0;padding:.8cqw 1.2cqw;font-size:1.65cqw}
++@media(max-width:560px){.slide-header:has(.slide-supplement){flex-wrap:wrap}.slide-header:has(.slide-supplement) .slide-header-actions{width:100%;justify-content:space-between}.mini-stage .slide-header:has(.slide-supplement){flex-wrap:nowrap}.mini-stage .slide-header:has(.slide-supplement) .slide-header-actions{width:auto}.slide-supplement.button{white-space:normal}}
++@media print{.slide-supplement{display:none!important}}
+diff --git a/src/engine/model.ts b/src/engine/model.ts
+index 9911fd9..47e23cd 100644
+--- a/src/engine/model.ts
++++ b/src/engine/model.ts
+@@ -17,7 +17,7 @@ export type Visual =
+  | {type:'codeParts';parts:{code:string;label:string;explanation:string}[];caption:string}
+ export type Task = {id:string;type:'single'|'multiple'|'short'|'matching';prompt:string;choose?:number;options?:Option[];items?:Option[]}
+ export type Reading = {citation:string;url?:string}
+-export type Slide = {id:string;kind:'title'|'theory'|'notebook'|'process'|'comparison'|'example'|'warning'|'test'|'summary'|'literature'|'materials'|'section'|'questions'|'agenda';readingGroup?:'primary'|'additional';references?:Reading[];title:string;kicker:string;body?:string;notebook?:string;bullets?:string[];visual?:Visual;steps?:{title:string;text:string}[];columns?:string[];rows?:string[][];task?:Task;source?:string}
++export type Slide = {id:string;kind:'title'|'theory'|'notebook'|'process'|'comparison'|'example'|'warning'|'test'|'summary'|'literature'|'materials'|'section'|'questions'|'agenda';readingGroup?:'primary'|'additional';references?:Reading[];title:string;kicker:string;body?:string;notebook?:string;bullets?:string[];visual?:Visual;steps?:{title:string;text:string}[];columns?:string[];rows?:string[][];task?:Task;source?:string;supplement?:{label:string;href:string}}
+ export type Lecture = {id:string;title:string;sourceTitle:string;semester:number;question:string;slides:Slide[]}
+ export type Course = {schemaVersion:1;contentVersion:string;id:string;code:string;discipline:string;year:string;heroTitle:string;heroAccent:string;slogan:string;mascot:string;mascotAlt:string;logo:string;ornament:string;font:string;materialsUrl:string;topicArrow?:string;literature?:{primary:Reading[];additional:Reading[]};assessment?:{mode:'autonomous';url:string};demo:boolean;semesters:number[];lectures:Lecture[]}
+ export type Note = {script:string;preparation:string;notebook:string;questions:string;answer:string;estimatedSeconds:number}
+@@ -25,6 +25,11 @@ export type TeacherPack = {schemaVersion:1;courseId:string;contentVersion:string
+ export const emptyNote = ():Note => ({script:'',preparation:'',notebook:'',questions:'',answer:'',estimatedSeconds:120})
+ export function safeUrl(value:string) {try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:''}catch{return ''}}
+ export function assetUrl(path:string,base:string){return safeUrl(path)||`${base}${path.replace(/^\//,'')}`}
++export function supplementUrl(value:string,base:string){
++ if(safeUrl(value))return safeUrl(value)
++ if(!value.trim()||value.startsWith('//')||/^[a-z][a-z0-9+.-]*:/i.test(value)||/[\\\u0000-\u001f]/.test(value))return ''
++ return assetUrl(value,base)
++}
+ export function validateCourse(value:unknown): asserts value is Course {
+  const c=value as Course
+  if(!c||c.schemaVersion!==1||!c.id||!c.contentVersion||!c.code||!c.discipline||!Array.isArray(c.semesters)||!Array.isArray(c.lectures)||!c.lectures.length)throw Error('Некорректная конфигурация курса')
+@@ -35,6 +40,7 @@ export function validateCourse(value:unknown): asserts value is Course {
+  for(const s of l.slides){if(!s.id||ids.has(s.id)||!s.title||!kinds.includes(s.kind))throw Error('Некорректный слайд');ids.add(s.id)
+  if(s.task&&!['single','multiple','short','matching'].includes(s.task.type))throw Error('Неизвестный тип задания')
+  if(s.references)checkReading(s.references)
++ if(s.supplement&&(typeof s.supplement.label!=='string'||!s.supplement.label.trim()||typeof s.supplement.href!=='string'||!supplementUrl(s.supplement.href,'/')))throw Error('Некорректная ссылка дополнения')
+  if(s.readingGroup&&!['primary','additional'].includes(s.readingGroup))throw Error('Неизвестная группа литературы')
+  }}
+  const walk=(v:unknown):void=>{if(v&&typeof v==='object'){for(const [k,x] of Object.entries(v)){if(['keys','answer','correctAnswer','correctIndexes','script','preparation','notes'].includes(k))throw Error('Приватные данные в публичном курсе');walk(x)}}};walk(c)

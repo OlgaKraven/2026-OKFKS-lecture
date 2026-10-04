@@ -8,8 +8,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 127,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 126,
     "officialMinutes": 270
   },
   {
@@ -21,8 +21,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 126,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 125,
     "officialMinutes": 180
   },
   {
@@ -34,8 +34,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 123,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 122,
     "officialMinutes": 270
   },
   {
@@ -47,7 +47,7 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
     "estimatedMinutes": 123,
     "officialMinutes": 180
   },
@@ -60,8 +60,8 @@
     "questions": 8,
     "tests": 32,
     "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 123,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 121,
     "officialMinutes": 180
   },
   {
@@ -72,9 +72,9 @@
     "slides": 112,
     "questions": 8,
     "tests": 32,
-    "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 124,
+    "visuals": 18,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 123,
     "officialMinutes": 270
   },
   {
@@ -85,9 +85,11 @@
     "slides": 112,
     "questions": 8,
     "tests": 32,
-    "visuals": 17,
-    "contentVersion": "2.0.1-content-review-20260918",
-    "estimatedMinutes": 124,
-    "officialMinutes": 90
+    "visuals": 18,
+    "contentVersion": "2.0.2-compatible-enrichment-20261002",
+    "estimatedMinutes": 123,
+    "officialMinutes": 90,
+    "requiredRouteMinutes": 57,
+    "discussionReserveMinutes": 33
   }
 ]
