@@ -1,49 +1,49 @@
 [
   {
     "lectureId": "s07-01-quality-and-failures",
-    "file": "work\\pdf-review\\s07-01-quality-and-failures.pdf",
+    "file": "work\\pdf-workshops\\s07-01-quality-and-failures.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-02-reliability-metrics",
-    "file": "work\\pdf-review\\s07-02-reliability-metrics.pdf",
+    "file": "work\\pdf-workshops\\s07-02-reliability-metrics.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-03-reliability-threats-prevention",
-    "file": "work\\pdf-review\\s07-03-reliability-threats-prevention.pdf",
+    "file": "work\\pdf-workshops\\s07-03-reliability-threats-prevention.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-04-observing-operating-system",
-    "file": "work\\pdf-review\\s07-04-observing-operating-system.pdf",
+    "file": "work\\pdf-workshops\\s07-04-observing-operating-system.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-01-threats-and-malware",
-    "file": "work\\pdf-review\\s08-01-threats-and-malware.pdf",
+    "file": "work\\pdf-workshops\\s08-01-threats-and-malware.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-02-protection-controls",
-    "file": "work\\pdf-review\\s08-02-protection-controls.pdf",
+    "file": "work\\pdf-workshops\\s08-02-protection-controls.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-03-encryption-and-security-testing",
-    "file": "work\\pdf-review\\s08-03-encryption-and-security-testing.pdf",
+    "file": "work\\pdf-workshops\\s08-03-encryption-and-security-testing.pdf",
     "pages": 112,
     "qrDecoded": 5,
     "layout": []
