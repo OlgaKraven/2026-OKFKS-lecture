@@ -911,7 +911,7 @@
   }
   .ok-page .ok-hero {
     min-height:250px;
-    padding:25px 20px;
+    padding:25px 20px 138px;
     align-items:flex-start;
   }
   .ok-page .ok-hero-copy {
@@ -926,7 +926,7 @@
     margin-left:8px;
   }
   .ok-page h1 {
-    font-size:29px;
+    font-size:clamp(24px,7.4vw,29px);
     max-width:340px;
     line-height:1.16;
     margin-bottom:14px;
@@ -1059,7 +1059,7 @@
     display:none;
   }
   .ok-page h1 {
-    font-size:26px;
+    font-size:24px;
   }
   .ok-page .ok-hero {
     min-height:264px;

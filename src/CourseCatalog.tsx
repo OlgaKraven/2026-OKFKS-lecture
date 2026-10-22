@@ -172,7 +172,7 @@ export function CourseCatalog({
       <section className="ok-hero" aria-label="Обложка курса">
         <div className="ok-hero-copy">
           <div className="ok-eyebrow">{course.code}<span>{course.semesters.join('–')} семестры</span></div>
-          <h1>{course.heroTitle}<br />{course.heroAccent.startsWith('и ') && 'и '}<em>{course.heroAccent.replace(/^и /, '')}</em></h1>
+          <h1>{course.discipline}</h1>
         </div>
         <img className="ok-rhino" src={asset('brand/mascot/okfks-rhino-catalog.png')} alt={course.mascotAlt} />
       </section>
@@ -204,7 +204,6 @@ export function CourseCatalog({
         <div className="ok-empty" hidden={!!visibleLectures.length}><h3>Темы не найдены</h3><p>Попробуйте другое слово или выберите все темы.</p><button className="ok-button" type="button" onClick={() => { setFilters({ search: '', semester: 'all' }); searchRef.current?.focus() }}>Сбросить поиск</button></div>
       </section>
     </main>
-    <footer className="ok-footer"><span>{course.discipline}</span><span>{course.code}</span></footer>
     <dialog className="ok-materials-dialog" ref={materialsDialogRef} aria-labelledby="ok-materials-heading" onClose={closeMaterials}>
       <button className="ok-close" type="button" aria-label="Закрыть материалы" onClick={() => materialsDialogRef.current?.close()}><X aria-hidden="true" /></button>
       <h2 id="ok-materials-heading">Материалы</h2>
