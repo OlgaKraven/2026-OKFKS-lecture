@@ -105,7 +105,7 @@ export function ReliabilityLab({base, assets}:{base:string;assets?:{logo:string;
       <aside className="lab-model-note"><CircleHelp size={20}/><p><b>Границы модели.</b> Учебные данные: три отказа и три завершённых восстановления. MTBF = T / N; MTTR = R / N; K = T / (T + R). Равенство с MTBF / (MTBF + MTTR) здесь следует из одинакового числа случаев. Незавершённые восстановления требуют отдельного учёта. Средние не предсказывают следующий отказ.</p></aside>
       {teacher&&<aside className="lab-teacher"><p className="lab-eyebrow">ПОДСКАЗКИ ПРЕПОДАВАТЕЛЮ · {guide.time}</p><h3>Сначала прогноз, затем действие</h3><p><b>Вопрос группе:</b> {guide.question}</p><p><b>Порядок показа:</b> {guide.sequence}</p><p><b>Ожидаемое объяснение:</b> {guide.answer}</p><p className="lab-small">Мастерская дополняет примеры второй темы. Для проекторного показа управляйте одной страницей; интерактив не синхронизируется с отдельным окном audience. Прогресс сохраняется только на этом устройстве.</p></aside>}
       </div>
-      <footer className="slide-footer"><span>Авторский учебный разбор · МДК.04.02</span><span>Мастерская надёжности</span></footer>
+      <footer className="slide-footer"><span>МДК.04.02</span><span>Мастерская надёжности</span></footer>
     </article>
     <footer className="lab-footer"><span>Пилот · Только учебные данные · Прогресс на этом устройстве</span><button type="button" onClick={reset}><RotateCcw size={16}/> Начать мастерскую заново</button></footer>
     <WorkshopDirectory base={base}/>

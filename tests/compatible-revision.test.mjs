@@ -9,17 +9,17 @@ const manifest = read('public/teaching/compatibility.json'), pack = read('public
 const base='/2026-OKFKS-lecture/', prefix=`lecture:${base}:okfks`
 const store = () => { const values = new Map(); return {getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,v)} }
 
-test('only the seven s111 summaries are removed; surviving IDs, order, notebook anchors and definitions remain compatible', () => {
+test('the retired s002 semester overviews and s111 summaries are removed; surviving IDs, order, notebook anchors and definitions remain compatible', () => {
   assert.equal(course.lectures.length,7)
   for (let i=0;i<course.lectures.length;i++) {
     const lecture=course.lectures[i],after=lecture.slides
     const original=baseline.course.lectures[i].slides
     const removedId=`${lecture.id}-s111`
     assert.equal(original.filter(s=>s.id===removedId).length,1)
-    const before=original.filter(s=>s.id!==removedId)
-    assert.equal(after.length,111)
-    assert.deepEqual(after.map(s=>s.id),before.map(s=>s.id))
-    before.forEach((s,j)=>assert.equal(after[j].notebook,s.notebook,s.id))
+    const before=original.filter(s=>s.id!==removedId && s.id!==`${lecture.id}-s002` && !/-s10[1-9]$|-s110$/.test(s.id))
+    assert.equal(after.length,108)
+    assert.deepEqual(after.filter(s=>!s.activityPassport).map(s=>s.id),before.map(s=>s.id))
+    before.forEach(s=>{const current=after.find(x=>x.id===s.id);if(!current.definitionEntries)assert.equal(current.notebook,s.notebook,s.id)})
     if (i===0 || i===1) before.filter(s=>s.notebook && s.kind==='theory').forEach(s=>assert.equal(after.find(a=>a.id===s.id).body,s.body,s.id))
   }
   const text=JSON.stringify(course.lectures[1])
@@ -72,7 +72,7 @@ test('route covers all eight sections and fits 90 minutes with discussion reserv
   assert.equal(route.estimatedCoreMinutes+route.reserveMinutes,90)
   for(const s of l.slides.filter(s=>s.kind==='section'))assert.ok(route.requiredSlideIds.includes(s.id))
   assert.deepEqual([...new Set([...route.requiredSlideIds,...route.independentSlideIds])].sort(),l.slides.map(s=>s.id).sort())
-  assert.equal(l.slides.length,111)
+  assert.equal(l.slides.length,108)
   assert.ok(![...route.requiredSlideIds,...route.independentSlideIds].includes(`${l.id}-s111`))
   assert.ok(route.reserveMinutes>=5)
 })

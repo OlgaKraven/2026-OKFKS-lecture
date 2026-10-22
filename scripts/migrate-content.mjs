@@ -9,6 +9,9 @@ import { applyEnrichment } from '../authoring/enrichment.mjs'
 import { applyFourSlidePilot } from '../authoring/four-slide-pilot.mjs'
 import { applySemester7Review } from '../authoring/review-semester7.mjs'
 import { applySemester8Review } from '../authoring/review-semester8.mjs'
+import {applyDefinitions,definitions} from '../authoring/definitions.mjs'
+import {addQuestionSupplements} from '../authoring/question-supplements.mjs'
+import { applyPresentationCleanup } from '../authoring/presentation-cleanup.mjs'
 import { applyTeacherText } from '../authoring/publish-teacher-text.mjs'
 
 // Compile the preserved authoring sources; they are never imported by the site.
@@ -168,7 +171,7 @@ for (let ti = 0; ti < topics.length; ti++) {
     }
     const explanationIds = oldGroup.filter(s => !s.test).map(s => idOf(topic, s))
     questionMap.push({ lectureId: topic.id, questionId: qid, title: q.title, outcome: q.check, explanationIds, taskIds: tests.map(s => s.task.id) })
-    glossary.push({ lectureId: topic.id, questionId: qid, term: q.title, explanation: q.focus })
+    glossary.push({ lectureId: topic.id, questionId: qid, term: q.title, explanation: q.focus, definitions:definitions[ti][qi].map(([term,definition])=>({term,definition})) })
   }
   const lecture = { id: topic.id, title: topic.displayTitle, sourceTitle: topic.sourceTitle, semester: topic.semester, question: 'МДК.04.02 · учебные материалы', slides }
   const titleCorrections = {
@@ -227,6 +230,9 @@ for (const lecture of course.lectures) {
 }
 const removedIds = new Set(removedSlides.map(slide => slide.id))
 await applyTeacherText(course, bank, pack)
+applyPresentationCleanup(course, pack, mapping)
+applyDefinitions(course,pack)
+const questionSupplements=addQuestionSupplements(course,pack,questionMap)
 // Counts and timing describe the final authored revision, including overrides.
 for (const row of registry) {
   const lecture = course.lectures.find(lecture => lecture.id === row.lectureId)
@@ -236,6 +242,7 @@ for (const row of registry) {
 }
 async function json(file, data) { await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n') }
 await json('public/course.json', course)
+await json('public/question-supplements.json',{schemaVersion:1,courseId:course.id,activities:questionSupplements})
 await json('public/assessment.json', bank)
 // Author-approved published notes; local teacher edits remain in private/ and the browser.
 await json('public/teaching/notes.json', pack)
@@ -260,9 +267,10 @@ const migration = { courseId: course.id, previousVersion: migrationBaseline.cour
 await json('public/teaching/compatibility.json', migration)
 const changes = newSlides.map(s => {
   const before = previousById.get(s.id)
+  if(!before)return {id:s.id,title:s.title,changedFields:Object.keys(s),notebook:'Не требуется',action:'Добавлен отдельный паспорт интерактивного дополнения перед самопроверкой'}
   const fields = [...new Set([...Object.keys(before), ...Object.keys(s)])].filter(f => JSON.stringify(before[f]) !== JSON.stringify(s[f]))
-  if (before.notebook !== s.notebook) throw Error(`Notebook anchor changed: ${s.id}`)
-  return { id:s.id, title:s.title, changedFields:fields, notebook:'Сохранён', action:fields.length ? 'Дополнение пояснений или задания; опорная запись сохраняется' : 'Без изменений' }
+  if (before.notebook !== s.notebook && !s.definitionEntries) throw Error(`Notebook anchor changed: ${s.id}`)
+  return { id:s.id, title:s.title, changedFields:fields, notebook:s.definitionEntries?'Уточнены определения':'Сохранён', action:fields.length ? 'Дополнение пояснений или задания; опорная запись сохраняется' : 'Без изменений' }
 })
 await json('reports/change-map.json', { previousVersion:baseline.course.contentVersion, contentVersion:version, slides:changes, removedSlides })
 const last = course.lectures.at(-1)
@@ -283,10 +291,10 @@ registry.at(-1).discussionReserveMinutes = route.reserveMinutes
 await json('reports/lecture-registry.json', registry)
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
 const list = ids => ids.map(id => `<li><a href="../?lecture=${last.id}&amp;slide=${id}">${escape(last.slides.find(s=>s.id===id).title)}</a> <small>${id.slice(-4)}</small></li>`).join('')
-await fs.writeFile('public/teaching/route.html', `<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Маршрут занятия</title><style>body{font:17px/1.6 system-ui;max-width:900px;margin:auto;padding:24px}a{color:#14558c}li{margin:8px 0}small{color:#64748b}</style><h1>${escape(last.title)}: 90 минут</h1><p>Расчётная работа со слайдами — ${routeMinutes} мин; резерв на обсуждение — ${route.reserveMinutes} мин. Все восемь вопросов включены. Полный набор остаётся доступен.</p><h2>Обязательный маршрут</h2><p>Идите по ссылкам в указанном порядке; обычная кнопка «Вперёд» показывает также дополнительные слайды. В аудитории выбраны три ситуационных задания: проверка стороны TLS, свидетельства шифрования и повторная проверка исправления.</p><ol>${list(route.requiredSlideIds)}</ol><h2>Дополнительное закрепление</h2><p>Остальные задания и этапы лабораторного отчёта выполняются отдельно. Литературу и материалы можно открыть перед занятием.</p><ol>${list(route.independentSlideIds)}</ol></html>`)
+await fs.writeFile('public/teaching/route.html', `<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Маршрут занятия</title><style>body{font:17px/1.6 system-ui;max-width:900px;margin:auto;padding:24px}a{color:#14558c}li{margin:8px 0}small{color:#64748b}</style><h1>${escape(last.title)}: 90 минут</h1><p>Расчётная работа со слайдами — ${routeMinutes} мин; резерв на обсуждение — ${route.reserveMinutes} мин. Все восемь вопросов включены. Полный набор остаётся доступен.</p><h2>Обязательный маршрут</h2><p>Идите по ссылкам в указанном порядке; обычная кнопка «Вперёд» показывает также дополнительные слайды. В аудитории выбраны три ситуационных задания: проверка стороны TLS, свидетельства шифрования и повторная проверка исправления.</p><ol>${list(route.requiredSlideIds)}</ol><h2>Дополнительное закрепление</h2><p>Остальные задания самопроверки выполняются отдельно. Литературу и материалы можно открыть перед занятием.</p><ol>${list(route.independentSlideIds)}</ol></html>`)
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex')
 await json('reports/compatibility-check.json', { previousVersion:baseline.course.contentVersion, migrationPreviousVersion:migrationBaseline.course.contentVersion, contentVersion:version,
   slides:newSlides.length, unchangedSlideOrder:course.lectures.every((l,i)=>digest(l.slides.map(s=>s.id))===digest(baseline.course.lectures[i].slides.filter(s=>!removedIds.has(s.id)).map(s=>s.id))),
-  removedSlideIds:[...removedIds], notebookAnchorsPreserved:oldSlides.filter(s=>s.notebook).length, unchangedTaskIds:unchangedTaskIds.length, changedSlides:changes.filter(s=>s.changedFields.length).length })
+  removedSlideIds:[...removedIds], notebookAnchorsPreserved:newSlides.filter(s=>s.notebook&&previousById.get(s.id)?.notebook===s.notebook).length, notebookDefinitionBlocksRevised:newSlides.filter(s=>s.definitionEntries).length, unchangedTaskIds:unchangedTaskIds.length, changedSlides:changes.filter(s=>s.changedFields.length).length })
 await fs.writeFile('private/teacher.md', course.lectures.map(l => `# ${l.title}\n\n` + l.slides.map(s => `## ${s.id} — ${s.title}\n\n${pack.notes[s.id].script}\n\n${pack.notes[s.id].notebook}\n\n### Подготовка\n\n${pack.notes[s.id].preparation}\n\n### Вопрос аудитории\n\n${pack.notes[s.id].questions}\n\n### Ожидаемый ответ и разбор\n\n${pack.notes[s.id].answer}`).join('\n\n')).join('\n\n'))
 console.log(JSON.stringify({ lectures: course.lectures.length, slides: newSlides.length, tasks: Object.keys(bank.keys).length, teacherPack: packPath }, null, 2))

@@ -1106,3 +1106,7 @@
   font-size:13px;
   line-height:1.5;
 }
+
+.ok-page .ok-teacher-footer > .ok-button { width:100%; justify-content:center; }
+
+.ok-page .ok-teacher-footer > .ok-button-primary { background:var(--ok-red); border-color:var(--ok-red); color:#fff; }

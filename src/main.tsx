@@ -7,9 +7,11 @@ import { NotesStatus } from './NotesStatus'
 import { CourseCatalog } from './CourseCatalog'
 import { migrateCompatibleSession, resolveCourseSlideId } from './compatibility'
 import './content-fixes.css'
+import './presentation-design.css'
+import {QuestionWorkshop} from './lab/QuestionWorkshop'
 import { ReliabilityLab } from './lab/ReliabilityLab'
 import { WorkshopLab } from './lab/WorkshopLab'
-import {LearningVisualPrintAppendix,renderLearningVisual} from './infographics/LearningVisual'
+import {renderLearningVisualPrintSlide,renderLearningVisual} from './infographics/LearningVisual'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
@@ -17,6 +19,7 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
 }).then(async course => {
   validateCourse(course)
   const mode = new URL(location.href).searchParams.get('mode')
+  if(mode==='question-lab'){createRoot(document.getElementById('root')!).render(<QuestionWorkshop course={course} base={import.meta.env.BASE_URL}/>);return}
   if (mode === 'lab') {
     const workshop=new URL(location.href).searchParams.get('workshop')
     createRoot(document.getElementById('root')!).render(workshop?<WorkshopLab base={import.meta.env.BASE_URL} id={workshop}/>:<ReliabilityLab base={import.meta.env.BASE_URL} />)
@@ -85,7 +88,6 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   document.title = `${course.code} · ${course.discipline}`
   createRoot(document.getElementById('root')!).render(<VisualRendererProvider render={renderLearningVisual}>
     {showNotesStatus && <NotesStatus course={course} error={notesError} previousVersion={previousVersion} archiveAvailable={archiveAvailable} compatibilityError={compatibilityError} />}
-    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} resolveTeacherNotes={resolveTeacherNotes} renderCatalog={props => <CourseCatalog {...props} />} />
-    <LearningVisualPrintAppendix course={course}/>
+    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} resolveTeacherNotes={resolveTeacherNotes} renderCatalog={props => <CourseCatalog {...props} />} renderPrintSlide={props=>renderLearningVisualPrintSlide({...props,course})} />
   </VisualRendererProvider>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })

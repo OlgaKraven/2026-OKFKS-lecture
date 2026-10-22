@@ -25,21 +25,21 @@ const storage = () => {
 }
 const attempt = seed => ({ seed, attempts: 3, draft: ['o1'], submitted: ['o1'], result: { status: 'correct', score: 1 } })
 
-test('the full review removes only seven s111 summaries and preserves all surviving IDs, order, brand assets and notebook anchors', () => {
-  const removedIds = new Set(pilot.course.lectures.map(lecture => `${lecture.id}-s111`))
-  assert.equal(removedIds.size, 7)
-  assert.equal(previousSlides.filter(slide => removedIds.has(slide.id)).length, 7)
-  assert.equal(slides.length, 777)
-  assert.equal(new Set(slides.map(slide => slide.id)).size, 777)
+test('the full review removes the retired semester overviews and summaries and preserves all surviving IDs, order, brand assets and notebook anchors', () => {
+  const removedIds = new Set(pilot.course.lectures.flatMap(lecture => [`${lecture.id}-s002`,...Array.from({length:11},(_,i)=>`${lecture.id}-s${101+i}`)]))
+  assert.equal(removedIds.size, 84)
+  assert.equal(previousSlides.filter(slide => removedIds.has(slide.id)).length, 84)
+  assert.equal(slides.length, 756)
+  assert.equal(new Set(slides.map(slide => slide.id)).size, 756)
   assert.deepEqual(course.lectures.map(lecture => lecture.id), pilot.course.lectures.map(lecture => lecture.id))
-  assert.deepEqual(slides.map(slide => slide.id), previousSlides.filter(slide => !removedIds.has(slide.id)).map(slide => slide.id))
+  assert.deepEqual(slides.filter(s=>!s.activityPassport).map(slide => slide.id), previousSlides.filter(slide => !removedIds.has(slide.id)).map(slide => slide.id))
   for (let i = 0; i < course.lectures.length; i++) {
-    assert.equal(course.lectures[i].slides.length, 111)
+    assert.equal(course.lectures[i].slides.length, 108)
     const { slides: currentSlides, ...metadata } = course.lectures[i]
     const { slides: oldSlides, ...oldMetadata } = pilot.course.lectures[i]
-    assert.deepEqual(metadata, oldMetadata)
+    assert.deepEqual(metadata, {...oldMetadata, question: oldMetadata.question.replace(' · учебные материалы', '')})
     const survivingOldSlides = oldSlides.filter(slide => !removedIds.has(slide.id))
-    currentSlides.forEach((slide, index) => assert.equal(slide.notebook, survivingOldSlides[index].notebook, slide.id))
+    currentSlides.filter(s=>!s.activityPassport&&!s.definitionEntries).forEach(slide => assert.equal(slide.notebook, survivingOldSlides.find(old=>old.id===slide.id).notebook, slide.id))
   }
   for (const field of ['id', 'code', 'discipline', 'year', 'heroTitle', 'heroAccent', 'slogan', 'mascot', 'mascotAlt', 'logo', 'ornament', 'font', 'topicArrow', 'materialsUrl', 'literature', 'semesters']) {
     assert.deepEqual(course[field], pilot.course[field], field)

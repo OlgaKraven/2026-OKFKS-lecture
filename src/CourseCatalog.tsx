@@ -162,7 +162,7 @@ export function CourseCatalog({
               <h3>Скачать лекции в PDF</h3>
               <div className="ok-export-actions">{course.semesters.map(semester => <button className="ok-button" type="button" key={semester} aria-label={`${semester} семестр — скачать PDF`} onClick={() => { closeTeacher(); onPrint(`semester-${semester}`) }}><Download aria-hidden="true" />{semester} семестр</button>)}</div>
             </div>
-            <div className="ok-teacher-footer"><button className="ok-button" type="button" onClick={closeTeacher}>Готово</button></div>
+            <div className="ok-teacher-footer"><button className="ok-button ok-button-primary" type="button" onClick={closeTeacher}>Готово</button></div>
           </div>
         </details>
         <button className="ok-theme" type="button" aria-label={theme === 'light' ? 'Включить тёмную тему' : 'Включить светлую тему'} title={theme === 'light' ? 'Включить тёмную тему' : 'Включить светлую тему'} onClick={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}>{theme === 'light' ? <Moon aria-hidden="true" /> : <Sun aria-hidden="true" />}</button>

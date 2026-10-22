@@ -2,8 +2,8 @@
   "previousVersion": "2.0.1-content-review-20260918",
   "migrationPreviousVersion": "2.0.3-four-slide-pilot-20261021",
   "contentVersion": "2.1.0-design-review-20261021",
-  "slides": 777,
-  "unchangedSlideOrder": true,
+  "slides": 756,
+  "unchangedSlideOrder": false,
   "removedSlideIds": [
     "s07-01-quality-and-failures-s111",
     "s07-02-reliability-metrics-s111",
@@ -13,7 +13,8 @@
     "s08-02-protection-controls-s111",
     "s08-03-encryption-and-security-testing-s111"
   ],
-  "notebookAnchorsPreserved": 175,
+  "notebookAnchorsPreserved": 63,
+  "notebookDefinitionBlocksRevised": 56,
   "unchangedTaskIds": 55,
-  "changedSlides": 442
+  "changedSlides": 681
 }

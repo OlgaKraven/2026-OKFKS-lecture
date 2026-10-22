@@ -6,14 +6,14 @@ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'))
 const course = await read('public/course.json')
 const map = await read('authoring/migration-map.json')
 const workload = await read('authoring/course-map.json')
-test('all legacy positions retain provenance; only the seven s111 summaries have no current slide', () => {
+test('all legacy positions retain provenance; the retired s002 semester overviews and s111 summaries have no current slide', () => {
   assert.equal(map.length, 784)
-  assert.equal(map.filter(entry => entry.slideIds.length === 0).length, 7)
+  assert.equal(map.filter(entry => entry.slideIds.length === 0).length, 84)
   for (const lecture of course.lectures) {
     const entries = map.filter(m => m.lectureId === lecture.id)
     assert.deepEqual(entries.map(e => e.oldNumber), Array.from({ length: 112 }, (_, i) => i + 1))
     for (const entry of entries) {
-      if (entry.oldNumber === 111) {
+      if ((entry.oldNumber===2||entry.oldNumber>=101&&entry.oldNumber<=111)) {
         assert.deepEqual(entry.slideIds, [])
         assert.match(entry.change, /^Удалён/)
       } else {
@@ -21,8 +21,8 @@ test('all legacy positions retain provenance; only the seven s111 summaries have
         assert.ok(lecture.slides.some(s => s.id === entry.slideIds[0]))
       }
     }
-    assert.equal(lecture.slides.length, 111)
-    assert.deepEqual(entries.flatMap(entry => entry.slideIds).sort(), lecture.slides.map(slide => slide.id).sort())
+    assert.equal(lecture.slides.length, 108)
+    assert.deepEqual(entries.flatMap(entry => entry.slideIds).sort(), lecture.slides.filter(s=>!s.activityPassport).map(slide => slide.id).sort())
   }
 })
 test('source workload and semester allocation remain separate', () => {

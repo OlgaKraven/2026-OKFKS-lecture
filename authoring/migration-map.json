@@ -19,10 +19,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Надёжность и качество в эксплуатации",
-    "slideIds": [
-      "s07-01-quality-and-failures-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1405,10 +1403,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s07-01-quality-and-failures-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1419,10 +1415,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s07-01-quality-and-failures-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1433,10 +1427,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s07-01-quality-and-failures-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1447,10 +1439,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s07-01-quality-and-failures-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1461,10 +1451,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s07-01-quality-and-failures-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1475,10 +1463,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s07-01-quality-and-failures-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1489,10 +1475,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s07-01-quality-and-failures-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1503,10 +1487,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s07-01-quality-and-failures-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1517,10 +1499,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s07-01-quality-and-failures-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1531,10 +1511,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s07-01-quality-and-failures-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -1587,10 +1565,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Надёжность и качество в эксплуатации",
-    "slideIds": [
-      "s07-02-reliability-metrics-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3069,10 +3045,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s07-02-reliability-metrics-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3084,10 +3058,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s07-02-reliability-metrics-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3099,10 +3071,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s07-02-reliability-metrics-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3114,10 +3084,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s07-02-reliability-metrics-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3129,10 +3097,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s07-02-reliability-metrics-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3144,10 +3110,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s07-02-reliability-metrics-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3159,10 +3123,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s07-02-reliability-metrics-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3174,10 +3136,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s07-02-reliability-metrics-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3189,10 +3149,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s07-02-reliability-metrics-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3204,10 +3162,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s07-02-reliability-metrics-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -3262,10 +3218,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Надёжность и качество в эксплуатации",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -4936,10 +4890,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -4953,10 +4905,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -4970,10 +4920,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -4987,10 +4935,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5004,10 +4950,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5021,10 +4965,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5038,10 +4980,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5055,10 +4995,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5072,10 +5010,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5089,10 +5025,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -5151,10 +5085,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Надёжность и качество в эксплуатации",
-    "slideIds": [
-      "s07-04-observing-operating-system-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6825,10 +6757,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s07-04-observing-operating-system-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6842,10 +6772,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s07-04-observing-operating-system-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6859,10 +6787,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s07-04-observing-operating-system-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6876,10 +6802,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s07-04-observing-operating-system-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6893,10 +6817,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s07-04-observing-operating-system-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6910,10 +6832,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s07-04-observing-operating-system-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6927,10 +6847,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s07-04-observing-operating-system-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6944,10 +6862,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s07-04-observing-operating-system-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6961,10 +6877,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s07-04-observing-operating-system-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -6978,10 +6892,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s07-04-observing-operating-system-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -7040,10 +6952,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Защита компьютерных систем",
-    "slideIds": [
-      "s08-01-threats-and-malware-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8618,10 +8528,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s08-01-threats-and-malware-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8634,10 +8542,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s08-01-threats-and-malware-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8650,10 +8556,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s08-01-threats-and-malware-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8666,10 +8570,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s08-01-threats-and-malware-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8682,10 +8584,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s08-01-threats-and-malware-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8698,10 +8598,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s08-01-threats-and-malware-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8714,10 +8612,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s08-01-threats-and-malware-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8730,10 +8626,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s08-01-threats-and-malware-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8746,10 +8640,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s08-01-threats-and-malware-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8762,10 +8654,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s08-01-threats-and-malware-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -8822,10 +8712,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Защита компьютерных систем",
-    "slideIds": [
-      "s08-02-protection-controls-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10784,10 +10672,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s08-02-protection-controls-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10804,10 +10690,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s08-02-protection-controls-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10824,10 +10708,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s08-02-protection-controls-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10844,10 +10726,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s08-02-protection-controls-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10864,10 +10744,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s08-02-protection-controls-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10884,10 +10762,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s08-02-protection-controls-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10904,10 +10780,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s08-02-protection-controls-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10924,10 +10798,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s08-02-protection-controls-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10944,10 +10816,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s08-02-protection-controls-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -10964,10 +10834,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s08-02-protection-controls-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -11032,10 +10900,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 2,
     "oldTitle": "Защита компьютерных систем",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s002"
-    ],
-    "change": "Макет service → theory",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13090,10 +12956,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 101,
     "oldTitle": "Сначала оформите паспорт работы",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s101"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13111,10 +12975,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 102,
     "oldTitle": "Соберите исходные данные без домыслов",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s102"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13132,10 +12994,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 103,
     "oldTitle": "Назначьте критерий до выполнения",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s103"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13153,10 +13013,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 104,
     "oldTitle": "Выполняйте действие и ведите журнал",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s104"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13174,10 +13032,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 105,
     "oldTitle": "Добавьте граничный или негативный сценарий",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s105"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13195,10 +13051,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 106,
     "oldTitle": "Разберите отклонение, а не скрывайте его",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s106"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13216,10 +13070,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 107,
     "oldTitle": "Сопоставьте свидетельство с критерием",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s107"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13237,10 +13089,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 108,
     "oldTitle": "Завершите отчёт выводом и ограничениями",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s108"
-    ],
-    "change": "Макет practice → example",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13258,10 +13108,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 109,
     "oldTitle": "Первые четыре опоры собираются в единую модель",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s109"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",
@@ -13279,10 +13127,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 110,
     "oldTitle": "Последние четыре опоры задают границы решения",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s110"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён из презентации блок обзора, ЛР или синтеза по замечанию автора",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",

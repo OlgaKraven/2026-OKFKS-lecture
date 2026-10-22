@@ -29,7 +29,7 @@ test('published notes install all slides and preserve teacher edits on repeat vi
   const store = storage()
   const saved = prepareTeacherNotes(course, '/2026-OKFKS-lecture/', pack, store)
   assert.equal(store.getItem(key), null)
-  assert.equal(Object.keys(saved).length, 777)
+  assert.equal(Object.keys(saved).length, 756)
   const slideIds = course.lectures.flatMap(lecture => lecture.slides.map(slide => slide.id))
   assert.deepEqual(Object.keys(pack.notes).sort(), [...slideIds].sort())
   assert.deepEqual(Object.keys(saved).sort(), [...slideIds].sort())
@@ -61,7 +61,7 @@ test('empty local sections do not hide the published notes, while edited text su
 test('unavailable or corrupt storage does not hide the published notes', () => {
   for (const store of [{ getItem: () => { throw new Error('Storage disabled') } }, { getItem: () => '{broken' }]) {
     const notes = prepareTeacherNotes(course, '/2026-OKFKS-lecture/', pack, store)
-    assert.equal(Object.keys(notes).length, 777)
+    assert.equal(Object.keys(notes).length, 756)
     const id = course.lectures[0].slides[0].id
     assert.equal(notes[id].script, pack.notes[id].script)
   }

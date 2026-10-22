@@ -23,3 +23,7 @@ test('retired closing links and saved positions reach final questions without ch
     assert.equal(storage.getItem(`${prefix}:${course.contentVersion}:attempts`), scores)
   }
 })
+
+test('retired semester overview links reach the surviving context without changing other anchors',()=>{for(const lecture of course.lectures){assert.equal(resolveCourseSlideId(course,lecture.id,`${lecture.id}-s002`),`${lecture.id}-s006`)}})
+
+test('retired laboratory and synthesis blocks resolve to the final questions',()=>{for(const lecture of course.lectures)for(let n=101;n<=110;n++){const id=`${lecture.id}-s${n}`;assert.ok(!lecture.slides.some(s=>s.id===id));assert.equal(resolveCourseSlideId(course,lecture.id,id),`${lecture.id}-s112`)}})

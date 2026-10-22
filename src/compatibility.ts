@@ -17,8 +17,11 @@ const sha256 = async (value: string) => [...new Uint8Array(await crypto.subtle.d
 // positions now lead to the surviving final questions in the same lecture.
 export function resolveCourseSlideId(course: Course, lectureId: string, slideId: string) {
   const lecture = course.lectures.find(item => item.id === lectureId)
-  if (lecture && slideId === `${lectureId}-s111` && !lecture.slides.some(slide => slide.id === slideId)) {
+  if (lecture && /^s10[1-9]$|^s110$|^s111$/.test(slideId.slice(lectureId.length+1)) && !lecture.slides.some(slide => slide.id === slideId)) {
     return lecture.slides.find(slide => slide.id === `${lectureId}-s112`)?.id || slideId
+  }
+  if (lecture && slideId === `${lectureId}-s002` && !lecture.slides.some(slide => slide.id === slideId)) {
+    return lecture.slides.find(slide => slide.id === `${lectureId}-s006`)?.id || lecture.slides[0].id
   }
   return slideId
 }

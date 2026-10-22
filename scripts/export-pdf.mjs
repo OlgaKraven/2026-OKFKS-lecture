@@ -36,9 +36,12 @@ try {
   await fs.mkdir(output, { recursive: true })
   for (const lecture of lectures) {
     const expectedSlides = lecture.slides.filter(slide => !slide.task && slide.kind !== 'test').length
-    const expectedDiagrams = diagrams.filter(spec => lecture.slides.some(slide => slide.id === spec.slideId)).length
+    const lectureDiagrams=diagrams.filter(spec=>lecture.slides.some(slide=>slide.id===spec.slideId))
+    const expectedDiagrams=lectureDiagrams.length
+    const diagramOnly=lectureDiagrams.filter(spec=>{const s=lecture.slides.find(slide=>slide.id===spec.slideId);return !s.body&&!s.bullets?.length&&!s.notebook&&!s.rows}).length
+    const expectedTextPages=expectedSlides-diagramOnly
     await page.goto(`${base}?mode=print&scope=${lecture.id}`)
-    await page.waitForFunction(count => document.querySelectorAll('.print-page').length === count, expectedSlides)
+    await page.waitForFunction(count => document.querySelectorAll('.print-page').length === count, expectedTextPages)
     await page.waitForFunction(count => document.querySelectorAll('.lv-print-sheet').length === count, expectedDiagrams)
     await page.waitForFunction(() => document.fonts.check('16px Raleway'))
     await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(image => image.decode())) })
@@ -52,6 +55,8 @@ try {
       if (!code.expected || decoded?.data !== code.expected) throw Error(`QR mismatch: ${code.expected}`)
     }
     await page.emulateMedia({ media: 'print' })
+    const unstableOrders=await page.locator('.print-page .lv-ordered').evaluateAll(nodes=>nodes.filter(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length!==3).length)
+    if(unstableOrders)throw Error('Printed sequence lost its three-column layout')
     const ambiguousGuards = await page.locator('.lv-print-sheet [data-label-edge]').evaluateAll(labels => labels.flatMap(label => {
       const svg = label.closest('svg'), box = label.querySelector('foreignObject')
       const point = { x: Number(box.getAttribute('x')) + Number(box.getAttribute('width')) / 2, y: Number(box.getAttribute('y')) + Number(box.getAttribute('height')) / 2 }
@@ -71,19 +76,19 @@ try {
     const layout = await page.locator('.slide-frame').evaluateAll(frames => frames.map(frame => {
       const copy = frame.querySelector('.slide-copy')
       const r = copy.getBoundingClientRect(), footer = frame.querySelector('.slide-footer').getBoundingClientRect()
-      const content = [...copy.children].map(x => x.getBoundingClientRect())
+      const content = [...copy.children].filter(x => x.getClientRects().length).map(x => x.getBoundingClientRect())
       const bottom = Math.max(...content.map(x => x.bottom))
       const svgOverflow = [...copy.querySelectorAll('svg')].flatMap(svg => {
         const vb = svg.viewBox.baseVal
         return [...svg.querySelectorAll('text')].filter(t => { const b = t.getBBox(); return b.x < -1 || b.x + b.width > vb.width + 1 || b.y + b.height > vb.height + 1 }).map(t => t.textContent)
       })
-      const overlap = content.some((rect, i) => i > 0 && rect.top < content[i - 1].bottom - 2)
+      const overlap = content.some((rect, i) => content.slice(i + 1).some(other => Math.min(rect.right, other.right) - Math.max(rect.left, other.left) > 2 && Math.min(rect.bottom, other.bottom) - Math.max(rect.top, other.top) > 2))
       return { id: frame.dataset.slideId, overflow: Math.max(0, bottom - footer.top, copy.scrollHeight - copy.clientHeight), rightOverflow: Math.max(0, ...content.map(x => x.right - r.right)), overlap, svgOverflow }
     }).filter(x => x.overflow > 2 || x.rightOverflow > 2 || x.overlap || x.svgOverflow.length))
     const file = path.join(output, `${lecture.id}.pdf`)
     await page.pdf({ path: file, printBackground: true, preferCSSPageSize: true })
     const pdf = await PDFDocument.load(await fs.readFile(file))
-    if (pdf.getPageCount() < expectedSlides + expectedDiagrams) throw Error(`Missing printed content: ${lecture.id}: ${pdf.getPageCount()}`)
+    if (pdf.getPageCount() < expectedTextPages + expectedDiagrams) throw Error(`Missing printed content: ${lecture.id}: ${pdf.getPageCount()}`)
     if (errors.length) throw Error(errors.join('\n'))
     reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), sourceSlides: expectedSlides, diagramSheets: expectedDiagrams, qrDecoded: qr.length, branchLabelsChecked: true, layout })
     console.log(JSON.stringify(reports.at(-1)))

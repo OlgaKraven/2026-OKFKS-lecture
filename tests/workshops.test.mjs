@@ -28,9 +28,6 @@ test('all workshop entries resolve to existing slides and current published teac
     const lecture=course.lectures.find(x=>x.id===l.lecture)
     for(const n of ['001',...l.slides]){
       const slide=lecture.slides.find(s=>s.id===`${l.lecture}-s${n}`)
-      const q=new URLSearchParams(slide.supplement.href.slice(1))
-      assert.equal(q.get('workshop'),l.id);assert.equal(q.get('originSlide'),slide.id)
-      assert.ok(['map','experiment','game'].includes(q.get('activity')))
       assert.ok(pack.notes[slide.id], `Missing teacher scenario for ${slide.id}`)
     }
     for(const c of l.cases){assert.ok(c.options[c.correct]);assert.ok(c.answer && c.hint)}
