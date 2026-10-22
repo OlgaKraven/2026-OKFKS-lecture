@@ -5,6 +5,8 @@ import type {Course,Lecture,Slide} from '@olgakraven/lecture-engine'
 import {Diagram} from './Diagrams'
 import {advance,authoredSpecs,chooseScenario,initialSnapshot,navigate,pauseSnapshot,scenarioFor,specification,togglePlayback} from './model'
 import type {Snapshot,Spec} from './model'
+import {TaskReview} from '../presentation/TaskReview'
+import {presentationRole,usePresentationSync} from '../presentation/usePresentationSync'
 import './learning-visuals.css'
 
 type Message={kind:'snapshot';slideId:string;seq:number;state:Snapshot}|{kind:'hello';slideId:string}
@@ -115,13 +117,14 @@ function LearningVisual({spec,interactive,compact,replacesRows=false}:{spec:Spec
   return <div className={`lv ${compact?'lv-compact':''}`} data-learning-visual={spec.slideId} data-replaces-rows={replacesRows||undefined} ref={root}>
     {expandHost&&createPortal(<button type="button" className="button primary pd-expand" onClick={()=>setSnapshot(s=>({...s,detail:true}))} aria-label="Развернуть схему">Развернуть схему ↗</button>,expandHost)}
     <div inert={expanded||undefined}>{body(false)}</div>
-    {expanded&&<Dialog controlled={audience&&snapshot.detail} onClose={()=>{setLocalExpanded(false);if(!audience)setSnapshot(s=>({...pauseSnapshot(s),detail:false}))}}><div className="lv">{body(true)}</div></Dialog>}
+    {expanded&&<Dialog controlled={audience&&snapshot.detail} onClose={()=>{setLocalExpanded(false);if(!audience)setSnapshot(s=>({...pauseSnapshot(s),detail:false}))}}><div className="lv" data-learning-visual={spec.slideId}>{body(true)}</div></Dialog>}
   </div>
 }
 type PassportSlide=Slide&{activityPassport?:{task:string;check:string;href:string}}
-function SupplementPassport({slide,base}:{slide:PassportSlide;base:string}){
+function SupplementPassport({slide,base,course}:{slide:PassportSlide;base:string;course:Course}){
  const passport=slide.activityPassport!
- return <section className="lv lv-passport" data-supplement-passport={slide.id}><div><span>Задача</span><p>{passport.task}</p></div><div><span>Что проверить</span><p>{passport.check}</p></div><a className="button primary" href={`${base}${passport.href}`} target="_blank" rel="noopener">Разбор задачи ↗</a><p className="lv-passport-print-note">Откройте разбор задачи в веб-версии лекции перед самопроверкой этого вопроса.</p></section>
+ const [review,setReview]=usePresentationSync(`${course.id}:${slide.id}:review`,()=>({open:false}),(value):value is {open:boolean}=>Boolean(value&&typeof value==='object'&&typeof (value as {open?:unknown}).open==='boolean'))
+ return <section className="lv lv-passport" data-supplement-passport={slide.id}><div><span>Задача</span><p>{passport.task}</p></div><div><span>Что проверить</span><p>{passport.check}</p></div><a className="button primary" href={`${base}${passport.href}`} target="_blank" rel="noopener" onClick={event=>{if(presentationRole().mode){event.preventDefault();setReview({open:true})}}}>Разбор задачи ↗</a><p className="lv-passport-print-note">Откройте разбор задачи в веб-версии лекции перед самопроверкой этого вопроса.</p>{review.open&&<TaskReview course={course} base={base} href={passport.href} onClose={()=>setReview({open:false})}/>}</section>
 }
 export function PracticeDiagram({spec}:{spec:Spec}){return <LearningVisual key={spec.slideId} spec={spec} interactive compact={false}/>}
 export function QuestionDiagram({slide}:{slide:Slide}){
@@ -129,8 +132,8 @@ export function QuestionDiagram({slide}:{slide:Slide}){
  return spec?<LearningVisual key={slide.id} spec={spec} interactive compact={false}/>:null
 }
 
-export function renderLearningVisual({slide,interactive,base}:{slide:Slide;base:string;interactive:boolean}){
-  if((slide as PassportSlide).activityPassport)return <SupplementPassport slide={slide} base={base}/>
+export function renderLearningVisual({slide,interactive,base,course}:{slide:Slide;base:string;interactive:boolean;course:Course}){
+  if((slide as PassportSlide).activityPassport)return <SupplementPassport slide={slide} base={base} course={course}/>
   // Authored print diagrams are placed beside their own explanatory material by the print callback.
   const print=role().mode==='print'||/\/print\/?$/.test(location.pathname)
   const spec=specification(slide)
