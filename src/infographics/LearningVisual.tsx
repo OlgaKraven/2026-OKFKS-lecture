@@ -121,7 +121,7 @@ function LearningVisual({spec,interactive,compact,replacesRows=false}:{spec:Spec
 type PassportSlide=Slide&{activityPassport?:{task:string;check:string;href:string}}
 function SupplementPassport({slide,base}:{slide:PassportSlide;base:string}){
  const passport=slide.activityPassport!
- return <section className="lv lv-passport" data-supplement-passport={slide.id}><div><span>Задача</span><p>{passport.task}</p></div><div><span>Что проверить</span><p>{passport.check}</p></div><a className="button primary" href={`${base}${passport.href}`} target="_blank" rel="noopener">Интерактивная схема ↗</a><p className="lv-passport-print-note">Откройте интерактивное дополнение в веб-версии лекции перед самопроверкой этого вопроса.</p></section>
+ return <section className="lv lv-passport" data-supplement-passport={slide.id}><div><span>Задача</span><p>{passport.task}</p></div><div><span>Что проверить</span><p>{passport.check}</p></div><a className="button primary" href={`${base}${passport.href}`} target="_blank" rel="noopener">Разбор задачи ↗</a><p className="lv-passport-print-note">Откройте разбор задачи в веб-версии лекции перед самопроверкой этого вопроса.</p></section>
 }
 export function PracticeDiagram({spec}:{spec:Spec}){return <LearningVisual key={spec.slideId} spec={spec} interactive compact={false}/>}
 export function QuestionDiagram({slide}:{slide:Slide}){

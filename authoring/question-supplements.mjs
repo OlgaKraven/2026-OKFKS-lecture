@@ -20,7 +20,7 @@ export function addQuestionSupplements(course,pack,questionMap){
      const activity={id,revision:'transfer-v1',lectureId:lecture.id,number,title:section.title,task:example.task,check:map.outcome,referenceSlideIds,exerciseSpec,decision:example.decision,options:example.options,correct:example.correct,solution:example.solution,hint:example.hint}
      activities.push(activity)
      const href=`?${new URLSearchParams({mode:'question-lab',lecture:lecture.id,question:String(number)})}`
-     slides.push({id,kind:'example',kicker:`Интерактивное дополнение · вопрос ${number}`,title:`Практика: ${section.title}`,activityPassport:{task:activity.task,check:activity.check,href}})
+     slides.push({id,kind:'example',kicker:`Разбор задачи · вопрос ${number}`,title:`Практика: ${section.title}`,activityPassport:{task:activity.task,check:activity.check,href}})
      pack.notes[id]={script:`Перед самопроверкой предложите самостоятельный учебный случай: ${activity.task}`,preparation:'Откройте дополнение. Попросите сформулировать прогноз, исследовать новые данные и обосновать выбор решения.',notebook:'',questions:activity.decision,answer:activity.solution,estimatedSeconds:120}
     }
    }
