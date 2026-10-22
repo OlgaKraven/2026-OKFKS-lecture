@@ -232,25 +232,6 @@
   text-decoration:none;
 }
 
-.ok-page .ok-teacher-texts {
-  margin-top:16px;
-}
-
-.ok-page .ok-teacher-texts h3 {
-  margin-bottom:6px;
-}
-
-.ok-page .ok-teacher-texts p {
-  margin:0 0 12px;
-  color:var(--ok-muted);
-  font-size:12px;
-  line-height:1.5;
-}
-
-.ok-page .ok-export-actions .ok-export-all {
-  grid-column:1 / -1;
-}
-
 .ok-page .ok-teacher-footer {
   display:flex;
   justify-content:flex-end;
@@ -577,16 +558,7 @@
   flex-shrink:0;
 }
 
-.ok-page .ok-topic-downloads {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:flex-end;
-  gap:8px 12px;
-  margin-left:auto;
-}
-
-.ok-page .ok-pdf,.ok-page .ok-md {
+.ok-page .ok-pdf {
   display:flex;
   align-items:center;
   gap:5px;
@@ -600,22 +572,10 @@
   text-decoration:none;
 }
 
-.ok-page .ok-pdf svg,.ok-page .ok-md svg {
+.ok-page .ok-pdf svg {
   width:15px;
   height:15px;
   flex-shrink:0;
-}
-
-.ok-page .ok-md:hover,.ok-page .ok-teacher-texts a:hover {
-  color:var(--ok-ink);
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.ok-page .ok-md:focus-visible,.ok-page .ok-teacher-texts a:focus-visible {
-  outline:3px solid var(--blue);
-  outline-offset:3px;
-  border-radius:4px;
 }
 
 .ok-page .ok-empty {
@@ -722,14 +682,7 @@
   padding:0 9px;
 }
 
-.ok-page[data-layout=list] .ok-topic-downloads {
-  flex-direction:column;
-  align-items:stretch;
-  gap:0;
-  margin-left:0;
-}
-
-.ok-page[data-layout=list] .ok-pdf,.ok-page[data-layout=list] .ok-md {
+.ok-page[data-layout=list] .ok-pdf {
   justify-content:center;
   min-height:44px;
   font-size:11px;
@@ -1110,12 +1063,6 @@
     margin-top:4px;
     flex-wrap:wrap;
     gap:8px 12px;
-  }
-  .ok-page[data-layout=list] .ok-topic-downloads {
-    flex-direction:row;
-    align-items:center;
-    gap:8px 12px;
-    margin-left:auto;
   }
   .ok-page[data-layout=list] .ok-open {
     font-size:12px;

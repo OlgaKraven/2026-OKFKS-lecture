@@ -9,7 +9,7 @@ import { applyEnrichment } from '../authoring/enrichment.mjs'
 import { applyFourSlidePilot } from '../authoring/four-slide-pilot.mjs'
 import { applySemester7Review } from '../authoring/review-semester7.mjs'
 import { applySemester8Review } from '../authoring/review-semester8.mjs'
-import { applyTeacherText, publishTeacherDownloads } from '../authoring/publish-teacher-text.mjs'
+import { applyTeacherText } from '../authoring/publish-teacher-text.mjs'
 
 // Compile the preserved authoring sources; they are never imported by the site.
 const sourceRoot = 'authoring/legacy/src'
@@ -289,5 +289,4 @@ await json('reports/compatibility-check.json', { previousVersion:baseline.course
   slides:newSlides.length, unchangedSlideOrder:course.lectures.every((l,i)=>digest(l.slides.map(s=>s.id))===digest(baseline.course.lectures[i].slides.filter(s=>!removedIds.has(s.id)).map(s=>s.id))),
   removedSlideIds:[...removedIds], notebookAnchorsPreserved:oldSlides.filter(s=>s.notebook).length, unchangedTaskIds:unchangedTaskIds.length, changedSlides:changes.filter(s=>s.changedFields.length).length })
 await fs.writeFile('private/teacher.md', course.lectures.map(l => `# ${l.title}\n\n` + l.slides.map(s => `## ${s.id} — ${s.title}\n\n${pack.notes[s.id].script}\n\n${pack.notes[s.id].notebook}\n\n### Подготовка\n\n${pack.notes[s.id].preparation}\n\n### Вопрос аудитории\n\n${pack.notes[s.id].questions}\n\n### Ожидаемый ответ и разбор\n\n${pack.notes[s.id].answer}`).join('\n\n')).join('\n\n'))
-await publishTeacherDownloads(course)
 console.log(JSON.stringify({ lectures: course.lectures.length, slides: newSlides.length, tasks: Object.keys(bank.keys).length, teacherPack: packPath }, null, 2))

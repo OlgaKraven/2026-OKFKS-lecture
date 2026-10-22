@@ -172,14 +172,6 @@ export function CourseCatalog({
               <h3>Скачать лекции в PDF</h3>
               <div className="ok-export-actions">{course.semesters.map(semester => <button className="ok-button" type="button" key={semester} aria-label={`${semester} семестр — скачать PDF`} onClick={() => { closeTeacher(); onPrint(`semester-${semester}`) }}><Download aria-hidden="true" />{semester} семестр</button>)}</div>
             </div>
-            <div className="ok-export-settings ok-teacher-texts">
-              <h3>Тексты и сценарии</h3>
-              <p>Тексты лекций, сценарии по слайдам и пакет заметок для панели.</p>
-              <div className="ok-export-actions">
-                <a className="ok-button ok-export-all" href={asset('teaching/exports/okfks-teacher-all.zip')} download="ОКФКС — все 7 лекций.zip" aria-label="Скачать тексты и сценарии всех 7 лекций — ZIP"><Download aria-hidden="true" />Все 7 лекций · ZIP</a>
-                {course.semesters.map(semester => <a className="ok-button" key={semester} href={asset(`teaching/exports/okfks-teacher-semester-${semester}.zip`)} download={`ОКФКС — ${semester} семестр.zip`} aria-label={`${semester} семестр — скачать тексты и сценарии в ZIP`}><Download aria-hidden="true" />{semester} семестр · ZIP</a>)}
-              </div>
-            </div>
             <div className="ok-teacher-footer"><button className="ok-button" type="button" onClick={closeTeacher}>Готово</button></div>
           </div>
         </details>
@@ -217,10 +209,7 @@ export function CourseCatalog({
           <div className="ok-topic-copy"><h3>{lecture.title}</h3>{descriptions[lecture.id] && <p>{descriptions[lecture.id]}</p>}</div>
           <div className="ok-topic-actions">
             <button className="ok-open" type="button" aria-label={`Открыть лекцию: ${lecture.title}`} onClick={() => onOpenLecture(lecture)}>Открыть лекцию<ArrowUpRight aria-hidden="true" /></button>
-            <div className="ok-topic-downloads">
-              <button className="ok-pdf" type="button" aria-label={`Скачать PDF: ${lecture.title}`} onClick={() => onPrint(lecture.id)}><Download aria-hidden="true" />Скачать PDF</button>
-              <a className="ok-md" href={asset(`teaching/texts/${lecture.id}.md`)} download={`ОКФКС — ${lecture.title}.md`} aria-label={`Скачать текст лекции в Markdown: ${lecture.title}`}><Download aria-hidden="true" />Текст MD</a>
-            </div>
+            <button className="ok-pdf" type="button" aria-label={`Скачать PDF: ${lecture.title}`} onClick={() => onPrint(lecture.id)}><Download aria-hidden="true" />Скачать PDF</button>
           </div>
         </article>)}</div>
         <div className="ok-empty" hidden={!!visibleLectures.length}><h3>Темы не найдены</h3><p>Попробуйте другое слово или выберите все темы.</p><button className="ok-button" type="button" onClick={() => { setFilters({ search: '', semester: 'all' }); searchRef.current?.focus() }}>Сбросить поиск</button></div>
