@@ -1,65 +1,72 @@
 [
   {
     "lectureId": "s07-01-quality-and-failures",
-    "file": "../review/pdf/s07-01-quality-and-failures.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s07-01-quality-and-failures.pdf",
     "pages": 82,
     "sourceSlides": 79,
     "diagramSheets": 3,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s07-02-reliability-metrics",
-    "file": "../review/pdf/s07-02-reliability-metrics.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s07-02-reliability-metrics.pdf",
     "pages": 83,
     "sourceSlides": 79,
     "diagramSheets": 4,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s07-03-reliability-threats-prevention",
-    "file": "../review/pdf/s07-03-reliability-threats-prevention.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s07-03-reliability-threats-prevention.pdf",
     "pages": 83,
     "sourceSlides": 79,
     "diagramSheets": 4,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s07-04-observing-operating-system",
-    "file": "../review/pdf/s07-04-observing-operating-system.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s07-04-observing-operating-system.pdf",
     "pages": 84,
     "sourceSlides": 79,
     "diagramSheets": 4,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s08-01-threats-and-malware",
-    "file": "../review/pdf/s08-01-threats-and-malware.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s08-01-threats-and-malware.pdf",
     "pages": 82,
     "sourceSlides": 79,
     "diagramSheets": 3,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s08-02-protection-controls",
-    "file": "../review/pdf/s08-02-protection-controls.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s08-02-protection-controls.pdf",
     "pages": 82,
     "sourceSlides": 79,
     "diagramSheets": 3,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   },
   {
     "lectureId": "s08-03-encryption-and-security-testing",
-    "file": "../review/pdf/s08-03-encryption-and-security-testing.pdf",
+    "file": "../../../../../../../../../private/tmp/okfks-label-fix/pdf/s08-03-encryption-and-security-testing.pdf",
     "pages": 83,
     "sourceSlides": 79,
     "diagramSheets": 4,
     "qrDecoded": 5,
+    "branchLabelsChecked": true,
     "layout": []
   }
 ]

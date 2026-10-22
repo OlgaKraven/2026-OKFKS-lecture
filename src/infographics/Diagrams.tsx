@@ -127,6 +127,14 @@ function Flow({spec,frame,committedFrame,progress,moving,width,prefix}:DiagramPr
  })
  const intersects=(a:Box,b:Box,padding=0)=>a.x<b.x+b.width+padding&&a.x+a.width>b.x-padding&&a.y<b.y+b.height+padding&&a.y+a.height>b.y-padding
  const segmentHits=(a:Point,b:Point,box:Box,padding=3)=>a.x===b.x?a.x>box.x-padding&&a.x<box.x+box.width+padding&&Math.max(a.y,b.y)>box.y-padding&&Math.min(a.y,b.y)<box.y+box.height+padding:a.y>box.y-padding&&a.y<box.y+box.height+padding&&Math.max(a.x,b.x)>box.x-padding&&Math.min(a.x,b.x)<box.x+box.width+padding
+ const routeDistance=(point:Point,points:Point[])=>Math.min(...points.slice(1).map((b,i)=>{
+  const a=points[i],dx=b.x-a.x,dy=b.y-a.y,length=dx*dx+dy*dy
+  const t=length?clamp(((point.x-a.x)*dx+(point.y-a.y)*dy)/length):0
+  return Math.hypot(point.x-a.x-t*dx,point.y-a.y-t*dy)
+ }))
+ const overlapsSegment=(a:Point,b:Point,c:Point,d:Point)=>a.x===b.x&&c.x===d.x&&a.x===c.x
+  ?Math.min(Math.max(a.y,b.y),Math.max(c.y,d.y))>Math.max(Math.min(a.y,b.y),Math.min(c.y,d.y))
+  :a.y===b.y&&c.y===d.y&&a.y===c.y&&Math.min(Math.max(a.x,b.x),Math.max(c.x,d.x))>Math.max(Math.min(a.x,b.x),Math.min(c.x,d.x))
  const labels:Box[]=[]
  let labelsFit=true
  // Place every label against the complete route set, so later edges cannot erase earlier guards.
@@ -137,6 +145,8 @@ function Flow({spec,frame,committedFrame,progress,moving,width,prefix}:DiagramPr
   for(let i=1;i<route.points.length;i++){
    const a=route.points[i-1],b=route.points[i],length=Math.abs(a.x-b.x)+Math.abs(a.y-b.y)
    if(length<24)continue
+   // A guard belongs to its own branch, beyond shared stems and merges.
+   if(routes.some(other=>other!==route&&other.points.slice(1).some((d,j)=>overlapsSegment(a,b,other.points[j],d))))continue
    if(a.y===b.y){
     const labelWidth=Math.min(112,Math.max(28,length-12)),labelHeight=textLines(label,labelWidth)*16+6
     for(const t of [.5,.3,.7]){const x=a.x+(b.x-a.x)*t-labelWidth/2;candidates.push({x,y:a.y-labelHeight-7,width:labelWidth,height:labelHeight},{x,y:a.y+7,width:labelWidth,height:labelHeight})}
@@ -145,7 +155,11 @@ function Flow({spec,frame,committedFrame,progress,moving,width,prefix}:DiagramPr
     for(const t of [.5,.28,.72]){const y=a.y+(b.y-a.y)*t-labelHeight/2;candidates.push({x:a.x-labelWidth-8,y,width:labelWidth,height:labelHeight},{x:a.x+8,y,width:labelWidth,height:labelHeight})}
    }
   }
-  const available=candidates.filter(box=>box.x>=4&&box.y>=3&&box.x+box.width<=width-4&&box.y+box.height<=height-3&&![...boxes.values()].some(node=>intersects(box,node,3))&&!labels.some(other=>intersects(box,other,6)))
+  const owned=(box:Box)=>{
+   const center={x:box.x+box.width/2,y:box.y+box.height/2},distance=routeDistance(center,route.points)
+   return routes.every(other=>other===route||routeDistance(center,other.points)>distance+.5)
+  }
+  const available=candidates.filter(box=>owned(box)&&box.x>=4&&box.y>=3&&box.x+box.width<=width-4&&box.y+box.height<=height-3&&![...boxes.values()].some(node=>intersects(box,node,3))&&!labels.some(other=>intersects(box,other,6)))
   const scored=available.map((box,index)=>({box,index,hits:routes.reduce((sum,other)=>sum+other.points.slice(1).filter((point,i)=>segmentHits(other.points[i],point,box)).length,0)})).sort((a,b)=>a.hits-b.hits||a.index-b.index)
   const chosen=scored[0]?.hits===0?scored[0].box:undefined
   if(chosen){route.labelBox=chosen;labels.push(chosen)}

@@ -52,6 +52,22 @@ try {
       if (!code.expected || decoded?.data !== code.expected) throw Error(`QR mismatch: ${code.expected}`)
     }
     await page.emulateMedia({ media: 'print' })
+    const ambiguousGuards = await page.locator('.lv-print-sheet [data-label-edge]').evaluateAll(labels => labels.flatMap(label => {
+      const svg = label.closest('svg'), box = label.querySelector('foreignObject')
+      const point = { x: Number(box.getAttribute('x')) + Number(box.getAttribute('width')) / 2, y: Number(box.getAttribute('y')) + Number(box.getAttribute('height')) / 2 }
+      const distances = [...svg.querySelectorAll('path[data-edge]')].map(edge => {
+        const length = edge.getTotalLength()
+        let distance = Infinity
+        for (let n = 0; n <= Math.ceil(length); n++) {
+          const p = edge.getPointAtLength(Math.min(n, length))
+          distance = Math.min(distance, Math.hypot(p.x - point.x, p.y - point.y))
+        }
+        return { id: edge.dataset.edge, distance }
+      })
+      const own = distances.find(edge => edge.id === label.dataset.labelEdge)
+      return !own || distances.some(edge => edge.id !== own.id && edge.distance <= own.distance + .2) ? [label.textContent] : []
+    }))
+    if (ambiguousGuards.length) throw Error(`Ambiguous branch labels: ${lecture.id}: ${ambiguousGuards.join('; ')}`)
     const layout = await page.locator('.slide-frame').evaluateAll(frames => frames.map(frame => {
       const copy = frame.querySelector('.slide-copy')
       const r = copy.getBoundingClientRect(), footer = frame.querySelector('.slide-footer').getBoundingClientRect()
@@ -69,7 +85,7 @@ try {
     const pdf = await PDFDocument.load(await fs.readFile(file))
     if (pdf.getPageCount() < expectedSlides + expectedDiagrams) throw Error(`Missing printed content: ${lecture.id}: ${pdf.getPageCount()}`)
     if (errors.length) throw Error(errors.join('\n'))
-    reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), sourceSlides: expectedSlides, diagramSheets: expectedDiagrams, qrDecoded: qr.length, layout })
+    reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), sourceSlides: expectedSlides, diagramSheets: expectedDiagrams, qrDecoded: qr.length, branchLabelsChecked: true, layout })
     console.log(JSON.stringify(reports.at(-1)))
   }
   await fs.mkdir('reports', { recursive: true })
