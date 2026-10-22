@@ -12,6 +12,7 @@ import { ReliabilityLab } from './lab/ReliabilityLab'
 import { WorkshopLab } from './lab/WorkshopLab'
 import {renderLearningVisualPrintSlide,renderLearningVisual} from './infographics/LearningVisual'
 import {PresentationSelects} from './presentation/PresentationSelects'
+import './typography.css'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')

@@ -1,5 +1,4 @@
 /* The frame, controls, palette and typography use the pinned lecture-engine. */
-@font-face{font-family:Raleway;src:url('/fonts/raleway-cyrillic.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 .reliability-lab{max-width:92rem;margin:auto;padding:24px 28px;font-family:Raleway,Arial,sans-serif;line-height:1.5}
 .reliability-lab h1,.reliability-lab h2,.reliability-lab h3,.reliability-lab p{margin:0}
 .reliability-lab svg.lucide{flex-shrink:0}
