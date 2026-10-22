@@ -1,0 +1,142 @@
+lecture,slide,title,mode,representation,scenarios,frames
+s07-01-quality-and-failures,s07-01-quality-and-failures-s015,Измеримый признак начинается с роли и условий эксплуатации,reworked,flow,3,14
+s07-01-quality-and-failures,s07-01-quality-and-failures-s018,Один общий балл скрывает разные свойства качества,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s026,Показатель ценен только вместе с последующим решением,focus,comparison,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s029,"Бесполезна метрика, по которой никто не принимает решений",focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s037,От свойства — к измерению и свидетельству,focus,tree,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s040,Одна метрика не описывает качество системы целиком,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s048,Категорию определяют по месту проявления и доказательствам,focus,process,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s049,Неверная проверка превращает дефект в отказ операции,added,flow,3,12
+s07-01-quality-and-failures,s07-01-quality-and-failures-s051,Строка Error сама по себе ещё не означает отказ,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s059,Время события ещё не доказывает причинную связь,focus,process,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s062,Первая запись по времени не всегда является первопричиной,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s070,Условия активации важны не меньше самого результата,focus,comparison,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s073,Исправление симптома стирает условия возникновения,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s081,Минимальная запись сохраняет контекст и доказательство,focus,process,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s083,Проверим вывод при изменении условия,added,flow,2,8
+s07-01-quality-and-failures,s07-01-quality-and-failures-s084,Категории нельзя менять без истории решения,focus,table,1,2
+s07-01-quality-and-failures,s07-01-quality-and-failures-s092,"Статистике нужны период, объём и правило группировки",focus,comparison,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s093,"Сравниваем долю неуспешных операций, %",focus,bars,1,
+s07-01-quality-and-failures,s07-01-quality-and-failures-s095,Абсолютные числа несопоставимы при разной нагрузке,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s015,Полноту журнала проверяют до вычислений,focus,comparison,1,
+s07-02-reliability-metrics,s07-02-reliability-metrics-s018,Разные системы нельзя складывать без нормализации,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s026,Формула T/N применима при N > 0 и определённом T,reworked,flow,1,6
+s07-02-reliability-metrics,s07-02-reliability-metrics-s029,Среднее время не гарантирует интервал без отказа,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s037,Единое правило задаёт границы каждого восстановления,focus,comparison,1,
+s07-02-reliability-metrics,s07-02-reliability-metrics-s040,Календарный простой и активная работа — не одно и то же,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s048,События связывают с отказами до расчёта интервалов,reworked,timeline,1,4
+s07-02-reliability-metrics,s07-02-reliability-metrics-s051,Спорные записи нельзя удалять без объяснения,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s059,В формуле готовности используются одинаковые единицы,reworked,flow,2,11
+s07-02-reliability-metrics,s07-02-reliability-metrics-s060,"MTBF 40 ч и MTTR 2 ч дают готовность 95,24 %",focus,bars,1,
+s07-02-reliability-metrics,s07-02-reliability-metrics-s062,Раннее округление и смешение единиц искажают расчёт,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s070,Все интервалы приводятся к одной единице заранее,focus,comparison,1,
+s07-02-reliability-metrics,s07-02-reliability-metrics-s073,Минуты и часы нельзя подставлять в одну формулу,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s081,Порог и оператор фиксируются до округления,reworked,flow,2,10
+s07-02-reliability-metrics,s07-02-reliability-metrics-s084,Точность нельзя менять ради нужного результата,focus,table,1,2
+s07-02-reliability-metrics,s07-02-reliability-metrics-s092,Итог требует арифметической и смысловой проверки,focus,comparison,1,
+s07-02-reliability-metrics,s07-02-reliability-metrics-s095,Короткий период не подтверждает устойчивую характеристику,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s015,"Фактор описывают через источник, объект и механизм",reworked,sequence,3,15
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s018,Нежелательное событие без механизма ещё не угроза,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s026,Каждый переход требует наблюдения или проверяемой гипотезы,focus,process,1,
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s029,Корреляция не превращается в доказанную причину,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s037,Вход проверяется до изменения состояния системы,focus,comparison,1,
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s038,Пустой идентификатор отклоняется до записи,focus,table,1,4
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s040,Молчаливое исправление скрывает неверный ввод,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s048,Состояние проверяется как можно ближе к действию,reworked,flow,4,22
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s051,Одной проверки при запуске недостаточно,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s059,Сначала задают допустимый ущерб и границу изоляции,reworked,flow,2,10
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s062,Продолжение любой ценой скрывает частичный результат,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s070,Безопасный повтор ограничен и учитывает идемпотентность,reworked,flow,3,21
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s073,Бесконечный повтор неидемпотентной записи создаёт риск,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s081,Копия той же ошибки не создаёт независимости,focus,comparison,1,
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s082,Две реализации обнаруживают расхождение; платёж не выполняют,focus,table,1,5
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s084,Второй файл на том же носителе не становится резервом,focus,table,1,2
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s092,Снижение риска сравнивают с полной стоимостью меры,focus,comparison,1,
+s07-03-reliability-threats-prevention,s07-03-reliability-threats-prevention-s095,Большее число копий не всегда повышает надёжность,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s010,"Id, RecordId и ActivityId: разные роли",focus,table,1,4
+s07-04-observing-operating-system,s07-04-observing-operating-system-s011,Пустой журнал ещё не означает исправность,focus,table,1,4
+s07-04-observing-operating-system,s07-04-observing-operating-system-s015,В журнал попадают нужные события — не секреты,focus,process,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s016,Четыре записи: разделяем A17 и A18,reworked,timeline,1,5
+s07-04-observing-operating-system,s07-04-observing-operating-system-s018,Пароли и полный ввод пользователя журналу не нужны,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s026,Формат данных выбирают под вопрос анализа,focus,comparison,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s027,Ряд времени ответа дополняют событиями журнала,focus,bars,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s029,Одно накопленное число не заменяет подробный журнал,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s037,Сначала задают норму и ограничение ресурса,focus,process,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s040,Не каждый пик загрузки является отказом,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s048,"У сигнала есть порог, окно, подтверждение и ответственный",reworked,flow,2,12
+s07-04-observing-operating-system,s07-04-observing-operating-system-s051,Контроль всех доступных показателей создаёт шум,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s059,Динамика и сочетание признаков важнее одной точки,focus,comparison,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s062,Одно предупреждение журнала ещё не означает предотказ,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s070,"Причину проверяют порядком, механизмом, альтернативами и повтором",focus,process,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s073,Самый заметный график не доказывает корневую причину,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s081,Единая шкала делает оценки сопоставимыми,focus,comparison,1,
+s07-04-observing-operating-system,s07-04-observing-operating-system-s083,Проверим вывод при изменении условия,added,flow,2,10
+s07-04-observing-operating-system,s07-04-observing-operating-system-s084,Недостаточно записать риск без действия и ответственного,focus,table,1,2
+s07-04-observing-operating-system,s07-04-observing-operating-system-s092,"Разработка оправдана выгодой, повторяемостью и обратимостью",reworked,flow,3,34
+s07-04-observing-operating-system,s07-04-observing-operating-system-s095,Шумный одиночный сигнал не должен менять параметры,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s011,Копирование архива оценивают в контексте,focus,table,1,4
+s08-01-threats-and-malware,s08-01-threats-and-malware-s015,"Сценарий связывает источник, возможность, актив и последствие",focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s016,Внешний отправитель может передать опасный файл,added,flow,2,8
+s08-01-threats-and-malware,s08-01-threats-and-malware-s018,"Угроза, уязвимость, событие и инцидент — разные понятия",focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s026,Один сценарий допускает несколько независимых признаков,focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s027,Границы доверия связывают риск с контролем,focus,table,1,4
+s08-01-threats-and-malware,s08-01-threats-and-malware-s029,Классификационная метка не является мерой защиты,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s037,"Источник описывают через доступ, знания и путь воздействия",focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s038,Ошибка оператора и внешний нарушитель создают разные сценарии,added,flow,2,8
+s08-01-threats-and-malware,s08-01-threats-and-malware-s040,Не каждый пользователь является нарушителем,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s048,В модель входят только нужные сценарию характеристики,focus,tree,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s051,Возможности нарушителя должны соответствовать архитектуре,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s059,Версия модели должна соответствовать версии системы,focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s062,Список угроз без границ и предположений неполон,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s070,Наблюдаемые свойства важнее названия файла,focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s073,Расширение файла не определяет класс программы,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s081,"Для каждого входа проверяют источник, права и обработчик",focus,network,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s084,Почта — не единственный путь: есть обновления и носители,focus,table,1,2
+s08-01-threats-and-malware,s08-01-threats-and-malware-s092,Проверка исключает действующий вредоносный код,focus,comparison,1,
+s08-01-threats-and-malware,s08-01-threats-and-malware-s093,Изолированный стенд использует безопасный сценарий,added,flow,2,8
+s08-01-threats-and-malware,s08-01-threats-and-malware-s095,Ради демонстрации нельзя отключать или обходить защиту,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s011,"Вложение, вход и папка: разные проверки",focus,table,1,4
+s08-02-protection-controls,s08-02-protection-controls-s015,Название продукта не подтверждает состояние его функций,focus,comparison,1,
+s08-02-protection-controls,s08-02-protection-controls-s018,Один успешный скан не доказывает полной защиты,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s026,Режим и момент срабатывания задают смысл результата,focus,timeline,1,
+s08-02-protection-controls,s08-02-protection-controls-s029,Ручное сканирование нельзя смешивать с постоянной защитой,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s037,Критерии и их веса определяют до испытаний,focus,process,1,
+s08-02-protection-controls,s08-02-protection-controls-s038,Средства A и B: сравнение результатов в одной среде,focus,table,1,5
+s08-02-protection-controls,s08-02-protection-controls-s040,Рекламные списки функций не заменяют испытания,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s048,Каждое правило выводится из разрешённого потока и угроз,focus,tree,1,
+s08-02-protection-controls,s08-02-protection-controls-s049,Тестовый порт открыт только для лабораторной подсети,added,flow,2,8
+s08-02-protection-controls,s08-02-protection-controls-s051,Сетевой экран не всегда анализирует содержимое приложения,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s059,Минимальная область учитывает профиль и приоритет,focus,comparison,1,
+s08-02-protection-controls,s08-02-protection-controls-s062,Широкое разрешение «для проверки» нельзя оставлять,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s070,Аутентификацию проверяют отдельно от полномочий,focus,process,1,
+s08-02-protection-controls,s08-02-protection-controls-s071,Оператор входит без получения прав администратора,added,sequence,2,10
+s08-02-protection-controls,s08-02-protection-controls-s073,Общая учётная запись не связывает действие с субъектом,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s081,Действие правила проверяют на тестовых учётных записях,focus,comparison,1,
+s08-02-protection-controls,s08-02-protection-controls-s084,Реальные пароли не входят в протокол проверки,focus,table,1,2
+s08-02-protection-controls,s08-02-protection-controls-s092,"Модель прав начинается с запрета, а не с разрешения",focus,comparison,1,
+s08-02-protection-controls,s08-02-protection-controls-s093,"Наблюдатель читает отчёт, но не меняет настройки",focus,table,1,4
+s08-02-protection-controls,s08-02-protection-controls-s094,Проверим вывод при изменении условия,added,flow,2,14
+s08-02-protection-controls,s08-02-protection-controls-s095,Права администратора нельзя копировать ради удобства,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s011,Шифротекст и ключ — разные данные,focus,table,1,4
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s015,"Сценарий задают данные, состояние, противник и расшифрование",focus,tree,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s016,Файл защищают от чтения при утрате учебного носителя,added,flow,2,8
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s018,Шифрование не предотвращает любые изменения и удаление,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s026,"Хранение, канал и копия: три границы защиты",focus,network,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s027,"BitLocker защищает том, TLS — соединение",focus,table,1,4
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s029,Шифрование диска не заменяет защиту после входа и в канале,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s037,"Протокол, алгоритм, ключ и реализация",focus,comparison,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s038,Заполненная техническая карта защищённого обмена,focus,table,1,5
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s040,Название алгоритма не описывает весь сценарий защиты,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s048,"Секреты не попадают в код, снимки экрана, журналы и PDF",focus,cycle,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s050,Проверим вывод при изменении условия,added,flow,2,8
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s051,Паролю и закрытому ключу не место в репозитории,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s059,"Синтетические данные, хэш и тест отказа дают доказательства",focus,process,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s060,Совпавший хэш подтверждает корректное восстановление,added,flow,2,8
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s062,Новое расширение файла ещё не доказывает шифрование,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s070,"Условие, шаги, ожидание и возврат делают тест проверяемым",focus,comparison,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s073,Случайный набор инструментов не заменяет критерии,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s081,Непредвиденное воздействие требует остановки проверки,focus,process,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s082,Проверка идёт на снимке стенда с синтетическими данными,added,sequence,3,23
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s084,Производственный ресурс нельзя проверять без разрешения,focus,table,1,2
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s092,"Мера получает владельца, срок и повторный тест",focus,process,1,
+s08-03-encryption-and-security-testing,s08-03-encryption-and-security-testing-s095,Ограниченные тесты не доказывают полную защищённость,focus,table,1,2

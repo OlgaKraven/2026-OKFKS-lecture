@@ -1,0 +1,10 @@
+{
+  "source": "lecture-engine-source snapshot used for engine okfks.9",
+  "files": {
+    "src/engine/VisualRenderer.tsx": null,
+    "src/engine/SlideView.tsx": "7fbba6dc8b9568945028fd19c898267779131977deed70d2fb885cfcc4d75234",
+    "src/engine/index.ts": "586701504ea1d5bf0a1ca65070cd7b792c31e48a4f0d2e21ea25dc50c63b603a",
+    "src/engine/Teaching.tsx": "00ae8554944149f76845b1d138956ff3574794c05698c913883feb3ba9ce8fc2",
+    "src/engine/LectureSite.tsx": "3fe7e61bd3d91f551d760fd42f1c353a7ac80a481ea14685dfdc16f40f042b52"
+  }
+}

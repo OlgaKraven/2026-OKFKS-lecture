@@ -8,6 +8,7 @@ const course = JSON.parse(await fs.readFile('dist/course.json', 'utf8'))
 const text = []
 for (const file of files) {
   const relative = path.relative('dist', file).replaceAll('\\', '/')
+  assert.ok(!/\.(?:zip|tgz|gz|tar|7z|rar)$/i.test(relative), `Repository-only archive in public output: ${file}`)
   assert.ok(!/\.md$/i.test(relative), `Repository-only Markdown in public output: ${file}`)
   assert.ok(!/^teaching\/(?:texts|scenarios|exports|packs)\//.test(relative) && !/^teaching\/alignment-\d+\.json$/.test(relative), `Repository-only teaching resource in public output: ${file}`)
   assert.ok(!/private|teacher-pack|\.map$|authoring|legacy/i.test(file), `Private output path: ${file}`)
@@ -46,3 +47,15 @@ for (const file of packFiles.filter(f => /^teacher-pack.*\.json$/.test(f))) {
   }
 }
 console.log(JSON.stringify({ files: files.length, privateScriptsChecked: checked, status: 'passed' }))
+
+// Lecture prose and slide scripts in Markdown belong to BrainM, not this branch.
+const sourceTexts = []
+async function scanSource(dir) {
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name)
+    if (entry.isDirectory()) await scanSource(file)
+    else if (/\.md$/i.test(entry.name) && entry.name !== 'README.md') sourceTexts.push(file)
+  }
+}
+await scanSource('authoring/teacher-text-20261022')
+assert.deepEqual(sourceTexts, [], 'Lecture Markdown must be stored in BrainM')

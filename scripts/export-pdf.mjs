@@ -21,6 +21,7 @@ const server = spawn(process.execPath, ['node_modules/vite/bin/vite.js', 'previe
 let log = '', browser
 server.stdout.on('data', b => { log += b }); server.stderr.on('data', b => { log += b })
 const reports = []
+const diagrams = (await Promise.all(['semester7','semester8'].map(name => fs.readFile(`src/infographics/data/${name}.json`, 'utf8')))).flatMap(text => JSON.parse(text))
 try {
   for (let i = 0; i < 80; i++) {
     if (server.exitCode !== null) throw Error(log)
@@ -34,8 +35,11 @@ try {
   page.on('pageerror', error => errors.push(error.message))
   await fs.mkdir(output, { recursive: true })
   for (const lecture of lectures) {
+    const expectedSlides = lecture.slides.filter(slide => !slide.task && slide.kind !== 'test').length
+    const expectedDiagrams = diagrams.filter(spec => lecture.slides.some(slide => slide.id === spec.slideId)).length
     await page.goto(`${base}?mode=print&scope=${lecture.id}`)
-    await page.waitForFunction(count => document.querySelectorAll('.print-page').length === count, lecture.slides.length)
+    await page.waitForFunction(count => document.querySelectorAll('.print-page').length === count, expectedSlides)
+    await page.waitForFunction(count => document.querySelectorAll('.lv-print-sheet').length === count, expectedDiagrams)
     await page.waitForFunction(() => document.fonts.check('16px Raleway'))
     await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(image => image.decode())) })
     await page.waitForFunction(() => document.querySelectorAll('.resource-qr').length === 5)
@@ -63,9 +67,9 @@ try {
     const file = path.join(output, `${lecture.id}.pdf`)
     await page.pdf({ path: file, printBackground: true, preferCSSPageSize: true })
     const pdf = await PDFDocument.load(await fs.readFile(file))
-    if (pdf.getPageCount() !== lecture.slides.length) throw Error(`Page count: ${lecture.id}: ${pdf.getPageCount()}`)
+    if (pdf.getPageCount() < expectedSlides + expectedDiagrams) throw Error(`Missing printed content: ${lecture.id}: ${pdf.getPageCount()}`)
     if (errors.length) throw Error(errors.join('\n'))
-    reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), qrDecoded: qr.length, layout })
+    reports.push({ lectureId: lecture.id, file: path.relative(process.cwd(), file), pages: pdf.getPageCount(), sourceSlides: expectedSlides, diagramSheets: expectedDiagrams, qrDecoded: qr.length, layout })
     console.log(JSON.stringify(reports.at(-1)))
   }
   await fs.mkdir('reports', { recursive: true })

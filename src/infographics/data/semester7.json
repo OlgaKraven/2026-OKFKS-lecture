@@ -1,0 +1,3036 @@
+[
+  {
+    "slideId": "s07-01-quality-and-failures-s015",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Ответ и сохранение проверяются отдельно",
+    "overview": "Два независимых требования: ответ не позже 2 с и ровно одна сохранённая запись с тем же ID. Обзор ещё не означает успешную проверку.",
+    "scope": "Один учебный запрос. Измерения 1,4 с и 0,8 с взяты из соседних разборов; ветвь «позже 2 с» задаётся условием без выдуманной длительности.",
+    "defaultScenario": "accepted",
+    "scenarios": [
+      {
+        "id": "accepted",
+        "label": "Ответ 1,4 с, запись есть",
+        "condition": "Ответ с номером пришёл за 1,4 с; найдена ровно одна запись с тем же ID.",
+        "frames": [
+          {
+            "caption": "Два независимых требования: ответ не позже 2 с и ровно одна сохранённая запись с тем же ID. Обзор ещё не означает успешную проверку.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Отправлена одна корректная заявка; далее отдельно проверяются ответ и сохранение.",
+            "focus": [
+              "q-criteria-request"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "1,4 ≤ 2: требование времени ответа выполнено.",
+            "focus": [
+              "q-criteria-time"
+            ],
+            "edges": [
+              "q-criteria-request-time"
+            ]
+          },
+          {
+            "caption": "В хранилище ровно одна запись с полученным номером.",
+            "focus": [
+              "q-criteria-stored"
+            ],
+            "edges": [
+              "q-criteria-time-yes"
+            ]
+          },
+          {
+            "caption": "Обе проверки пройдены; вывод относится к этому испытанию.",
+            "focus": [
+              "q-criteria-accepted"
+            ],
+            "edges": [
+              "q-criteria-stored-yes"
+            ],
+            "result": "Ответ своевременен; заявка сохранена ровно один раз."
+          }
+        ]
+      },
+      {
+        "id": "missing",
+        "label": "Ответ 0,8 с, записи нет",
+        "condition": "Ответ получен за 0,8 с, но сохранённой заявки нет.",
+        "frames": [
+          {
+            "caption": "Два независимых требования: ответ не позже 2 с и ровно одна сохранённая запись с тем же ID. Обзор ещё не означает успешную проверку.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Отправлена одна корректная заявка; далее отдельно проверяются ответ и сохранение.",
+            "focus": [
+              "q-criteria-request"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "0,8 ≤ 2: быстрый ответ сам по себе не доказывает сохранение.",
+            "focus": [
+              "q-criteria-time"
+            ],
+            "edges": [
+              "q-criteria-request-time"
+            ]
+          },
+          {
+            "caption": "Запись с полученным номером не найдена.",
+            "focus": [
+              "q-criteria-stored"
+            ],
+            "edges": [
+              "q-criteria-time-yes"
+            ]
+          },
+          {
+            "caption": "Требование сохранения не выполнено; принимать всю функцию как успешную нельзя.",
+            "focus": [
+              "q-criteria-missing"
+            ],
+            "edges": [
+              "q-criteria-stored-no"
+            ],
+            "result": "Время ответа выполнено; сохранение не выполнено."
+          }
+        ]
+      },
+      {
+        "id": "late",
+        "label": "Ответ позже 2 с",
+        "condition": "Наблюдён ответ позже установленной границы 2 с; точная длительность не задана.",
+        "frames": [
+          {
+            "caption": "Два независимых требования: ответ не позже 2 с и ровно одна сохранённая запись с тем же ID. Обзор ещё не означает успешную проверку.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Отправлена одна корректная заявка; далее отдельно проверяются ответ и сохранение.",
+            "focus": [
+              "q-criteria-request"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Ответ позже 2 с: условие своевременности ложно.",
+            "focus": [
+              "q-criteria-time"
+            ],
+            "edges": [
+              "q-criteria-request-time"
+            ]
+          },
+          {
+            "caption": "Требование времени нарушено; эта ветвь не утверждает ничего о сохранении.",
+            "focus": [
+              "q-criteria-late"
+            ],
+            "edges": [
+              "q-criteria-time-no"
+            ],
+            "result": "Проверка времени не пройдена; сохранение здесь не проверялось."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "q-criteria-request",
+        "title": "Корректная заявка",
+        "kind": "start",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "q-criteria-time",
+        "title": "Ответ ≤ 2 с?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "q-criteria-stored",
+        "title": "Одна запись с тем же ID?",
+        "kind": "decision",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "q-criteria-late",
+        "title": "Ответ опоздал",
+        "kind": "end",
+        "column": 2,
+        "row": 1
+      },
+      {
+        "id": "q-criteria-accepted",
+        "title": "Обе проверки пройдены",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      },
+      {
+        "id": "q-criteria-missing",
+        "title": "Сохранение не подтверждено",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "q-criteria-request-time",
+        "from": "q-criteria-request",
+        "to": "q-criteria-time"
+      },
+      {
+        "id": "q-criteria-time-yes",
+        "from": "q-criteria-time",
+        "to": "q-criteria-stored",
+        "label": "Да"
+      },
+      {
+        "id": "q-criteria-time-no",
+        "from": "q-criteria-time",
+        "to": "q-criteria-late",
+        "label": "Нет"
+      },
+      {
+        "id": "q-criteria-stored-yes",
+        "from": "q-criteria-stored",
+        "to": "q-criteria-accepted",
+        "label": "Да"
+      },
+      {
+        "id": "q-criteria-stored-no",
+        "from": "q-criteria-stored",
+        "to": "q-criteria-missing",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-01-quality-and-failures-s049",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Когда дефект превращается в отказ",
+    "overview": "Требование разрешает возраст от 18 лет; исследуется существующая проверка age > 18. Показаны обе ветви кода.",
+    "scope": "Только исходная ошибочная проверка; исправленная версия здесь не исполняется.",
+    "defaultScenario": "age17",
+    "scenarios": [
+      {
+        "id": "age17",
+        "label": "17: корректный запрет",
+        "condition": "Вход age = 17; код age > 18, требование age ≥ 18.",
+        "frames": [
+          {
+            "caption": "Требование разрешает возраст от 18 лет; исследуется существующая проверка age > 18. Показаны обе ветви кода.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сравниваем код age > 18 с требованием age ≥ 18; пока конкретный вход не разобран.",
+            "focus": [
+              "q-age-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "17 > 18 даёт false.",
+            "focus": [
+              "q-age-check"
+            ],
+            "edges": [
+              "q-age-input-check"
+            ]
+          },
+          {
+            "caption": "Код не принимает заявку.",
+            "focus": [
+              "q-age-rejected"
+            ],
+            "edges": [
+              "q-age-no"
+            ],
+            "result": "17 < 18: запрет соответствует требованию. Дефект условия сохраняется, но на этом входе отказ требуемой функции не наблюдался."
+          }
+        ]
+      },
+      {
+        "id": "age18",
+        "label": "18: дефект активирован",
+        "condition": "Вход age = 18; код age > 18, требование age ≥ 18.",
+        "frames": [
+          {
+            "caption": "Требование разрешает возраст от 18 лет; исследуется существующая проверка age > 18. Показаны обе ветви кода.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сравниваем код age > 18 с требованием age ≥ 18; пока конкретный вход не разобран.",
+            "focus": [
+              "q-age-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "18 > 18 даёт false.",
+            "focus": [
+              "q-age-check"
+            ],
+            "edges": [
+              "q-age-input-check"
+            ]
+          },
+          {
+            "caption": "Код не принимает заявку.",
+            "focus": [
+              "q-age-rejected"
+            ],
+            "edges": [
+              "q-age-no"
+            ],
+            "result": "18 должно приниматься, но отвергнуто: воспроизведён отказ на границе."
+          }
+        ]
+      },
+      {
+        "id": "age19",
+        "label": "19: заявка принята",
+        "condition": "Вход age = 19; код age > 18, требование age ≥ 18.",
+        "frames": [
+          {
+            "caption": "Требование разрешает возраст от 18 лет; исследуется существующая проверка age > 18. Показаны обе ветви кода.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сравниваем код age > 18 с требованием age ≥ 18; пока конкретный вход не разобран.",
+            "focus": [
+              "q-age-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "19 > 18 даёт true.",
+            "focus": [
+              "q-age-check"
+            ],
+            "edges": [
+              "q-age-input-check"
+            ]
+          },
+          {
+            "caption": "Код принимает заявку.",
+            "focus": [
+              "q-age-accepted"
+            ],
+            "edges": [
+              "q-age-yes"
+            ],
+            "result": "19 принимается и кодом, и требованием; это не устраняет дефект на 18."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "q-age-input",
+        "title": "Вход 17, 18 или 19",
+        "kind": "start",
+        "column": 1,
+        "row": 0,
+        "text": "Требование: age ≥ 18"
+      },
+      {
+        "id": "q-age-check",
+        "title": "Код: age > 18?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "q-age-rejected",
+        "title": "Не принимать",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "q-age-accepted",
+        "title": "Принимать",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "q-age-input-check",
+        "from": "q-age-input",
+        "to": "q-age-check"
+      },
+      {
+        "id": "q-age-yes",
+        "from": "q-age-check",
+        "to": "q-age-accepted",
+        "label": "true"
+      },
+      {
+        "id": "q-age-no",
+        "from": "q-age-check",
+        "to": "q-age-rejected",
+        "label": "false"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-01-quality-and-failures-s083",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Область уникальности идентификатора",
+    "overview": "Одинаковая строка локального requestId не доказывает тождество операций. Сначала учитывается источник записи.",
+    "scope": "Источник — экземпляр приложения. Внутри источника правило уникальности ID заранее согласовано; первопричина и общий инцидент здесь не определяются.",
+    "defaultScenario": "same",
+    "scenarios": [
+      {
+        "id": "same",
+        "label": "Один источник и один ID",
+        "condition": "Записи принадлежат одному экземпляру и одной операции R1 по согласованному правилу уникальности.",
+        "frames": [
+          {
+            "caption": "Одинаковая строка локального requestId не доказывает тождество операций. Сначала учитывается источник записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сопоставляем записи с локальным requestId = R1; исходные строки сохраняются.",
+            "focus": [
+              "q-identity-records"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Источник совпадает; R1 относится к одной операции в этом источнике.",
+            "focus": [
+              "q-identity-source"
+            ],
+            "edges": [
+              "q-identity-records-source"
+            ]
+          },
+          {
+            "caption": "Записи можно связать с одной операцией, сохранив все свидетельства.",
+            "focus": [
+              "q-identity-group"
+            ],
+            "edges": [
+              "q-identity-source-yes"
+            ],
+            "result": "Одна операция; число исходных сообщений не меняется."
+          }
+        ]
+      },
+      {
+        "id": "different",
+        "label": "Разные источники, тот же R1",
+        "condition": "Два независимых экземпляра выдали одинаковый локальный requestId R1.",
+        "frames": [
+          {
+            "caption": "Одинаковая строка локального requestId не доказывает тождество операций. Сначала учитывается источник записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сопоставляем записи с локальным requestId = R1; исходные строки сохраняются.",
+            "focus": [
+              "q-identity-records"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Источники различаются: совпадение строки R1 недостаточно.",
+            "focus": [
+              "q-identity-source"
+            ],
+            "edges": [
+              "q-identity-records-source"
+            ]
+          },
+          {
+            "caption": "Записи разных экземпляров остаются раздельными операциями.",
+            "focus": [
+              "q-identity-separate"
+            ],
+            "edges": [
+              "q-identity-source-no"
+            ],
+            "result": "Объединение только по R1 запрещено; нужны источник и контекст."
+          }
+        ]
+      }
+    ],
+    "scenarioLabel": "Источник записей",
+    "nodes": [
+      {
+        "id": "q-identity-records",
+        "title": "Записи с локальным R1",
+        "kind": "start",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "q-identity-source",
+        "title": "Источник и ID совпадают?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "q-identity-group",
+        "title": "Связать с одной операцией",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "q-identity-separate",
+        "title": "Разделить операции",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "q-identity-records-source",
+        "from": "q-identity-records",
+        "to": "q-identity-source"
+      },
+      {
+        "id": "q-identity-source-yes",
+        "from": "q-identity-source",
+        "to": "q-identity-group",
+        "label": "Да"
+      },
+      {
+        "id": "q-identity-source-no",
+        "from": "q-identity-source",
+        "to": "q-identity-separate",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-02-reliability-metrics-s026",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Исходные интервалы → проверяемое среднее",
+    "overview": "Наработки 20, 50 и 50 ч суммируются; число учитываемых отказов равно 3. Связи показывают расчёт, а не календарную последовательность.",
+    "scope": "Три указанных интервала работы и три отказа одного набора. Временная ось не строится: длительности восстановлений сюда не примешиваются.",
+    "defaultScenario": "three",
+    "scenarios": [
+      {
+        "id": "three",
+        "label": "Три учтённых отказа",
+        "condition": "20 + 50 + 50 = 120 ч работы; N = 3 > 0.",
+        "frames": [
+          {
+            "caption": "Наработки 20, 50 и 50 ч суммируются; число учитываемых отказов равно 3. Связи показывают расчёт, а не календарную последовательность.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Сохраняем исходные длительности: 20, 50 и 50 ч.",
+            "focus": [
+              "r-mtbf-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Сумма наработки T = 20 + 50 + 50 = 120 ч.",
+            "focus": [
+              "r-mtbf-sum"
+            ],
+            "edges": [
+              "r-mtbf-input-sum"
+            ]
+          },
+          {
+            "caption": "В этом наборе N = 3 учитываемых отказа; деление допустимо.",
+            "focus": [
+              "r-mtbf-count"
+            ],
+            "edges": [
+              "r-mtbf-input-count"
+            ]
+          },
+          {
+            "caption": "MTBF = T/N = 120/3 = 40 ч на отказ.",
+            "focus": [
+              "r-mtbf-mean"
+            ],
+            "edges": [
+              "r-mtbf-sum-mean",
+              "r-mtbf-count-mean"
+            ]
+          },
+          {
+            "caption": "Обратная проверка: 40 × 3 = 120 ч. Первый реальный интервал 20 ч не равен среднему.",
+            "focus": [
+              "r-mtbf-reverse"
+            ],
+            "edges": [
+              "r-mtbf-mean-reverse"
+            ],
+            "result": "MTBF = 40 ч на отказ для выбранного журнала; гарантии следующего интервала нет."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "r-mtbf-input",
+        "title": "20, 50, 50 ч работы",
+        "kind": "start",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "r-mtbf-sum",
+        "title": "T = 120 ч",
+        "kind": "action",
+        "column": 0,
+        "row": 1
+      },
+      {
+        "id": "r-mtbf-count",
+        "title": "N = 3 > 0",
+        "kind": "action",
+        "column": 2,
+        "row": 1
+      },
+      {
+        "id": "r-mtbf-mean",
+        "title": "MTBF = 40 ч",
+        "kind": "action",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "r-mtbf-reverse",
+        "title": "40 × 3 = 120 ч",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "r-mtbf-input-sum",
+        "from": "r-mtbf-input",
+        "to": "r-mtbf-sum"
+      },
+      {
+        "id": "r-mtbf-input-count",
+        "from": "r-mtbf-input",
+        "to": "r-mtbf-count"
+      },
+      {
+        "id": "r-mtbf-sum-mean",
+        "from": "r-mtbf-sum",
+        "to": "r-mtbf-mean",
+        "label": "T"
+      },
+      {
+        "id": "r-mtbf-count-mean",
+        "from": "r-mtbf-count",
+        "to": "r-mtbf-mean",
+        "label": "N"
+      },
+      {
+        "id": "r-mtbf-mean-reverse",
+        "from": "r-mtbf-mean",
+        "to": "r-mtbf-reverse"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-02-reliability-metrics-s048",
+    "catalogId": "INFO-02",
+    "kind": "timeline",
+    "title": "Повтор уведомления не добавляет отказ",
+    "overview": "На известных отметках 10:00, 10:02 и 11:00 наблюдается один отказ A, повтор уведомления и возврат функции.",
+    "scope": "Числовая шкала построена только по заданным часам; ноль соответствует 10:00. Повторное сообщение остаётся свидетельством того же A.",
+    "defaultScenario": "incidentA",
+    "scenarios": [
+      {
+        "id": "incidentA",
+        "label": "Один инцидент A",
+        "condition": "Потеря функции A в 10:00; повтор уведомления A в 10:02; восстановление в 11:00.",
+        "frames": [
+          {
+            "caption": "На известных отметках 10:00, 10:02 и 11:00 наблюдается один отказ A, повтор уведомления и возврат функции.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "10:00: зафиксирована потеря функции A; начинается недоступность.",
+            "focus": [
+              "r-notice-lost"
+            ],
+            "edges": [],
+            "result": "Учтён один отказ A.",
+            "time": 0
+          },
+          {
+            "caption": "10:02: это повтор уведомления A, а не второй отказ.",
+            "focus": [
+              "r-notice-repeat"
+            ],
+            "edges": [],
+            "result": "Число отказов остаётся 1; обе записи сохранены.",
+            "time": 2
+          },
+          {
+            "caption": "11:00: функция A восстановлена. Длительность 60 мин = 1 ч.",
+            "focus": [
+              "r-notice-restored",
+              "r-notice-down"
+            ],
+            "edges": [],
+            "result": "Один отказ и 1 ч восстановления; исходные три записи сохранены.",
+            "time": 60
+          }
+        ]
+      }
+    ],
+    "axis": {
+      "min": 0,
+      "max": 60,
+      "unit": "мин от 10:00"
+    },
+    "segments": [
+      {
+        "id": "r-notice-down",
+        "label": "Недоступность A: 1 ч",
+        "start": 0,
+        "end": 60,
+        "lane": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "r-notice-lost",
+        "label": "10:00 · потеря A",
+        "at": 0
+      },
+      {
+        "id": "r-notice-repeat",
+        "label": "10:02 · повтор A",
+        "at": 2
+      },
+      {
+        "id": "r-notice-restored",
+        "label": "11:00 · возврат A",
+        "at": 60
+      }
+    ]
+  },
+  {
+    "slideId": "s07-02-reliability-metrics-s059",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Совпадают ли учтённые циклы?",
+    "overview": "Для трёх завершённых циклов известны T = 120 ч и R = 6 ч. Перед подстановкой средних проверяется совпадение состава учитываемых случаев.",
+    "scope": "Арифметическая схема; 120 и 6 ч — суммы, а не два смежных отрезка оси. Открытый четвёртый случай берётся из соседнего задания.",
+    "defaultScenario": "complete",
+    "scenarios": [
+      {
+        "id": "complete",
+        "label": "Три завершённых цикла",
+        "condition": "Три отказа и три завершённых восстановления принадлежат одному набору.",
+        "frames": [
+          {
+            "caption": "Для трёх завершённых циклов известны T = 120 ч и R = 6 ч. Перед подстановкой средних проверяется совпадение состава учитываемых случаев.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Базовые суммы трёх завершённых случаев: 20 + 50 + 50 = 120 ч работы; 1 + 2 + 3 = 6 ч восстановления.",
+            "focus": [
+              "r-cohort-work",
+              "r-cohort-recovery"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "В базовом наборе три отказа и три завершённых восстановления.",
+            "focus": [
+              "r-cohort-cohort"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Состав циклов согласован; средние относятся к тем же трём случаям.",
+            "focus": [
+              "r-cohort-match"
+            ],
+            "edges": [
+              "r-cohort-work-match",
+              "r-cohort-recovery-match",
+              "r-cohort-cohort-match"
+            ]
+          },
+          {
+            "caption": "MTBF = 120/3 = 40 ч; MTTR = 6/3 = 2 ч.",
+            "focus": [
+              "r-cohort-means"
+            ],
+            "edges": [
+              "r-cohort-match-yes"
+            ]
+          },
+          {
+            "caption": "Готовность = 40/(40+2) = 120/(120+6) ≈ 0,95238095.",
+            "focus": [
+              "r-cohort-availability"
+            ],
+            "edges": [
+              "r-cohort-means-availability"
+            ],
+            "result": "Готовность ≈ 95,24 % для указанного полного набора."
+          }
+        ]
+      },
+      {
+        "id": "open",
+        "label": "Четвёртый случай открыт",
+        "condition": "Четвёртый отказ уже произошёл; завершены лишь прежние три восстановления.",
+        "frames": [
+          {
+            "caption": "Для трёх завершённых циклов известны T = 120 ч и R = 6 ч. Перед подстановкой средних проверяется совпадение состава учитываемых случаев.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Базовые суммы трёх завершённых случаев: 20 + 50 + 50 = 120 ч работы; 1 + 2 + 3 = 6 ч восстановления.",
+            "focus": [
+              "r-cohort-work",
+              "r-cohort-recovery"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Теперь отказов четыре, а завершённых восстановлений только три.",
+            "focus": [
+              "r-cohort-cohort"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Состав полного набора не совпадает: четвёртое восстановление не завершено.",
+            "focus": [
+              "r-cohort-match"
+            ],
+            "edges": [
+              "r-cohort-work-match",
+              "r-cohort-recovery-match",
+              "r-cohort-cohort-match"
+            ]
+          },
+          {
+            "caption": "Не подставляем механически прежние средние как оценку всех четырёх случаев.",
+            "focus": [
+              "r-cohort-incomplete"
+            ],
+            "edges": [
+              "r-cohort-match-no"
+            ],
+            "result": "2 ч описывает только три завершённых восстановления; полная оценка требует уточнить данные и границы."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "r-cohort-work",
+        "title": "Базовое T = 120 ч",
+        "kind": "action",
+        "column": 0,
+        "row": 0,
+        "text": "20 + 50 + 50"
+      },
+      {
+        "id": "r-cohort-cohort",
+        "title": "Состав случаев",
+        "kind": "action",
+        "column": 1,
+        "row": 0,
+        "text": "Отказы и завершения"
+      },
+      {
+        "id": "r-cohort-recovery",
+        "title": "Завершённое R = 6 ч",
+        "kind": "action",
+        "column": 2,
+        "row": 0,
+        "text": "1 + 2 + 3"
+      },
+      {
+        "id": "r-cohort-match",
+        "title": "Циклы согласованы?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "r-cohort-means",
+        "title": "Средние: 40 ч и 2 ч",
+        "kind": "action",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "r-cohort-availability",
+        "title": "Готовность ≈ 95,24 %",
+        "kind": "end",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "r-cohort-incomplete",
+        "title": "Уточнить открытый случай",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "r-cohort-work-match",
+        "from": "r-cohort-work",
+        "to": "r-cohort-match",
+        "label": "Работа"
+      },
+      {
+        "id": "r-cohort-recovery-match",
+        "from": "r-cohort-recovery",
+        "to": "r-cohort-match",
+        "label": "Восстановление"
+      },
+      {
+        "id": "r-cohort-cohort-match",
+        "from": "r-cohort-cohort",
+        "to": "r-cohort-match",
+        "label": "Состав"
+      },
+      {
+        "id": "r-cohort-match-yes",
+        "from": "r-cohort-match",
+        "to": "r-cohort-means",
+        "label": "Да"
+      },
+      {
+        "id": "r-cohort-means-availability",
+        "from": "r-cohort-means",
+        "to": "r-cohort-availability"
+      },
+      {
+        "id": "r-cohort-match-no",
+        "from": "r-cohort-match",
+        "to": "r-cohort-incomplete",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-02-reliability-metrics-s081",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Сравнение выполняется до округления",
+    "overview": "Критерий готовности задан заранее: значение не ниже 0,95. Решение принимается по неокруглённой оценке.",
+    "scope": "Две оценки взяты из таблицы слайда. Округлённое отображение не используется как новое исходное число.",
+    "defaultScenario": "above",
+    "scenarios": [
+      {
+        "id": "above",
+        "label": "0,95238095 ≥ 0,95",
+        "condition": "Неокруглённая оценка 0,95238095; критерий ≥ 0,95.",
+        "frames": [
+          {
+            "caption": "Критерий готовности задан заранее: значение не ниже 0,95. Решение принимается по неокруглённой оценке.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Фиксируем оператор ≥ и порог 0,95 до сравнения и округления.",
+            "focus": [
+              "r-threshold-criterion"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Для сравнения используем исходную оценку 0,95238095.",
+            "focus": [
+              "r-threshold-value"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "0,95238095 ≥ 0,95: условие истинно.",
+            "focus": [
+              "r-threshold-compare"
+            ],
+            "edges": [
+              "r-threshold-criterion-compare",
+              "r-threshold-value-compare"
+            ]
+          },
+          {
+            "caption": "Требование выполнено.",
+            "focus": [
+              "r-threshold-passed"
+            ],
+            "edges": [
+              "r-threshold-compare-yes"
+            ],
+            "result": "0,95238095: выполнено. Отображение 0,95 при округлении до двух знаков не меняет решение."
+          }
+        ]
+      },
+      {
+        "id": "below",
+        "label": "0,9496 < 0,95",
+        "condition": "Неокруглённая оценка 0,9496; критерий ≥ 0,95.",
+        "frames": [
+          {
+            "caption": "Критерий готовности задан заранее: значение не ниже 0,95. Решение принимается по неокруглённой оценке.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Фиксируем оператор ≥ и порог 0,95 до сравнения и округления.",
+            "focus": [
+              "r-threshold-criterion"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Для сравнения используем исходную оценку 0,9496.",
+            "focus": [
+              "r-threshold-value"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "0,9496 < 0,95: условие ложно.",
+            "focus": [
+              "r-threshold-compare"
+            ],
+            "edges": [
+              "r-threshold-criterion-compare",
+              "r-threshold-value-compare"
+            ]
+          },
+          {
+            "caption": "Требование не выполнено.",
+            "focus": [
+              "r-threshold-failed"
+            ],
+            "edges": [
+              "r-threshold-compare-no"
+            ],
+            "result": "0,9496: не выполнено. Отображение 0,95 при округлении до двух знаков не меняет решение."
+          }
+        ]
+      }
+    ],
+    "scenarioLabel": "Исходная оценка",
+    "nodes": [
+      {
+        "id": "r-threshold-criterion",
+        "title": "Критерий ≥ 0,95",
+        "kind": "action",
+        "column": 0,
+        "row": 0
+      },
+      {
+        "id": "r-threshold-value",
+        "title": "Исходная оценка",
+        "kind": "start",
+        "column": 1,
+        "row": 0,
+        "text": "0,95238095 или 0,9496"
+      },
+      {
+        "id": "r-threshold-compare",
+        "title": "Значение ≥ 0,95?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "r-threshold-passed",
+        "title": "Выполнено",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      },
+      {
+        "id": "r-threshold-failed",
+        "title": "Не выполнено",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "r-threshold-criterion-compare",
+        "from": "r-threshold-criterion",
+        "to": "r-threshold-compare"
+      },
+      {
+        "id": "r-threshold-value-compare",
+        "from": "r-threshold-value",
+        "to": "r-threshold-compare"
+      },
+      {
+        "id": "r-threshold-compare-yes",
+        "from": "r-threshold-compare",
+        "to": "r-threshold-passed",
+        "label": "Да"
+      },
+      {
+        "id": "r-threshold-compare-no",
+        "from": "r-threshold-compare",
+        "to": "r-threshold-failed",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-03-reliability-threats-prevention-s015",
+    "catalogId": "UML-11",
+    "kind": "sequence",
+    "title": "Нет подтверждения ≠ нет записи",
+    "overview": "Клиент отправил запись, но подтверждение не получил. Проверка по прежнему ID различает найденную запись, подтверждённое отсутствие и неразрешённый исход.",
+    "scope": "Упрощённая Sequence из двух участников. Return первой записи намеренно отсутствует: подтверждение не дошло до клиента. Проверка статуса не измеряет время и не гарантирует идемпотентность.",
+    "defaultScenario": "found",
+    "scenarios": [
+      {
+        "id": "found",
+        "label": "Запись найдена",
+        "condition": "Проверка по прежнему ID вернула сохранённую запись.",
+        "frames": [
+          {
+            "caption": "Клиент отправил запись, но подтверждение не получил. Проверка по прежнему ID различает найденную запись, подтверждённое отсутствие и неразрешённый исход.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Клиент отправляет запись с идентификатором операции.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Подтверждение не получено. Известно отсутствие ответа, а не отсутствие записи.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": [],
+            "result": "Исход записи неизвестен."
+          },
+          {
+            "caption": "До новой записи клиент уточняет исход по тому же ID.",
+            "focus": [
+              "p-ack-query"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Ответ проверки: запись с этим ID уже сохранена.",
+            "focus": [
+              "p-ack-found"
+            ],
+            "edges": [],
+            "result": "Используем существующую запись; создание той же заявки с новым ID не требуется."
+          }
+        ]
+      },
+      {
+        "id": "absent",
+        "label": "Отсутствие подтверждено",
+        "condition": "Проверка по прежнему ID подтвердила отсутствие записи.",
+        "frames": [
+          {
+            "caption": "Клиент отправил запись, но подтверждение не получил. Проверка по прежнему ID различает найденную запись, подтверждённое отсутствие и неразрешённый исход.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Клиент отправляет запись с идентификатором операции.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Подтверждение не получено. Известно отсутствие ответа, а не отсутствие записи.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": [],
+            "result": "Исход записи неизвестен."
+          },
+          {
+            "caption": "До новой записи клиент уточняет исход по тому же ID.",
+            "focus": [
+              "p-ack-query"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Ответ проверки: отсутствие записи подтверждено.",
+            "focus": [
+              "p-ack-absent"
+            ],
+            "edges": [],
+            "result": "Исход уточнён. Автоматическая новая запись не показана: безопасность повтора и защита от дублей проверяются отдельно."
+          }
+        ]
+      },
+      {
+        "id": "unknown",
+        "label": "Исход не уточнён",
+        "condition": "Проверка по ID не смогла определить итог записи.",
+        "frames": [
+          {
+            "caption": "Клиент отправил запись, но подтверждение не получил. Проверка по прежнему ID различает найденную запись, подтверждённое отсутствие и неразрешённый исход.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Клиент отправляет запись с идентификатором операции.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Подтверждение не получено. Известно отсутствие ответа, а не отсутствие записи.",
+            "focus": [
+              "p-ack-write"
+            ],
+            "edges": [],
+            "result": "Исход записи неизвестен."
+          },
+          {
+            "caption": "До новой записи клиент уточняет исход по тому же ID.",
+            "focus": [
+              "p-ack-query"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Ответ проверки не разрешил исход операции.",
+            "focus": [
+              "p-ack-unknown"
+            ],
+            "edges": [],
+            "result": "Исход остаётся неизвестным; потеря данных не доказана, слепой повтор с новым ID не выполняется."
+          }
+        ]
+      }
+    ],
+    "participants": [
+      {
+        "id": "p-ack-client",
+        "title": "Клиент импорта"
+      },
+      {
+        "id": "p-ack-system",
+        "title": "Система"
+      }
+    ],
+    "messages": [
+      {
+        "id": "p-ack-write",
+        "from": "p-ack-client",
+        "to": "p-ack-system",
+        "label": "Записать с ID",
+        "kind": "call"
+      },
+      {
+        "id": "p-ack-query",
+        "from": "p-ack-client",
+        "to": "p-ack-system",
+        "label": "Уточнить исход по ID",
+        "kind": "call"
+      },
+      {
+        "id": "p-ack-found",
+        "from": "p-ack-system",
+        "to": "p-ack-client",
+        "label": "Запись найдена",
+        "kind": "return",
+        "branch": "found"
+      },
+      {
+        "id": "p-ack-absent",
+        "from": "p-ack-system",
+        "to": "p-ack-client",
+        "label": "Отсутствие подтверждено",
+        "kind": "return",
+        "branch": "absent"
+      },
+      {
+        "id": "p-ack-unknown",
+        "from": "p-ack-system",
+        "to": "p-ack-client",
+        "label": "Исход не определён",
+        "kind": "return",
+        "branch": "unknown"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-03-reliability-threats-prevention-s048",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Предусловие не заменяет проверку действия",
+    "overview": "Запись требует 20 МБ. Проверка свободного места отсеивает невозможный случай, но окончательный исход устанавливается по самой записи.",
+    "scope": "Учебные величины 30, 15 и 20 МБ взяты из слайда и соседнего задания. Каталог проверяется отдельно; модель не обещает успех только из-за места.",
+    "defaultScenario": "insufficient",
+    "scenarios": [
+      {
+        "id": "insufficient",
+        "label": "До записи только 15 МБ",
+        "condition": "При предварительной проверке свободно 15 МБ, требуется 20 МБ.",
+        "frames": [
+          {
+            "caption": "Запись требует 20 МБ. Проверка свободного места отсеивает невозможный случай, но окончательный исход устанавливается по самой записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Для импорта требуется 20 МБ; до изменения состояния проверяем ресурс.",
+            "focus": [
+              "p-resource-need"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "15 < 20: предварительное условие не выполнено.",
+            "focus": [
+              "p-resource-space"
+            ],
+            "edges": [
+              "p-resource-need-space"
+            ]
+          },
+          {
+            "caption": "Запись не начинается; причина нехватки места сообщается.",
+            "focus": [
+              "p-resource-rejected"
+            ],
+            "edges": [
+              "p-resource-space-no"
+            ],
+            "result": "Недостаточно места; состояние не изменялось."
+          }
+        ]
+      },
+      {
+        "id": "stable",
+        "label": "Место осталось доступным",
+        "condition": "Свободно 30 МБ, требуется 20 МБ; запись завершилась успешно.",
+        "frames": [
+          {
+            "caption": "Запись требует 20 МБ. Проверка свободного места отсеивает невозможный случай, но окончательный исход устанавливается по самой записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Для импорта требуется 20 МБ; до изменения состояния проверяем ресурс.",
+            "focus": [
+              "p-resource-need"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Предварительная проверка: 30 ≥ 20 МБ, ресурсное условие выполнено.",
+            "focus": [
+              "p-resource-space"
+            ],
+            "edges": [
+              "p-resource-need-space"
+            ]
+          },
+          {
+            "caption": "Перед действием свободные 30 МБ сохранились; выполняем запись.",
+            "focus": [
+              "p-resource-write"
+            ],
+            "edges": [
+              "p-resource-space-yes"
+            ]
+          },
+          {
+            "caption": "Действие подтвердило завершение записи.",
+            "focus": [
+              "p-resource-written"
+            ],
+            "edges": [
+              "p-resource-write-result"
+            ]
+          },
+          {
+            "caption": "Результат записи подтверждён.",
+            "focus": [
+              "p-resource-done"
+            ],
+            "edges": [
+              "p-resource-write-yes"
+            ],
+            "result": "Запись завершена."
+          }
+        ]
+      },
+      {
+        "id": "consumed",
+        "label": "Другой процесс занял 15 МБ",
+        "condition": "Проверка увидела 30 МБ; затем другой процесс занял 15 МБ, осталось 15 при потребности 20.",
+        "frames": [
+          {
+            "caption": "Запись требует 20 МБ. Проверка свободного места отсеивает невозможный случай, но окончательный исход устанавливается по самой записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Для импорта требуется 20 МБ; до изменения состояния проверяем ресурс.",
+            "focus": [
+              "p-resource-need"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Предварительная проверка: 30 ≥ 20 МБ, ресурсное условие выполнено.",
+            "focus": [
+              "p-resource-space"
+            ],
+            "edges": [
+              "p-resource-need-space"
+            ]
+          },
+          {
+            "caption": "После проверки другой процесс занял 15 МБ: осталось 15 < 20; попытка записи получает отказ.",
+            "focus": [
+              "p-resource-write"
+            ],
+            "edges": [
+              "p-resource-space-yes"
+            ]
+          },
+          {
+            "caption": "Действие не завершилось успешно; ошибка обрабатывается.",
+            "focus": [
+              "p-resource-written"
+            ],
+            "edges": [
+              "p-resource-write-result"
+            ]
+          },
+          {
+            "caption": "Незавершённая часть отменяется; успех не объявляется.",
+            "focus": [
+              "p-resource-cancelled"
+            ],
+            "edges": [
+              "p-resource-write-no"
+            ],
+            "result": "Контролируемый отказ; согласованность сохраняется, успешная запись не заявляется."
+          }
+        ]
+      },
+      {
+        "id": "directory",
+        "label": "Место есть, каталог недоступен",
+        "condition": "Для импорта зарезервированы 20 МБ, но каталог назначения недоступен для записи.",
+        "frames": [
+          {
+            "caption": "Запись требует 20 МБ. Проверка свободного места отсеивает невозможный случай, но окончательный исход устанавливается по самой записи.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Для импорта требуется 20 МБ; до изменения состояния проверяем ресурс.",
+            "focus": [
+              "p-resource-need"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Предварительная проверка: 30 ≥ 20 МБ, ресурсное условие выполнено.",
+            "focus": [
+              "p-resource-space"
+            ],
+            "edges": [
+              "p-resource-need-space"
+            ]
+          },
+          {
+            "caption": "Даже при зарезервированных 20 МБ каталог назначения не принимает запись.",
+            "focus": [
+              "p-resource-write"
+            ],
+            "edges": [
+              "p-resource-space-yes"
+            ]
+          },
+          {
+            "caption": "Действие не завершилось успешно; ошибка обрабатывается.",
+            "focus": [
+              "p-resource-written"
+            ],
+            "edges": [
+              "p-resource-write-result"
+            ]
+          },
+          {
+            "caption": "Незавершённая часть отменяется; успех не объявляется.",
+            "focus": [
+              "p-resource-cancelled"
+            ],
+            "edges": [
+              "p-resource-write-no"
+            ],
+            "result": "Контролируемый отказ; согласованность сохраняется, успешная запись не заявляется."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "p-resource-need",
+        "title": "Требуется 20 МБ",
+        "kind": "start",
+        "column": 0,
+        "row": 0
+      },
+      {
+        "id": "p-resource-space",
+        "title": "Свободно ≥ 20 МБ?",
+        "kind": "decision",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "p-resource-rejected",
+        "title": "Не начинать запись",
+        "kind": "end",
+        "column": 2,
+        "row": 0
+      },
+      {
+        "id": "p-resource-write",
+        "title": "Выполнить запись",
+        "kind": "action",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "p-resource-written",
+        "title": "Запись завершена?",
+        "kind": "decision",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "p-resource-cancelled",
+        "title": "Отменить частичное",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "p-resource-done",
+        "title": "Запись подтверждена",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "p-resource-need-space",
+        "from": "p-resource-need",
+        "to": "p-resource-space"
+      },
+      {
+        "id": "p-resource-space-no",
+        "from": "p-resource-space",
+        "to": "p-resource-rejected",
+        "label": "Нет"
+      },
+      {
+        "id": "p-resource-space-yes",
+        "from": "p-resource-space",
+        "to": "p-resource-write",
+        "label": "Да"
+      },
+      {
+        "id": "p-resource-write-result",
+        "from": "p-resource-write",
+        "to": "p-resource-written"
+      },
+      {
+        "id": "p-resource-write-yes",
+        "from": "p-resource-written",
+        "to": "p-resource-done",
+        "label": "Да"
+      },
+      {
+        "id": "p-resource-write-no",
+        "from": "p-resource-written",
+        "to": "p-resource-cancelled",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-03-reliability-threats-prevention-s059",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Продолжение или откат задаёт требование",
+    "overview": "Входной набор содержит 10 строк: 9 корректных и одну ошибочную. Разрешённая реакция зависит от заданной границы целостности.",
+    "scope": "Два альтернативных требования к одному учебному набору. Выбор целостности выполняется до импорта, а не меняется посреди операции.",
+    "defaultScenario": "independent",
+    "scenarios": [
+      {
+        "id": "independent",
+        "label": "Независимые заявки",
+        "condition": "Каждая заявка имеет собственную границу целостности; ошибочная строка изолируется.",
+        "frames": [
+          {
+            "caption": "Входной набор содержит 10 строк: 9 корректных и одну ошибочную. Разрешённая реакция зависит от заданной границы целостности.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Исходный набор ещё не обработан: 10 строк, из них 9 корректных и одна ошибочная.",
+            "focus": [
+              "p-integrity-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Заявки независимы: граница отказа — одна заявка.",
+            "focus": [
+              "p-integrity-boundary"
+            ],
+            "edges": [
+              "p-integrity-input-boundary"
+            ]
+          },
+          {
+            "caption": "Ошибочную заявку помещаем в карантин с ID, причиной и статусом; остальные можно принимать.",
+            "focus": [
+              "p-integrity-quarantine"
+            ],
+            "edges": [
+              "p-integrity-boundary-yes"
+            ]
+          },
+          {
+            "caption": "Отчёт отдельно показывает 9 принятых и 1 отклонённую заявку.",
+            "focus": [
+              "p-integrity-partial"
+            ],
+            "edges": [
+              "p-integrity-quarantine-report"
+            ],
+            "result": "9 + 1 = 10; ошибка одной независимой заявки не остановила остальные."
+          }
+        ]
+      },
+      {
+        "id": "atomic",
+        "label": "Пакет атомарен",
+        "condition": "Пакет обязан выполняться целиком; после девяти записанных строк десятая завершается отказом.",
+        "frames": [
+          {
+            "caption": "Входной набор содержит 10 строк: 9 корректных и одну ошибочную. Разрешённая реакция зависит от заданной границы целостности.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Исходный набор ещё не обработан: 10 строк, из них 9 корректных и одна ошибочная.",
+            "focus": [
+              "p-integrity-input"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Пакет атомарен: граница целостности — вся операция.",
+            "focus": [
+              "p-integrity-boundary"
+            ],
+            "edges": [
+              "p-integrity-input-boundary"
+            ]
+          },
+          {
+            "caption": "Отказ десятой строки требует отмены частичных изменений, а не объявления частичного успеха.",
+            "focus": [
+              "p-integrity-rollback"
+            ],
+            "edges": [
+              "p-integrity-boundary-no"
+            ]
+          },
+          {
+            "caption": "Состояние проверяется после отката: пакет не объявляется частично принятым.",
+            "focus": [
+              "p-integrity-atomicEnd"
+            ],
+            "edges": [
+              "p-integrity-rollback-report"
+            ],
+            "result": "Требуемый итог атомарного пакета — 0 сохранённых строк этого пакета; факт отката подтверждают проверкой состояния."
+          }
+        ]
+      }
+    ],
+    "scenarioLabel": "Требование целостности",
+    "nodes": [
+      {
+        "id": "p-integrity-input",
+        "title": "10 строк: 9 + 1",
+        "kind": "start",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "p-integrity-boundary",
+        "title": "Заявки независимы?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "p-integrity-quarantine",
+        "title": "Карантин одной заявки",
+        "kind": "action",
+        "column": 0,
+        "row": 1
+      },
+      {
+        "id": "p-integrity-rollback",
+        "title": "Откат всей операции",
+        "kind": "action",
+        "column": 2,
+        "row": 1
+      },
+      {
+        "id": "p-integrity-partial",
+        "title": "9 принятых + 1 отклонённая",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "p-integrity-atomicEnd",
+        "title": "Нет частичного успеха",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "p-integrity-input-boundary",
+        "from": "p-integrity-input",
+        "to": "p-integrity-boundary"
+      },
+      {
+        "id": "p-integrity-boundary-yes",
+        "from": "p-integrity-boundary",
+        "to": "p-integrity-quarantine",
+        "label": "Да"
+      },
+      {
+        "id": "p-integrity-boundary-no",
+        "from": "p-integrity-boundary",
+        "to": "p-integrity-rollback",
+        "label": "Нет: пакет атомарен"
+      },
+      {
+        "id": "p-integrity-quarantine-report",
+        "from": "p-integrity-quarantine",
+        "to": "p-integrity-partial"
+      },
+      {
+        "id": "p-integrity-rollback-report",
+        "from": "p-integrity-rollback",
+        "to": "p-integrity-atomicEnd"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-03-reliability-threats-prevention-s070",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Один повтор, две попытки",
+    "overview": "Чтение имеет максимум две попытки: исходную и один повтор после предусмотренной задержки. Успех и исчерпание лимита — разные окончания.",
+    "scope": "Модель чтения без побочного эффекта записи. Безопасность повтора записи и защита от одновременных дублей здесь не выводятся из счётчика.",
+    "defaultScenario": "first",
+    "scenarios": [
+      {
+        "id": "first",
+        "label": "Успех первой попытки",
+        "condition": "Первое чтение завершилось успешно.",
+        "frames": [
+          {
+            "caption": "Чтение имеет максимум две попытки: исходную и один повтор после предусмотренной задержки. Успех и исчерпание лимита — разные окончания.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Выполняется попытка чтения 1 из 2.",
+            "focus": [
+              "p-retry-read"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Первая попытка успешна; повтор не требуется.",
+            "focus": [
+              "p-retry-ok"
+            ],
+            "edges": [
+              "p-retry-read-ok"
+            ]
+          },
+          {
+            "caption": "Полученный результат возвращается; всего одна попытка.",
+            "focus": [
+              "p-retry-done"
+            ],
+            "edges": [
+              "p-retry-ok-yes"
+            ],
+            "result": "Успех после 1 попытки."
+          }
+        ]
+      },
+      {
+        "id": "second",
+        "label": "Ошибка, затем успех",
+        "condition": "Первая попытка дала ошибку связи; повторное чтение успешно.",
+        "frames": [
+          {
+            "caption": "Чтение имеет максимум две попытки: исходную и один повтор после предусмотренной задержки. Успех и исчерпание лимита — разные окончания.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Выполняется попытка чтения 1 из 2.",
+            "focus": [
+              "p-retry-read"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Попытка 1 завершилась ошибкой связи.",
+            "focus": [
+              "p-retry-ok"
+            ],
+            "edges": [
+              "p-retry-read-ok"
+            ]
+          },
+          {
+            "caption": "Использована 1 попытка из 2: ещё один повтор разрешён.",
+            "focus": [
+              "p-retry-budget"
+            ],
+            "edges": [
+              "p-retry-ok-no"
+            ]
+          },
+          {
+            "caption": "Выдерживается предусмотренная задержка; её числовая длительность в лекции не задана.",
+            "focus": [
+              "p-retry-wait"
+            ],
+            "edges": [
+              "p-retry-budget-yes"
+            ]
+          },
+          {
+            "caption": "Выполняется попытка 2 из 2.",
+            "focus": [
+              "p-retry-retry"
+            ],
+            "edges": [
+              "p-retry-wait-retry"
+            ]
+          },
+          {
+            "caption": "Попытка 2 завершилась успешно.",
+            "focus": [
+              "p-retry-ok"
+            ],
+            "edges": [
+              "p-retry-retry-ok"
+            ]
+          },
+          {
+            "caption": "Результат возвращается; третья попытка не нужна.",
+            "focus": [
+              "p-retry-done"
+            ],
+            "edges": [
+              "p-retry-ok-yes"
+            ],
+            "result": "Успех после 2 попыток; выполнен один повтор."
+          }
+        ]
+      },
+      {
+        "id": "failed",
+        "label": "Обе попытки неуспешны",
+        "condition": "Первая и вторая попытки дали ошибку связи.",
+        "frames": [
+          {
+            "caption": "Чтение имеет максимум две попытки: исходную и один повтор после предусмотренной задержки. Успех и исчерпание лимита — разные окончания.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Выполняется попытка чтения 1 из 2.",
+            "focus": [
+              "p-retry-read"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Попытка 1 завершилась ошибкой связи.",
+            "focus": [
+              "p-retry-ok"
+            ],
+            "edges": [
+              "p-retry-read-ok"
+            ]
+          },
+          {
+            "caption": "Использована 1 попытка из 2: ещё один повтор разрешён.",
+            "focus": [
+              "p-retry-budget"
+            ],
+            "edges": [
+              "p-retry-ok-no"
+            ]
+          },
+          {
+            "caption": "Выдерживается предусмотренная задержка; её числовая длительность в лекции не задана.",
+            "focus": [
+              "p-retry-wait"
+            ],
+            "edges": [
+              "p-retry-budget-yes"
+            ]
+          },
+          {
+            "caption": "Выполняется попытка 2 из 2.",
+            "focus": [
+              "p-retry-retry"
+            ],
+            "edges": [
+              "p-retry-wait-retry"
+            ]
+          },
+          {
+            "caption": "Попытка 2 тоже завершилась ошибкой.",
+            "focus": [
+              "p-retry-ok"
+            ],
+            "edges": [
+              "p-retry-retry-ok"
+            ]
+          },
+          {
+            "caption": "Использованы 2 попытки из 2: условие продолжения ложно.",
+            "focus": [
+              "p-retry-budget"
+            ],
+            "edges": [
+              "p-retry-ok-no"
+            ]
+          },
+          {
+            "caption": "Возвращается контролируемый отказ; третьей попытки нет.",
+            "focus": [
+              "p-retry-failed"
+            ],
+            "edges": [
+              "p-retry-budget-no"
+            ],
+            "result": "Лимит 2 попытки исчерпан; цикл завершён отказом."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "p-retry-read",
+        "title": "Чтение: попытка 1",
+        "kind": "start",
+        "column": 0,
+        "row": 0
+      },
+      {
+        "id": "p-retry-ok",
+        "title": "Чтение успешно?",
+        "kind": "decision",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "p-retry-done",
+        "title": "Вернуть результат",
+        "kind": "end",
+        "column": 2,
+        "row": 0
+      },
+      {
+        "id": "p-retry-budget",
+        "title": "Попыток < 2?",
+        "kind": "decision",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "p-retry-wait",
+        "title": "Заданная задержка",
+        "kind": "action",
+        "column": 0,
+        "row": 1
+      },
+      {
+        "id": "p-retry-retry",
+        "title": "Чтение: попытка 2",
+        "kind": "action",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "p-retry-failed",
+        "title": "Контролируемый отказ",
+        "kind": "end",
+        "column": 2,
+        "row": 1
+      }
+    ],
+    "edges": [
+      {
+        "id": "p-retry-read-ok",
+        "from": "p-retry-read",
+        "to": "p-retry-ok"
+      },
+      {
+        "id": "p-retry-ok-yes",
+        "from": "p-retry-ok",
+        "to": "p-retry-done",
+        "label": "Да"
+      },
+      {
+        "id": "p-retry-ok-no",
+        "from": "p-retry-ok",
+        "to": "p-retry-budget",
+        "label": "Нет"
+      },
+      {
+        "id": "p-retry-budget-yes",
+        "from": "p-retry-budget",
+        "to": "p-retry-wait",
+        "label": "Да"
+      },
+      {
+        "id": "p-retry-wait-retry",
+        "from": "p-retry-wait",
+        "to": "p-retry-retry"
+      },
+      {
+        "id": "p-retry-retry-ok",
+        "from": "p-retry-retry",
+        "to": "p-retry-ok",
+        "label": "Проверить попытку 2"
+      },
+      {
+        "id": "p-retry-budget-no",
+        "from": "p-retry-budget",
+        "to": "p-retry-failed",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-04-observing-operating-system-s016",
+    "catalogId": "INFO-02",
+    "kind": "timeline",
+    "title": "Две операции на общей шкале",
+    "overview": "Четыре записи LabApp относятся к двум операциям. Связь по requestId различает A17 и A18 при перекрывающемся выполнении.",
+    "scope": "Только заданные события 10:14:00–10:14:04 одного учебного провайдера. Ноль оси — 10:14:00; никаких промежуточных измерений не добавлено.",
+    "defaultScenario": "two",
+    "scenarios": [
+      {
+        "id": "two",
+        "label": "A17 и A18",
+        "condition": "A17: начало 10:14:00, failed в 10:14:03; A18: начало 10:14:01, accepted в 10:14:04.",
+        "frames": [
+          {
+            "caption": "Четыре записи LabApp относятся к двум операциям. Связь по requestId различает A17 и A18 при перекрывающемся выполнении.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "10:14:00: началась A17.",
+            "focus": [
+              "o-correlate-a17start"
+            ],
+            "edges": [],
+            "time": 0
+          },
+          {
+            "caption": "10:14:01: началась A18; A17 ещё не завершена.",
+            "focus": [
+              "o-correlate-a18start"
+            ],
+            "edges": [],
+            "result": "Одновременно рассматриваются две разные операции.",
+            "time": 1
+          },
+          {
+            "caption": "10:14:03: A17 завершилась с failed; длительность 3 − 0 = 3 с. A18 ещё выполняется.",
+            "focus": [
+              "o-correlate-a17end",
+              "o-correlate-a17"
+            ],
+            "edges": [],
+            "result": "A17: 3 с, failed. Это не результат A18.",
+            "time": 3
+          },
+          {
+            "caption": "10:14:04: A18 завершилась с accepted; длительность 4 − 1 = 3 с.",
+            "focus": [
+              "o-correlate-a18end",
+              "o-correlate-a18"
+            ],
+            "edges": [],
+            "result": "A17: 3 с, failed; A18: 3 с, accepted. Результаты не смешаны.",
+            "time": 4
+          }
+        ]
+      }
+    ],
+    "axis": {
+      "min": 0,
+      "max": 4,
+      "unit": "с от 10:14:00"
+    },
+    "segments": [
+      {
+        "id": "o-correlate-a17",
+        "label": "A17 · failed",
+        "start": 0,
+        "end": 3,
+        "lane": 0
+      },
+      {
+        "id": "o-correlate-a18",
+        "label": "A18 · accepted",
+        "start": 1,
+        "end": 4,
+        "lane": 1
+      }
+    ],
+    "events": [
+      {
+        "id": "o-correlate-a17start",
+        "label": "10:14:00 · A17 start",
+        "at": 0
+      },
+      {
+        "id": "o-correlate-a18start",
+        "label": "10:14:01 · A18 start",
+        "at": 1
+      },
+      {
+        "id": "o-correlate-a17end",
+        "label": "10:14:03 · A17 failed",
+        "at": 3
+      },
+      {
+        "id": "o-correlate-a18end",
+        "label": "10:14:04 · A18 accepted",
+        "at": 4
+      }
+    ]
+  },
+  {
+    "slideId": "s07-04-observing-operating-system-s048",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Успеет ли согласованная реакция?",
+    "overview": "При 6 ГБ свободного места, границе 2 ГБ и постоянном расходе 2 ГБ/ч запас до границы равен двум часам. Затем оценивается время реакции.",
+    "scope": "Расчёт условен при постоянном темпе; это не прогноз с выдуманными точками оси. Сравнивается только заданная длительность реакции с запасом.",
+    "defaultScenario": "fits",
+    "scenarios": [
+      {
+        "id": "fits",
+        "label": "Реакция укладывается",
+        "condition": "Согласованная реакция занимает не более 2 ч при тех же предпосылках расчёта.",
+        "frames": [
+          {
+            "caption": "При 6 ГБ свободного места, границе 2 ГБ и постоянном расходе 2 ГБ/ч запас до границы равен двум часам. Затем оценивается время реакции.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Свободно 6 ГБ; согласованная граница — 2 ГБ.",
+            "focus": [
+              "o-margin-space"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "До границы 6 − 2 = 4 ГБ.",
+            "focus": [
+              "o-margin-margin"
+            ],
+            "edges": [
+              "o-margin-space-margin"
+            ]
+          },
+          {
+            "caption": "При неизменном темпе 2 ГБ/ч запас 4/2 = 2 ч.",
+            "focus": [
+              "o-margin-rate",
+              "o-margin-time"
+            ],
+            "edges": [
+              "o-margin-margin-time",
+              "o-margin-rate-time"
+            ]
+          },
+          {
+            "caption": "Условие: согласованная реакция укладывается в имеющиеся 2 ч.",
+            "focus": [
+              "o-margin-fits"
+            ],
+            "edges": [
+              "o-margin-time-fits"
+            ]
+          },
+          {
+            "caption": "По этому критерию время реакции не превышает запас.",
+            "focus": [
+              "o-margin-enough"
+            ],
+            "edges": [
+              "o-margin-fits-yes"
+            ],
+            "result": "Времени достаточно по заданному сравнению; изменение темпа требует нового расчёта."
+          }
+        ]
+      },
+      {
+        "id": "late",
+        "label": "Реакция занимает 3 ч",
+        "condition": "До границы 2 ч, согласованная реакция занимает 3 ч.",
+        "frames": [
+          {
+            "caption": "При 6 ГБ свободного места, границе 2 ГБ и постоянном расходе 2 ГБ/ч запас до границы равен двум часам. Затем оценивается время реакции.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Свободно 6 ГБ; согласованная граница — 2 ГБ.",
+            "focus": [
+              "o-margin-space"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "До границы 6 − 2 = 4 ГБ.",
+            "focus": [
+              "o-margin-margin"
+            ],
+            "edges": [
+              "o-margin-space-margin"
+            ]
+          },
+          {
+            "caption": "При неизменном темпе 2 ГБ/ч запас 4/2 = 2 ч.",
+            "focus": [
+              "o-margin-rate",
+              "o-margin-time"
+            ],
+            "edges": [
+              "o-margin-margin-time",
+              "o-margin-rate-time"
+            ]
+          },
+          {
+            "caption": "3 ч > 2 ч: согласованная реакция не укладывается.",
+            "focus": [
+              "o-margin-fits"
+            ],
+            "edges": [
+              "o-margin-time-fits"
+            ]
+          },
+          {
+            "caption": "Такой сигнал запаздывает относительно времени реакции; порог или план реакции требуется пересмотреть.",
+            "focus": [
+              "o-margin-insufficient"
+            ],
+            "edges": [
+              "o-margin-fits-no"
+            ],
+            "result": "Порог недостаточен: до границы 2 ч, реакция 3 ч."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "o-margin-space",
+        "title": "6 ГБ; граница 2 ГБ",
+        "kind": "action",
+        "column": 0,
+        "row": 0
+      },
+      {
+        "id": "o-margin-rate",
+        "title": "Темп: 2 ГБ/ч",
+        "kind": "action",
+        "column": 2,
+        "row": 0
+      },
+      {
+        "id": "o-margin-margin",
+        "title": "Запас: 4 ГБ",
+        "kind": "action",
+        "column": 0,
+        "row": 1
+      },
+      {
+        "id": "o-margin-time",
+        "title": "До границы: 2 ч",
+        "kind": "action",
+        "column": 2,
+        "row": 1
+      },
+      {
+        "id": "o-margin-fits",
+        "title": "Реакция укладывается?",
+        "kind": "decision",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "o-margin-enough",
+        "title": "Время не превышено",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "o-margin-insufficient",
+        "title": "Пересмотреть сигнал",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "o-margin-space-margin",
+        "from": "o-margin-space",
+        "to": "o-margin-margin"
+      },
+      {
+        "id": "o-margin-margin-time",
+        "from": "o-margin-margin",
+        "to": "o-margin-time"
+      },
+      {
+        "id": "o-margin-rate-time",
+        "from": "o-margin-rate",
+        "to": "o-margin-time"
+      },
+      {
+        "id": "o-margin-time-fits",
+        "from": "o-margin-time",
+        "to": "o-margin-fits"
+      },
+      {
+        "id": "o-margin-fits-yes",
+        "from": "o-margin-fits",
+        "to": "o-margin-enough",
+        "label": "Да"
+      },
+      {
+        "id": "o-margin-fits-no",
+        "from": "o-margin-fits",
+        "to": "o-margin-insufficient",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-04-observing-operating-system-s083",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Место освобождено — функция проверена?",
+    "overview": "После разрешённой очистки проверяются два разных свидетельства: свободное место и приём контрольной заявки.",
+    "scope": "Учебная проверка результата уже описанной меры; архивные данные не включаются в общее правило очистки. Новые причины отказа здесь не назначаются.",
+    "defaultScenario": "accepted",
+    "scenarios": [
+      {
+        "id": "accepted",
+        "label": "Контрольная заявка принята",
+        "condition": "После допустимой очистки места достаточно; контрольная заявка успешно принята.",
+        "frames": [
+          {
+            "caption": "После разрешённой очистки проверяются два разных свидетельства: свободное место и приём контрольной заявки.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Выполнена предусмотренная очистка только допустимых каталогов.",
+            "focus": [
+              "o-cleanup-cleanup"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Проверка показала: места достаточно. Это ещё не подтверждает приём заявки.",
+            "focus": [
+              "o-cleanup-space"
+            ],
+            "edges": [
+              "o-cleanup-cleanup-space"
+            ]
+          },
+          {
+            "caption": "Контрольная заявка принята; функциональное свидетельство получено.",
+            "focus": [
+              "o-cleanup-control"
+            ],
+            "edges": [
+              "o-cleanup-space-control"
+            ]
+          },
+          {
+            "caption": "Результат меры можно подтвердить местом и успешной операцией.",
+            "focus": [
+              "o-cleanup-done"
+            ],
+            "edges": [
+              "o-cleanup-control-yes"
+            ],
+            "result": "Есть оба свидетельства: достаточное место и принятая контрольная заявка."
+          }
+        ]
+      },
+      {
+        "id": "failed",
+        "label": "Место есть, заявка не принята",
+        "condition": "После очистки места достаточно, но контрольная заявка по-прежнему не принимается.",
+        "frames": [
+          {
+            "caption": "После разрешённой очистки проверяются два разных свидетельства: свободное место и приём контрольной заявки.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Выполнена предусмотренная очистка только допустимых каталогов.",
+            "focus": [
+              "o-cleanup-cleanup"
+            ],
+            "edges": []
+          },
+          {
+            "caption": "Проверка показала: места достаточно. Это ещё не подтверждает приём заявки.",
+            "focus": [
+              "o-cleanup-space"
+            ],
+            "edges": [
+              "o-cleanup-cleanup-space"
+            ]
+          },
+          {
+            "caption": "Контрольная заявка не принята, хотя места достаточно.",
+            "focus": [
+              "o-cleanup-control"
+            ],
+            "edges": [
+              "o-cleanup-space-control"
+            ]
+          },
+          {
+            "caption": "Меру нельзя завершить как успешное восстановление функции; требуется дальнейшая проверка.",
+            "focus": [
+              "o-cleanup-incomplete"
+            ],
+            "edges": [
+              "o-cleanup-control-no"
+            ],
+            "result": "Освобождение места подтверждено; восстановление приёма заявки не подтверждено."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "o-cleanup-cleanup",
+        "title": "Допустимая очистка",
+        "kind": "start",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "o-cleanup-space",
+        "title": "Места достаточно",
+        "kind": "state",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "o-cleanup-control",
+        "title": "Заявка принята?",
+        "kind": "decision",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "o-cleanup-done",
+        "title": "Результат подтверждён",
+        "kind": "end",
+        "column": 2,
+        "row": 2
+      },
+      {
+        "id": "o-cleanup-incomplete",
+        "title": "Мера не завершена",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "o-cleanup-cleanup-space",
+        "from": "o-cleanup-cleanup",
+        "to": "o-cleanup-space"
+      },
+      {
+        "id": "o-cleanup-space-control",
+        "from": "o-cleanup-space",
+        "to": "o-cleanup-control"
+      },
+      {
+        "id": "o-cleanup-control-yes",
+        "from": "o-cleanup-control",
+        "to": "o-cleanup-done",
+        "label": "Да"
+      },
+      {
+        "id": "o-cleanup-control-no",
+        "from": "o-cleanup-control",
+        "to": "o-cleanup-incomplete",
+        "label": "Нет"
+      }
+    ]
+  },
+  {
+    "slideId": "s07-04-observing-operating-system-s092",
+    "catalogId": "PROC-05",
+    "kind": "flow",
+    "title": "Три превышения и проверяемый возврат",
+    "overview": "Ограничение включается после трёх подряд значений очереди >20. Возврат требует значения <10 и проверки сохранности принятых задач и приёма.",
+    "scope": "Три замера 19/21/19 либо 22/24/25; затем для второго ряда задано снижение до 9. Интервалы между замерами неизвестны: временная ось не создаётся. Цикл ограничен тремя учебными замерами.",
+    "defaultScenario": "quiet",
+    "scenarios": [
+      {
+        "id": "quiet",
+        "label": "19, 21, 19",
+        "condition": "Ряд 19, 21, 19 не содержит трёх последовательных превышений 20.",
+        "frames": [
+          {
+            "caption": "Ограничение включается после трёх подряд значений очереди >20. Возврат требует значения <10 и проверки сохранности принятых задач и приёма.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Начальное состояние — обычный режим; счётчик подряд идущих превышений равен 0.",
+            "focus": [
+              "o-hysteresis-normal"
+            ],
+            "edges": [],
+            "result": "Обычный режим; 0 из 3 превышений подряд."
+          },
+          {
+            "caption": "Замер 1: 19 ≤ 20; счётчик подряд = 0.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-normal-high"
+            ],
+            "result": "Обычный режим; 0 из 3."
+          },
+          {
+            "caption": "Следующий замер в пределах учебного окна.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 2: 21 > 20; счётчик подряд = 1.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Обычный режим; 1 из 3."
+          },
+          {
+            "caption": "Три подряд ещё не набраны; переходим к последнему замеру окна.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 3: 19 ≤ 20; счётчик сброшен до 0.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Обычный режим; 0 из 3."
+          },
+          {
+            "caption": "Три учебных замера закончились. Ряд 19, 21, 19 не включает ограничение.",
+            "focus": [
+              "o-hysteresis-window"
+            ],
+            "edges": [
+              "o-hysteresis-high-no",
+              "o-hysteresis-next-window"
+            ],
+            "result": "Обычный режим сохранён; бесконечного автоповтора замеров нет."
+          }
+        ]
+      },
+      {
+        "id": "limited",
+        "label": "22, 24, 25 → 9; задачи сохранены",
+        "condition": "Три превышения подряд включают ограничение; затем очередь 9, старые задачи сохранены и возврат проверен.",
+        "frames": [
+          {
+            "caption": "Ограничение включается после трёх подряд значений очереди >20. Возврат требует значения <10 и проверки сохранности принятых задач и приёма.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Начальное состояние — обычный режим; счётчик подряд идущих превышений равен 0.",
+            "focus": [
+              "o-hysteresis-normal"
+            ],
+            "edges": [],
+            "result": "Обычный режим; 0 из 3 превышений подряд."
+          },
+          {
+            "caption": "Замер 1: 22 > 20; счётчик подряд = 1.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-normal-high"
+            ],
+            "result": "Обычный режим; 1 из 3."
+          },
+          {
+            "caption": "Нужен следующий замер в пределах учебного окна.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 2: 24 > 20; счётчик подряд = 2.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Обычный режим; 2 из 3."
+          },
+          {
+            "caption": "Условие трёх подряд ещё не выполнено; берём третий замер.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 3: 25 > 20; счётчик подряд = 3, условие включения истинно.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Три превышения подряд подтверждены."
+          },
+          {
+            "caption": "Включён ограниченный режим; сохранность уже принятых задач должна быть обеспечена.",
+            "focus": [
+              "o-hysteresis-limited"
+            ],
+            "edges": [
+              "o-hysteresis-high-yes"
+            ]
+          },
+          {
+            "caption": "Сразу после включения последнее наблюдённое значение 25 ещё не удовлетворяет q < 10. Это не новый замер.",
+            "focus": [
+              "o-hysteresis-low"
+            ],
+            "edges": [
+              "o-hysteresis-limited-low"
+            ],
+            "result": "25 ≥ 10: условие возврата ложно."
+          },
+          {
+            "caption": "Ограниченный режим сохраняется до нового основания для возврата.",
+            "focus": [
+              "o-hysteresis-limited"
+            ],
+            "edges": [
+              "o-hysteresis-low-no"
+            ],
+            "result": "Ограничение не снято; принятые задачи должны сохраняться."
+          },
+          {
+            "caption": "Позднее очередь снизилась до 9: 9 < 10. Проверяем возврат, а не возвращаем режим вслепую.",
+            "focus": [
+              "o-hysteresis-low"
+            ],
+            "edges": [
+              "o-hysteresis-limited-low"
+            ]
+          },
+          {
+            "caption": "Проверка подтверждает сохранность принятых задач и возможность нормального приёма.",
+            "focus": [
+              "o-hysteresis-check"
+            ],
+            "edges": [
+              "o-hysteresis-low-yes"
+            ]
+          },
+          {
+            "caption": "Обычный режим возвращён после подтверждения.",
+            "focus": [
+              "o-hysteresis-returned"
+            ],
+            "edges": [
+              "o-hysteresis-check-yes"
+            ],
+            "result": "Адаптация принята: старые задачи сохранены, возврат проверен."
+          }
+        ]
+      },
+      {
+        "id": "lost",
+        "label": "22, 24, 25 → 9; старые задачи потеряны",
+        "condition": "После ограничения очередь уменьшилась, но часть ранее принятых задач потеряна.",
+        "frames": [
+          {
+            "caption": "Ограничение включается после трёх подряд значений очереди >20. Возврат требует значения <10 и проверки сохранности принятых задач и приёма.",
+            "focus": [],
+            "edges": []
+          },
+          {
+            "caption": "Начальное состояние — обычный режим; счётчик подряд идущих превышений равен 0.",
+            "focus": [
+              "o-hysteresis-normal"
+            ],
+            "edges": [],
+            "result": "Обычный режим; 0 из 3 превышений подряд."
+          },
+          {
+            "caption": "Замер 1: 22 > 20; счётчик подряд = 1.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-normal-high"
+            ],
+            "result": "Обычный режим; 1 из 3."
+          },
+          {
+            "caption": "Нужен следующий замер в пределах учебного окна.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 2: 24 > 20; счётчик подряд = 2.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Обычный режим; 2 из 3."
+          },
+          {
+            "caption": "Условие трёх подряд ещё не выполнено; берём третий замер.",
+            "focus": [
+              "o-hysteresis-next"
+            ],
+            "edges": [
+              "o-hysteresis-high-no"
+            ]
+          },
+          {
+            "caption": "Замер 3: 25 > 20; счётчик подряд = 3, условие включения истинно.",
+            "focus": [
+              "o-hysteresis-high"
+            ],
+            "edges": [
+              "o-hysteresis-next-high"
+            ],
+            "result": "Три превышения подряд подтверждены."
+          },
+          {
+            "caption": "Включён ограниченный режим; сохранность уже принятых задач должна быть обеспечена.",
+            "focus": [
+              "o-hysteresis-limited"
+            ],
+            "edges": [
+              "o-hysteresis-high-yes"
+            ]
+          },
+          {
+            "caption": "Сразу после включения последнее наблюдённое значение 25 ещё не удовлетворяет q < 10. Это не новый замер.",
+            "focus": [
+              "o-hysteresis-low"
+            ],
+            "edges": [
+              "o-hysteresis-limited-low"
+            ],
+            "result": "25 ≥ 10: условие возврата ложно."
+          },
+          {
+            "caption": "Ограниченный режим сохраняется до нового основания для возврата.",
+            "focus": [
+              "o-hysteresis-limited"
+            ],
+            "edges": [
+              "o-hysteresis-low-no"
+            ],
+            "result": "Ограничение не снято; принятые задачи должны сохраняться."
+          },
+          {
+            "caption": "Позднее очередь снизилась до 9: 9 < 10. Проверяем возврат, а не возвращаем режим вслепую.",
+            "focus": [
+              "o-hysteresis-low"
+            ],
+            "edges": [
+              "o-hysteresis-limited-low"
+            ]
+          },
+          {
+            "caption": "Проверка обнаружила потерю части старых задач; одного уменьшения очереди недостаточно.",
+            "focus": [
+              "o-hysteresis-check"
+            ],
+            "edges": [
+              "o-hysteresis-low-yes"
+            ]
+          },
+          {
+            "caption": "Такую адаптацию нельзя принять как успешную; нормальный возврат не подтверждён.",
+            "focus": [
+              "o-hysteresis-rejected"
+            ],
+            "edges": [
+              "o-hysteresis-check-no"
+            ],
+            "result": "Адаптация не принята: нарушена сохранность ранее принятых задач."
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "o-hysteresis-normal",
+        "title": "Обычный режим",
+        "kind": "start",
+        "column": 0,
+        "row": 0
+      },
+      {
+        "id": "o-hysteresis-high",
+        "title": "q > 20 три раза подряд?",
+        "kind": "decision",
+        "column": 1,
+        "row": 0
+      },
+      {
+        "id": "o-hysteresis-limited",
+        "title": "Ограниченный режим",
+        "kind": "state",
+        "column": 2,
+        "row": 0
+      },
+      {
+        "id": "o-hysteresis-window",
+        "title": "Окно закончено",
+        "kind": "end",
+        "column": 0,
+        "row": 1
+      },
+      {
+        "id": "o-hysteresis-next",
+        "title": "Следующий замер",
+        "kind": "action",
+        "column": 1,
+        "row": 1
+      },
+      {
+        "id": "o-hysteresis-low",
+        "title": "q < 10?",
+        "kind": "decision",
+        "column": 2,
+        "row": 1
+      },
+      {
+        "id": "o-hysteresis-rejected",
+        "title": "Адаптация не принята",
+        "kind": "end",
+        "column": 0,
+        "row": 2
+      },
+      {
+        "id": "o-hysteresis-returned",
+        "title": "Режим возвращён",
+        "kind": "end",
+        "column": 1,
+        "row": 2
+      },
+      {
+        "id": "o-hysteresis-check",
+        "title": "Возврат подтверждён?",
+        "kind": "decision",
+        "column": 2,
+        "row": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "o-hysteresis-normal-high",
+        "from": "o-hysteresis-normal",
+        "to": "o-hysteresis-high"
+      },
+      {
+        "id": "o-hysteresis-high-yes",
+        "from": "o-hysteresis-high",
+        "to": "o-hysteresis-limited",
+        "label": "Да"
+      },
+      {
+        "id": "o-hysteresis-high-no",
+        "from": "o-hysteresis-high",
+        "to": "o-hysteresis-next",
+        "label": "Нет"
+      },
+      {
+        "id": "o-hysteresis-next-high",
+        "from": "o-hysteresis-next",
+        "to": "o-hysteresis-high",
+        "label": "Есть замер: максимум 3"
+      },
+      {
+        "id": "o-hysteresis-next-window",
+        "from": "o-hysteresis-next",
+        "to": "o-hysteresis-window",
+        "label": "Три замера закончены"
+      },
+      {
+        "id": "o-hysteresis-limited-low",
+        "from": "o-hysteresis-limited",
+        "to": "o-hysteresis-low"
+      },
+      {
+        "id": "o-hysteresis-low-no",
+        "from": "o-hysteresis-low",
+        "to": "o-hysteresis-limited",
+        "label": "Нет: сохранять режим"
+      },
+      {
+        "id": "o-hysteresis-low-yes",
+        "from": "o-hysteresis-low",
+        "to": "o-hysteresis-check",
+        "label": "Да"
+      },
+      {
+        "id": "o-hysteresis-check-yes",
+        "from": "o-hysteresis-check",
+        "to": "o-hysteresis-returned",
+        "label": "Да"
+      },
+      {
+        "id": "o-hysteresis-check-no",
+        "from": "o-hysteresis-check",
+        "to": "o-hysteresis-rejected",
+        "label": "Нет"
+      }
+    ]
+  }
+]

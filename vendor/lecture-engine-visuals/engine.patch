@@ -1,0 +1,117 @@
+--- /dev/null
++++ b/src/engine/VisualRenderer.tsx
+@@ -0,0 +1,13 @@
++import {createContext} from 'react'
++import type {ReactNode} from 'react'
++import type {Slide} from './model'
++
++export type VisualRendererProps={slide:Slide;base:string;interactive:boolean}
++type VisualRenderer=(props:VisualRendererProps)=>ReactNode|undefined
++
++export const VisualRendererContext=createContext<VisualRenderer|undefined>(undefined)
++
++/** Return undefined to retain the engine's visual/steps; null explicitly leaves the slot empty. */
++export function VisualRendererProvider({render,children}:{render:VisualRenderer;children:ReactNode}){
++ return <VisualRendererContext.Provider value={render}>{children}</VisualRendererContext.Provider>
++}
+--- a/src/engine/SlideView.tsx
++++ b/src/engine/SlideView.tsx
+@@ -1,10 +1,20 @@
++import {useContext} from 'react'
+ import {Resources} from './Resources'
+ import type {Course,Lecture,Profile,Slide} from './model'
+ import {assetUrl,supplementUrl} from './model'
+ import {Infographic} from './Infographic'
+ import {TaskView} from './Assessment'
++import {VisualRendererContext} from './VisualRenderer'
+ export function SlideView({course,lecture,slide,profile,base,number,interactive=false}:{course:Course;lecture:Lecture;slide:Slide;profile:Profile;base:string;number:number;interactive?:boolean}){
+- return <article className={`slide-frame kind-${slide.kind} ${slide.visual||slide.steps||slide.rows?'has-visual':''}`} data-slide-id={slide.id}>
++ const renderVisual=useContext(VisualRendererContext)
++ const customVisual=renderVisual?.({slide,base,interactive})
++ const visual=customVisual===undefined
++  ? slide.visual?<Infographic visual={slide.visual} base={base}/>
++   :slide.steps?<Infographic visual={{type:'process',items:slide.steps,caption:'Порядок чтения: слева направо, от первого шага к последнему.'}}/>
++   :undefined
++  :customVisual
++ const hasVisual=slide.rows||(visual!==undefined&&visual!==null&&visual!==false)
++ return <article className={`slide-frame kind-${slide.kind} ${hasVisual?'has-visual':''}`} data-slide-id={slide.id}>
+  <img className="side-ornament" src={assetUrl(course.ornament,base)} alt=""/>
+  <header className="slide-header"><div className="slide-brand"><img src={assetUrl(course.logo,base)} alt="Логотип"/><span>{course.code} · {lecture.semester}-й семестр</span></div><div className="slide-header-actions">{slide.supplement&&<a className="button secondary slide-supplement" href={supplementUrl(slide.supplement.href,base)} target="_blank" rel="noopener">{slide.supplement.label} ↗</a>}<span className="slide-number">{String(number).padStart(2,'0')}</span></div></header>
+  <div className="slide-content"><div className="slide-copy"><p className="slide-kicker">{slide.kicker}</p><h2>{slide.title}</h2>
+@@ -12,8 +22,7 @@
+  {slide.kind==='agenda'&&<ol className="topic-agenda">{lecture.slides.filter(s=>s.kind==='section').map((s,i)=><li key={s.id}><span>{String(i+1).padStart(2,'0')}</span><strong>{s.title}</strong></li>)}</ol>}
+  {slide.body&&<p className="slide-body-copy">{slide.body}</p>}
+  {slide.bullets&&<ul>{slide.bullets.map(x=><li key={x}>{x}</li>)}</ul>}
+- {slide.visual&&<Infographic visual={slide.visual} base={base}/>}
+- {slide.steps&&!slide.visual&&<Infographic visual={{type:'process',items:slide.steps,caption:'Порядок чтения: слева направо, от первого шага к последнему.'}}/>}
++ {visual}
+  {slide.rows&&<div className="table-scroll" tabIndex={0} role="region" aria-label={`Таблица: ${slide.title}`}><table className="comparison-table"><thead><tr>{slide.columns?.map(x=><th key={x}>{x}</th>)}</tr></thead><tbody>{slide.rows.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}
+  {slide.notebook&&<aside className="write-note"><span>Запишите</span><strong>{slide.notebook}</strong></aside>}
+  {slide.task&&interactive&&<TaskView task={slide.task}/>}
+@@ -23,5 +32,3 @@
+  <footer className="slide-footer"><span>{slide.source||lecture.question}</span><span>{course.demo?'Демонстрация шаблона':course.discipline}</span></footer>
+  </article>
+ }
+-
+-
+--- a/src/engine/index.ts
++++ b/src/engine/index.ts
+@@ -1,5 +1,7 @@
+ export { LectureSite } from './LectureSite'
+ export type { CatalogProps } from './LectureSite'
+ export { Infographic } from './Infographic'
++export { VisualRendererProvider } from './VisualRenderer'
++export type { VisualRendererProps } from './VisualRenderer'
+ export { validateCourse, TEMPLATE_VERSION } from './model'
+ export type { Course, Lecture, Slide, TeacherPack, Note } from './model'
+--- a/src/engine/Teaching.tsx
++++ b/src/engine/Teaching.tsx
+@@ -48,7 +48,7 @@
+  useEffect(()=>{stateRef.current={...stateRef.current,slideId:shown.slideId,black,replay,profile,assessment,pointer:pointerEnabled?pointer:null,sequence:stateRef.current.sequence+1};save(sessionKey,{slideId:shown.slideId,black});setStatus('Синхронизация…');busRef.current?.send({type:'STATE',state:stateRef.current})},[shown.slideId,black,replay,profile,sessionKey,assessment,pointer,pointerEnabled])
+  useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),1000);return()=>clearInterval(timer)},[])
+  useEffect(()=>{save(`${sessionKey}:timer`,timing)},[timing,sessionKey])
+- useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.target as HTMLElement).closest('input,textarea,select,button,a,[contenteditable],.table-scroll,.infographic,.choice-grid,.matching-fields,.short-field,.code-block,.template-dialog,[role="region"]'))return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();move(1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();move(-1)}if(e.key==='Home')change(lecture.slides[0].id);if(e.key==='End')change(lecture.slides.at(-1)!.id)};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[shownIndex,lecture,black])
++ useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.target as HTMLElement).closest('input,textarea,select,button,a,[contenteditable],.table-scroll,.infographic,.choice-grid,.matching-fields,.short-field,.code-block,.template-dialog,.lv-dialog,.lv,[role="region"]'))return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();move(1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();move(-1)}if(e.key==='Home')change(lecture.slides[0].id);if(e.key==='End')change(lecture.slides.at(-1)!.id)};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[shownIndex,lecture,black])
+  const update=(value:Partial<Note>)=>{const next={...notes,[selectedSlide.id]:{...note,...value}};setNotes(next);if(!save(storageKey,next))setNotice('Не удалось сохранить заметки в браузере. Скачайте файл заметок.')}
+  const elapsed=timing.elapsed+(timing.paused?0:now-timing.start)
+  const toggleTimer=()=>setTiming(t=>t.paused?{...t,start:Date.now(),paused:false}:{start:Date.now(),elapsed:t.elapsed+Date.now()-t.start,paused:true})
+@@ -60,7 +60,7 @@
+  return <main className="presenter-shell"><AssessmentSync task={lecture.slides[shownIndex].task} onChange={receiveAssessment}/><header className="presenter-header"><div><p className="eyebrow">Панель преподавателя</p><h1>{lecture.title}</h1></div><span className={`connection ${status==='Синхронизировано'?'connected':''}`} role="status">{status}</span><button className="button ghost" onClick={end}><X size={18}/>Завершить</button></header>
+  {notice&&<div className="notice" role="status">{notice}<button className="text-button" onClick={()=>setNotice('')}>Закрыть</button></div>}
+  <div className="presenter-layout-help"><span>Перетащите границы между панелями, чтобы изменить ширину. Аудиторию можно вынести из вкладки на второй монитор.</span><button className="text-button" onClick={layout.reset}>Сбросить размеры</button></div>
+- <div className="presenter-grid" ref={layout.grid} style={layout.style}><section className="presenter-preview"><div className="preview-label"><strong>Сейчас у аудитории</strong><span>{shownIndex+1} / {lecture.slides.length}{black?' · чёрный экран':''}</span></div><div className={`mini-stage ${black?'preview-black':''}`} onPointerMove={e=>{if(pointerEnabled){const r=e.currentTarget.getBoundingClientRect();setPointer({x:Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),y:Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))})}}} onPointerLeave={()=>setPointer(null)}><SlideView course={course} lecture={lecture} slide={lecture.slides[shownIndex]} profile={profile} base={base} number={shownIndex+1} interactive/>{pointerEnabled&&pointer&&<span className="laser-pointer" style={{left:`${pointer.x*100}%`,top:`${pointer.y*100}%`}}/>}</div>
++ <div className="presenter-grid" ref={layout.grid} style={layout.style}><section className="presenter-preview"><div className="preview-label"><strong>Сейчас у аудитории</strong><span>{shownIndex+1} / {lecture.slides.length}{black?' · чёрный экран':''}</span></div><div className={`mini-stage ${black?'preview-black':''}`} onPointerMove={e=>{if(pointerEnabled){const r=e.currentTarget.getBoundingClientRect();setPointer({x:Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),y:Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))})}}} onPointerLeave={()=>setPointer(null)}><SlideView course={course} lecture={lecture} slide={lecture.slides[shownIndex]} profile={profile} base={base} number={shownIndex+1} interactive={locked}/>{pointerEnabled&&pointer&&<span className="laser-pointer" style={{left:`${pointer.x*100}%`,top:`${pointer.y*100}%`}}/>}</div>
+  <div className="presenter-controls"><button className="button secondary" disabled={!locked||shownIndex===0} onClick={()=>move(-1)}><ArrowLeft size={17}/>Назад</button><button className="button primary" disabled={!locked||shownIndex===lecture.slides.length-1} onClick={()=>move(1)}>Вперёд<ArrowRight size={17}/></button><button className="button secondary" aria-pressed={black} disabled={!locked} onClick={()=>setBlack(!black)}><Square size={16}/>{black?'Вернуть слайд':'Чёрный экран'}</button></div>
+  <div className="preview-label"><strong>Далее</strong><span>{lecture.slides[shownIndex+1]?.title||'Последний слайд'}</span></div>{lecture.slides[shownIndex+1]&&<div className="mini-stage next-stage"><SlideView course={course} lecture={lecture} slide={lecture.slides[shownIndex+1]} profile={profile} base={base} number={shownIndex+2}/></div>}
+  <div className="session-tools"><button className="button ghost" aria-pressed={pointerEnabled} onClick={()=>{setPointerEnabled(!pointerEnabled);setPointer(null)}}><MousePointer2 size={17}/>Указка</button><button className="button ghost" disabled={!locked} onClick={reopen}><MonitorPlay size={17}/>Открыть аудиторию</button><button className="button ghost" disabled={!locked} onClick={()=>setReplay(replay+1)}>Повтор анимации</button><button className="button ghost" onClick={copyAudience}>Скопировать ссылку аудитории</button></div>
+@@ -74,5 +74,3 @@
+  <label className="notes-duration">Расчётное время, секунд<input type="number" min="0" value={note.estimatedSeconds} onChange={e=>update({estimatedSeconds:Math.max(0,Number(e.target.value))})}/></label></section>
+  {layout.separator(1)}<aside className="presenter-outline"><label className="search-field"><input placeholder="Найти слайд" aria-label="Найти слайд" value={search} onChange={e=>setSearch(e.target.value)}/></label><ol className="toc-list">{lecture.slides.map((s,i)=>({s,i})).filter(({s})=>s.title.toLowerCase().includes(search.toLowerCase())).map(({s,i})=><li key={s.id}><button aria-current={s.id===selected?'step':undefined} onClick={()=>setSelected(s.id)}><b>{String(i+1).padStart(2,'0')}</b>{s.title}</button></li>)}</ol></aside></div></main>
+ }
+-
+-
+--- a/src/engine/LectureSite.tsx
++++ b/src/engine/LectureSite.tsx
+@@ -50,7 +50,7 @@
+  useEffect(()=>{document.documentElement.dataset.theme=theme;save(`${prefix}:theme`,theme)},[theme,prefix])
+  useEffect(()=>{const font=new FontFace('Raleway',`url(${assetUrl(course.font,base)})`,{weight:'100 900'});font.load().then(f=>document.fonts.add(f)).catch(()=>{});},[course.font,base])
+  useEffect(()=>{save(`${prefix}:animation`,animations)},[animations,prefix])
+- useEffect(()=>{if(mode!=='viewer'||!lecture)return;const key=(e:KeyboardEvent)=>{const target=e.target as HTMLElement;if(modal||target.closest('input,textarea,select,button,a,[contenteditable],.table-scroll,.infographic,.choice-grid,.matching-fields,.short-field,.code-block,.template-dialog,[role="region"]'))return;const next=['ArrowRight','PageDown',' '].includes(e.key);const previous=['ArrowLeft','PageUp'].includes(e.key);if(next||previous||['Home','End'].includes(e.key)){e.preventDefault();go(e.key==='Home'?0:e.key==='End'?lecture.slides.length-1:index+(next?1:-1))}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[mode,lecture,index,modal])
++ useEffect(()=>{if(mode!=='viewer'||!lecture)return;const key=(e:KeyboardEvent)=>{const target=e.target as HTMLElement;if(modal||target.closest('input,textarea,select,button,a,[contenteditable],.table-scroll,.infographic,.choice-grid,.matching-fields,.short-field,.code-block,.template-dialog,.lv-dialog,.lv,[role="region"]'))return;const next=['ArrowRight','PageDown',' '].includes(e.key);const previous=['ArrowLeft','PageUp'].includes(e.key);if(next||previous||['Home','End'].includes(e.key)){e.preventDefault();go(e.key==='Home'?0:e.key==='End'?lecture.slides.length-1:index+(next?1:-1))}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[mode,lecture,index,modal])
+  useEffect(()=>{if(mode==='print'&&query.get('auto')==='1'){Promise.all([document.fonts.ready,...Array.from(document.images).map(img=>img.decode().catch(()=>{}))]).then(()=>{setTimeout(()=>window.print(),150)})}},[mode,query])
+  const startTeaching=()=>{if(!lecture)return;const session=crypto.randomUUID();const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();const popup=window.open(u,`audience-${session}`);(window as Window&{lectureAudience?:Window|null}).lectureAudience=popup;navigate({mode:'presenter',lecture:lecture.id,slide:slide!.id,session})}
+  const icon=(label:string,child:React.ReactNode,fn:()=>void,pressed?:boolean)=><button className="icon-button" title={label} aria-label={label} aria-pressed={pressed} onClick={fn}>{child}</button>
+@@ -75,7 +75,7 @@
+  {themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a>
+  {icon('Указка',<MousePointer2 size={19}/>,()=>{setPointerEnabled(!pointerEnabled);setPointer(null)},pointerEnabled)}
+  {icon('Скачать лекцию',<Download size={19}/>,()=>setModal('download'))}
+- 
++
+  {icon('Полноэкранный режим',fullscreen?<Minimize size={19}/>:<Maximize size={19}/>,toggleFull)}
+  </div></header><div className="progress-track" role="progressbar" aria-label="Прогресс лекции" aria-valuemin={0} aria-valuemax={lecture.slides.length} aria-valuenow={index+1}><span style={{width:`${(index+1)/lecture.slides.length*100}%`}}/></div>
+  <section className="player-stage"><div className="active-slide" onPointerMove={e=>{if(pointerEnabled){const r=e.currentTarget.getBoundingClientRect();setPointer({x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height})}}} onPointerLeave={()=>setPointer(null)} key={`${slide!.id}:${replay}`}><SlideView course={course} lecture={lecture} slide={slide!} profile={profile} base={base} number={index+1} interactive/>{pointerEnabled&&pointer&&<span className="laser-pointer" style={{left:`${pointer.x*100}%`,top:`${pointer.y*100}%`}}/>}</div></section>
+@@ -94,4 +94,3 @@
+  return <Modal title="Настройка перед занятием" onClose={onClose}><form onSubmit={e=>{e.preventDefault();if(persist())onClose()}} className="settings-form"><label>ФИО преподавателя<input autoComplete="name" value={p.fullName} onChange={e=>setP({...p,fullName:e.target.value})}/></label><label>Должность<input value={p.position} onChange={e=>setP({...p,position:e.target.value})}/></label><label>Кафедра или лаборатория<input value={p.department} onChange={e=>setP({...p,department:e.target.value})}/></label><label>Ссылка на папку с материалами<input type="url" placeholder="https://…" value={m} onChange={e=>setM(e.target.value)}/></label><p className="field-help">Настройки сохраняются в этом браузере. В опубликованном курсе общая ссылка задаётся автором.</p>{error&&<p role="alert">{error}</p>}<section className="profile-downloads"><strong>Сохранить лекции в PDF</strong><div>{course.semesters.map(s=><button type="button" className="button ghost" key={s} onClick={()=>{if(persist())print(`semester-${s}`)}}><Download size={17}/>{s} семестр</button>)}<button type="button" className="button ghost" onClick={()=>{if(persist())print('all')}}><Download size={17}/>{course.year?`За ${course.year} год`:'Все лекции'}</button></div></section>
+  <div className="dialog-actions"><button className="button primary" type="submit">Сохранить настройки</button></div></form></Modal>
+ }
+-

@@ -1,50 +1,64 @@
 [
   {
     "lectureId": "s07-01-quality-and-failures",
-    "file": "s07-01-quality-and-failures.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s07-01-quality-and-failures.pdf",
+    "pages": 82,
+    "sourceSlides": 79,
+    "diagramSheets": 3,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-02-reliability-metrics",
-    "file": "s07-02-reliability-metrics.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s07-02-reliability-metrics.pdf",
+    "pages": 83,
+    "sourceSlides": 79,
+    "diagramSheets": 4,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-03-reliability-threats-prevention",
-    "file": "s07-03-reliability-threats-prevention.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s07-03-reliability-threats-prevention.pdf",
+    "pages": 83,
+    "sourceSlides": 79,
+    "diagramSheets": 4,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s07-04-observing-operating-system",
-    "file": "s07-04-observing-operating-system.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s07-04-observing-operating-system.pdf",
+    "pages": 84,
+    "sourceSlides": 79,
+    "diagramSheets": 4,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-01-threats-and-malware",
-    "file": "s08-01-threats-and-malware.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s08-01-threats-and-malware.pdf",
+    "pages": 82,
+    "sourceSlides": 79,
+    "diagramSheets": 3,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-02-protection-controls",
-    "file": "s08-02-protection-controls.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s08-02-protection-controls.pdf",
+    "pages": 82,
+    "sourceSlides": 79,
+    "diagramSheets": 3,
     "qrDecoded": 5,
     "layout": []
   },
   {
     "lectureId": "s08-03-encryption-and-security-testing",
-    "file": "s08-03-encryption-and-security-testing.pdf",
-    "pages": 111,
+    "file": "../review/pdf/s08-03-encryption-and-security-testing.pdf",
+    "pages": 83,
+    "sourceSlides": 79,
+    "diagramSheets": 4,
     "qrDecoded": 5,
     "layout": []
   }

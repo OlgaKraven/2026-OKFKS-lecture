@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import { LectureSite, validateCourse } from '@olgakraven/lecture-engine'
+import { LectureSite, validateCourse, VisualRendererProvider } from '@olgakraven/lecture-engine'
 import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
 import { prepareTeacherSession } from './teacherNotes'
@@ -9,6 +9,7 @@ import { migrateCompatibleSession, resolveCourseSlideId } from './compatibility'
 import './content-fixes.css'
 import { ReliabilityLab } from './lab/ReliabilityLab'
 import { WorkshopLab } from './lab/WorkshopLab'
+import {LearningVisualPrintAppendix,renderLearningVisual} from './infographics/LearningVisual'
 
 fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(response => {
   if (!response.ok) throw new Error('Не удалось загрузить курс')
@@ -82,8 +83,9 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
     if (resolved !== slideId) { url.searchParams.set('slide', resolved); history.replaceState({}, '', url) }
   }
   document.title = `${course.code} · ${course.discipline}`
-  createRoot(document.getElementById('root')!).render(<>
+  createRoot(document.getElementById('root')!).render(<VisualRendererProvider render={renderLearningVisual}>
     {showNotesStatus && <NotesStatus course={course} error={notesError} previousVersion={previousVersion} archiveAvailable={archiveAvailable} compatibilityError={compatibilityError} />}
     <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} resolveTeacherNotes={resolveTeacherNotes} renderCatalog={props => <CourseCatalog {...props} />} />
-  </>)
+    <LearningVisualPrintAppendix course={course}/>
+  </VisualRendererProvider>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })
