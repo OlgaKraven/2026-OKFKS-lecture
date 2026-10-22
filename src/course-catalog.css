@@ -138,6 +138,7 @@
 }
 
 .ok-page .ok-teacher summary {
+  cursor:pointer;
   display:flex;
   min-height:44px;
   min-width:44px;
