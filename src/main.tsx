@@ -2,10 +2,10 @@ import { createRoot } from 'react-dom/client'
 import { LectureSite, validateCourse } from '@olgakraven/lecture-engine'
 import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
-import { prepareUpdatedTeacherNotes } from './teacherNotes'
+import { prepareTeacherSession } from './teacherNotes'
 import { NotesStatus } from './NotesStatus'
 import { CourseCatalog } from './CourseCatalog'
-import { migrateCompatibleSession } from './compatibility'
+import { migrateCompatibleSession, resolveCourseSlideId } from './compatibility'
 import './content-fixes.css'
 import { ReliabilityLab } from './lab/ReliabilityLab'
 import { WorkshopLab } from './lab/WorkshopLab'
@@ -38,11 +38,14 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   }
   let notesError = ''
   let teacherNotes: Record<string, Note> | undefined
+  let resolveTeacherNotes: (() => Record<string, Note>) | undefined
   if (showNotesStatus) {
     try {
       const response = await fetch(`${import.meta.env.BASE_URL}teaching/notes.json?v=${encodeURIComponent(course.contentVersion)}`, { cache: 'no-cache' })
       if (!response.ok) throw new Error('Не удалось загрузить заметки с сайта')
-      teacherNotes = await prepareUpdatedTeacherNotes(course, import.meta.env.BASE_URL, await response.json(), { getItem: key => localStorage.getItem(key) })
+      const session = await prepareTeacherSession(course, import.meta.env.BASE_URL, await response.json(), { getItem: key => localStorage.getItem(key) })
+      teacherNotes = session.notes
+      resolveTeacherNotes = session.resolve
     } catch (error) {
       notesError = 'Не удалось получить заметки с сайта. Нажмите «Повторить загрузку».'
       console.warn('Автоматическая загрузка заметок недоступна:', error)
@@ -70,12 +73,17 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
     const id = `${oldTopic}-s${String(legacyNumber).padStart(3, '0')}`
     url.searchParams.delete('topic')
     url.searchParams.set('lecture', oldTopic)
-    if (lecture) url.searchParams.set('slide', lecture.slides.find(item => item.id === id)?.id || lecture.slides[0].id)
+    if (lecture) url.searchParams.set('slide', lecture.slides.find(item => item.id === resolveCourseSlideId(course, lecture.id, id))?.id || lecture.slides[0].id)
     history.replaceState({}, '', url)
+  }
+  const lectureId = url.searchParams.get('lecture'), slideId = url.searchParams.get('slide')
+  if (lectureId && slideId) {
+    const resolved = resolveCourseSlideId(course, lectureId, slideId)
+    if (resolved !== slideId) { url.searchParams.set('slide', resolved); history.replaceState({}, '', url) }
   }
   document.title = `${course.code} · ${course.discipline}`
   createRoot(document.getElementById('root')!).render(<>
     {showNotesStatus && <NotesStatus course={course} error={notesError} previousVersion={previousVersion} archiveAvailable={archiveAvailable} compatibilityError={compatibilityError} />}
-    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} renderCatalog={props => <CourseCatalog {...props} />} />
+    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} resolveTeacherNotes={resolveTeacherNotes} renderCatalog={props => <CourseCatalog {...props} />} />
   </>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })

@@ -1,6 +1,6 @@
 {
   "previousVersion": "2.0.1-content-review-20260918",
-  "contentVersion": "2.0.2-compatible-enrichment-20261002",
+  "contentVersion": "2.1.0-design-review-20261021",
   "slides": [
     {
       "id": "s07-01-quality-and-failures-s001",
@@ -76,10 +76,14 @@
     },
     {
       "id": "s07-01-quality-and-failures-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Отклонение запроса: штатная реакция или отказ",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s012",
@@ -159,24 +163,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s024",
@@ -249,24 +262,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s035",
@@ -284,8 +306,9 @@
     },
     {
       "id": "s07-01-quality-and-failures-s037",
-      "title": "От цели качества переходят к свойству и свидетельству",
+      "title": "От свойства — к измерению и свидетельству",
       "changedFields": [
+        "title",
         "visual"
       ],
       "notebook": "Сохранён",
@@ -339,24 +362,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s046",
@@ -430,24 +462,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s057",
@@ -520,24 +561,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s068",
@@ -611,31 +661,42 @@
     },
     {
       "id": "s07-01-quality-and-failures-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s079",
       "title": "Сбор и классификация событий",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s080",
@@ -659,6 +720,7 @@
       "changedFields": [
         "kicker",
         "body",
+        "bullets",
         "supplement"
       ],
       "notebook": "Сохранён",
@@ -702,24 +764,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s090",
@@ -746,10 +817,13 @@
     },
     {
       "id": "s07-01-quality-and-failures-s093",
-      "title": "Частоты событий читают вместе с числом операций",
-      "changedFields": [],
+      "title": "Сравниваем долю неуспешных операций, %",
+      "changedFields": [
+        "title",
+        "visual"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s094",
@@ -789,24 +863,33 @@
     },
     {
       "id": "s07-01-quality-and-failures-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s101",
@@ -874,13 +957,6 @@
     {
       "id": "s07-01-quality-and-failures-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s07-01-quality-and-failures-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -968,10 +1044,14 @@
     },
     {
       "id": "s07-02-reliability-metrics-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Среднее время не задаёт максимум",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s012",
@@ -1051,24 +1131,33 @@
     },
     {
       "id": "s07-02-reliability-metrics-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s024",
@@ -1142,24 +1231,33 @@
     },
     {
       "id": "s07-02-reliability-metrics-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s035",
@@ -1233,10 +1331,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s043",
@@ -1250,10 +1351,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s046",
@@ -1326,24 +1430,33 @@
     },
     {
       "id": "s07-02-reliability-metrics-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s057",
@@ -1415,10 +1528,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s065",
@@ -1432,10 +1548,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s068",
@@ -1509,10 +1628,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s076",
@@ -1526,10 +1648,13 @@
     },
     {
       "id": "s07-02-reliability-metrics-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s079",
@@ -1602,24 +1727,33 @@
     },
     {
       "id": "s07-02-reliability-metrics-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s090",
@@ -1692,24 +1826,33 @@
     },
     {
       "id": "s07-02-reliability-metrics-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s101",
@@ -1777,13 +1920,6 @@
     {
       "id": "s07-02-reliability-metrics-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s07-02-reliability-metrics-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -1869,10 +2005,14 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Сигнал, резерв питания и копия решают разные задачи",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s012",
@@ -1952,24 +2092,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s024",
@@ -2043,24 +2192,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s035",
@@ -2130,24 +2288,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s046",
@@ -2220,24 +2387,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s057",
@@ -2311,24 +2487,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s068",
@@ -2401,31 +2586,42 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s079",
       "title": "Информационная и программная избыточность",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s080",
@@ -2445,10 +2641,14 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s082",
-      "title": "Хэш выявляет изменение, но не делает копии независимыми",
+      "title": "Две реализации обнаруживают расхождение; платёж не выполняют",
       "changedFields": [
+        "title",
         "kicker",
-        "body"
+        "body",
+        "bullets",
+        "columns",
+        "rows"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -2491,24 +2691,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s090",
@@ -2539,6 +2748,7 @@
       "changedFields": [
         "kicker",
         "body",
+        "bullets",
         "supplement"
       ],
       "notebook": "Сохранён",
@@ -2582,24 +2792,33 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных ответа",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Выполните расчёт",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Установите предметные соответствия",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s101",
@@ -2667,13 +2886,6 @@
     {
       "id": "s07-03-reliability-threats-prevention-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s07-03-reliability-threats-prevention-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -2752,17 +2964,29 @@
     },
     {
       "id": "s07-04-observing-operating-system-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Id, RecordId и ActivityId: разные роли",
+      "changedFields": [
+        "title",
+        "body",
+        "bullets",
+        "columns",
+        "rows"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Пустой журнал ещё не означает исправность",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets",
+        "columns",
+        "rows"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s012",
@@ -2796,10 +3020,14 @@
     },
     {
       "id": "s07-04-observing-operating-system-s016",
-      "title": "Начало, корреляция и результат связывают операцию",
+      "title": "Четыре записи: разделяем A17 и A18",
       "changedFields": [
+        "title",
         "kicker",
-        "body"
+        "body",
+        "bullets",
+        "columns",
+        "rows"
       ],
       "notebook": "Сохранён",
       "action": "Дополнение пояснений или задания; опорная запись сохраняется"
@@ -2826,9 +3054,11 @@
     {
       "id": "s07-04-observing-operating-system-s019",
       "title": "Запись восстанавливает сценарий и не раскрывает секреты",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s020",
@@ -2842,24 +3072,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s024",
@@ -2888,6 +3127,7 @@
       "id": "s07-04-observing-operating-system-s027",
       "title": "Ряд времени ответа дополняют событиями журнала",
       "changedFields": [
+        "visual",
         "supplement"
       ],
       "notebook": "Сохранён",
@@ -2915,9 +3155,11 @@
     {
       "id": "s07-04-observing-operating-system-s030",
       "title": "Наблюдение должно показывать и динамику, и отклонения",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s031",
@@ -2931,24 +3173,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s035",
@@ -3006,9 +3257,11 @@
     {
       "id": "s07-04-observing-operating-system-s041",
       "title": "Показатель связывают со временем ответа и режимом нагрузки",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s042",
@@ -3022,24 +3275,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s046",
@@ -3096,9 +3358,11 @@
     {
       "id": "s07-04-observing-operating-system-s052",
       "title": "Полезный сигнал однозначен и ведёт к понятной реакции",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s053",
@@ -3112,24 +3376,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s057",
@@ -3186,9 +3459,11 @@
     {
       "id": "s07-04-observing-operating-system-s063",
       "title": "Правило проверяют на истории и ложных срабатываниях",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s064",
@@ -3202,24 +3477,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s068",
@@ -3277,9 +3561,11 @@
     {
       "id": "s07-04-observing-operating-system-s074",
       "title": "Наблюдение, гипотеза и подтверждение записываются раздельно",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s075",
@@ -3293,24 +3579,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s079",
@@ -3367,9 +3662,11 @@
     {
       "id": "s07-04-observing-operating-system-s085",
       "title": "Приоритетный риск должен приводить к контролируемой мере",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s086",
@@ -3383,24 +3680,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s090",
@@ -3457,9 +3763,11 @@
     {
       "id": "s07-04-observing-operating-system-s096",
       "title": "У адаптации есть условия, пределы, журнал и возврат в норму",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s097",
@@ -3473,24 +3781,33 @@
     },
     {
       "id": "s07-04-observing-operating-system-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s101",
@@ -3558,13 +3875,6 @@
     {
       "id": "s07-04-observing-operating-system-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s07-04-observing-operating-system-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -3650,10 +3960,16 @@
     },
     {
       "id": "s08-01-threats-and-malware-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Копирование архива оценивают в контексте",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets",
+        "columns",
+        "rows"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s012",
@@ -3717,9 +4033,11 @@
     {
       "id": "s08-01-threats-and-malware-s019",
       "title": "Карточка называет актив, источник, путь и последствие",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s020",
@@ -3733,24 +4051,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s024",
@@ -3806,9 +4133,11 @@
     {
       "id": "s08-01-threats-and-malware-s030",
       "title": "Категория должна вести к проверяемым сценариям",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s031",
@@ -3822,24 +4151,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s035",
@@ -3896,9 +4234,11 @@
     {
       "id": "s08-01-threats-and-malware-s041",
       "title": "Возможности и ограничения источника требуют обоснования",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s042",
@@ -3912,24 +4252,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s046",
@@ -3987,9 +4336,11 @@
     {
       "id": "s08-01-threats-and-malware-s052",
       "title": "Профиль связывается со сценарием и границей доверия",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s053",
@@ -4003,24 +4354,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s057",
@@ -4077,9 +4437,11 @@
     {
       "id": "s08-01-threats-and-malware-s063",
       "title": "Область модели должна быть понятна другому участнику",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s064",
@@ -4093,24 +4455,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s068",
@@ -4167,9 +4538,11 @@
     {
       "id": "s08-01-threats-and-malware-s074",
       "title": "Категория подтверждается описанными действиями",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s075",
@@ -4183,24 +4556,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s079",
@@ -4258,9 +4640,11 @@
     {
       "id": "s08-01-threats-and-malware-s085",
       "title": "Все входы системы должны иметь контроль",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s086",
@@ -4274,24 +4658,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s090",
@@ -4348,9 +4741,11 @@
     {
       "id": "s08-01-threats-and-malware-s096",
       "title": "Безопасный результат воспроизводим и удаляется по регламенту",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s097",
@@ -4364,24 +4759,33 @@
     },
     {
       "id": "s08-01-threats-and-malware-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s101",
@@ -4449,13 +4853,6 @@
     {
       "id": "s08-01-threats-and-malware-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s08-01-threats-and-malware-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -4541,10 +4938,16 @@
     },
     {
       "id": "s08-02-protection-controls-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Вложение, вход и папка: разные проверки",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets",
+        "columns",
+        "rows"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s012",
@@ -4608,9 +5011,11 @@
     {
       "id": "s08-02-protection-controls-s019",
       "title": "Каждый заявленный компонент подтверждён статусом и тестом",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s020",
@@ -4624,24 +5029,33 @@
     },
     {
       "id": "s08-02-protection-controls-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s024",
@@ -4698,9 +5112,11 @@
     {
       "id": "s08-02-protection-controls-s030",
       "title": "Для режима фиксируют триггер, охват и запись в журнале",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s031",
@@ -4714,24 +5130,33 @@
     },
     {
       "id": "s08-02-protection-controls-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s035",
@@ -4790,9 +5215,11 @@
     {
       "id": "s08-02-protection-controls-s041",
       "title": "Повтор процедуры должен давать сопоставимые данные",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s042",
@@ -4806,24 +5233,33 @@
     },
     {
       "id": "s08-02-protection-controls-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s046",
@@ -4881,9 +5317,11 @@
     {
       "id": "s08-02-protection-controls-s052",
       "title": "Разрешённое проходит, запрещённое отклоняется",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s053",
@@ -4897,24 +5335,33 @@
     },
     {
       "id": "s08-02-protection-controls-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s057",
@@ -4972,9 +5419,11 @@
     {
       "id": "s08-02-protection-controls-s063",
       "title": "Правило сверяется со схемой потока и планом возврата",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s064",
@@ -4988,24 +5437,33 @@
     },
     {
       "id": "s08-02-protection-controls-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s068",
@@ -5063,9 +5521,11 @@
     {
       "id": "s08-02-protection-controls-s074",
       "title": "Действия связаны с конкретной записью и ролью",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s075",
@@ -5079,24 +5539,33 @@
     },
     {
       "id": "s08-02-protection-controls-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s079",
@@ -5153,9 +5622,11 @@
     {
       "id": "s08-02-protection-controls-s085",
       "title": "Протокол хранит правило и результат, но не пароль",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s086",
@@ -5169,24 +5640,33 @@
     },
     {
       "id": "s08-02-protection-controls-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s090",
@@ -5246,9 +5726,11 @@
     {
       "id": "s08-02-protection-controls-s096",
       "title": "Разрешённое выполняется, лишнее отклоняется без последствий",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s097",
@@ -5262,24 +5744,33 @@
     },
     {
       "id": "s08-02-protection-controls-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s101",
@@ -5347,13 +5838,6 @@
     {
       "id": "s08-02-protection-controls-s110",
       "title": "Последние четыре опоры задают границы решения",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
-      "id": "s08-02-protection-controls-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
@@ -5441,10 +5925,16 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s011",
-      "title": "Конспект строим по связям, а не по числу страниц",
-      "changedFields": [],
+      "title": "Шифротекст и ключ — разные данные",
+      "changedFields": [
+        "title",
+        "kicker",
+        "bullets",
+        "columns",
+        "rows"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s012",
@@ -5508,9 +5998,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s019",
       "title": "Актив, состояние, ключ и граница защиты указаны явно",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s020",
@@ -5524,24 +6016,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s023",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s021",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s022",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s024",
@@ -5559,8 +6060,9 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s026",
-      "title": "Каждому состоянию нужны свои средство, ключи и проверка",
+      "title": "Хранение, канал и копия: три границы защиты",
       "changedFields": [
+        "title",
         "visual"
       ],
       "notebook": "Сохранён",
@@ -5600,9 +6102,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s030",
       "title": "Носитель и соединение подтверждаются отдельными тестами",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s031",
@@ -5616,24 +6120,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s034",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s032",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s033",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s035",
@@ -5651,8 +6164,9 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s037",
-      "title": "Отчёт фиксирует уровень утверждения и версию реализации",
+      "title": "Протокол, алгоритм, ключ и реализация",
       "changedFields": [
+        "title",
         "visual"
       ],
       "notebook": "Сохранён",
@@ -5694,9 +6208,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s041",
       "title": "Роль элемента подтверждается источником документации",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s042",
@@ -5710,24 +6226,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s045",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Различите роли в защищённом обмене",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s043",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s044",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s046",
@@ -5784,9 +6309,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s052",
       "title": "Поиск по комплекту не должен находить действующие секреты",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s053",
@@ -5800,24 +6327,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s056",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s054",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s055",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s057",
@@ -5875,9 +6411,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s063",
       "title": "Нужны позитивный, негативный тесты и контроль целостности",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s064",
@@ -5891,24 +6429,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s067",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s065",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s066",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s068",
@@ -5965,9 +6512,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s074",
       "title": "Критичные требования покрыты без лишних действий",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s075",
@@ -5981,24 +6530,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s078",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s076",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Вычислите по заданным условиям",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s077",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s079",
@@ -6055,9 +6613,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s085",
       "title": "Границы соблюдены, исходное состояние восстановлено",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s086",
@@ -6071,24 +6631,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s089",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s087",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s088",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s090",
@@ -6146,9 +6715,11 @@
     {
       "id": "s08-03-encryption-and-security-testing-s096",
       "title": "Вывод ограничен областью и подтверждён свидетельством",
-      "changedFields": [],
+      "changedFields": [
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s097",
@@ -6162,24 +6733,33 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s100",
-      "title": "Выберите два ответа",
-      "changedFields": [],
+      "title": "Выберите два обоснованных утверждения",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s098",
-      "title": "Восстановите слово",
-      "changedFields": [],
+      "title": "Назовите существенное понятие",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s099",
-      "title": "Установите соответствия",
-      "changedFields": [],
+      "title": "Свяжите понятия и технические роли",
+      "changedFields": [
+        "title",
+        "task"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s101",
@@ -6252,18 +6832,48 @@
       "action": "Без изменений"
     },
     {
-      "id": "s08-03-encryption-and-security-testing-s111",
-      "title": "Конспект завершён, когда по нему можно действовать",
-      "changedFields": [],
-      "notebook": "Сохранён",
-      "action": "Без изменений"
-    },
-    {
       "id": "s08-03-encryption-and-security-testing-s112",
       "title": "Вопросы от аудитории",
       "changedFields": [],
       "notebook": "Сохранён",
       "action": "Без изменений"
+    }
+  ],
+  "removedSlides": [
+    {
+      "id": "s07-01-quality-and-failures-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s07-02-reliability-metrics-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s07-03-reliability-threats-prevention-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s07-04-observing-operating-system-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s08-01-threats-and-malware-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s08-02-protection-controls-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
+    },
+    {
+      "id": "s08-03-encryption-and-security-testing-s111",
+      "title": "Конспект завершён, когда по нему можно действовать",
+      "reason": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания"
     }
   ]
 }

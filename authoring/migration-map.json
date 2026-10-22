@@ -1545,10 +1545,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s07-01-quality-and-failures-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-01"
@@ -3221,10 +3219,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s07-02-reliability-metrics-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-02",
@@ -5110,10 +5106,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s07-03-reliability-threats-prevention-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-04",
@@ -7001,10 +6995,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s07-04-observing-operating-system-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-08",
@@ -8786,10 +8778,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s08-01-threats-and-malware-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-11",
@@ -10994,10 +10984,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s08-02-protection-controls-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-13",
@@ -13312,10 +13300,8 @@
     "sourceFile": "authoring/legacy/src/deck/buildDeck.ts",
     "oldNumber": 111,
     "oldTitle": "Конспект завершён, когда по нему можно действовать",
-    "slideIds": [
-      "s08-03-encryption-and-security-testing-s111"
-    ],
-    "change": "Перенос содержания",
+    "slideIds": [],
+    "change": "Удалён по замечанию автора: служебная проверка конспекта без предметного содержания",
     "sourceIds": [
       "rpd-okfks-text",
       "lab-18",

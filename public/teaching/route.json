@@ -2,8 +2,8 @@
   "lectureId": "s08-03-encryption-and-security-testing",
   "title": "Шифрование и проверка защищённости",
   "durationMinutes": 90,
-  "estimatedCoreMinutes": 57,
-  "reserveMinutes": 33,
+  "estimatedCoreMinutes": 49,
+  "reserveMinutes": 41,
   "requiredSlideIds": [
     "s08-03-encryption-and-security-testing-s001",
     "s08-03-encryption-and-security-testing-s009",
@@ -71,7 +71,6 @@
     "s08-03-encryption-and-security-testing-s096",
     "s08-03-encryption-and-security-testing-s097",
     "s08-03-encryption-and-security-testing-s109",
-    "s08-03-encryption-and-security-testing-s111",
     "s08-03-encryption-and-security-testing-s112"
   ],
   "independentSlideIds": [
@@ -120,5 +119,5 @@
     "s08-03-encryption-and-security-testing-s108",
     "s08-03-encryption-and-security-testing-s110"
   ],
-  "notice": "Оценка по сценарию; резерв отведён на ответы и обсуждение. Слайды сохранены, обязательный маршрут выделен отдельно."
+  "notice": "Оценка по сценарию; резерв отведён на ответы и обсуждение. Обязательный маршрут выделен отдельно."
 }

@@ -1,0 +1,65 @@
+--- a/package.json
++++ b/package.json
+@@ -1,7 +1,7 @@
+ {
+   "name": "@olgakraven/lecture-engine",
+   "private": true,
+-  "version": "0.1.1-okfks.8",
++  "version": "0.1.1-okfks.9",
+   "type": "module",
+   "scripts": {
+     "dev": "vite",
+--- a/src/engine/LectureSite.tsx
++++ b/src/engine/LectureSite.tsx
+@@ -27,7 +27,7 @@
+  onProfileChange:(profile:Profile)=>void
+  onMaterialsChange:(url:string)=>void
+ }
+-export function LectureSite({course,base='/',teacherNotes,renderCatalog}:{course:Course;base?:string;teacherNotes?:Record<string,Note>;renderCatalog?:(props:CatalogProps)=>ReactNode}){
++export function LectureSite({course,base='/',teacherNotes,resolveTeacherNotes,renderCatalog}:{course:Course;base?:string;teacherNotes?:Record<string,Note>;resolveTeacherNotes?:()=>Record<string,Note>;renderCatalog?:(props:CatalogProps)=>ReactNode}){
+  const prefix=`lecture:${base}:${course.id}`
+  const [query,setQuery]=useState(()=>new URLSearchParams(location.search))
+  const [theme,setTheme]=useState<'light'|'dark'>(()=>read(`${prefix}:theme`,'light'))
+@@ -55,7 +55,7 @@
+  const startTeaching=()=>{if(!lecture)return;const session=crypto.randomUUID();const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();const popup=window.open(u,`audience-${session}`);(window as Window&{lectureAudience?:Window|null}).lectureAudience=popup;navigate({mode:'presenter',lecture:lecture.id,slide:slide!.id,session})}
+  const icon=(label:string,child:React.ReactNode,fn:()=>void,pressed?:boolean)=><button className="icon-button" title={label} aria-label={label} aria-pressed={pressed} onClick={fn}>{child}</button>
+  const themeButton=icon(theme==='light'?'Включить тёмную тему':'Включить светлую тему',theme==='light'?<Moon size={19}/>:<Sun size={19}/>,()=>setTheme(theme==='light'?'dark':'light'))
+- if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching teacherNotes={mode==='presenter'?teacherNotes:undefined} course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={()=>navigate({lecture:lecture.id,slide:slide!.id})}/></Suspense>
++ if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching teacherNotes={mode==='presenter'?teacherNotes:undefined} resolveTeacherNotes={mode==='presenter'?resolveTeacherNotes:undefined} course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={currentId=>{const id=lecture.slides.some(s=>s.id===currentId)?currentId:slide!.id;save(`${prefix}:${course.contentVersion}:${lecture.id}:progress`,id);navigate({lecture:lecture.id,slide:id})}}/></Suspense>
+  if(mode==='print'){const scope=query.get('scope');const list=course.lectures.filter(l=>scope==='all'||scope===l.id||scope===`semester-${l.semester}`);return <main className="print-document"><div className="print-hint"><strong>PDF · {list.length} лекций</strong><button className="button primary" onClick={()=>window.print()}>Сохранить PDF</button></div>{list.flatMap(l=>l.slides.map((s,i)=><section className="print-page" key={s.id}><SlideView course={course} lecture={l} slide={s} number={i+1} base={base} profile={profile}/></section>))}</main>}
+  return <AssessmentProvider course={course} base={base}>
+  {!lecture?renderCatalog?renderCatalog({course,base,profile,materials,theme,onThemeChange:setTheme,storagePrefix:prefix,invalidLecture:query.has('lecture'),onOpenLecture:open,onPrint:print,onProfileChange:p=>{setProfile(p);save(`${prefix}:profile`,p)},onMaterialsChange:url=>{setMaterials(url);save(`${prefix}:materials`,url)}}):<main className="catalog"><header className="catalog-header"><a className="brand-lockup" href={base}><img src={assetUrl(course.logo,base)} alt="Логотип компании"/><span><strong>{course.code}</strong><small>{course.discipline}</small></span></a><nav><button className="button ghost settings-button" onClick={()=>setModal('settings')}><UserRound size={19}/><span>Настройка перед занятием</span></button>{themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a></nav></header>
+--- a/src/engine/Teaching.tsx
++++ b/src/engine/Teaching.tsx
+@@ -9,7 +9,7 @@
+ import {AssessmentProvider,AssessmentSync} from './Assessment'
+ import type {Attempt} from './Assessment'
+ import {downloadJson,read,save} from './storage'
+-type Props={teacherNotes?:Record<string,Note>;course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:()=>void}
++type Props={teacherNotes?:Record<string,Note>;resolveTeacherNotes?:()=>Record<string,Note>;course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:(slideId:string)=>void}
+ export default function Teaching(props:Props){return props.mode==='audience'?<Audience {...props}/>:<AssessmentProvider course={props.course} base={props.base}><Presenter {...props}/></AssessmentProvider>}
+ function Audience({course,lecture,base,session,profile}:Props){
+  const [state,setState]=useState<PublicState|null>(null);const current=useRef<PublicState|null>(null);const [full,setFull]=useState(false);const [fullscreenError,setFullscreenError]=useState('')
+@@ -26,11 +26,11 @@
+  {fullscreenError&&!full&&<div className="audience-fullscreen-error" role="alert">{fullscreenError}<button className="button secondary" onClick={()=>setFullscreenError('')}>Закрыть</button></div>}
+  </main>
+ }
+-function Presenter({course,lecture,base,profile,session,initialSlide,onExit,teacherNotes}:Props){
++function Presenter({course,lecture,base,profile,session,initialSlide,onExit,teacherNotes,resolveTeacherNotes}:Props){
+  const storageKey=`lecture:${base}:${course.id}:private:${course.contentVersion}`
+  const layout=usePanelLayout(`lecture:${base}:${course.id}:panel-layout`)
+  const sessionKey=`lecture-session:${session}`
+- const [notes,setNotes]=useState<Record<string,Note>>(()=>teacherNotes||read(storageKey,{}))
++ const [notes,setNotes]=useState<Record<string,Note>>(()=>resolveTeacherNotes?.()||teacherNotes||read(storageKey,{}))
+  const [shown,setShown]=useState(()=>read(sessionKey,{slideId:initialSlide,black:false}))
+  const [selected,setSelected]=useState(shown.slideId);const [black,setBlack]=useState(shown.black);const [replay,setReplay]=useState(0)
+  const [pointerEnabled,setPointerEnabled]=useState(false);const [pointer,setPointer]=useState<{x:number;y:number}|null>(null);const [assessment,setAssessment]=useState<Record<string,Attempt>>({});const receiveAssessment=useCallback((value:Record<string,Attempt>)=>setAssessment(value),[])
+@@ -55,7 +55,7 @@
+  const reopen=()=>{const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();popup.current=window.open(u,`audience-${session}`);busRef.current?.setPeer(popup.current);if(!popup.current)setNotice('Браузер заблокировал окно. Разрешите всплывающие окна и нажмите «Открыть аудиторию» снова.')}
+  const copyAudience=async()=>{const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();try{await navigator.clipboard.writeText(u.href);setNotice('Ссылка аудитории скопирована. Откройте её в новой обычной вкладке этого же браузера.')}catch{setNotice(`Ссылка аудитории: ${u.href}`)}}
+  const importNotes=async(file:File)=>{try{const pack=JSON.parse(await file.text()) as TeacherPack;if(pack.schemaVersion!==1||pack.courseId!==course.id||pack.contentVersion!==course.contentVersion||!pack.notes||typeof pack.notes!=='object')throw Error('Файл относится к другому курсу или версии');const allIds=new Set(course.lectures.flatMap(l=>l.slides.map(s=>s.id)));for(const [id,n] of Object.entries(pack.notes)){if(!allIds.has(id)||!n||!['script','preparation','notebook','questions','answer'].every(k=>typeof n[k as keyof Note]==='string')||!Number.isFinite(n.estimatedSeconds)||n.estimatedSeconds<0)throw Error('Некорректные заметки')};const next={...notes,...pack.notes};if(!save(storageKey,next))throw Error('Не удалось сохранить заметки');setNotes(next);setNotice('Заметки загружены и сохранены в этом браузере.')}catch(e){setNotice(String(e))}}
+- const end=()=>{busRef.current?.send({type:'END'});popup.current?.close();onExit()}
++ const end=()=>{busRef.current?.send({type:'END'});popup.current?.close();onExit(shown.slideId)}
+  const tabNames={script:'Сценарий',preparation:'Подготовка',notebook:'Запись',questions:'Вопросы',answer:'Ответы'}
+  return <main className="presenter-shell"><AssessmentSync task={lecture.slides[shownIndex].task} onChange={receiveAssessment}/><header className="presenter-header"><div><p className="eyebrow">Панель преподавателя</p><h1>{lecture.title}</h1></div><span className={`connection ${status==='Синхронизировано'?'connected':''}`} role="status">{status}</span><button className="button ghost" onClick={end}><X size={18}/>Завершить</button></header>
+  {notice&&<div className="notice" role="status">{notice}<button className="text-button" onClick={()=>setNotice('')}>Закрыть</button></div>}

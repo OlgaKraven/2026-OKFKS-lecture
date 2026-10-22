@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": 1,
+  "courseId": "okfks",
+  "contentVersion": "2.1.0-design-review-20261021",
+  "sourceKind": "local",
+  "sourceSha256": "d75c3f143f749d7ef4ace82f5380caa84cab45cbbeede8db13541b8b97657c20",
+  "lectureIds": [
+    "s08-03-encryption-and-security-testing"
+  ],
+  "documents": {
+    "teacher": "texts/s08-03-encryption-and-security-testing.md",
+    "presenter": "scenarios/s08-03-encryption-and-security-testing.md"
+  },
+  "slides": [
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s001",
+      "displayNumber": 1,
+      "title": "Шифрование и проверка защищённости",
+      "anchors": {
+        "teacher": "context-001",
+        "presenter": "p-s08-03-encryption-and-security-testing-s001"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s003",
+      "displayNumber": 2,
+      "title": "Основная литература",
+      "anchors": {
+        "teacher": "context-003",
+        "presenter": "p-s08-03-encryption-and-security-testing-s003"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s004",
+      "displayNumber": 3,
+      "title": "Дополнительная литература",
+      "anchors": {
+        "teacher": "context-004",
+        "presenter": "p-s08-03-encryption-and-security-testing-s004"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s005",
+      "displayNumber": 4,
+      "title": "Материалы к занятиям",
+      "anchors": {
+        "teacher": "context-005",
+        "presenter": "p-s08-03-encryption-and-security-testing-s005"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s009",
+      "displayNumber": 5,
+      "title": "Вопросы темы",
+      "anchors": {
+        "teacher": "context-009",
+        "presenter": "p-s08-03-encryption-and-security-testing-s009"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s002",
+      "displayNumber": 6,
+      "title": "Защита компьютерных систем",
+      "anchors": {
+        "teacher": "context-002",
+        "presenter": "p-s08-03-encryption-and-security-testing-s002"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s006",
+      "displayNumber": 7,
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "anchors": {
+        "teacher": "context-006",
+        "presenter": "p-s08-03-encryption-and-security-testing-s006"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s007",
+      "displayNumber": 8,
+      "title": "К концу занятия у вас будет рабочее решение",
+      "anchors": {
+        "teacher": "context-007",
+        "presenter": "p-s08-03-encryption-and-security-testing-s007"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s008",
+      "displayNumber": 9,
+      "title": "От исходной ситуации — к доказанному выводу",
+      "anchors": {
+        "teacher": "context-008",
+        "presenter": "p-s08-03-encryption-and-security-testing-s008"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s010",
+      "displayNumber": 10,
+      "title": "Практика проходит только в разрешённой среде",
+      "anchors": {
+        "teacher": "context-010",
+        "presenter": "p-s08-03-encryption-and-security-testing-s010"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s011",
+      "displayNumber": 11,
+      "title": "Шифротекст и ключ — разные данные",
+      "anchors": {
+        "teacher": "context-011",
+        "presenter": "p-s08-03-encryption-and-security-testing-s011"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s012",
+      "displayNumber": 12,
+      "title": "Можно ли доказать защищённость данных только тем, что файл или соединение помечены как зашифрованные?",
+      "anchors": {
+        "teacher": "context-012",
+        "presenter": "p-s08-03-encryption-and-security-testing-s012"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s013",
+      "displayNumber": 13,
+      "title": "Задача шифрования",
+      "anchors": {
+        "teacher": "q1-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s013"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s014",
+      "displayNumber": 14,
+      "title": "Шифрование снижает риск раскрытия, но не решает всё",
+      "anchors": {
+        "teacher": "q1-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s014"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s015",
+      "displayNumber": 15,
+      "title": "Сценарий задают данные, состояние, противник и расшифрование",
+      "anchors": {
+        "teacher": "q1-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s015"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s016",
+      "displayNumber": 16,
+      "title": "Файл защищают от чтения при утрате учебного носителя",
+      "anchors": {
+        "teacher": "q1-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s016"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s017",
+      "displayNumber": 17,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q1-p4",
+        "presenter": "p-s08-03-encryption-and-security-testing-s017"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s018",
+      "displayNumber": 18,
+      "title": "Шифрование не предотвращает любые изменения и удаление",
+      "anchors": {
+        "teacher": "q1-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s018"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s019",
+      "displayNumber": 19,
+      "title": "Актив, состояние, ключ и граница защиты указаны явно",
+      "anchors": {
+        "teacher": "q1-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s019"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s020",
+      "displayNumber": 20,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q1-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s020"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s023",
+      "displayNumber": 21,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q1-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s023"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s021",
+      "displayNumber": 22,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q1-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s021"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s022",
+      "displayNumber": 23,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q1-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s022"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s024",
+      "displayNumber": 24,
+      "title": "Хранение и передача",
+      "anchors": {
+        "teacher": "q2-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s024"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s025",
+      "displayNumber": 25,
+      "title": "Хранение защищает носитель, передача — канал и стороны",
+      "anchors": {
+        "teacher": "q2-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s025"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s026",
+      "displayNumber": 26,
+      "title": "Хранение, канал и копия: три границы защиты",
+      "anchors": {
+        "teacher": "q2-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s026"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s027",
+      "displayNumber": 27,
+      "title": "BitLocker защищает том, TLS — соединение",
+      "anchors": {
+        "teacher": "q2-worked",
+        "presenter": "p-s08-03-encryption-and-security-testing-s027"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s028",
+      "displayNumber": 28,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q2-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s028"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s029",
+      "displayNumber": 29,
+      "title": "Шифрование диска не заменяет защиту после входа и в канале",
+      "anchors": {
+        "teacher": "q2-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s029"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s030",
+      "displayNumber": 30,
+      "title": "Носитель и соединение подтверждаются отдельными тестами",
+      "anchors": {
+        "teacher": "q2-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s030"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s031",
+      "displayNumber": 31,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q2-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s031"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s034",
+      "displayNumber": 32,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q2-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s034"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s032",
+      "displayNumber": 33,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q2-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s032"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s033",
+      "displayNumber": 34,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q2-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s033"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s035",
+      "displayNumber": 35,
+      "title": "Алгоритм, протокол, ключ и средство",
+      "anchors": {
+        "teacher": "q3-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s035"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s036",
+      "displayNumber": 36,
+      "title": "Алгоритм, протокол, ключ и средство выполняют разные роли",
+      "anchors": {
+        "teacher": "q3-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s036"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s037",
+      "displayNumber": 37,
+      "title": "Протокол, алгоритм, ключ и реализация",
+      "anchors": {
+        "teacher": "q3-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s037"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s038",
+      "displayNumber": 38,
+      "title": "Заполненная техническая карта защищённого обмена",
+      "anchors": {
+        "teacher": "q3-p4",
+        "presenter": "p-s08-03-encryption-and-security-testing-s038"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s039",
+      "displayNumber": 39,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q3-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s039"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s040",
+      "displayNumber": 40,
+      "title": "Название алгоритма не описывает весь сценарий защиты",
+      "anchors": {
+        "teacher": "q3-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s040"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s041",
+      "displayNumber": 41,
+      "title": "Роль элемента подтверждается источником документации",
+      "anchors": {
+        "teacher": "q3-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s041"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s042",
+      "displayNumber": 42,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q3-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s042"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s045",
+      "displayNumber": 43,
+      "title": "Различите роли в защищённом обмене",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q3-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s045"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s043",
+      "displayNumber": 44,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q3-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s043"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s044",
+      "displayNumber": 45,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q3-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s044"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s046",
+      "displayNumber": 46,
+      "title": "Управление учебными ключами",
+      "anchors": {
+        "teacher": "q4-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s046"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s047",
+      "displayNumber": 47,
+      "title": "Ключ проходит создание, хранение, смену и уничтожение",
+      "anchors": {
+        "teacher": "q4-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s047"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s048",
+      "displayNumber": 48,
+      "title": "Секреты не попадают в код, снимки экрана, журналы и PDF",
+      "anchors": {
+        "teacher": "q4-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s048"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s049",
+      "displayNumber": 49,
+      "title": "В отчёте сохраняют идентификатор, а не значение ключа",
+      "anchors": {
+        "teacher": "q4-p3",
+        "presenter": "p-s08-03-encryption-and-security-testing-s049"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s050",
+      "displayNumber": 50,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q4-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s050"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s051",
+      "displayNumber": 51,
+      "title": "Паролю и закрытому ключу не место в репозитории",
+      "anchors": {
+        "teacher": "q4-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s051"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s052",
+      "displayNumber": 52,
+      "title": "Поиск по комплекту не должен находить действующие секреты",
+      "anchors": {
+        "teacher": "q4-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s052"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s053",
+      "displayNumber": 53,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q4-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s053"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s056",
+      "displayNumber": 54,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q4-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s056"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s054",
+      "displayNumber": 55,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q4-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s054"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s055",
+      "displayNumber": 56,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q4-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s055"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s057",
+      "displayNumber": 57,
+      "title": "Проверка результата",
+      "anchors": {
+        "teacher": "q5-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s057"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s058",
+      "displayNumber": 58,
+      "title": "Проверка сочетает отказ без полномочий и восстановление с ними",
+      "anchors": {
+        "teacher": "q5-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s058"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s059",
+      "displayNumber": 59,
+      "title": "Синтетические данные, хэш и тест отказа дают доказательства",
+      "anchors": {
+        "teacher": "q5-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s059"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s060",
+      "displayNumber": 60,
+      "title": "Совпавший хэш подтверждает корректное восстановление",
+      "anchors": {
+        "teacher": "q5-p3",
+        "presenter": "p-s08-03-encryption-and-security-testing-s060"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s061",
+      "displayNumber": 61,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q5-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s061"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s062",
+      "displayNumber": 62,
+      "title": "Новое расширение файла ещё не доказывает шифрование",
+      "anchors": {
+        "teacher": "q5-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s062"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s063",
+      "displayNumber": 63,
+      "title": "Нужны позитивный, негативный тесты и контроль целостности",
+      "anchors": {
+        "teacher": "q5-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s063"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s064",
+      "displayNumber": 64,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q5-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s064"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s067",
+      "displayNumber": 65,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q5-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s067"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s065",
+      "displayNumber": 66,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q5-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s065"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s066",
+      "displayNumber": 67,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q5-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s066"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s068",
+      "displayNumber": 68,
+      "title": "Набор проверок защиты",
+      "anchors": {
+        "teacher": "q6-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s068"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s069",
+      "displayNumber": 69,
+      "title": "Набор тестов выводится из требований, угроз и границ",
+      "anchors": {
+        "teacher": "q6-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s069"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s070",
+      "displayNumber": 70,
+      "title": "Условие, шаги, ожидание и возврат делают тест проверяемым",
+      "anchors": {
+        "teacher": "q6-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s070"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s071",
+      "displayNumber": 71,
+      "title": "Доступ, отказ лишней роли и соединение проверяют отдельно",
+      "anchors": {
+        "teacher": "q6-p4",
+        "presenter": "p-s08-03-encryption-and-security-testing-s071"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s072",
+      "displayNumber": 72,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q6-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s072"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s073",
+      "displayNumber": 73,
+      "title": "Случайный набор инструментов не заменяет критерии",
+      "anchors": {
+        "teacher": "q6-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s073"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s074",
+      "displayNumber": 74,
+      "title": "Критичные требования покрыты без лишних действий",
+      "anchors": {
+        "teacher": "q6-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s074"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s075",
+      "displayNumber": 75,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q6-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s075"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s078",
+      "displayNumber": 76,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q6-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s078"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s076",
+      "displayNumber": 77,
+      "title": "Вычислите по заданным условиям",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q6-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s076"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s077",
+      "displayNumber": 78,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q6-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s077"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s079",
+      "displayNumber": 79,
+      "title": "Проверка по регламенту",
+      "anchors": {
+        "teacher": "q7-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s079"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s080",
+      "displayNumber": 80,
+      "title": "Регламент задаёт область, полномочия, остановку и доказательства",
+      "anchors": {
+        "teacher": "q7-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s080"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s081",
+      "displayNumber": 81,
+      "title": "Непредвиденное воздействие требует остановки проверки",
+      "anchors": {
+        "teacher": "q7-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s081"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s082",
+      "displayNumber": 82,
+      "title": "Проверка идёт на снимке стенда с синтетическими данными",
+      "anchors": {
+        "teacher": "q7-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s082"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s083",
+      "displayNumber": 83,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q7-p5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s083"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s084",
+      "displayNumber": 84,
+      "title": "Производственный ресурс нельзя проверять без разрешения",
+      "anchors": {
+        "teacher": "q7-p3",
+        "presenter": "p-s08-03-encryption-and-security-testing-s084"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s085",
+      "displayNumber": 85,
+      "title": "Границы соблюдены, исходное состояние восстановлено",
+      "anchors": {
+        "teacher": "q7-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s085"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s086",
+      "displayNumber": 86,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q7-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s086"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s089",
+      "displayNumber": 87,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q7-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s089"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s087",
+      "displayNumber": 88,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q7-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s087"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s088",
+      "displayNumber": 89,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q7-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s088"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s090",
+      "displayNumber": 90,
+      "title": "Заключение и меры",
+      "anchors": {
+        "teacher": "q8-p2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s090"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s091",
+      "displayNumber": 91,
+      "title": "Заключение разделяет наблюдение, критерий, риск и действие",
+      "anchors": {
+        "teacher": "q8-p1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s091"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s092",
+      "displayNumber": 92,
+      "title": "Мера получает владельца, срок и повторный тест",
+      "anchors": {
+        "teacher": "q8-visual",
+        "presenter": "p-s08-03-encryption-and-security-testing-s092"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s093",
+      "displayNumber": 93,
+      "title": "Лишнее право ведёт к корректировке роли и повторному тесту",
+      "anchors": {
+        "teacher": "q8-p4",
+        "presenter": "p-s08-03-encryption-and-security-testing-s093"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s094",
+      "displayNumber": 94,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "q8-p6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s094"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s095",
+      "displayNumber": 95,
+      "title": "Ограниченные тесты не доказывают полную защищённость",
+      "anchors": {
+        "teacher": "q8-p7",
+        "presenter": "p-s08-03-encryption-and-security-testing-s095"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s096",
+      "displayNumber": 96,
+      "title": "Вывод ограничен областью и подтверждён свидетельством",
+      "anchors": {
+        "teacher": "q8-p7",
+        "presenter": "p-s08-03-encryption-and-security-testing-s096"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s097",
+      "displayNumber": 97,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q8-choice-rule",
+        "presenter": "p-s08-03-encryption-and-security-testing-s097"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s100",
+      "displayNumber": 98,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q8-choice-check",
+        "presenter": "p-s08-03-encryption-and-security-testing-s100"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s098",
+      "displayNumber": 99,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q8-word",
+        "presenter": "p-s08-03-encryption-and-security-testing-s098"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s099",
+      "displayNumber": 100,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "assessment-s08-03-encryption-and-security-testing-q8-matching",
+        "presenter": "p-s08-03-encryption-and-security-testing-s099"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s101",
+      "displayNumber": 101,
+      "title": "Сначала оформите паспорт работы",
+      "anchors": {
+        "teacher": "practice-1",
+        "presenter": "p-s08-03-encryption-and-security-testing-s101"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s102",
+      "displayNumber": 102,
+      "title": "Соберите исходные данные без домыслов",
+      "anchors": {
+        "teacher": "practice-2",
+        "presenter": "p-s08-03-encryption-and-security-testing-s102"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s103",
+      "displayNumber": 103,
+      "title": "Назначьте критерий до выполнения",
+      "anchors": {
+        "teacher": "practice-3",
+        "presenter": "p-s08-03-encryption-and-security-testing-s103"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s104",
+      "displayNumber": 104,
+      "title": "Выполняйте действие и ведите журнал",
+      "anchors": {
+        "teacher": "practice-4",
+        "presenter": "p-s08-03-encryption-and-security-testing-s104"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s105",
+      "displayNumber": 105,
+      "title": "Добавьте граничный или негативный сценарий",
+      "anchors": {
+        "teacher": "practice-5",
+        "presenter": "p-s08-03-encryption-and-security-testing-s105"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s106",
+      "displayNumber": 106,
+      "title": "Разберите отклонение, а не скрывайте его",
+      "anchors": {
+        "teacher": "practice-6",
+        "presenter": "p-s08-03-encryption-and-security-testing-s106"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s107",
+      "displayNumber": 107,
+      "title": "Сопоставьте свидетельство с критерием",
+      "anchors": {
+        "teacher": "practice-7",
+        "presenter": "p-s08-03-encryption-and-security-testing-s107"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s108",
+      "displayNumber": 108,
+      "title": "Завершите отчёт выводом и ограничениями",
+      "anchors": {
+        "teacher": "practice-8",
+        "presenter": "p-s08-03-encryption-and-security-testing-s108"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s109",
+      "displayNumber": 109,
+      "title": "Первые четыре опоры собираются в единую модель",
+      "anchors": {
+        "teacher": "synthesis-first",
+        "presenter": "p-s08-03-encryption-and-security-testing-s109"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s110",
+      "displayNumber": 110,
+      "title": "Последние четыре опоры задают границы решения",
+      "anchors": {
+        "teacher": "synthesis-second",
+        "presenter": "p-s08-03-encryption-and-security-testing-s110"
+      }
+    },
+    {
+      "lectureId": "s08-03-encryption-and-security-testing",
+      "slideId": "s08-03-encryption-and-security-testing-s112",
+      "displayNumber": 111,
+      "title": "Вопросы от аудитории",
+      "anchors": {
+        "teacher": "context-112",
+        "presenter": "p-s08-03-encryption-and-security-testing-s112"
+      }
+    }
+  ]
+}

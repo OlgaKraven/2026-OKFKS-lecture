@@ -1,0 +1,223 @@
+{
+  "contentVersion": "2.1.0-design-review-20261021",
+  "notes": 777,
+  "panel": [
+    {
+      "slideId": "s07-01-quality-and-failures-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 31
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s015",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 31
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 109
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 92
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 27
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s015",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 33
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 111
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 90
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 38
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s015",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 33
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 89
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 60
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 34
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s010",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 42
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 90
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 61
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 26
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s011",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 28
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 96
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 87
+    },
+    {
+      "slideId": "s08-02-protection-controls-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 25
+    },
+    {
+      "slideId": "s08-02-protection-controls-s011",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 27
+    },
+    {
+      "slideId": "s08-02-protection-controls-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 98
+    },
+    {
+      "slideId": "s08-02-protection-controls-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 84
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s001",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 43
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s011",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 39
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s020",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 73
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s112",
+      "status": "passed",
+      "fields": 5,
+      "estimatedSeconds": 121
+    }
+  ],
+  "fieldsCompared": 140,
+  "persistence": {
+    "sameSessionReentry": true,
+    "reload": true,
+    "exportNotes": 777,
+    "exportPersonalEdit": true,
+    "returnSlideId": "s08-03-encryption-and-security-testing-s112",
+    "audienceContainsPrivateText": false,
+    "automaticUpdatePreservedPersonalEdit": true,
+    "testEditRestored": true
+  },
+  "downloads": {
+    "individualMD": 7,
+    "listLinks": 7,
+    "archives": [
+      {
+        "path": "teaching/exports/okfks-teacher-all.zip",
+        "sha256": "05b7fe869492b22b0c90b7b984f7cadcabcfbdc9221696bf999e36ba70b0b991",
+        "files": 32,
+        "status": "passed"
+      },
+      {
+        "path": "teaching/exports/okfks-teacher-semester-7.zip",
+        "sha256": "122db9e7fddfcc3d950b648a1e67c5168884e309113f875040a9e4597804ba9e",
+        "files": 19,
+        "status": "passed"
+      },
+      {
+        "path": "teaching/exports/okfks-teacher-semester-8.zip",
+        "sha256": "f5d65b0d576d790847b4f7f3b3d0b2d3cc38e89df790edcb4433f7c37dab89e5",
+        "files": 15,
+        "status": "passed"
+      }
+    ]
+  },
+  "pdf": {
+    "lectures": 7,
+    "pagesEach": 111,
+    "totalPages": 777,
+    "qrDecoded": 35,
+    "layoutErrors": 0
+  },
+  "unitTests": 42,
+  "build": "passed",
+  "privacy": "passed",
+  "infographicRendererChanged": false,
+  "themeChanged": false,
+  "browserData": "isolated localhost origin",
+  "notesSha256": "49eded304ca74269cff72a880a95be44aef1b0376bef94a89a07ab09cdf283da"
+}

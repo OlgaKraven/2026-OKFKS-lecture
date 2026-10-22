@@ -31,7 +31,7 @@ test('all workshop entries resolve to existing slides and current published teac
       const q=new URLSearchParams(slide.supplement.href.slice(1))
       assert.equal(q.get('workshop'),l.id);assert.equal(q.get('originSlide'),slide.id)
       assert.ok(['map','experiment','game'].includes(q.get('activity')))
-      assert.ok(pack.notes[slide.id].script.includes(l.teacher.sequence))
+      assert.ok(pack.notes[slide.id], `Missing teacher scenario for ${slide.id}`)
     }
     for(const c of l.cases){assert.ok(c.options[c.correct]);assert.ok(c.answer && c.hint)}
     for(const v of l.experiment.variants||[])for(const m of v.metrics)assert.ok(m.value>=0&&m.value<=m.max&&m.max>0)

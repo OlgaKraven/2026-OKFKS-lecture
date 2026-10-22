@@ -1,0 +1,5431 @@
+{
+  "schemaVersion": 1,
+  "courseId": "okfks",
+  "contentVersion": "2.1.0-design-review-20261021",
+  "slides": 777,
+  "changedNotes": 301,
+  "changedFields": {
+    "preparation": 101,
+    "script": 105,
+    "answer": 233
+  },
+  "notebookByteExact": true,
+  "estimatedSecondsUnchanged": true,
+  "previousAutomaticFingerprints": "previous-auto-hashes.json",
+  "historyFields": [
+    "script",
+    "preparation",
+    "notebook",
+    "questions",
+    "answer",
+    "estimatedSeconds"
+  ],
+  "serviceMetadataRemoved": true,
+  "taskAnswers": [
+    {
+      "slideId": "s07-01-quality-and-failures-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-02-protection-controls-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s020",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s023",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s021",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s022",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s031",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s034",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s032",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s033",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s042",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s045",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s043",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s044",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s053",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s056",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s054",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s055",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s064",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s067",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s065",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s066",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s075",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s078",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s076",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s077",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s086",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s089",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s087",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s088",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s097",
+      "type": "single",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s100",
+      "type": "multiple",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s098",
+      "type": "short",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s099",
+      "type": "matching",
+      "correctContentPreserved": true,
+      "optionIdentifiersRemoved": true
+    }
+  ],
+  "changes": [
+    {
+      "slideId": "s07-01-quality-and-failures-s001",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "b87cc47fe022570ab8a69d9a14213e3a76ac5bffb41f49de0ff1765faacbb2af"
+      },
+      "currentHashes": {
+        "preparation": "c8f4f1ac808e71716036681b8068fc8571bc85460608bc7a4bf9dd66d8e134e9"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "e492b87aa8ebcf5f78686a3ec3f28d8ecb2ab2df05302259db46daa07dfd26a3"
+      },
+      "currentHashes": {
+        "preparation": "4dbe347fe0bb6ad3557f5ecc78a0d801aef433c054d5125524e90053ba8351a0"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s004",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "e492b87aa8ebcf5f78686a3ec3f28d8ecb2ab2df05302259db46daa07dfd26a3"
+      },
+      "currentHashes": {
+        "preparation": "4dbe347fe0bb6ad3557f5ecc78a0d801aef433c054d5125524e90053ba8351a0"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s020",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "dd50946bf3442c9cda4561b07902e45678a8ec79b5b4777c65678a977f569ffd",
+        "answer": "52ef9876e9316941f4d9c21e7acc7014a71afd919abfb2246319816bfeb328d2"
+      },
+      "currentHashes": {
+        "script": "1e6ac6cec488bd375f91787032ba14dee42d45254466b663b32fabc22b2925c1",
+        "answer": "51533994c53b3cb36e9b5b2b811b214a71c1030999c67a7e91231cd994fcd234"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s023",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "68345ebb27d20eaa03bf92e13223bbddd991bd15799e330493684399a72e5fd1",
+        "answer": "3c936e10a65522591e7daafea1aaf75ae8b2d2fd1556c910f59f613770e7161e"
+      },
+      "currentHashes": {
+        "script": "525d687a614f039369b72fe124f0d0ce7c4655792a100589ce796b028bfdf442",
+        "answer": "0bc107c4dbb57f4cd76a94e7456e83c60b839f9483d21be4eea104ae863c1f62"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s021",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "9fe383a2d1df01fe295ac344fa2e1fd554c7131094b3f9da9413677b11e62832",
+        "answer": "9d97b141f7eea02b768ad8116801e142f09ac33480717e4b2990d5a009ace2bd"
+      },
+      "currentHashes": {
+        "script": "874bc8818e997ae915bf37c849531d7fab20aa88ef9fefff47e6928c20499b5e",
+        "answer": "8173ce124067fb0f73cd4cc4d11e1168d2669dd25057d13a8343d0569a26f0fc"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s022",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "0e9ae1ce0a1619b24560189557aa6a9fe3d2b931aa6eebbd7f78b1bdcfbb0e90",
+        "answer": "cc3dc3e67a3c4cefc806f79108779c4da1555ebbe04b218d7b8b0caa47517d0f"
+      },
+      "currentHashes": {
+        "script": "5f05dcea80bf527edc9fb13947cbddfdde88bd72c33fd6564e0323c3b66b68ab",
+        "answer": "1655e38f0dadb060182a766f0347f9022469bd02a4918213170259b08cf3a8ff"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s031",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "462505a62ee70197c5dd07a768e61d79b3135ff24b837acff5625ccc704848ec",
+        "answer": "7fcbdad6f0620373dfe69529088982befc17b8950b2355bda6d4221cb83ec867"
+      },
+      "currentHashes": {
+        "script": "2f178716e18454f406385f71ef00725eb051e1acfa2fab1dedd8fdea8c7ad40f",
+        "answer": "3b93ff21a61d73e4909e9a58a668ca47be0d60ea10272f025347277de0b04686"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s034",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a49cc4cc18b4cc6394ea728ea8672c83fbfc589b664b0fd12e4082bed68477c0",
+        "answer": "1b5b9bf2bd0c29e5afc0c3d1063e7e02ab87df0733c7c64f1e0c28212bb2fa8c"
+      },
+      "currentHashes": {
+        "script": "c32478ddf66a065d38e02df1e6c6078c8613758ac86e136d97d480ba09c799d1",
+        "answer": "fb6e79d8b70bde468ae3198b135df03937215f75b6dc5d9aba7a8cd4c3b65f31"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s032",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4e022cb4826a77cdb9ccdf132fbe56c576937f094594db7ee143eba4348e6b06",
+        "answer": "209de2b8d1e7ca8bb8e4c7e15961bbe20b46431751af34d83f2d7113e9d91d49"
+      },
+      "currentHashes": {
+        "script": "977294078cb1d8fdf52d65c825ad1505ab47437357a2160b960ffd7ec4c04201",
+        "answer": "46a0a98a7b99b2534efa31f635f7d997237042408e642cd327a1dd4129294cc6"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s033",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "73c50c33b706b521b0abe0ba1e6dd057ffd641fbb859a98b5f55c95fc6c69262",
+        "answer": "302e873de643c3a7a655861b3a2ae7e9b0b8fc10eb9d2f8ac87f27744052d8bf"
+      },
+      "currentHashes": {
+        "script": "6ea0e565fd1ed4ad4317b6a8d76c52322ffcfe1c433a2b4b0c28bd1e42bff87a",
+        "answer": "1ef6cc232cea903cc005de8291a3bc598bbbf5ffdcbc3b60f7ccf854dcd1d3ad"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s042",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "9152561fae0e165881928c93775bc8f101bf60873febd516c7e699e488a5b70c",
+        "answer": "f5f886ce0e431dcabcd687c12818de8a40c7e0f1fdf02df419ce0ec067cba6e6"
+      },
+      "currentHashes": {
+        "script": "2f50cc621b386b80a2c426c33b3fde9314422d1c11452f9e69ec977e19aa7ef7",
+        "answer": "ed99ec660a3379893f99edfc2dc30628965f43b8af12ced23a9c1475cd04d7ef"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s045",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "402626a6cfa3d03bc905e5894b510d0fc289babe7bc7052484e0e79cabb22892",
+        "answer": "919054b4a75297e814e4775766a7021648eac4621a56a346db04565cdb380216"
+      },
+      "currentHashes": {
+        "script": "52a60d18e6251a1ac9f671ab7061376e4fee51d81f35045239b4d3f6c834540b",
+        "answer": "038cc08d9d353011093b2faafbd2014f263a8413882e68617e2921b62a991b4b"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s043",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "3fc197e2a75e6deb5c2b1bdad60350909d8c7372c2052d0f7380e6db97ccf538",
+        "answer": "ce9f80cdf97a714361216c142c0297ec62b2dfac19e5e62891deddab088bed07"
+      },
+      "currentHashes": {
+        "script": "01503b2eba86e6a738a8f165318f5d49d16029a4b52505d3891dd38dffb4f61c",
+        "answer": "1faba50f1eecc8fb78ab5dad6bf3f6cde04f8b79b897eae3d40549946b8deac6"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s044",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "071d8bc622137cdd8a45ad2ad9d6625677af66bd8f8e55e12ad5001192283217",
+        "answer": "a2d0cf33d30d38b63d4ea0067921b0dc79766a75063f948755101560b9c16903"
+      },
+      "currentHashes": {
+        "script": "057ab01c4213fcb5636b73c2e959b33979dfbcc03e895776f3d1839be6000ebe",
+        "answer": "3a9e5fe836d4355de9a668bb3049efcd740230ba01b419545580c6c656539856"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s049",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "b9a8b7c5c414fb2528e249bd4e0fa580c3b967d372da4085db097811814dca28"
+      },
+      "currentHashes": {
+        "preparation": "ff676d059bff51b6ca2d3a10be19243476a6570da2676bca0eaa08dc7a363cf7"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s053",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "0f75b88fb64e4bd8dea0010fcd40f418c4233881cf8a66995402db7d6c30ab88",
+        "answer": "ffc4fd5eed13192a7290e1a19d78e99cf740dc8b1c690e6ce197077b397753d2"
+      },
+      "currentHashes": {
+        "script": "2b45cb1aaa8a397a4228c357a0db0e480c592c42d8038657c78350cf02d75429",
+        "answer": "e354c7650e6c42c4e7e10be2cae0115bde0fd78027f9ef252a60764e4d3647a5"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s056",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "f404259a70b85660bd58bf08cc79ede079d67becd8221622febd238311db707d",
+        "answer": "431267e5218e5d71472b422123eeaa4629338cf7d0d59485aafb3b31200c0af5"
+      },
+      "currentHashes": {
+        "script": "17cdf43a6f770632930a201f1c8a922239a11aebfcdd6004d3f88367ac69adb1",
+        "answer": "87230c826ba7b5baf79517e5f196c31a76888eb9923ffaae4bce3b6f4b3430ac"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s054",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "b72fa80a7a97f3d46a94ea4d51adfba01426ca88e36aa84d98d7d33f39fa3ad8",
+        "answer": "a6984226751d64d6a8945c14ca0565c2a59de3b87601f431b0bce2fa24d4ba3e"
+      },
+      "currentHashes": {
+        "script": "dad53e0eef57e6f97734911a8671a836af5c2b3dc3641c821112e8576cdddbb8",
+        "answer": "e3d51154b053bd353a94a878e681eb81aa76197bef751bc6e316d1f011535689"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s055",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "acaf00b3dac1c2e618fea1dc5f519e31fd2d4caed66999ae57233bcd6ce7ee5a",
+        "answer": "ce179e9f48e5dbc180c36aede60be070304099af5bf32e596894a0a410a6de2a"
+      },
+      "currentHashes": {
+        "script": "f584f92b1a792d3bca4be46f4b06797dd2c6a8ea7b9dd59fe499953813eaff7b",
+        "answer": "742ff3417cd92f9e79bb18ccefda8b54a9952947385ced0b0446fbd26fedac19"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s064",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "7679ad36eb7e8961438587267dc99e811a6797a9baf3f754ccd1ae1eb70635f7",
+        "answer": "81b5b0ca0a112b0c190c8521195e258fb21c601997980e53fae5ff27d875742a"
+      },
+      "currentHashes": {
+        "script": "88dc67154204a62ec3d86f74192b2af493b2834c57c6462164c5c97c88c17f89",
+        "answer": "88a5434417cef33274b942c3d9c1179eafff9a2bd27196fb3bf39330036abc7f"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s067",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a375cc584a5922bf0efc3af5fb81e3a99c25b4ef325e95ef1f4a42bd7ee22c72",
+        "answer": "7b04415c662c92636726f66c28f8f299bbce2b0e2a4088abd38eab7fd24905b1"
+      },
+      "currentHashes": {
+        "script": "e9034b2d6c3dd8594c63d7e73d558066984d70718a960dc9b1a9c8fba5233e94",
+        "answer": "f4a138d0f0e618ad19a59f08a05946732559086e534f76ca48e32e265c6541b2"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s065",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "2ea0fdfa8f6ccc2c166f988252d91d99b180a4352ac00cb14617a76a425a7a7c",
+        "answer": "fb214bf469eb447e9050e4ba4637703162dd4ae57446e2983f2197dcee4ed50b"
+      },
+      "currentHashes": {
+        "script": "317b8a2d6cad164f9c02b213e9751435599626bfb6f0d3dc1579665b3d6f4e04",
+        "answer": "73ce98637386784d419ab6827337c0615e2d830bd1f2d6d0f48091882ee3b985"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s066",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c3bdda48fd624aef50c9f89b36d3c5f123cc5803bf44ef815eb351a0bddc7855",
+        "answer": "887d2a62986ebd30854860a10b2f10bc430f152e0d3124cab472ae93d77372d5"
+      },
+      "currentHashes": {
+        "script": "5bf7b81cd0978517730095e51e591ea64790578eee8e01074caef634bd42d132",
+        "answer": "b5da0af812ca813ab24c8ad5b80598bcfdee1eb2f93cd99a0a8deb1b4852af1d"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s071",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "aa2ebbd823c5079b5791a320f213298b36b85bd9e90daec0a5310c655d5b7685"
+      },
+      "currentHashes": {
+        "preparation": "f84d878d2cd99217cb43bdaddbea6877ff3c5353fa8b5370ec3ffa82132caec7"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s075",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "b04a3d403331b5d881c98894b1c963b912ea891fc2869c467b737b90eb47d611",
+        "answer": "44de1cb21706c26d200d733e48bcbfd20cf58394272dcaed8af0d3c1fd2ff3c0"
+      },
+      "currentHashes": {
+        "script": "fcef0e1d4ec8ff0dfaf421509a7fe8dd61f0195d07d083cb301904be9e250786",
+        "answer": "5e9d0e00e11169bd89274284e456e47909a9bc3cf12e9ea41f8732a27513dd36"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s078",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "420cfd2682e6efdec54fb2dc3a8fdf7b22090ba571a15f805e96fe4f7213a1ad",
+        "answer": "0cd4b46cd629baf0525eae3dd682da89d53a95a9b02869864b7164daf189a1bc"
+      },
+      "currentHashes": {
+        "script": "c0648acb3451e455a57b7c49bd8615ac5e1021a731f80748a3a1e47068d2e99a",
+        "answer": "73c8d118ea70acaac874c2accf74a93447ded9f9a390c9c5bb73b539f7480b1d"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s076",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "1559d85475e47a3dc38e267e421bb364824fc30008c8b3f818238a8fde7350ca",
+        "answer": "624e0556032da75e21a592ae8aa2e49bea6ae757e22738fd6c7272d8e66e3c2c"
+      },
+      "currentHashes": {
+        "script": "7c3163aff1450e46ca3286d2aeab26b3db8ef793672d6222fb62cfd711a30f14",
+        "answer": "9ac76d19836e90809bee0b61623ce0a9dca8bc1b7074db40fd74a449a69f71b7"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s077",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4dc741778fb7dd591177a2520b55d50d5c3e45ed5a33e4401f648ebce8f4f08c",
+        "answer": "cd01b89c052eac1594d7f99bd29efe9e3154cb4e3092f37017aede4124fd705f"
+      },
+      "currentHashes": {
+        "script": "86d0ae6fe7af0e77787fb4c712b92a5f119a02cd72981c31eaa4715de815977c",
+        "answer": "f5dff2226af09f03da0aae0012828e992a02fedbae1a39573499d3d6d7ea7a97"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s082",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "748a201548b0729f7807610bf6ca7eda311a5f27fedcfc090c4ca542aef3a630"
+      },
+      "currentHashes": {
+        "preparation": "751957b2989be1176a9910678f71aca91a9581f1cc9169dcf5f14a17f695e919"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s086",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4b22e2fb45e27f00424f69e3f6c7f5456b2430de99bab346fe80ac5f0a4de48e",
+        "answer": "1d1bf68a2732e2a1858b03b8be7e84dd07e7dda6ad9ebbc63a84959f0a333c02"
+      },
+      "currentHashes": {
+        "script": "bb3a91593cf2c373ce53167e1691134f914ab0293d5c366029ee568acd9b8698",
+        "answer": "16ec69c088676d765e82bf6415cfec1a5a8b8942af0c852a916a41833e8a0ecf"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s089",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c11e34ffe178cdeefeb22a5d2e038cd1eeb12f398245321c77f8954ca5555557",
+        "answer": "26f22b04172be6f8e39ee0f34398cf4223b063c64a9b333808bd4d9c8b607dcc"
+      },
+      "currentHashes": {
+        "script": "f96b077f00099bf56550f3f68d4af48d2c362cb40922629cc2fcf7ca286d7caf",
+        "answer": "3320aa09257997c17cee2b4ab5ee46e1f7e47a5a2fef83a31a3cc7ea0695488d"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s087",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "d3513d8313896e6686171b4b9b8edcdcd376c891788efc6f7ed91ab13b0bf534",
+        "answer": "6eb9a823cd44d78ce6186d3ff43b51b54d9607d95bde49dbcae63191cf34c9cf"
+      },
+      "currentHashes": {
+        "script": "25351d7fa96e1c967a9e819dd1f7d71f0e401bc283bd1caf5d2f5cac4c787f38",
+        "answer": "70a536155ba65d7edcaa4d159127efb60582d85dd2616e1fc72a1047bfb78323"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s088",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "e9c65e86a2860d9b063b5403285d63c008cbd0ff6127cf6ffb521010e8078a30",
+        "answer": "b59426fa6a411a2b9a5222a72887430e715d6cee9f04a2c4bdd617c8b7957c0e"
+      },
+      "currentHashes": {
+        "script": "ea789501c11b84ab78191264d166172304f2c99117d079a97acc4409b08c9447",
+        "answer": "5525e2dfc1242203047d9de605e83ec8654514f66e772b3fcc2fb1e576a8517c"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s097",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4dd6fd02472dd4533997d64696f47f3e5ae41c331785c5dbc95cc022ada8abec",
+        "answer": "96b20f55dc9468ce045c03708442b42f699262d32a44ba587823b11da8b430e6"
+      },
+      "currentHashes": {
+        "script": "d8f422c5394d4d6829f41fc45ae52b8bbd6d34b057987b65de76d87f8d877154",
+        "answer": "b56fdf78bf1e713f4a879ebe0b50eff0c70d370d3059cab3d79e1c6393984ae2"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s100",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "b4b55a4c715431d1c000bbda6919c0dfa75cefb94d3bc951490547b53acfebbb",
+        "answer": "002d2c5d176119e85df26d5e7aba30aaf39bd02ad2c980e3001cc410842cbd7f"
+      },
+      "currentHashes": {
+        "script": "7af65f7fc6c49df857c5814e377312823d952b13c894403967801c1a523823dd",
+        "answer": "fb80dc4900023cf9e50b35b7adaea462e21446a679039d14a8fbb8536a5c6e2c"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s098",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a617d71f8374655e75f8617db0f17b9f2d2e9955c5a5139c7bfb4dfdab18cad4",
+        "answer": "b1a1d294f4484f605a793f0e2779dba5a8646bc6265aab7c198b7f84892b7b29"
+      },
+      "currentHashes": {
+        "script": "fafc4894d240c509d41b3541a07576d3f7a1e17a27243fc483cb28d400f7570b",
+        "answer": "693862a2651eec2da90f78bac0d9d54bff8c4595bdd56cc018a84d2add699e97"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s099",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c7a307b57964e2d681bafe377a726646ca8d2d72ee78b1c7431f8b74e2984d06",
+        "answer": "7dde4ca37e47eab81ac53b6390d1d9e7f10e2e0cca0b6890badf822f9e887b91"
+      },
+      "currentHashes": {
+        "script": "05afaa9d1267eabf07c4a786742c88ab88132c0bcdabfee4fe90e42815dd87d2",
+        "answer": "8426bdef94e6e798d91ee7ab42811aa0cf790d0066d366150f9643dd7f193f51"
+      }
+    },
+    {
+      "slideId": "s07-01-quality-and-failures-s101",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "587d982d8dad0ccef362d0588cb38249b028adaa7533e1b8da82c24d44c06f1d"
+      },
+      "currentHashes": {
+        "preparation": "6f1c4c3d32749f8d598a8bd8e39e0736fcadb399368ce19fdb07ecd47de3ba30"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s001",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "b87cc47fe022570ab8a69d9a14213e3a76ac5bffb41f49de0ff1765faacbb2af"
+      },
+      "currentHashes": {
+        "preparation": "c8f4f1ac808e71716036681b8068fc8571bc85460608bc7a4bf9dd66d8e134e9"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "e492b87aa8ebcf5f78686a3ec3f28d8ecb2ab2df05302259db46daa07dfd26a3"
+      },
+      "currentHashes": {
+        "preparation": "4dbe347fe0bb6ad3557f5ecc78a0d801aef433c054d5125524e90053ba8351a0"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s004",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "e492b87aa8ebcf5f78686a3ec3f28d8ecb2ab2df05302259db46daa07dfd26a3"
+      },
+      "currentHashes": {
+        "preparation": "4dbe347fe0bb6ad3557f5ecc78a0d801aef433c054d5125524e90053ba8351a0"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s009",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "b87cc47fe022570ab8a69d9a14213e3a76ac5bffb41f49de0ff1765faacbb2af"
+      },
+      "currentHashes": {
+        "preparation": "c8f4f1ac808e71716036681b8068fc8571bc85460608bc7a4bf9dd66d8e134e9"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s020",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "8f2067407a352787776d709e17d5f2160cfb98911cf7808ad0fbf3b3d44b13f3",
+        "answer": "cede21b41843c0cbe29f76bb5abd053f879722ba67693da6d7f9d075b10534e3"
+      },
+      "currentHashes": {
+        "script": "cac43f38102c14f249e684372dc18709ea0149f832ae6822d0b0a00711151ca2",
+        "answer": "62c7f8a754a89d5871bb33f672d98e4afbf4584c5fbfc2905f4ac1971fcb39fe"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s023",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c753b8300a67e76d72bdca577969cd0a3b9800d8c0095b776f33eb00db4b9032",
+        "answer": "e12f4fe628c8a375781af0712495ce9bf75a8a3c2bf8ab70d48f37f838c48d30"
+      },
+      "currentHashes": {
+        "script": "908dbaea182d96c807404e1e9e631bd673d58edfe698ec3f9222cf1067a1f280",
+        "answer": "ed36e6c56880b736a0ba272b1d03dd4275f0fb1d6596b60d4fe54adae1f3ba4b"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s021",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "f3ec1621998077a23442bc4c450b285221f668cdb94633500d9906a571fd5efc",
+        "answer": "1da42b2a8f2a80f2ac534787ea0836854c6dce2e33645ab5b7b0c6671dddc79a"
+      },
+      "currentHashes": {
+        "script": "54128b820b2944573ea6f833339716de06d3fc3bd0a185defd3743ab892f372d",
+        "answer": "75669f2990aec0d8ca6399d4efd841b7227461f469fca2815cc2cb525c9f3690"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s022",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "8b96630bc378cf6f1f71a91e0a5b8af3517a7c688ce84334793eee655e06e57e",
+        "answer": "ff51fcb1dfcbea76c8c8d0536c3c4aabf44be4278d50fedaf52fb0081a19a7a5"
+      },
+      "currentHashes": {
+        "script": "ca1b6072a5bf97ad4c9b486b018267ccc3bb2f116549cbd6c223b7f191a63f2b",
+        "answer": "c95c3d7f02b7739f9f45e2ab81f89888cb7692ba876eeeb3a7b6a55fdb4ece2a"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s027",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "48fe9b6c1347cd170f0f60e7d93e162c04692d67f8e6e1bf265bd708b14cb85e"
+      },
+      "currentHashes": {
+        "preparation": "ce1d77029a444ca911d8f9ba8555104d0bb07eade33a4e321179c15bff502b29"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s031",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "86ec64d45243242253a7245fe83ee7b1de3cb1ac81931fba914f6b8bb686bf18",
+        "answer": "c6b6905fc89cbcf8432fefdf038b1d3f99ef9d691de79c7a41f5f3abc75198a9"
+      },
+      "currentHashes": {
+        "script": "db435653ab916edc910e9d2f671065117f0709f8ac443ebfaead25631362b756",
+        "answer": "3da0c4d15390c31cfc60719c9cef96817b52efb08d01ff57fe2da67382ad8781"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s034",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "dc6ee86c4566b66137b15f16d0acb3f1f6b38c01d0946e0ea9204e26cf14954c",
+        "answer": "2123f7317614abe3030fb9a2b76c552980b6d383bcfe962226cab781b207c4e4"
+      },
+      "currentHashes": {
+        "script": "9800f7d322ef2a2dfb880bda0458824451307027713c6ace2fb8cd3a97cad447",
+        "answer": "fac61de660a11bdf49635fa64f9e0f403779ba3c1c75f458403704f030711aed"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s032",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "b5f1ce18c325c97cc32c60d68617a20896910c48f674c8e59b5e5e183e234a7e",
+        "answer": "65aaa9bd1005eeb314b56d6fdea8341550addf76e0dc6a0b3ed49452d7159d7e"
+      },
+      "currentHashes": {
+        "script": "e516b2e824b2d61a7286d59e2bbf68d2baf9e0a47565a1dba41f0f095eb61482",
+        "answer": "83f5bdc3d4e48c6389d3bae61aaaadc6e58a2c718316f547e79abff1229f30d4"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s033",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "5d532aafb8e4bb438cd942fa22daf1f83a4cafbd44ddaff30345b4e3fc0ab3d3",
+        "answer": "4973adccd12f12d2fca1ad53663014dd19e2ba1f9edc276364e1648f888f43f0"
+      },
+      "currentHashes": {
+        "script": "c83a1ed5ded2af13d522367bc94c2a0952f96f1bc0dea1f593e3e5c68c1a75a8",
+        "answer": "108103e0bc64243b1989db2d32ef2379f6eaad572425b53241cd613f625f88b5"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s038",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "48fe9b6c1347cd170f0f60e7d93e162c04692d67f8e6e1bf265bd708b14cb85e"
+      },
+      "currentHashes": {
+        "preparation": "ce1d77029a444ca911d8f9ba8555104d0bb07eade33a4e321179c15bff502b29"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s042",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "8b1f65e4cc9c8298f03538f7d36a812af0953e9c06abe226da59be260aa92e61",
+        "answer": "9b09e908bde55154330c133f4b911eb1aac6b034b084fd045ffae2b0de4acd54"
+      },
+      "currentHashes": {
+        "script": "445e5f0073bf861691c592152aa3c9558393408285fb5bbcb90a800284a2486b",
+        "answer": "33623435be2058f3ac4fc8a02c0fc9c7d943cf8dab22de946f07f816a196efd5"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s045",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "0f12fc550c30b74b8ac7ce65ac235997996006fe2505d9389dc3b39c09ddf6a7",
+        "answer": "e45fb280ab87f510df9d977a2344605d86a6cbe33787301a2510b3bcbc65b42e"
+      },
+      "currentHashes": {
+        "script": "f878327a899b977619ad375c32126d2a74f818f3eb9e8ed211231c6929655397",
+        "answer": "1ef5dae6923adae75e3bcfbb64e2fd13406a3f13ee95d36161cef068a6d73f07"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s043",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c4337aba93aaa6899ca10eddd65e5e77134437df6c9c136709388b759c28d8bc",
+        "answer": "74612133eb4da71d77be428fc4ebf81c05829031e00b3f7ed4d74c986ca4fe99"
+      },
+      "currentHashes": {
+        "script": "44bd2b4c36dc9b0ef0a427872b4fe7c1b7e268324f2d2cc07a6a3f5f67a39c15",
+        "answer": "6cbea3214aaf0339367f6d0e44bd3a67a1b1b9e7f58654926e6fb57a35d051a6"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s044",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "190e832d61e3b15ee5a374dbd6b310e673380d3c68e3b682bc32cc009765fcbb",
+        "answer": "a5ffc6ffc45b3cc9c761492cc02f1800e8e899df9915ff374df2b5114185bffb"
+      },
+      "currentHashes": {
+        "script": "a43e4d022a60bc024aea40f75f143e61d213c33306590309adc7684183708b7f",
+        "answer": "74073473bbf67e2d59460c52e6357ba068088e2978fec9ee4fa58b3db415b72d"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s053",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "5e79d5bcbe5e5a22b2c931c3f265b2a83bb102edd2016f03f6e6ad353d7f08cd",
+        "answer": "28ba7b4e442c2f0e89a06f4148be049ebabf65443cf9c2360636badc4a153ab2"
+      },
+      "currentHashes": {
+        "script": "1dd8504a931049bdc305a395e101d8fef0ec363243810c65d134067c48312c45",
+        "answer": "a879d2b0178e958969e7c03aacd973411c9ecedc9e431daeb6e41746dd7113ec"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s056",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "18948544b3e45bdc0370d239de04b8bb7a2d59b9012422b64681ee3212d06a3e",
+        "answer": "30dd0da08a17b3e10e29213fa45c2cdc7380e395fb54993310df60ad60478fb5"
+      },
+      "currentHashes": {
+        "script": "8321bdf7159986f89306acd063c17d08a9a15ff647be73f48a6aebce2d2e5ca6",
+        "answer": "4df683716c974076f07c962624def11d7cb4f378054c4e684f282eac6774c679"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s054",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "ae54f54fbd75f7db861073dfa99d6967819e7b241cc527a74dcac5e1fe3de6c4",
+        "answer": "e925e4ea95af5082cea5d2bb6e0d1b14a44851793f27d47b3b3a50b62c87ebea"
+      },
+      "currentHashes": {
+        "script": "787446268d60a3ec567bea910c1af08bf9be34f36df123791df024f06b961374",
+        "answer": "2d6fdb6471fe3fb487a2d26cdd4de8c24a5d6ce771745bdbb87f9211884561e9"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s055",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "663834ad5004307337860785f9bdb593c46a83969b4723128123c5ec590de8dd",
+        "answer": "f970374e64b86fedaf1cdae85ef49b705377aab24d0abb18da18f30187e6f253"
+      },
+      "currentHashes": {
+        "script": "f52bb3f277196175dbac1545c98a3f427231c55ad1d0e8299ba1d75d012daf97",
+        "answer": "c9d9a152df12017650aa5400430d47fdc5bf88276d484a0e39be31cbb7b93ef2"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s060",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "ed49b79950038af38d494d0a8a88d0d96d7f51a60652862cbdca4aa8ba149a33"
+      },
+      "currentHashes": {
+        "preparation": "310ba939d92b50b3ab0f44c1e0a78b9b560885880923f621f4bffe7faa7607e1"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s064",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "e0ae00d7d17f7a59967385848728397135012c435fcf670b46edbfae71580415",
+        "answer": "f27882765817f4ce0b0de3878fd8189595388beb2267ca0bba0716822e9de1b4"
+      },
+      "currentHashes": {
+        "script": "f2d89cacdb3a7fed59b20b17f2780f8a4d128941799e1b9d50e120e56ec061a9",
+        "answer": "e66ad6fa4452f81697acf06bde1659522892253533c9fb56fe5b18b5acb7d068"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s067",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4ce01194a4cf2df5c1aef1194706a86df08a7e707a6ac900a692d4cf40382d7a",
+        "answer": "0c42d66ef28c0ce7af1419b7238f7c844ae376c19289c734ddb8c658c60c7d7d"
+      },
+      "currentHashes": {
+        "script": "d20689a6898e273c97877a169010569729a4d35e60e7c7e45bcae5f44e8a749b",
+        "answer": "c23c648d9e0ce92ac3592e929b8c61e0ec617b712827aa6b733c065bd8603610"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s065",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "3542f7e0d419195f16a9fd419d7c887dd087c9467f67554c499c7180cfdcc086",
+        "answer": "979cd6d82e3bef7987c43dd783a8c6333b145c18462dd3d2748a36c27514db8f"
+      },
+      "currentHashes": {
+        "script": "f72d1634b705b113c367780e3f9bd41e5b98e3cb1e7dca738157e690d28fed4c",
+        "answer": "5b82f63b18dae1244fe05f8220f89daa5d96a92ffd6c485adc03a021022577ce"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s066",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "be7b3d9e6bc3166b41420fa506e4a774bf79d88743651da2f1c9baabd11e8879",
+        "answer": "0ea71f0bacbab2ecf3f8d84a9d88128df5a97aa73594014c4b7ef99b4519fc62"
+      },
+      "currentHashes": {
+        "script": "a265df03b3f2aa6c82fa33ad51c6f4c54511d86d5b1344958b4d6bd673b6ca48",
+        "answer": "b4e205f397055d975097b5e324143577d28b6b9204f5c9804d705a778e920a1d"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s071",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "0a017285b78aa220da8fc7140286b224614781488f51ad45637cdda9a12d5a7e"
+      },
+      "currentHashes": {
+        "preparation": "51ceb0a3588aa14f8a78c015703d36ec72988b173bf94acfd4568db1260623fa"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s075",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "e51b5238f49c47a2d9d386d05fe43c0f697e68c34b41e2ae05257f3af79b7754",
+        "answer": "da260b0ff6fe8f78109f51dbd817f2233a755af50e144e6fd1b5b03a57d6b97b"
+      },
+      "currentHashes": {
+        "script": "fbb11bfb843244ae4890493a82edee82249e0d9b3ba532cacce221a465d24eda",
+        "answer": "1a548b3e24f3342e293be8b9857c42342edf25a8e4dd7cb4720efb66d70c765c"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s078",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a64a1483d04951115e04206845b5ab76cf018a6d10bbd27f8e088d64091162dd",
+        "answer": "7be90dbbde63dc41593ab2d30f9861ff6920643fa4fedb60000c2ef2f0d4269d"
+      },
+      "currentHashes": {
+        "script": "44041e2075f848122780917d566294603206d5e8264dbe48a1c80a83a6d3809f",
+        "answer": "e10ffeb89980ef647146c9fb46bfac11807ac92c60712c2c99304324ad9e5d10"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s076",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a83eb08b687ce73cb9406113ca1347ea20d1ca71e7d46640af0667169e93e704",
+        "answer": "89665ebfa7908bb2cc2e68909ff11c288100d6765433352feb06afe4f2e2bf54"
+      },
+      "currentHashes": {
+        "script": "a37430964ad9204bcc3bf417ffc6366926cc9f19fef85030cf94603878549937",
+        "answer": "7cea37cffbae3d2f58bd1001ebf25a2c309e6ceea3a43b6f88f4744c4df101df"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s077",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c656a535c0e8a1fdc4bc5df11f9e94695e4e72feeaf46426a2bea129a4e89f12",
+        "answer": "c96f8f9825336233c494b63a9517e258709a75ee0869c2260e9203178a7021f1"
+      },
+      "currentHashes": {
+        "script": "70e0276fa9402d8b5c1a82e1e4add9a832cf6d0363bba4f8238d674b9796354f",
+        "answer": "5f8009c461303ade18bb3ccebe0b00913cded2ff8b35fc265b579039fdf7c9fd"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s086",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "5b0148b2652ad7a22b060960efe3bdcf16348b13a66db0b74c1aa9124b9210d3",
+        "answer": "c7449a82b39764a55d8173e7c808d3720a9c3c42f0dea53051e9c08b11cb648d"
+      },
+      "currentHashes": {
+        "script": "93db09947a467ac7746622a6fcccc66380d377cf281ce3b02f46cfcaddda8af1",
+        "answer": "b08075151cd3bc3f53f9476db22a5feba6a8bcfc78849fe627bd688b87323b67"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s089",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "832e5febe028ceb4009f504c51c5b3aef30eb8b5ce5c6f8b1044520d4923fa53",
+        "answer": "8b61123db141be3d2c93b17cfa06bf9cce61979c36e9cedd8f46ffbe30881806"
+      },
+      "currentHashes": {
+        "script": "b76b0f953b3a29e345b69e3548b07f9a23e9e2b63c788b57ca4321be25de4cd5",
+        "answer": "f49b5279aa06bb4978caac1594cc6b0a69a325da43b7900bf95f58a9a8bacf3a"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s087",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "2071b705037616a44fd1eaa154b8063fdadf726b4de973f612160173f7a0e8e1",
+        "answer": "ddd9d6d3ccb01272e2b8bc0db582546ee34289e1911e0ca8dcb287536b0fcd72"
+      },
+      "currentHashes": {
+        "script": "26b9b56c3e9d037796358d1e01e332749c7691b86914c0b8925c7abf45677dfe",
+        "answer": "01d41e70f75b27cf1448817a2d71694d88897b3b1c9abc94f398b550fef96b3b"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s088",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "709fe78c4d649ff6758fb18ef6f3089cc698a21c07649e823164ab86ad8e4099",
+        "answer": "3b51123c3b5a8b23d6221f907fdd9e2a941d0ababc78d9509959367d6506cc59"
+      },
+      "currentHashes": {
+        "script": "7f8bea9e4e22b9129154687b62e8c241b66734900ecce77e2eaa376463ff4192",
+        "answer": "6253d9cc13c7ae605cbe4ffb425d9261acee7be5bbcb3302f086d1697f1b2465"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s097",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "42a9f2ee449c7ca9dd2c75a610dee1caa55ef297f23a55ea8d34dfc16c1b96f6",
+        "answer": "ab89f442ac3afbd4516b885b0ff683c9a01f9f81420071cebc944150786d53d6"
+      },
+      "currentHashes": {
+        "script": "27c4804171bcb80617ee6b6aaf397ec03457e3e0805a46125bbf1ad87e0b5262",
+        "answer": "c3dacceba09d3c1b5a4811265cba9ff3384fac8528e1828c840d96a6d7b6afc2"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s100",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a84955896a1290d85b7467d7ca8c9b2c2b27f369b85a007159a7b581a33ec69f",
+        "answer": "177e992d1d63b6ebc2f9cb5c8d03fdc4694622544d30b8e4c375549270c9b898"
+      },
+      "currentHashes": {
+        "script": "6f8e40bdc77191a8706cd7d2cb8131520db62f656b25b2be5a5db6690ea56da8",
+        "answer": "dbb5aff0bb32611d9be4764436e1a0b39b09dabe7a3e57d5cd8bb9ebe28d7f48"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s098",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "8b8377db4691d5d8176a9ba7a7ee0999b7c8e3d2ef275cda5575a121563e6800",
+        "answer": "6805cfff9c03dc27a7fb63e1fc90be1d5be2ad4aa417acfc90f66d60547046c6"
+      },
+      "currentHashes": {
+        "script": "7e2f7909434ed5e80182dd9626e8eb9e586567b6d79f9d933d7dfb39fcade212",
+        "answer": "e1e220e38200c0079c85caf9297cc169476599c5ec557e7f96405a1bf38f6671"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s099",
+      "fields": [
+        "script",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "cbb4c84efdc9c5d67d01373fac5faadf437f1edd8401aa5bb93a862c7522b22f",
+        "answer": "7e44c57a7271545ef1a2b82174b4496e0903d4809a852e0225fcb6531412f51e"
+      },
+      "currentHashes": {
+        "script": "44008ac905ab06c598e6ec7f16da39c3d1b95035aa14da9c24ffc6c10b3d5bb8",
+        "answer": "dd85a9b8c552b43c82585e6a2e8efc5c3689a1276734f114e029933f4062bd0c"
+      }
+    },
+    {
+      "slideId": "s07-02-reliability-metrics-s101",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "587d982d8dad0ccef362d0588cb38249b028adaa7533e1b8da82c24d44c06f1d"
+      },
+      "currentHashes": {
+        "preparation": "6f1c4c3d32749f8d598a8bd8e39e0736fcadb399368ce19fdb07ecd47de3ba30"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "adef970b62a0dfbab9b2bfc53e758e754ad7255739211b1ef245d2396cbc15ec"
+      },
+      "currentHashes": {
+        "preparation": "0e67a1c3ddabf8f45249e0e6ca9af13dd6b10e1abab52a918bc2258674cc2a40"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s004",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "adef970b62a0dfbab9b2bfc53e758e754ad7255739211b1ef245d2396cbc15ec"
+      },
+      "currentHashes": {
+        "preparation": "0e67a1c3ddabf8f45249e0e6ca9af13dd6b10e1abab52a918bc2258674cc2a40"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s005",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "31aff1a06b1e209a6572dae76a11b301b8f58453ffc40158439e8aff947a85fb"
+      },
+      "currentHashes": {
+        "preparation": "dcecc3322c46a40c896cf1bfb9e9531ee2b5e5d33c1e08f0dc13b783e8e8e972"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s020",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "75f74a34c74582948268418564d4eeec5534aee727c1daf483da789d6bd50a5f"
+      },
+      "currentHashes": {
+        "answer": "2f8dbb1d1ef64488f0da5bf3da0bc19369511041a6c90c0a8faa0d48b7e98495"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s023",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "a63a1c930d0f00121e59834f7be5424d0b252700f181bedd4970b201e492494d"
+      },
+      "currentHashes": {
+        "answer": "b755d9b37b7c84810af525779110e7ab05cea995d07157fb696b1a0488ac2c21"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s021",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "7f5c8552c6b38ddf36aa9b7a7c9cb0e349571313e2bd3422fefb98533e4c8ea3"
+      },
+      "currentHashes": {
+        "answer": "df3faf41311fca39cde61fb6717da9c4828d7e92d71ebc48614bf1a33956ba65"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s022",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "7a4b7f04e9bcd4d1947a009701eb4a94d547f685b6f1e403258d0e513ce638b7"
+      },
+      "currentHashes": {
+        "answer": "9f901398b551b55d38229921de954dc0e4dc03469d32b20386cf85dd88650c4b"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s027",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s031",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "08ca3dbd1cbc0a46f000d7e797f48f50d84764f3aadf6e25e7c0e3de91666c14"
+      },
+      "currentHashes": {
+        "answer": "b81b3dcb438718a1300715a7d63d1e885ddda557084f01744b52ad013f1fe906"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s034",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4501a7b91c50ba57929796a62449723b3c237a5fc481cec68f4a58a13bbf0c7a"
+      },
+      "currentHashes": {
+        "answer": "7cb8b1529d999f2da3d30c1ede12e5a76e91b7b4bdf856130ec31423831026a1"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s032",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "45108c86b34f5cdc2acaf59db4d6f60ac37e6664a1f51ebe16f612741b33ca9d"
+      },
+      "currentHashes": {
+        "answer": "39015557902d53aa9a2c4e2e8e655875c8e2e60609e2c90a5ef7a695ef110b22"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s033",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6b7894e7205b9842bdc9bfc5e44ff072336ac5829df1bfe1bf4bc80d9ee1ff8d"
+      },
+      "currentHashes": {
+        "answer": "bdb7db038a2fe0024c93844535e850d21eed40b2eb683d5c4aa5aa303e114931"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s042",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "715cb4bd11c9d6e764b62c6d4e42d8879bd98e4c5d907c539f14451655503194"
+      },
+      "currentHashes": {
+        "answer": "8e4686b8c5ebc31d269d63c7513762a90194ca178e4644fd9f42dc62c73b17ca"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s045",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9136322dbf4a12b9429aa84c24fdc364853189d45e16416839ce3d78df4d69ef"
+      },
+      "currentHashes": {
+        "answer": "38b79431694e63a95be5db01698c5583333ff2914598531d1d44097c8dfafc2f"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s043",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ed0e8240cb194f114d5b5d71cd85e13a5333acbe47e0e542a4240984fe8778aa"
+      },
+      "currentHashes": {
+        "answer": "f5613a92a8351e687a52486fa456b50df3055df62f44f822586a03585c3a8cb2"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s044",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d6279ed86cea2fb6412c051f9fb919d07ff5777714b8fb782217d228d420223d"
+      },
+      "currentHashes": {
+        "answer": "8a477f9a581a0432400e0cbc07b6cec50e5bfc7502beaaef7b6816d7bb16cf38"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s053",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "324982ea4830e3155ccd671b0a28569f5fd6a7dcd4a82d491abdd5ce9eaa00e9"
+      },
+      "currentHashes": {
+        "answer": "cc331a404905b325c5ee73a79f7dc005173f9582a6fca036be72a90caf4b98b7"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s056",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "25bb85fdab664e9c07796c3a88254324508d460aefb0de072a4b29fd98a89329"
+      },
+      "currentHashes": {
+        "answer": "b36746dff2ec491ee93529bb99a0bceb309ea6d7bbc6bb3cad8473c0494da886"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s054",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6c44875e2b7e054ce328c1d35dc672feeaa9d40825eb9eb970f6bbc09fc48d07"
+      },
+      "currentHashes": {
+        "answer": "4504622dcd80c5d9ead45d4862c3b749beabada5782c40e151ee25c2c8f5a01d"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s055",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1bf67bdbafca7dbeeee10129c5801900796b3c9e4f64801a380729602b76ba4d"
+      },
+      "currentHashes": {
+        "answer": "94401afb72a0dc087c2cfe7dd2da2f51fa0c8d0909041db2e8fa0f4d97604d4a"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s060",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s064",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "cda73f1a026668b06a27bb07ae1a991010d6812a72317e8a2bebca66a6e7de41"
+      },
+      "currentHashes": {
+        "answer": "5ad8da747b7d318741470aaae07c9b7fc9e110433103fd5a431b13c5670aa04c"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s067",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "45479943f4783599b5104daa8e38641b68ea3bab85543c34e805dfa5030bd037"
+      },
+      "currentHashes": {
+        "answer": "1ae123dfe5f0740e5059c4227c67aa575e21afe790e5436d9b075fa52f5e7075"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s065",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "72ecbe24b695f0924046a402506d6bc4f3c973ea2dfce58bca85940807209f95"
+      },
+      "currentHashes": {
+        "answer": "9f5e608fa7333ff8bf079d83d240cbf530f9abf1d1ff57ab87b2ea3b8f4cf0bc"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s066",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "31604fed3e50073eb7d78c572e006d49aa78a1fe02c864caaa07c428bf8edc3a"
+      },
+      "currentHashes": {
+        "answer": "b0490b1994e341456565898ad2b9382c2a6cb60da4b095b63891d014b906b39b"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s075",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "2efcb775a6607b44f8f268b20a42fa1e9c983f2604c3d9c6321aac01a5b458f6"
+      },
+      "currentHashes": {
+        "answer": "b3ff2cc7af3fa9a69bb7d155595d9dd5a70bffaa89dbdf3209970e475034bc03"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s078",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "756620e64ef1be9aa45db1d7bb2e96cf6b8b59b3590164dc40cae7dedea3dd73"
+      },
+      "currentHashes": {
+        "answer": "7cde300c5f7302a2b35d230fb840d609a7e7aa28be0994c17a3146353714464d"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s076",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "0e7db5799647ef7192a197a2e3f03d6ae8053ee8089c7cde65da3a970915fcb8"
+      },
+      "currentHashes": {
+        "answer": "9409bb8e16213a0491c79a46218d4ea218a520610a853e5eb81ad2faff35e755"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s077",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d3cc7f8ae91d665dbe56271f1fc7cee0a764abca3171cc73219d5692923dad91"
+      },
+      "currentHashes": {
+        "answer": "9a74d6b7e6402e8ba0f6eefecd2c76459781ff68ca431bdada8ccb52c0f8d61a"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s086",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4f6dfc4f9ad3c75ec84c68afccc2adc80ce9dcd32b9375900a73d48f60726c85"
+      },
+      "currentHashes": {
+        "answer": "3bee3bfd5b5f82980323d8700861db7da0cad89602c1ad78ad44dc520570574f"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s089",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "7a71c7406eaf31aad1ac99551849136c5ebc8fe9743a4d6eb4329bae8c5a8f43"
+      },
+      "currentHashes": {
+        "answer": "251bb0ad68f055557c52be37161f33a8a0528053342665dadce3e8b15f0debe2"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s087",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6cbf88f2bc69f7e62f39dbd6e0a27900fd23667a8e35ec1523f6e38b93b83f4b"
+      },
+      "currentHashes": {
+        "answer": "4ba850e332a933429328c919628ef7fde0cb7487478bfd78a9161eade31e044b"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s088",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "527022fea37910313e52d8fecd09356ad7e2590f0faf02f589046a0c5e9b65fc"
+      },
+      "currentHashes": {
+        "answer": "c492e707b9430c7f079f207776e73b80d923ea48a9da3c496584dd563b60f6d2"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s093",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s097",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "0b53418b3bbdd7d61d925f6c56b8bb360cd8425e8d883a3be40749f4203acabe"
+      },
+      "currentHashes": {
+        "answer": "095cbae99d433ca7a8c49ea7fafea75c94570aefaafe445b2aeaa78468e934d6"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s100",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "b7d5cb87055e19215040d0fefe7206737b42e75c4e835e1e1b6950947170ac16"
+      },
+      "currentHashes": {
+        "answer": "affb2afe9547d69015074e06c5dbc2569f91180e2292c04cbd9b64593e4fa4b4"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s098",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "07973a327cfb122df58a4e242181b3fe453c1f4860a61ab87016fcff9930da28"
+      },
+      "currentHashes": {
+        "answer": "b977ca96ec6bb5246629f42a903658ec677e40df4ae8a97836c0d2bf20796a7c"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s099",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6881f7210b6e3cb32c1f47f1c627f87bea2c84ba3851cea9ca6ac03a3d620404"
+      },
+      "currentHashes": {
+        "answer": "1c00eb6d00d00fb167a57f92ba22742785fa60c5d0986e3b3ee590ffdfac4d11"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s101",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s102",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s103",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s104",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s105",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s106",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s107",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-03-reliability-threats-prevention-s108",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "adef970b62a0dfbab9b2bfc53e758e754ad7255739211b1ef245d2396cbc15ec"
+      },
+      "currentHashes": {
+        "preparation": "0e67a1c3ddabf8f45249e0e6ca9af13dd6b10e1abab52a918bc2258674cc2a40"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s004",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "adef970b62a0dfbab9b2bfc53e758e754ad7255739211b1ef245d2396cbc15ec"
+      },
+      "currentHashes": {
+        "preparation": "0e67a1c3ddabf8f45249e0e6ca9af13dd6b10e1abab52a918bc2258674cc2a40"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s005",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "31aff1a06b1e209a6572dae76a11b301b8f58453ffc40158439e8aff947a85fb"
+      },
+      "currentHashes": {
+        "preparation": "dcecc3322c46a40c896cf1bfb9e9531ee2b5e5d33c1e08f0dc13b783e8e8e972"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s020",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "5a9c10973eabb500bb29de13ecd4141d554f48e35848044823308728951250f6"
+      },
+      "currentHashes": {
+        "answer": "91c53a7c839fa922f51bdcd66821e2dc7a1ec39e6580f8c7307faf309f7c3e63"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s023",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "fd967631e5f6151f18c9eb1a328a023c102cf28d91ad8edc4b7a739153b8f949"
+      },
+      "currentHashes": {
+        "answer": "a1013abf350f8c08fe3da52dc6fbf670a405eb2fe4d5601b58f9273a563930b3"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s021",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4fa6d8426f76eb8d38bb5bfead193a06931f8461705f7763025112f9a4705c53"
+      },
+      "currentHashes": {
+        "answer": "d0d7fb1348a628a83a829f68169b5d9e472d841c91ce8a26a8d568a675a73bf9"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s022",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "433f9641c22ce40da43ece3e31c91874838ae633c3180a09d476b705be9b4af7"
+      },
+      "currentHashes": {
+        "answer": "412df35c1f751c166b864852635c0a5a6fbc26457ec8aa7e92534d076b5e72a8"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s027",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s031",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4e1a0942e1fbee5df11e743fc0aaf5f9f49a73c72d660d6fc5ec618724d224be"
+      },
+      "currentHashes": {
+        "answer": "48b416d07b250d482475f9bba8a584907c4418eb84f1e9ce34add2c359968c4f"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s034",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "0da2e796264b2c520d1e959f8fb6962af745f1e86c99a04c63ee8098a5e0c09b"
+      },
+      "currentHashes": {
+        "answer": "6d0cd241d5669fa6b3c262816acdd09f92d77bc98d3c1a55d766a5854e2fba8a"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s032",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "3c67453cf435c286d48e603781331e39b12e79f897b2fda70e16923508931058"
+      },
+      "currentHashes": {
+        "answer": "1a17942ab589c73979de78beaa91e34da75226c25dc8ab20191a136f288c8c28"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s033",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "5fadfb91ee84a9723f62f53d0bf7a16aa3b881c1f631db22627cde3bd1a6f84c"
+      },
+      "currentHashes": {
+        "answer": "34b5999026c7db2d69c70d7de17eca2dbfa8f681ac2736afd46c61a3b52a31b1"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s038",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s042",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8ca999294cdb0203a914faeb5115d61f24fdc5b348da0addfb4e3cc94a8fa4a0"
+      },
+      "currentHashes": {
+        "answer": "620c7d679bec0c2a8770d588681bcc41c25f25e33f4aacac00de2b893e3f28f1"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s045",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "e69f5ec5ca080a6a1bc94ab5876f5aa8447b4b221c9ef4d9db2b367693d1403d"
+      },
+      "currentHashes": {
+        "answer": "acc99a4ce82c0e28639e557daa1383ee63d1e550929f6922423ce5e0f7eac6d1"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s043",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "7d84223c632e6ec786bf4cff85d83a694db4f9e65d8481ffa092c959978118c3"
+      },
+      "currentHashes": {
+        "answer": "e6c55b7605532a5a37e6b8e9c71e029c68808b48d602daec82c619fb82a43afd"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s044",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1408e877ff3cace878f65693ad26d2b546410113b81b59d795b5c4a32a433e6c"
+      },
+      "currentHashes": {
+        "answer": "6d4ac320eeb2a5cef68b9ea1ee90f6bdf09f46b7f1e32d5e8ac70101f43e362b"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s053",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8204552dba9ccf332156d97b40b3ce2d6cebe3c3ff84510f7934603605735be0"
+      },
+      "currentHashes": {
+        "answer": "5457b44c8cf51e6fdd5716d9b22d437722e79ec08f791018cf0d9f5fa2605d46"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s056",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "72dd55514d8aee41d32bbeb1eabc9f31b68be133fa7e8178da7bae4b70442ea0"
+      },
+      "currentHashes": {
+        "answer": "2d52d79f498476ff2f5ffc4cfab6bcb1d1a180bcec77a85b0772bf3001461436"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s054",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ec705265beaad49702c488244437ceb0b07baa9217579796343c0ec716a0c0ed"
+      },
+      "currentHashes": {
+        "answer": "5d881b2021b89a61c49af1244de8756035225efb59593116c93be3af532bbb02"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s055",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "c7abd5b1fed1d1bcc7a6aa31e181cb09d6da843f9213929b37e1b42f1a8527b5"
+      },
+      "currentHashes": {
+        "answer": "f04acc7a89e6eb0e59c94e66361b5dac6d2e2c43629cee5035b0c5bd13ea36cd"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s064",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d54aef9580d948b2e4baa8b16b0130ffc955c177b574686e748f821c812191c7"
+      },
+      "currentHashes": {
+        "answer": "955137401a3128167c8b9e9349d3ae05dc6d17a64923c723f91a9cc0169195f4"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s067",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8b3721f8402413ea870d9ec843e1562bfddf3cc9e2c5eb12d8ffaa1638fcb6a6"
+      },
+      "currentHashes": {
+        "answer": "085517d3805aab0a6ab92fa8a6e15e4d25eaaac6beca3d5cd3060741917f2b06"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s065",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1298b9623fe7d314b6db0f6e35e6107c1808c26da287c2564ebb46c590c0cc17"
+      },
+      "currentHashes": {
+        "answer": "c47f5c780a94f34c24304cb4074ebcfb2047199e6d7fbb034aedf9c8ff78935c"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s066",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "a34f9af544b5b969d8d244edbe5d0b531431d017e3e32832dfea6355139ab3ea"
+      },
+      "currentHashes": {
+        "answer": "0df55781b0dadcaf6c7e067c87eee55328831474511761242acb17351cad17e7"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s071",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "fb0fff6e31558b0007b88ef7cb74d5d29cd75ba8edfd8768ae89b86d8c3718eb"
+      },
+      "currentHashes": {
+        "preparation": "911607c3014cd8e704f83a4b06e63103f1876690c9907ab534d151aea30f75ec"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s075",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "de7450fdf83744a630b0a53dd255c178862f5c448769c7cc715a7da6edb44b14"
+      },
+      "currentHashes": {
+        "answer": "94bd53c8634ca41fad3739ab59b15a5692bd626bf6ecc4ce8ea3ffe0e60e3638"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s078",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "c96c0fa568a1e89d651ccf556e909b5df0c890e06f57ddf1ddd2bde6229ed225"
+      },
+      "currentHashes": {
+        "answer": "bc47657c54899dab443a8f1eebab35bdfacd36ffac4dbc356575ba5e7d044991"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s076",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ad84ee88871dcf7942e95e667347f657f3837b017709b5eed205863c156f20a0"
+      },
+      "currentHashes": {
+        "answer": "b1835363ecd411778ba0d5be1577f6b5e3a294db5dde3f4d207db26b217fa723"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s077",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "901f38dc3f0b400f6f01b4c4e334b081b71a3ff9c104309fa4551a400f500c9d"
+      },
+      "currentHashes": {
+        "answer": "b4f476f074f76690f864cb5a6824313bbefc218811322e63ab21a549baf83749"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s086",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "3cb5e728de99cd995cd217f31be532ceb4dce7020d910dfd0baaa81c0828d89f"
+      },
+      "currentHashes": {
+        "answer": "307941c68d3ff13755f89d7a633fe7b09a0dde995644073d17464c8b3100e3ac"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s089",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "fe5a89e22e92a60cdd2259df628bd5773ec1ef383d4e9c473c9be3ec7d2bfa58"
+      },
+      "currentHashes": {
+        "answer": "d9110a080859995043edcaff08303c31c6de9daa5044fbadb87964c11eee5e99"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s087",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "187bcb8a139213574a60e893a88009e1707711dd74d5b0e4a3132ff9c7d0566a"
+      },
+      "currentHashes": {
+        "answer": "e468947e596ccc48f64718223b43d0d9770d51eede96872f705caa23077290ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s088",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d6e2bf0763b08fbf8e3b7c0220b68080f1a40cbb68319b9928893523a427f53f"
+      },
+      "currentHashes": {
+        "answer": "7451af120704179ea644dec7b195db80bc99ee2408fb7f4302da0f945fdbe00c"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s097",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d2f41387a2bcf5452d38a552b1d23ffe76cab4215868b746d7c92154c64d3f9a"
+      },
+      "currentHashes": {
+        "answer": "10127d66dcc042bf38daf31020a569c2785cfd82de1803c9ceb13aee950baf2f"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s100",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "97472bd6ff1927b398edf30bfb63daa3229c8c33ba5142808ca9f27069f960e5"
+      },
+      "currentHashes": {
+        "answer": "6938c270161c8e68a4c261c8f8e35731990b55172bb734c7cf2974bd26655c6d"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s098",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "747a5e02ea2ff997d3f23699b52d02d5729f3662effc5a6899f183e7c5b27abb"
+      },
+      "currentHashes": {
+        "answer": "3b52b0eb6b5949e630b262f4bfa4ca5c9b77e1c05d76acbe9e9ff30ceb50c715"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s099",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "be491f92bf54fc7fde7c1295c592e7183835774ced2c25bf1405635707a82ced"
+      },
+      "currentHashes": {
+        "answer": "fa7fb7521675ab34c8c226614d7786298960d800a5a3f64ff493f7fd275c36ee"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s101",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s102",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s103",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s104",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s105",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s106",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s107",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s07-04-observing-operating-system-s108",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "207d4458e3c3036560b21ee13f4779fb9b743f1a544312a32f8621a5761e40f2"
+      },
+      "currentHashes": {
+        "preparation": "d17e04e8249998ae42fd60e8170998092df26b606f06e23ea8de28a71c11f9ce"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "faeaa66fa4afa6103e4619faeb1e9b9019eb18be85885c8341a4a4e7591938b9"
+      },
+      "currentHashes": {
+        "preparation": "ab56c2ee4388b8010877301e176b01824f7833b3f7cd38464441eaf6ad4da0ec"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s005",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "4051a6dddb51c6db830330b59296e8e19fec9936e3112bf54a5d9b2c28fd0424"
+      },
+      "currentHashes": {
+        "preparation": "bcf11134af18976ec0e87c5b437abf0bb5f68573f62d7f7e441cb2d29e953cbb"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s020",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4ee79dde3f499d665a676e8f9fdb85267dcc19736b8aafa63af3cf42dd03ad38"
+      },
+      "currentHashes": {
+        "answer": "00e5b767e3f1d77e39fdd459743335017b1325a4cbe74693141ba37117d0fa47"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s023",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ae004493f2df91b76e7e750fa751980c5cbab37c4742115423d52a8ba7bdea44"
+      },
+      "currentHashes": {
+        "answer": "1a0e7193e0ad2fc613de6e10f81f857bf04e567a506f87130db8fe9b465f5874"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s021",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6c51bf729ae361e219b2f6a3df099309d0c604a60191207b5a79928fdfb3a2eb"
+      },
+      "currentHashes": {
+        "answer": "4cbbb7137ea8dfecb4030c14c9bc4ff8b963a34bf490737cc74b3c366b50cc28"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s022",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "fec119f6d038b2399110c70f21eb5fe95a254db095347f9512255dba45ec12cf"
+      },
+      "currentHashes": {
+        "answer": "01e758537c9b50eab66e9348ccc13dadc325c508316c247092b1349b5304814e"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s031",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9e5924fb3a5463453f43f4d4d6d1b8537be5d460b048283d18c2c38719fa8b53"
+      },
+      "currentHashes": {
+        "answer": "fbd82f3e3296958bad1efcfe1efa9ba5456084116bbd1f21933b773dfdbaad59"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s034",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "21d57c3eb7a86e1d380b3056f5d8f3c217c47bcc9b773218929842965a391a84"
+      },
+      "currentHashes": {
+        "answer": "bcd78afdabaae29f870a3a1165cc677750d363cbe839488ce03e8f7c5dabdc95"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s032",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8381fad2b0da5a75692cfd0191a0434064eafc5e8797d246dcefe0cd532e4e21"
+      },
+      "currentHashes": {
+        "answer": "a8453eb80416fcfc1d560c43b298032b7c08f2cb3c196cacc95275f1698c8d78"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s033",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "227fcdc8a7315ac4d9aa6f591c9d8d53ed97be42387e984cce14b266329ab153"
+      },
+      "currentHashes": {
+        "answer": "081ab624b472c68e519b43e6dcc1015913d6d104d83fa9e02d654c22d40b3f2d"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s042",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8f0a4e2c6aa048cad245ddb60a19f2feb55ae554d94fa4f4bbf7821f31c0edc1"
+      },
+      "currentHashes": {
+        "answer": "579e550ac2c992c8a0f38c59623716a0053fcab8e45dcbd8ffd73577d58ffed6"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s045",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "980da8db71ce0dd3101946c45346b24edba55613b97b4da56fe0ead6368af761"
+      },
+      "currentHashes": {
+        "answer": "c03c857b8bb254970a5a9ade9a5d74b5cc38ce3fdbcdf50a280709f4101eeb18"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s043",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "50832c92d5c06957b971b59114c9f4d94005593e20dc11893e3efd70c547a805"
+      },
+      "currentHashes": {
+        "answer": "ad867b7b7698538c60612e3778a0d5cf358bc2be3bdb000a7fc09a1fba3654f5"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s044",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "62f0d152b28f84acb8c34768fb322900c81169f4d57e333cece7517cb25e377f"
+      },
+      "currentHashes": {
+        "answer": "ecc906c0f743b01efd8d21303e48ac0d88ac37f4c12e5cd1a272aa1113408fd2"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s053",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "04cc2d190cd4df14426ae2ba36c161a893826417af1a75093ae613aefc605245"
+      },
+      "currentHashes": {
+        "answer": "8c8a16055ba6fa75677e7a208494ed6fb62542daa3af744a0aaf866a1f9b7615"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s056",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "aa8afe95241be41a0efdf729a1f82cabb036b81c53b1b08172e7ac402073a9d2"
+      },
+      "currentHashes": {
+        "answer": "98914c5cedd8084734a50efaf31623879351eab7743b87632e752c4834027df7"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s054",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "12016ae25b7c21bd5db0a4641395ead68fcd11fc2f258ee49cc6ea3f2c997a01"
+      },
+      "currentHashes": {
+        "answer": "994b19f34bd29fd4bf097a357d79b339282f673ccc55afaf46954f72c22fcab8"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s055",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "fbbc38938023026b54d95670265927de88b454f97a86c8046158f9dced25d9eb"
+      },
+      "currentHashes": {
+        "answer": "2750a3a8161aa7ce709a3f0070b9168080b8ee741d341576e488d63c33190683"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s064",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "0eb401da328da7913e3a314aac93cc51552d4e2cd71de63b0e84d1e48955aec7"
+      },
+      "currentHashes": {
+        "answer": "46ebd573dfe2a6b584cd5ac1abc6d75d85124b1e3e8582a2160c68941a64cd04"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s067",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d1b4810f8fdcc85ffcb554e9ad30265e8bc7f87a52461016cad02b9bd97aef38"
+      },
+      "currentHashes": {
+        "answer": "6bccf3fb8b6a378e341f9f8985fbb3569d3300e66ccaa53d4054ece46cc90ab2"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s065",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "88b22defa5a4294c4f865c882ec3ae6dc78e56da164347f8f12556dd1937b966"
+      },
+      "currentHashes": {
+        "answer": "0a4609820b86076287b40884871756e69f232fc96fa3b987b3726adac514fe2a"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s066",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "50827e91c0fb042d657b1bed7d312f48167b0f0de40f4cd994f282a738c16808"
+      },
+      "currentHashes": {
+        "answer": "b5fd86fdeaec65e9d295a723598e393faa746a252410ccacfd2f087a78a6218f"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s075",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "3ed640a64ae827af0cf5d24e25852f82ca3f8be23f6f2a30cc60288df2b277f5"
+      },
+      "currentHashes": {
+        "answer": "7655abd09d7750b319a3b8fb26125f9d7be69bd6e70bf7c79f4cb08929691b3e"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s078",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9414cf2082dd2fad4f001969353fc5005264b6bd8c58f6ef2f46de12ba061375"
+      },
+      "currentHashes": {
+        "answer": "80fba8df645e533b72ed64104e411125f53d6cdd92d9fcbe369e54327f925e24"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s076",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "a4d193619085c02d0ea9d1aa60bf025728076ba6539c4f08d70859c5d865a7c1"
+      },
+      "currentHashes": {
+        "answer": "cbc5b6e333aaa30e0c88cb8aa8885a8a4f64bf475bd906e911542925de69b46c"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s077",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "31c6ca007e64c6f9303e372285d9e01fd900bfac737bbc9500b09e65be002b35"
+      },
+      "currentHashes": {
+        "answer": "561f29bc894761cb73f813db304360bf2436397a2b6967484b1449a28d07810e"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s086",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8cfd0b3b756a09ea6bfbabb3d7f74f7bcbce841bab8829d5045759def82d7f56"
+      },
+      "currentHashes": {
+        "answer": "9576dbb1554c30183d879fd7d4b1bf4d908a7f68128f12c33170fc9c8838c9f2"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s089",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ef9fe417eec8b526b4e99a3c330050ad72cffaaab2cf21fb65c84bcabc290521"
+      },
+      "currentHashes": {
+        "answer": "81fe9f56234e20d78650ca7ab9729c4f5d6e18e8031d8caa067906455749c314"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s087",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "c8af73dfb48407bed474324442151ef7927657aea54779485d243f961244fa16"
+      },
+      "currentHashes": {
+        "answer": "a446a3c1aebedde8d833e83ec7f3a19b4fd2cc3fcaeab4b99745440aad9a3b5e"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s088",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "706dbdde22678f6094f4b2dea34468e9304b9d2fb7beacb4d511a9753e9cb31b"
+      },
+      "currentHashes": {
+        "answer": "958cd9d9ec7abe71e71ebb6074d14f040abcdec2e31e2c431e9af1da9a2f1c9c"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s097",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "f42539d9de50309b9c7bcc9ce2c0a264eb4ad26a068277c9f249b113b2f84f02"
+      },
+      "currentHashes": {
+        "answer": "1f8a6f025ed8dfaa676a0f2f1732d954509e8b3f1af14aedce054f080b37ef02"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s100",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ac9e9c18223f24bd63cf20d45ea59756e18e68afc02178a7744a913bfe800c27"
+      },
+      "currentHashes": {
+        "answer": "5578ad7e64387a43d189a5b3fee667b3107137e3338b4b5d52ff33a64e930c32"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s098",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "b053d8b2cefd0f757133397b20a13286e3629679ca8658cbdf524f7619401b10"
+      },
+      "currentHashes": {
+        "answer": "cfc4ed5b64fbf961bb33ea03b812d61d7587be8058cadec7cdb0e20d1794168c"
+      }
+    },
+    {
+      "slideId": "s08-01-threats-and-malware-s099",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "a98465c1b567bc39db65c139037ac40533a4d1b5cac22850e4cd405d23ab6fd4"
+      },
+      "currentHashes": {
+        "answer": "83edbf5c35d7329aa65ab23f36fe2f13d62032187d72522e66d61d99193c334a"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "faeaa66fa4afa6103e4619faeb1e9b9019eb18be85885c8341a4a4e7591938b9"
+      },
+      "currentHashes": {
+        "preparation": "ab56c2ee4388b8010877301e176b01824f7833b3f7cd38464441eaf6ad4da0ec"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s005",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "4051a6dddb51c6db830330b59296e8e19fec9936e3112bf54a5d9b2c28fd0424"
+      },
+      "currentHashes": {
+        "preparation": "bcf11134af18976ec0e87c5b437abf0bb5f68573f62d7f7e441cb2d29e953cbb"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s020",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "3292bf8c1cfad6ce2ba71dfb8390683fe62f640a4886dee2cbeedafd3c8cd718"
+      },
+      "currentHashes": {
+        "answer": "730f438b496a7dd6dcc49cb2ec87036af50dbb06307a3d29a1d9b995c9068943"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s023",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9d5a8a89535c2ee3c33e873063d05c92347045f824ae7d4408e2ad7c2734dee2"
+      },
+      "currentHashes": {
+        "answer": "2c7e3210fc24d1ff4b1fc9fe768eccc885552ef35db7437ae572d76aace7fefa"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s021",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "479fad56d64885f7dd91b31d62759a63b019b07b420a05510f6286962859a385"
+      },
+      "currentHashes": {
+        "answer": "bcefdd629798e7fb2d04d98997d4000ed0a8b2cb4c557a795c84652d74cd337b"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s022",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1d30cfa9fd334e73e8469946f6d1bb69413a27dcc5921ad9732660475792734e"
+      },
+      "currentHashes": {
+        "answer": "2ffd94ab56821a3ae252c2c2c2dc917a5c05be22ee3450ea3d8e2300018763c3"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s031",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "dd9ec3f5711280012a1ef1902c74acafe8513a182241a8fbc0f8245a97bc70a2"
+      },
+      "currentHashes": {
+        "answer": "45788186518015aa132ff1e6e07c81fe6966ad96a7f24748b59506f32d8cb2a8"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s034",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ae405031bb7be71959ac7d7337b4814c962e3f9ecd21842f7ae03bdf4b1f9c79"
+      },
+      "currentHashes": {
+        "answer": "d301dcee701435ae3716cd0caba00add5d5517bd9c15103600e81750ffe4e524"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s032",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6fec290a8e1ea17bf12d96403bca7ec46ee69e280c74161d09a152e8921c259d"
+      },
+      "currentHashes": {
+        "answer": "2941a3caad3362222502f449bc9639428e0a1159392e953b14cb2fefdd74a28a"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s033",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1715b2862a116c5cf37e13980a14fbb39014b8fb716b2f860edb71b388f133b7"
+      },
+      "currentHashes": {
+        "answer": "f53fe1e789ec96998eebbabedd42e2acd69265c2d07066d058d753d5a609138e"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s042",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "688e2d259fa15e99de10dd1eed151d5f4ef52f65a4698d95511fd7c2115cc2e9"
+      },
+      "currentHashes": {
+        "answer": "ba73070a1206e2bde8b7ac0e538453ce7addd7b3f36cb5270225dadbe6f5778a"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s045",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "33afc8d76ec83ea0e694c6e701513765b08fd70418244698a5c1b052b00f8a94"
+      },
+      "currentHashes": {
+        "answer": "eb460e4b16dfbd19976b222e50b5571ed2b66ecb55d965492cbcedfa19832c0f"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s043",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "6c1c4fdfd86c76808b80794570881f223553b3a347245c097aa27aaad3df0549"
+      },
+      "currentHashes": {
+        "answer": "96050843efa482c12b81e43bfe7ad2d879f58c0df838daf05563e89003238824"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s044",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "895e373818c3a3c08b8b6d9d6b3eb7430963d353df67b776784e8a5e175b588b"
+      },
+      "currentHashes": {
+        "answer": "117cbf3e7220b9c48369bf606c2d66f7960d0ca8c76ad244f9b889cbf870652c"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s053",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "c07560f52a54c10d4d279dc23bb744e98079c1b2cbe935c5412a076d277f7005"
+      },
+      "currentHashes": {
+        "answer": "f9b863054bf46195db3f536d611ff9d61c49ae029bfbf83169ba09435250680b"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s056",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "4aa5482acf66a80174515740cf1d6d6f1239aa9c4c02ca7fc391d65e7000a702"
+      },
+      "currentHashes": {
+        "answer": "892483ad61e240883c9ff311644db6643d67be87cd44068101b3508f344e80d0"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s054",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9a582df15c3bbbec09caad41431c5a278a07b682d782748a5f492a84ea19031c"
+      },
+      "currentHashes": {
+        "answer": "4b1c1ad3c29bea8fd1af3e441cbdde7977b9e934377771d5d959b53f97271a3c"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s055",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "ddc68361b33640e781c0e3f57bd560630eb9f57df4245d0701b1d5811891741c"
+      },
+      "currentHashes": {
+        "answer": "0f969e74351d8b03c4af43a7a4f6742c8432bb0af15d06e1f6e2dc408e81a81a"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s064",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "3ec500dc67feb676289c2c5e7d7a659cffe8a3e889aebb8f0b5b0f6119b4eb26"
+      },
+      "currentHashes": {
+        "answer": "fcb6bc82e1378d643f5fbaf31c47cc3eef941310daf1269fc9b7d25b63fad262"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s067",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "9942087e7f7a771b99e9ecf020eb4a3d1d26d0bf7b71198ddd0edfc388ef0065"
+      },
+      "currentHashes": {
+        "answer": "d811f1dcdbac5189c4ea0c6d7613d4969778850ee0c4ea29e7a66982044ba381"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s065",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "90d1e5ee7b36f847529ecfcf0d3068eaf944d7d806e3ff3c5ee307275b9bd9bb"
+      },
+      "currentHashes": {
+        "answer": "7ae8f1cd290dd8658333c00806b11f9f057ace0c7a0556cc2bbed7911e58694c"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s066",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "bd0d88bd8481e186e913b2a18221e694f126d68a97b421a0977dc1a556387e33"
+      },
+      "currentHashes": {
+        "answer": "1d347cce147b3f14504bfdd01b05b345bd566cafb1ce199af0f4a955936d0e16"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s075",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8dd6e26de98e95595e407228ebc5225ff002dcd1a49a2c79760bbf4228b76c2f"
+      },
+      "currentHashes": {
+        "answer": "2384f41a7e732b8a6b93d3d912ae40df252f59762646c018da1289dfcfa279ca"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s078",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "d5979d0a9bbadfdd63ac1f34989808cfd941d06aa7b0d5d0fee0ef347f90adc6"
+      },
+      "currentHashes": {
+        "answer": "bb69f936f7e9d7a149a3a8649e061e3f5680a8d6d662693148cfec927c4040df"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s076",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "77067648a6b213cd61a61217ce97016b6418c331e1779bdd241f419dd5e3dc4a"
+      },
+      "currentHashes": {
+        "answer": "285d5c61dc2195067d38d8de4768de5287a9c1996941b860e2463809097f4bd4"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s077",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "03a6ee19c10d749078da44fe83e13f9e3b913006ed6b816f482f0466952fb0de"
+      },
+      "currentHashes": {
+        "answer": "89dfdb5dbbb87ac09fe16f481bf1824f90c77f45195dbc9747648966bf7e8c3a"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s086",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "fd2712c7bed0bf83c6dd972e0c398210b3fd60102201bd7e8e9b291f09da247e"
+      },
+      "currentHashes": {
+        "answer": "dbdf04b96951f029f323ea5f40e0990f57b3777fba43767b6698368fd8ebf929"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s089",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "55b9a858fbd4551e7c743ad62192f2457611ebea83645d95926b703f8235f62a"
+      },
+      "currentHashes": {
+        "answer": "e5bf5ef21234842ce05469ba0a6c1ad802b9104a0035ddcc87bc7c31d8f3e909"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s087",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "cc4971eb2c7933612a4d9dc358e58a8382f6a2d01a9d2c74c021aef2ffb5eb49"
+      },
+      "currentHashes": {
+        "answer": "8d7e3e013f08bd8ef0b82ab6a3efb5e3ece3f37306e6b0b91eb7d7f6dcf45837"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s088",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "8591a4cb725099042425c22df7ac2ab5e7afde37001f997539705ab4afe285d6"
+      },
+      "currentHashes": {
+        "answer": "2e7c876b0e91d0fc9189176d320fe5bbae4528a489240f367e2432c3b2c42055"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s097",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "353c227a521c0213f701e7038bd7a9dc4622d5e8ca49bed2415efa7d0e689087"
+      },
+      "currentHashes": {
+        "answer": "625d09793f492f15d62758179fadf952231a3afc9fc74d56e1ebb9c17ee82aaa"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s100",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "1bf334367ef58bcdef8c7b6f6437bde6826b4a4f0fc1e74a40f2adb0822d0e7e"
+      },
+      "currentHashes": {
+        "answer": "fde8ad4af6be13f78d6cde7aeb393c8e663a2e9800bbf4fcd1ae69420f0c259b"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s098",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "43398cbc11f8f67ec8c5d7b13f1c7337bb997b035b72c1ecca5eee5d04da43d2"
+      },
+      "currentHashes": {
+        "answer": "4724cf0cb4e965ac2888fa3bd2e543245c7b3e9e91df959a9ce4b010fabfc9fc"
+      }
+    },
+    {
+      "slideId": "s08-02-protection-controls-s099",
+      "fields": [
+        "answer"
+      ],
+      "previousHashes": {
+        "answer": "00a0818e57b3255a26a68e86cb53a3c783dda19ad7175506b2125fc45ea79d49"
+      },
+      "currentHashes": {
+        "answer": "6dddb753ed1678dc72bf929cefd707cee68e93ade20b4e70eafdd80b79d15dea"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s001",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s003",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s004",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s005",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "e07afa112143858b96bcec5373f84bf4cde02d0435c54a829ef0c48e3f0c9626",
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d",
+        "answer": "87c6b9c0a80ceca2c0a482814853a9211d11cad54f54ee6e52aba80ba271264b"
+      },
+      "currentHashes": {
+        "script": "2e9b96948abcd47af0a05ffe225ccefc4f7cb74ae3d8c93e219ec3983d101d76",
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097",
+        "answer": "1481bb4199b539d8922308c41f64dfa45dd5c7b0a4d0f0bc7e027f8378545738"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s009",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s002",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s006",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s007",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s008",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s010",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s011",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s012",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s017",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "5372b690a05c1113a21fe24c601ae304da056e381dff02607104340f0044c21b"
+      },
+      "currentHashes": {
+        "script": "2bb31f615be3c89a4cd5fdd5376718d6faa6e3794693028f1b1b9958c83fa996"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s020",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c53894c132bd60211f81cd55c604704df0f870594cfeace9a30e924f3e7bcc9c",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "b3e7d78e670c340d571c3b4bf0478763a74a64635b63483a19a8b3510128dcfc"
+      },
+      "currentHashes": {
+        "script": "0f5c9db81ed630fb9e5dea1d20224a71aa51c0b62b55ae2b3d9744ba6f915366",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "3a0fef49be713b8ac010296c0440715e665a5165879534b5d469353a992e7edb"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s023",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "0b4ab87b5800da887b996ac1299a081753dd5107b5986d7b206d716ca04cbe23",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "681a2421be7f4de1fb2343baedb0a4affe0fb64d0b0e2682359b43df4669a1e3"
+      },
+      "currentHashes": {
+        "script": "866931d8f35a58993432e789ed4aad88c2e2899eaca22c3db44c8a5e89d652ff",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "01df979fad6284ef094a8aed777f82e7e6fddc9bc2333b82ebcb79c8fe7a9812"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s021",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "316fabf05fbd0a99b12aa6c7454d8877d4fef30d5315581520807fa43562da22",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "7412d4b6dda7449adca7dfeae12ccab7b1a927fead78bfbbd361e4ebfa0d4881"
+      },
+      "currentHashes": {
+        "script": "6a520f0f43669aae0082ea8a998a31ab770a7481df98ea353bcbcdc825ffea1e",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "30749cda71d195f36db4918fd2caccc5e83deabf8fe6043c1e73f45f07428b02"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s022",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "e9133baaad04a18645ab8f68d1a3132d5a55fb2c9ddf033c25ba02a21bcb0ddc",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "58c515ac96cfaa677e405c9d7891a168d88ee53fd68507875211781b36d6e84d"
+      },
+      "currentHashes": {
+        "script": "5fac0f6c38fdd554714722104cd58bb3c32a9489323d23f3eddb209fe98d3e6d",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "45e16875cd4488a03fedb974eddcedaea4ef194f25597553a0a3bae09ea7e117"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s028",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "c5567a61c35f514d9ca8a1fc7fd8f12fee2ad4adf33f20f3883409755536d00f"
+      },
+      "currentHashes": {
+        "script": "18c9af4623875214e2a67b4f9bd7beadfecd48a6ec9e09ebffaa015b10810214"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s031",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "24b21a29688f2bc7413d5cd2ac0284c3bfa093be01bfb86f74e715edb59e3114",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "af2e9487eff0af6360c97cbe84db1ca8bddbf4b45cf6af211f85b006f4afebd4"
+      },
+      "currentHashes": {
+        "script": "2baef9674293098f3ad7441183761fc6fc5675a18729905cf3113d2b1e53b956",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "7aef394b9dc32a5af179502368c08a24a25f1194b1c3f3dd7c49ef922c0ecb80"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s034",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "94a6ab1275ee3e669ad2347b5e1d7a197a39a14c23fc55bbf6731b1d74cdf0f4",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "a9b59d28233db72d4fbc00e4c6fb5b0422fb8de7f11aa050b814987a7c75c3ec"
+      },
+      "currentHashes": {
+        "script": "25e71231fff0b39c2ef50b03c6b4a79b4d36f31b2af8374cb071e05a5ca3a35c",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "f7ad13960ee3a1a935f611bad7d04afe8febf30e8c645310598a7e5846462749"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s032",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "34477389df9e454c3ddc6f0eba839b7d6bf53dbbe9186c2d017695d1eeca20f1",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "3df36c5011f34c961939a8ae5b87a2feecd6f2b4982fc52ccc5af05c93f9a57e"
+      },
+      "currentHashes": {
+        "script": "c1f5ddc6b918901ef0b5b6f079e4015ed8ffa384a41594acf77f8514f9aca6c0",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "2feb99fc4b6533d236e400c590b79bd8081cc07431a846aaef47aaeb8d495f99"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s033",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c890f41efe7d8c9d2e4c7d17f7b14f7ee46cb54c7d228e991a617a0e438a1916",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "466c203236504d9ed1b91ed963834ebb99434d7c76e350eb627c88fc59682515"
+      },
+      "currentHashes": {
+        "script": "46991d411d66220915f34b3319c000b821e88e7faaa308e4be70f0e86a52c47c",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "ef2a011d010274f6d20f22678ef90c8fa06fa7df54f3bbbd6f8c39eef4e22063"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s039",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "6072aa193b1fe3a4c2c06f128c3a0ef3e89fd69a0d93ce602d251ad0ef42f26f"
+      },
+      "currentHashes": {
+        "script": "d16d569a7c7a1ae455c637770df9bff1dbb6b2844b4a2654a31a2b5121d1d7c8"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s042",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "70c6a27d012f74626950b5b6a5bcb054e865110c705add6e149b8702d7a1f016",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "5d5049be16b618cc252cfa94fc0bfb0018666da5229fb1d1dc704d2a38828994"
+      },
+      "currentHashes": {
+        "script": "4a6a56ac1f39296136fca97344b0f9e1871e3f3e52b0759ace797d4d840164b2",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "27ad7ebcf14cf08010924e3ee0f9438ecdccac98760553f965e4008e6c09369d"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s045",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "816f4d60380aad97fbf98540c01498c068a41b8dc62e28b26ea3572905d08072",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "f093fde998494e94328f4e7a84e054529904de9812d8cea123b7d36cf3ab2910"
+      },
+      "currentHashes": {
+        "script": "5f903be4e0fc6f49bb386bb5afde602f73d4cf5112ef9cffd82ee91903dd045c",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "6072c8827f8b4bebed76522ea1078252b3d68dd5ee6b8a201714dbb18ed1ec79"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s043",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "87fb31aca6890562d0569c2409cdb922313c5bb7739fc841b285ea18d26146cd",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "cf44356dc63d00f3439c2abf19e362c571b5846b317b71ef42faee7acfd93032"
+      },
+      "currentHashes": {
+        "script": "4000f896fce54e700ea4fd9453e5ec5f4e45f825aefa4973227f637c39e1e271",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "69fa5d5eb42e3eaa3ca8265046fad367daab471984be76bae48010783c745421"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s044",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "7f55b51a46eda86756bd92f7349eec63b0121aeda3b0cd3b9831997d25ad7398",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "b9acc626e0d5f07c356e1a9e2387db8e750d33699e5de70be4b6c4d1c539183a"
+      },
+      "currentHashes": {
+        "script": "8e794acd4c4b89ae1f052bd1c8c229d0a514b41ac1339003a8fb0c4a000929be",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "458ac7a73fc79d3e77a79da4206c7b10b8ed0ea7f42d71f2f6133d7cc65716be"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s050",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "76eed6cd1e7fc7eb2d152e6c2ec1e6e6d9e7cdf4d71f9901897f26c4e669ca50"
+      },
+      "currentHashes": {
+        "script": "d8d011bb9fafe929620d40cfad8d77b61922a7325c88df41fd53b719957bb69d"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s053",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "70baabd55e79747860b8158b346206dc2143494d115cf0d9b984d5b87a7ade7a",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "39d7eee928e7dd1d9478e66040e007c7e4aebfd96a9250fb45ca020c3f116e89"
+      },
+      "currentHashes": {
+        "script": "39704b0a0feec543fd83cb94a51243b3a1f2cb8d53d912023b62ac1dd7aa023a",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "93f62b70e8b7d873ab50029235efc2651ce56cd8ec11c0f01829e48c53f72a21"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s056",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "f1b8297baa6a01c4a2eae9e87b238749c481632c81dcea40f4bea90fa74e3e80",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "4346c9211ef3e08bd6c209cdd466d1ad9ce3e4be81b83e2039da47806f67ff67"
+      },
+      "currentHashes": {
+        "script": "144fe0c376ae7ae34d9d98966d31bbb26b45175a7c381c7628e3d84f2b689721",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "71173aaf46a5c288df65d94ac7d477ee0ec84c153ee3bb55c0481f03efed5569"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s054",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "1ec25e286b9253ad630defef29064804802202c7d107429e088a82e2f817aa18",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "61ff52fedee5133dd25bd3acb055069ab4185fc3d3ccb016741464d0315852d7"
+      },
+      "currentHashes": {
+        "script": "e7d6ff754e93fac8bc07eab73bf3b5c1145c652b85595bc0dd50b6bd36cbedcf",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "3615f6431d03fe74aeec13969699f72684f0fb0ac05a9d6e764ee162baf70b09"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s055",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "2e596b69f5ad40c12a3d0b25901b996b9855614ade3961591d7dcef2f36afc6a",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "ddab674d272504ddef7be7c33e0fbf10d8ea3737989dbbf6ebe4acbe6bdee1c2"
+      },
+      "currentHashes": {
+        "script": "32d7152ed9a882f03b2798f536b503bdff277ef913a4439d932b14e96fe7f22c",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "21193c09ddc20738894e06ed9e773b43db782d1983e40fc64bf361aa35ec285a"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s061",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "4243f3b29c28afe0d7f5764474023b23eba5f0ea548dde0a961dd61442451879"
+      },
+      "currentHashes": {
+        "script": "a3c94aa51cb272e1446c10d8109e1257b9ea948f5e18d6385c25ce08f9f3c694"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s064",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "8b2c06d16219b34e4ba9437f7023c1b50b32d01de2f1ef095c6076a994c40b34",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "24f2b497ec6b7cf3903f4bfd289b420490d147d06b5d07fbeb028038e5445658"
+      },
+      "currentHashes": {
+        "script": "32b1953fe3dc811419334671e44a84db075bd5f4ab8ad9df6f3cf0ba2a0def27",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "86affb0b4a6b0eb952502841272f9d43b927792f9f8200c4bd58d2e80eab5ec0"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s067",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "1d505ea3af5a4abc85d22d405791a5b1757618ac86f8963a1498c80648e2ecb6",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "42ea8e06cac691b33de76610fd1fc929daf5549ce4210e7e808545cafbb52a89"
+      },
+      "currentHashes": {
+        "script": "5247166791e57f2babcb9fbe547a2a3c73013013ba2fbab6bb50144d6a3131f3",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "7740621df7f6561c4af5baa64c1e21a0473449d91a76128f799b70d3a0b49482"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s065",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "f043caea381a9e87e58f5cf463f5dc0e2a3084c971a64023bda00e701484670b",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "f156b8406919c65da32afb14f1a9c398ec17de98298e0ae4732ce0b53788be73"
+      },
+      "currentHashes": {
+        "script": "f1daba55397782755a856db5fbe477ac5a50455c604c9a19e7067ca0dfd3f8b0",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "4417626fdd5dc3ee3dc8188c932e285d48971d7008e1da1fdbaa6f2b89a97327"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s066",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "a4995c4e0bb2f301172a8fa8c0a6ee914f7c87fbe407c1ee459e69ad28c7b8dd",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "db137316eed33a3e3ada0d981066de0bcc643cb034f236fc4a45603521ed65e3"
+      },
+      "currentHashes": {
+        "script": "c746c59b5d0a36113ff16c01fde9f863299c82d310ea71685be1ecf6587639fe",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "b8cddf2a738324174cd71d6f92214ab444f895256d1878a783b51ac569a432e8"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s072",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "e94798e7aa84117d9006f5784f330bd181c85742cc3952a4d2044f651750996f"
+      },
+      "currentHashes": {
+        "script": "a1d175ebc466cf6e4cd56a4e893fa66b315d8e109da3bb9b50a74d5261c5f648"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s075",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c0ebd295fd9e277550518e8efa9079cfc012be5b11ca818081e55574b38529d5",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "04ffeae8cd66ef4313bf7f294d03c5f9b2ff84c4e1e50f02f6077576ff56104d"
+      },
+      "currentHashes": {
+        "script": "118e24f9d669a4b15855a97924b2a82906e56d74d0b65bda0e478461fc4c6873",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "bc1a725e740646d3072cf0cf1d3580ee4373f8c30cba86e8d6c9bf1ae2544313"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s078",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "f832aef97425b01db1e334bcd1a4530b0aa98845d336eb65ab933256be14d8b0",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "b37b8d9e5b586c159896dfe69400834483cdec3fb8d5dca7bd21f98d8b9c5acc"
+      },
+      "currentHashes": {
+        "script": "301dddeb50384809d67cfd85b7e74f0631a8acf7ffb59c58e8a6cb8a731d6a26",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "3edcde2e653926ae282b5323570480a67e19554dfc47a7f01fe258ff350233fe"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s076",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "fae9615c042950c39fd8c850b05efc6b0de91a722bc52f47140f43bfcb860602",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "21525e071234c9c426bd864fae1586e64b96410f492bab49d27872981780a2f2"
+      },
+      "currentHashes": {
+        "script": "54cf515d08ad48a614f69fd6ed417dda7cddf9279d3ce2a1c869b31b8b027764",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "6d29252499aad3732d8f16b1bc73ff99cf2674bbf1d5fb1edd6476455fae4f02"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s077",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "95ceb908e28c20ec7356b9995a89d4669c977686c652cfa6a06edd7b8cf6c9d9",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "bc39e41609da8cfdbd225626c8fe338a658011852ec5672af255133440a160bc"
+      },
+      "currentHashes": {
+        "script": "2a5b70ae72b3e668ab53c5d72c56e9ad869cd69e25024fc33e7a660f906e9793",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "69a7b6efef1466d1aa6f01603a825569b3a9974d19b26dde9cb5b4a17e5b8ec1"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s083",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "ee3702071ab698009faa54ab0410cafec8579e5826c77b0968c6c65a6462ece8"
+      },
+      "currentHashes": {
+        "script": "b29d1ae236368691edbaaefd9b2e171f34c7f30092cf21f8b38e519673d8e624"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s086",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "c0e2cc6a9436015831bde766eed29f36b10ed9e5fbc5639722af4461d7e404ea",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "061974fdb6e05ef6093fd6d46fdeecf208bebb42dae51d99cf671be318a40375"
+      },
+      "currentHashes": {
+        "script": "3c536c21e2a90f701b5e089294448fd245e69d275464cb4641156590b62f14f6",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "f513cbfe12458f4c4f5823b045469ac9c2df325baedd47e88cde7c28b86271d8"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s089",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "cca44ffd39a79f532dda6d54bb28cad37625da8f960bdc26790975bd69ad042c",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "e480e1ec1547999a051ea9d72e16912bf0f73a5f84a234d0316bbdb58b3ef28f"
+      },
+      "currentHashes": {
+        "script": "dc80a71cd4e85547785149f81edf52c7af47db5001f53b26adfb972755a5aebe",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "962b2903d09049848a26f299dd0441d119e847dba694b4815b0d5472ddf76db1"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s087",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "cb882dc5ae1a300aafeeb2a6c26921eb2b36c5b6fd7851c4495a0c7d15948039",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "4586f6e6efd0263c16d625606c55482eacebeee7711e9fe731bb0f1332afe0ba"
+      },
+      "currentHashes": {
+        "script": "be5446e55154ffc0cca140254090d311e060125545c3f06e6d678f6a3a08ac61",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "4e298cb6fe1c29e3bc5d2414b44952a5b53642edb49b6462c9f9a48892b726c3"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s088",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "4ffb2407e04f17e1209d7090c60d46070476aef6455b81a80ad9edfe2f33d0a5",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "af150ed322ab21e834456ac30e3a11e83fc979ce9dd8471d0de25b22003fbdc4"
+      },
+      "currentHashes": {
+        "script": "b085cebcf477af31e9097d2f5e53c92b9cc0bfcf8619bf5eefa9856a3faa3ddb",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "f8c05fc90fb0538b2601cf9924109832861dd81238adc78d20afe6ad393e3fdb"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s094",
+      "fields": [
+        "script"
+      ],
+      "previousHashes": {
+        "script": "70fd1d80df022234937acf160eea134316ded24e2ed5de3dd391436c6e63a326"
+      },
+      "currentHashes": {
+        "script": "0c7c23734b1594f3b4ca6af25a44261f4ad3765f494a8f8b1c439e2600e8c1e2"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s097",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "127b8751388b34e56ed1f77abcd444cf4d96c23e2e2f80f20ca10e1904454149",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "ff4960ae0e22b60a07bb47e057f4a263534dc376e3a98a2725025ba57dd055ed"
+      },
+      "currentHashes": {
+        "script": "914bfd557def5ac06edf9d6f2cd55e8d14e2f2eab5abbe507ddbda589231e7ce",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "26c99e3f03693257a4f582fa9f6a87f10397646e090f07b1d54106d4e4bd49b7"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s100",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "675b2493a720b17ee8b606d290b57ecd7ff5840f20994b4054a8d7fce6d53112",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "38fd24f0056dcdecb0a7ef6c99e50832992c973485e00d6c81d7a17429cde227"
+      },
+      "currentHashes": {
+        "script": "67c8fb37c6191ece5de54bba3dbafdf59b4e5808a6db9f81df0abbb0782d7845",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "6fb5030c2b8593906c69992507119ab910df2fa731a35c10ceb32fee0202d71f"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s098",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "ce71fb531427dc53efcce99e8711abefe3bcf992b49c260f5815afe55f7ad3e1",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "e9dd81d68d7f267e423a23337040bf3e2c6406c68be63a0aff78dede53038da6"
+      },
+      "currentHashes": {
+        "script": "f07c7d0db3f9ca6d0905961e8a4999c6dfaad4d249447ac7404e3fb26b92e36f",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "6b3a21bd658128614cfe1acac4243d3ffd82bee0c8d7acd0d1de138d765ea915"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s099",
+      "fields": [
+        "script",
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "script": "eeccabee593d351e75dadd3efa1fa72487d0c1e0bd3a04ba83080da73b9ec2a4",
+        "preparation": "e1e034a1f70aefdb055147ec93796b33db84888aabca777520a15079712d6194",
+        "answer": "f82d69f14003c6e1b7dc5418dc88a8dd94b062fa8e449c191bd1927cd6f94a26"
+      },
+      "currentHashes": {
+        "script": "63dbe32e9fd330a1bacd8248ee9fc98173180afc3d6f7edae17b807ea0cabba3",
+        "preparation": "349c83280fef85580d8b2a62baf5de5843c75c7de3683cdff871fe7b09320cb9",
+        "answer": "7d9fef54fb7be9b23fb7ca73aa828e8930acfd6a4f9012c2ff91ae5e6ce3522a"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s101",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "d7255dc17d28f42bf150d74e64491bcc3c118071c34a91f57d9246c0e27970a0"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "c469900d43eefb775345b287f893bc870476d8aa5f46ab06e390c1c6bd2e39d0"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s102",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "5d067fe2a84d508125c4f4d18f66ffb14629bf4c3eb5c3dda7125487d6584b9f"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "0907ff6d698b477fba567c1ca8819a0c3161119d85ef3f50eababaffaa9fafec"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s103",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "bdb6795bf442160b975c528923694ea7eea068b5f665bc7ddd8ca4a3d6e73b06"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "3143cb4ce607339db956878e342e02b30fb728b6d49c212e555c8e42bb04f8dd"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s104",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "36fc55cd8ca07276f00f72c69f30e756a35ac96acd21fd728e1b420c31b14819"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "b94bd1e884f052321156b3cb4c1d3d4360d7c1f22f316c28064b80ccaeabb79a"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s105",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "3bff1cd2963573ef8bdd37f386baeca0d2643d1e57917f3b2e087dc2dd59da5b"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "f125f2354a26afd18af592d768e42b0eb15188afdb74eff35e98bfd3b46df84b"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s106",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "6f7c6e868c22b8df10ec1e58b31cb252387ef4eb32ac4befd5bcb20f3437ad99"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "74e3c2cb95c3b5459e4dbed04ff3ac5245d194c05de7dd5063151f83f08b368a"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s107",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "aa05a0d084aab18f0014bf794b404eb3e67a0b86879be9e955832bfc2d7382c2"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "8382aa7e387ef7ba33a236729f0d67df151f4c00d8afe66a02ac417fe5e3a042"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s108",
+      "fields": [
+        "preparation",
+        "answer"
+      ],
+      "previousHashes": {
+        "preparation": "78c2b30b6a4d8d93ebf463cbbdd4049ff3ad10b47de915e56a2e7a8f52f2f97c",
+        "answer": "732a8c358ccd58e194406239c2fc5830c1249b391b343f9cb8eb7b2417117531"
+      },
+      "currentHashes": {
+        "preparation": "f73be9a43729ef8575332e3a3f3cbb70336d5adda70037988afd29fc711de38e",
+        "answer": "0c2b64dbca60b90df9f9c9bcfc07ad5f7413fa299af7fa0ba9d2bdfdbab96f7a"
+      }
+    },
+    {
+      "slideId": "s08-03-encryption-and-security-testing-s112",
+      "fields": [
+        "preparation"
+      ],
+      "previousHashes": {
+        "preparation": "baf2e6fbfd8b477bddba5cc212f2e07a5192dbc6a9d2b07d95eaab0bb8188f0d"
+      },
+      "currentHashes": {
+        "preparation": "f4bdcb8de57595efe2ccb54660fa88e478180628161d3d39a45310fd4ef73097"
+      }
+    }
+  ],
+  "rules": [
+    "Заменены служебные отчёты о файлах, выгрузке и непроверенности показа на подготовку материалов и занятия.",
+    "Технические идентификаторы вариантов заменены полными текстами правильных и ошибочных ответов и соответствий.",
+    "Удалён повторный блок ключа из исходного банка; сохранены объяснения, числовые ответы, допуски и допустимые формулировки.",
+    "Предметные ID заявки, Id/RecordId/requestId, импорт данных и версии программ сохранены.",
+    "Исходный курс, банк заданий и связные тексты лекций не изменялись."
+  ],
+  "verification": {
+    "status": "passed",
+    "slides": 777,
+    "tasks": 224,
+    "allPartialPacksMatch": true,
+    "allPresenterFieldsMatch": true,
+    "teacherTextsByteExact": true,
+    "courseAndBankByteExact": true,
+    "allPreviousAutomaticFieldsRecognized": 4662,
+    "serviceMetadataScan": {
+      "implementationMarkers": [],
+      "optionIdentifiers": [],
+      "unverifiedRenderingReports": [],
+      "answerFieldReferences": []
+    },
+    "retainedSubjectTechnicalTerms": {
+      "RecordId": 8,
+      "requestId": 26,
+      "ID": 50,
+      "импорт": 12,
+      "версии": 35,
+      "валидация": 10
+    },
+    "zipCrcPassed": 3,
+    "alignmentMapsPassed": 7
+  }
+}

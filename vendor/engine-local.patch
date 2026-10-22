@@ -1,5 +1,3 @@
-diff --git a/package.json b/package.json
-index bc6aa4e..6b09bc7 100644
 --- a/package.json
 +++ b/package.json
 @@ -1,7 +1,7 @@
@@ -7,12 +5,10 @@ index bc6aa4e..6b09bc7 100644
    "name": "@olgakraven/lecture-engine",
    "private": true,
 -  "version": "0.1.0",
-+  "version": "0.1.1-okfks.8",
++  "version": "0.1.1-okfks.9",
    "type": "module",
    "scripts": {
      "dev": "vite",
-diff --git a/src/engine/LectureSite.tsx b/src/engine/LectureSite.tsx
-index 0f57999..a237337 100644
 --- a/src/engine/LectureSite.tsx
 +++ b/src/engine/LectureSite.tsx
 @@ -1,6 +1,7 @@
@@ -24,7 +20,7 @@ index 0f57999..a237337 100644
  import {assetUrl,safeUrl,TEMPLATE_VERSION} from './model'
  import {read,save} from './storage'
  import {Modal} from './Modal'
-@@ -12,7 +13,21 @@ import './assessment.css'
+@@ -12,7 +13,21 @@
  import './layout-final.css'
  const Teaching=lazy(()=>import('./Teaching'))
  const blankProfile:Profile={fullName:'',position:'',department:''}
@@ -43,16 +39,16 @@ index 0f57999..a237337 100644
 + onProfileChange:(profile:Profile)=>void
 + onMaterialsChange:(url:string)=>void
 +}
-+export function LectureSite({course,base='/',teacherNotes,renderCatalog}:{course:Course;base?:string;teacherNotes?:Record<string,Note>;renderCatalog?:(props:CatalogProps)=>ReactNode}){
++export function LectureSite({course,base='/',teacherNotes,resolveTeacherNotes,renderCatalog}:{course:Course;base?:string;teacherNotes?:Record<string,Note>;resolveTeacherNotes?:()=>Record<string,Note>;renderCatalog?:(props:CatalogProps)=>ReactNode}){
   const prefix=`lecture:${base}:${course.id}`
   const [query,setQuery]=useState(()=>new URLSearchParams(location.search))
   const [theme,setTheme]=useState<'light'|'dark'>(()=>read(`${prefix}:theme`,'light'))
-@@ -40,16 +55,16 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
+@@ -40,16 +55,16 @@
   const startTeaching=()=>{if(!lecture)return;const session=crypto.randomUUID();const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();const popup=window.open(u,`audience-${session}`);(window as Window&{lectureAudience?:Window|null}).lectureAudience=popup;navigate({mode:'presenter',lecture:lecture.id,slide:slide!.id,session})}
   const icon=(label:string,child:React.ReactNode,fn:()=>void,pressed?:boolean)=><button className="icon-button" title={label} aria-label={label} aria-pressed={pressed} onClick={fn}>{child}</button>
   const themeButton=icon(theme==='light'?'Включить тёмную тему':'Включить светлую тему',theme==='light'?<Moon size={19}/>:<Sun size={19}/>,()=>setTheme(theme==='light'?'dark':'light'))
 - if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={()=>navigate({lecture:lecture.id,slide:slide!.id})}/></Suspense>
-+ if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching teacherNotes={mode==='presenter'?teacherNotes:undefined} course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={()=>navigate({lecture:lecture.id,slide:slide!.id})}/></Suspense>
++ if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching teacherNotes={mode==='presenter'?teacherNotes:undefined} resolveTeacherNotes={mode==='presenter'?resolveTeacherNotes:undefined} course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={currentId=>{const id=lecture.slides.some(s=>s.id===currentId)?currentId:slide!.id;save(`${prefix}:${course.contentVersion}:${lecture.id}:progress`,id);navigate({lecture:lecture.id,slide:id})}}/></Suspense>
   if(mode==='print'){const scope=query.get('scope');const list=course.lectures.filter(l=>scope==='all'||scope===l.id||scope===`semester-${l.semester}`);return <main className="print-document"><div className="print-hint"><strong>PDF · {list.length} лекций</strong><button className="button primary" onClick={()=>window.print()}>Сохранить PDF</button></div>{list.flatMap(l=>l.slides.map((s,i)=><section className="print-page" key={s.id}><SlideView course={course} lecture={l} slide={s} number={i+1} base={base} profile={profile}/></section>))}</main>}
   return <AssessmentProvider course={course} base={base}>
 - {!lecture?<main className="catalog"><header className="catalog-header"><a className="brand-lockup" href={base}><img src={assetUrl(course.logo,base)} alt="Логотип компании"/><span><strong>{course.code}</strong><small>{course.discipline}</small></span></a><nav><button className="button ghost settings-button" onClick={()=>setModal('settings')}><UserRound size={19}/><span>Настройка перед занятием</span></button>{themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a></nav></header>
@@ -68,7 +64,7 @@ index 0f57999..a237337 100644
   <header className="deck-toolbar"><button className="button ghost" onClick={()=>navigate({})}><ArrowLeft size={18}/>Каталог</button><div className="deck-topic"><strong>{lecture.title}</strong><span>{lecture.semester} семестр</span></div><div className="toolbar-actions">
   {icon('Результаты самопроверки',<BarChart3 size={19}/>,()=>setModal('results'))}
   {icon(animations?'Отключить анимацию':'Включить анимацию',animations?<Pause size={19}/>:<Play size={19}/>,()=>setAnimations(!animations),animations)}
-@@ -76,7 +91,7 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
+@@ -76,7 +91,7 @@
  function Settings({course,profile,materials,onSave,onClose,print}:{course:Course;profile:Profile;materials:string;onSave:(p:Profile,m:string)=>void;onClose:()=>void;print:(scope:string)=>void}){
   const [p,setP]=useState(profile);const [m,setM]=useState(materials);const [error,setError]=useState('')
   const persist=()=>{if(m&&!safeUrl(m)){setError('Укажите полный адрес папки, начинающийся с https:// или http://');return false}onSave(p,m);return true}
@@ -77,8 +73,40 @@ index 0f57999..a237337 100644
   <div className="dialog-actions"><button className="button primary" type="submit">Сохранить настройки</button></div></form></Modal>
  }
 
-diff --git a/src/engine/SlideView.tsx b/src/engine/SlideView.tsx
-index c01ac92..19e7130 100644
+--- a/src/engine/Teaching.tsx
++++ b/src/engine/Teaching.tsx
+@@ -9,7 +9,7 @@
+ import {AssessmentProvider,AssessmentSync} from './Assessment'
+ import type {Attempt} from './Assessment'
+ import {downloadJson,read,save} from './storage'
+-type Props={course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:()=>void}
++type Props={teacherNotes?:Record<string,Note>;resolveTeacherNotes?:()=>Record<string,Note>;course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:(slideId:string)=>void}
+ export default function Teaching(props:Props){return props.mode==='audience'?<Audience {...props}/>:<AssessmentProvider course={props.course} base={props.base}><Presenter {...props}/></AssessmentProvider>}
+ function Audience({course,lecture,base,session,profile}:Props){
+  const [state,setState]=useState<PublicState|null>(null);const current=useRef<PublicState|null>(null);const [full,setFull]=useState(false);const [fullscreenError,setFullscreenError]=useState('')
+@@ -26,11 +26,11 @@
+  {fullscreenError&&!full&&<div className="audience-fullscreen-error" role="alert">{fullscreenError}<button className="button secondary" onClick={()=>setFullscreenError('')}>Закрыть</button></div>}
+  </main>
+ }
+-function Presenter({course,lecture,base,profile,session,initialSlide,onExit}:Props){
++function Presenter({course,lecture,base,profile,session,initialSlide,onExit,teacherNotes,resolveTeacherNotes}:Props){
+  const storageKey=`lecture:${base}:${course.id}:private:${course.contentVersion}`
+  const layout=usePanelLayout(`lecture:${base}:${course.id}:panel-layout`)
+  const sessionKey=`lecture-session:${session}`
+- const [notes,setNotes]=useState<Record<string,Note>>(()=>read(storageKey,{}))
++ const [notes,setNotes]=useState<Record<string,Note>>(()=>resolveTeacherNotes?.()||teacherNotes||read(storageKey,{}))
+  const [shown,setShown]=useState(()=>read(sessionKey,{slideId:initialSlide,black:false}))
+  const [selected,setSelected]=useState(shown.slideId);const [black,setBlack]=useState(shown.black);const [replay,setReplay]=useState(0)
+  const [pointerEnabled,setPointerEnabled]=useState(false);const [pointer,setPointer]=useState<{x:number;y:number}|null>(null);const [assessment,setAssessment]=useState<Record<string,Attempt>>({});const receiveAssessment=useCallback((value:Record<string,Attempt>)=>setAssessment(value),[])
+@@ -55,7 +55,7 @@
+  const reopen=()=>{const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();popup.current=window.open(u,`audience-${session}`);busRef.current?.setPeer(popup.current);if(!popup.current)setNotice('Браузер заблокировал окно. Разрешите всплывающие окна и нажмите «Открыть аудиторию» снова.')}
+  const copyAudience=async()=>{const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();try{await navigator.clipboard.writeText(u.href);setNotice('Ссылка аудитории скопирована. Откройте её в новой обычной вкладке этого же браузера.')}catch{setNotice(`Ссылка аудитории: ${u.href}`)}}
+  const importNotes=async(file:File)=>{try{const pack=JSON.parse(await file.text()) as TeacherPack;if(pack.schemaVersion!==1||pack.courseId!==course.id||pack.contentVersion!==course.contentVersion||!pack.notes||typeof pack.notes!=='object')throw Error('Файл относится к другому курсу или версии');const allIds=new Set(course.lectures.flatMap(l=>l.slides.map(s=>s.id)));for(const [id,n] of Object.entries(pack.notes)){if(!allIds.has(id)||!n||!['script','preparation','notebook','questions','answer'].every(k=>typeof n[k as keyof Note]==='string')||!Number.isFinite(n.estimatedSeconds)||n.estimatedSeconds<0)throw Error('Некорректные заметки')};const next={...notes,...pack.notes};if(!save(storageKey,next))throw Error('Не удалось сохранить заметки');setNotes(next);setNotice('Заметки загружены и сохранены в этом браузере.')}catch(e){setNotice(String(e))}}
+- const end=()=>{busRef.current?.send({type:'END'});popup.current?.close();onExit()}
++ const end=()=>{busRef.current?.send({type:'END'});popup.current?.close();onExit(shown.slideId)}
+  const tabNames={script:'Сценарий',preparation:'Подготовка',notebook:'Запись',questions:'Вопросы',answer:'Ответы'}
+  return <main className="presenter-shell"><AssessmentSync task={lecture.slides[shownIndex].task} onChange={receiveAssessment}/><header className="presenter-header"><div><p className="eyebrow">Панель преподавателя</p><h1>{lecture.title}</h1></div><span className={`connection ${status==='Синхронизировано'?'connected':''}`} role="status">{status}</span><button className="button ghost" onClick={end}><X size={18}/>Завершить</button></header>
+  {notice&&<div className="notice" role="status">{notice}<button className="text-button" onClick={()=>setNotice('')}>Закрыть</button></div>}
 --- a/src/engine/SlideView.tsx
 +++ b/src/engine/SlideView.tsx
 @@ -1,12 +1,12 @@
@@ -96,35 +124,6 @@ index c01ac92..19e7130 100644
   <div className="slide-content"><div className="slide-copy"><p className="slide-kicker">{slide.kicker}</p><h2>{slide.title}</h2>
   {(slide.kind==='literature'||slide.kind==='materials')&&<Resources course={course} slide={slide} base={base}/>}
   {slide.kind==='agenda'&&<ol className="topic-agenda">{lecture.slides.filter(s=>s.kind==='section').map((s,i)=><li key={s.id}><span>{String(i+1).padStart(2,'0')}</span><strong>{s.title}</strong></li>)}</ol>}
-diff --git a/src/engine/Teaching.tsx b/src/engine/Teaching.tsx
-index 7886dcf..075525e 100644
---- a/src/engine/Teaching.tsx
-+++ b/src/engine/Teaching.tsx
-@@ -9,7 +9,7 @@ import type {PublicState} from './session'
- import {AssessmentProvider,AssessmentSync} from './Assessment'
- import type {Attempt} from './Assessment'
- import {downloadJson,read,save} from './storage'
--type Props={course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:()=>void}
-+type Props={teacherNotes?:Record<string,Note>;course:Course;lecture:Lecture;base:string;profile:Profile;mode:'presenter'|'audience';session:string;initialSlide:string;onExit:()=>void}
- export default function Teaching(props:Props){return props.mode==='audience'?<Audience {...props}/>:<AssessmentProvider course={props.course} base={props.base}><Presenter {...props}/></AssessmentProvider>}
- function Audience({course,lecture,base,session,profile}:Props){
-  const [state,setState]=useState<PublicState|null>(null);const current=useRef<PublicState|null>(null);const [full,setFull]=useState(false);const [fullscreenError,setFullscreenError]=useState('')
-@@ -26,11 +26,11 @@ function Audience({course,lecture,base,session,profile}:Props){
-  {fullscreenError&&!full&&<div className="audience-fullscreen-error" role="alert">{fullscreenError}<button className="button secondary" onClick={()=>setFullscreenError('')}>Закрыть</button></div>}
-  </main>
- }
--function Presenter({course,lecture,base,profile,session,initialSlide,onExit}:Props){
-+function Presenter({course,lecture,base,profile,session,initialSlide,onExit,teacherNotes}:Props){
-  const storageKey=`lecture:${base}:${course.id}:private:${course.contentVersion}`
-  const layout=usePanelLayout(`lecture:${base}:${course.id}:panel-layout`)
-  const sessionKey=`lecture-session:${session}`
-- const [notes,setNotes]=useState<Record<string,Note>>(()=>read(storageKey,{}))
-+ const [notes,setNotes]=useState<Record<string,Note>>(()=>teacherNotes||read(storageKey,{}))
-  const [shown,setShown]=useState(()=>read(sessionKey,{slideId:initialSlide,black:false}))
-  const [selected,setSelected]=useState(shown.slideId);const [black,setBlack]=useState(shown.black);const [replay,setReplay]=useState(0)
-  const [pointerEnabled,setPointerEnabled]=useState(false);const [pointer,setPointer]=useState<{x:number;y:number}|null>(null);const [assessment,setAssessment]=useState<Record<string,Attempt>>({});const receiveAssessment=useCallback((value:Record<string,Attempt>)=>setAssessment(value),[])
-diff --git a/src/engine/index.ts b/src/engine/index.ts
-index b9688eb..39440e5 100644
 --- a/src/engine/index.ts
 +++ b/src/engine/index.ts
 @@ -1,4 +1,5 @@
@@ -133,8 +132,6 @@ index b9688eb..39440e5 100644
  export { Infographic } from './Infographic'
  export { validateCourse, TEMPLATE_VERSION } from './model'
  export type { Course, Lecture, Slide, TeacherPack, Note } from './model'
-diff --git a/src/engine/layout-final.css b/src/engine/layout-final.css
-index 4334fd3..a185996 100644
 --- a/src/engine/layout-final.css
 +++ b/src/engine/layout-final.css
 @@ -31,3 +31,30 @@
@@ -168,11 +165,9 @@ index 4334fd3..a185996 100644
 +.mini-stage .slide-supplement.button{min-height:0;padding:.8cqw 1.2cqw;font-size:1.65cqw}
 +@media(max-width:560px){.slide-header:has(.slide-supplement){flex-wrap:wrap}.slide-header:has(.slide-supplement) .slide-header-actions{width:100%;justify-content:space-between}.mini-stage .slide-header:has(.slide-supplement){flex-wrap:nowrap}.mini-stage .slide-header:has(.slide-supplement) .slide-header-actions{width:auto}.slide-supplement.button{white-space:normal}}
 +@media print{.slide-supplement{display:none!important}}
-diff --git a/src/engine/model.ts b/src/engine/model.ts
-index 9911fd9..47e23cd 100644
 --- a/src/engine/model.ts
 +++ b/src/engine/model.ts
-@@ -17,7 +17,7 @@ export type Visual =
+@@ -17,7 +17,7 @@
   | {type:'codeParts';parts:{code:string;label:string;explanation:string}[];caption:string}
  export type Task = {id:string;type:'single'|'multiple'|'short'|'matching';prompt:string;choose?:number;options?:Option[];items?:Option[]}
  export type Reading = {citation:string;url?:string}
@@ -181,7 +176,7 @@ index 9911fd9..47e23cd 100644
  export type Lecture = {id:string;title:string;sourceTitle:string;semester:number;question:string;slides:Slide[]}
  export type Course = {schemaVersion:1;contentVersion:string;id:string;code:string;discipline:string;year:string;heroTitle:string;heroAccent:string;slogan:string;mascot:string;mascotAlt:string;logo:string;ornament:string;font:string;materialsUrl:string;topicArrow?:string;literature?:{primary:Reading[];additional:Reading[]};assessment?:{mode:'autonomous';url:string};demo:boolean;semesters:number[];lectures:Lecture[]}
  export type Note = {script:string;preparation:string;notebook:string;questions:string;answer:string;estimatedSeconds:number}
-@@ -25,6 +25,11 @@ export type TeacherPack = {schemaVersion:1;courseId:string;contentVersion:string
+@@ -25,6 +25,11 @@
  export const emptyNote = ():Note => ({script:'',preparation:'',notebook:'',questions:'',answer:'',estimatedSeconds:120})
  export function safeUrl(value:string) {try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:''}catch{return ''}}
  export function assetUrl(path:string,base:string){return safeUrl(path)||`${base}${path.replace(/^\//,'')}`}
@@ -193,7 +188,7 @@ index 9911fd9..47e23cd 100644
  export function validateCourse(value:unknown): asserts value is Course {
   const c=value as Course
   if(!c||c.schemaVersion!==1||!c.id||!c.contentVersion||!c.code||!c.discipline||!Array.isArray(c.semesters)||!Array.isArray(c.lectures)||!c.lectures.length)throw Error('Некорректная конфигурация курса')
-@@ -35,6 +40,7 @@ export function validateCourse(value:unknown): asserts value is Course {
+@@ -35,6 +40,7 @@
   for(const s of l.slides){if(!s.id||ids.has(s.id)||!s.title||!kinds.includes(s.kind))throw Error('Некорректный слайд');ids.add(s.id)
   if(s.task&&!['single','multiple','short','matching'].includes(s.task.type))throw Error('Неизвестный тип задания')
   if(s.references)checkReading(s.references)

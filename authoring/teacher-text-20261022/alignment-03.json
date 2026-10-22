@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": 1,
+  "courseId": "okfks",
+  "contentVersion": "2.1.0-design-review-20261021",
+  "sourceKind": "local",
+  "sourceSha256": "d75c3f143f749d7ef4ace82f5380caa84cab45cbbeede8db13541b8b97657c20",
+  "lectureIds": [
+    "s07-03-reliability-threats-prevention"
+  ],
+  "documents": {
+    "teacher": "03 — Угрозы надёжности и их предотвращение.md",
+    "presenter": "Панель преподавателя/03 — Угрозы надёжности и их предотвращение.md"
+  },
+  "slides": [
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s001",
+      "displayNumber": 1,
+      "title": "Угрозы надёжности и их предотвращение",
+      "anchors": {
+        "teacher": "l03-screen-001",
+        "presenter": "p-s07-03-reliability-threats-prevention-s001"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s003",
+      "displayNumber": 2,
+      "title": "Основная литература",
+      "anchors": {
+        "teacher": "l03-screen-002",
+        "presenter": "p-s07-03-reliability-threats-prevention-s003"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s004",
+      "displayNumber": 3,
+      "title": "Дополнительная литература",
+      "anchors": {
+        "teacher": "l03-screen-003",
+        "presenter": "p-s07-03-reliability-threats-prevention-s004"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s005",
+      "displayNumber": 4,
+      "title": "Материалы к занятиям",
+      "anchors": {
+        "teacher": "l03-screen-004",
+        "presenter": "p-s07-03-reliability-threats-prevention-s005"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s009",
+      "displayNumber": 5,
+      "title": "Вопросы темы",
+      "anchors": {
+        "teacher": "l03-screen-005",
+        "presenter": "p-s07-03-reliability-threats-prevention-s009"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s002",
+      "displayNumber": 6,
+      "title": "Надёжность и качество в эксплуатации",
+      "anchors": {
+        "teacher": "l03-screen-006",
+        "presenter": "p-s07-03-reliability-threats-prevention-s002"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s006",
+      "displayNumber": 7,
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "anchors": {
+        "teacher": "l03-screen-007",
+        "presenter": "p-s07-03-reliability-threats-prevention-s006"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s007",
+      "displayNumber": 8,
+      "title": "К концу занятия у вас будет рабочее решение",
+      "anchors": {
+        "teacher": "l03-screen-008",
+        "presenter": "p-s07-03-reliability-threats-prevention-s007"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s008",
+      "displayNumber": 9,
+      "title": "От исходной ситуации — к доказанному выводу",
+      "anchors": {
+        "teacher": "l03-screen-009",
+        "presenter": "p-s07-03-reliability-threats-prevention-s008"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s010",
+      "displayNumber": 10,
+      "title": "Практика проходит только в разрешённой среде",
+      "anchors": {
+        "teacher": "l03-screen-010",
+        "presenter": "p-s07-03-reliability-threats-prevention-s010"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s011",
+      "displayNumber": 11,
+      "title": "Сигнал, резерв питания и копия решают разные задачи",
+      "anchors": {
+        "teacher": "l03-screen-011",
+        "presenter": "p-s07-03-reliability-threats-prevention-s011"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s012",
+      "displayNumber": 12,
+      "title": "Всегда ли дополнительная копия или повтор операции повышают надёжность?",
+      "anchors": {
+        "teacher": "l03-screen-012",
+        "presenter": "p-s07-03-reliability-threats-prevention-s012"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s013",
+      "displayNumber": 13,
+      "title": "Дестабилизирующий фактор",
+      "anchors": {
+        "teacher": "l03-screen-013",
+        "presenter": "p-s07-03-reliability-threats-prevention-s013"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s014",
+      "displayNumber": 14,
+      "title": "Дестабилизирующий фактор способен нарушить функцию",
+      "anchors": {
+        "teacher": "l03-screen-014",
+        "presenter": "p-s07-03-reliability-threats-prevention-s014"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s015",
+      "displayNumber": 15,
+      "title": "Фактор описывают через источник, объект и механизм",
+      "anchors": {
+        "teacher": "l03-screen-015",
+        "presenter": "p-s07-03-reliability-threats-prevention-s015"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s016",
+      "displayNumber": 16,
+      "title": "Обрыв связи угрожает согласованности операции записи",
+      "anchors": {
+        "teacher": "l03-screen-016",
+        "presenter": "p-s07-03-reliability-threats-prevention-s016"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s017",
+      "displayNumber": 17,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-017",
+        "presenter": "p-s07-03-reliability-threats-prevention-s017"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s018",
+      "displayNumber": 18,
+      "title": "Нежелательное событие без механизма ещё не угроза",
+      "anchors": {
+        "teacher": "l03-screen-018",
+        "presenter": "p-s07-03-reliability-threats-prevention-s018"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s019",
+      "displayNumber": 19,
+      "title": "Фактор связан с конкретной функцией и отказом",
+      "anchors": {
+        "teacher": "l03-screen-019",
+        "presenter": "p-s07-03-reliability-threats-prevention-s019"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s020",
+      "displayNumber": 20,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-020",
+        "presenter": "p-s07-03-reliability-threats-prevention-s020"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s023",
+      "displayNumber": 21,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-021",
+        "presenter": "p-s07-03-reliability-threats-prevention-s023"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s021",
+      "displayNumber": 22,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "l03-screen-022",
+        "presenter": "p-s07-03-reliability-threats-prevention-s021"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s022",
+      "displayNumber": 23,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-023",
+        "presenter": "p-s07-03-reliability-threats-prevention-s022"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s024",
+      "displayNumber": 24,
+      "title": "Причинно-следственная цепочка",
+      "anchors": {
+        "teacher": "l03-screen-024",
+        "presenter": "p-s07-03-reliability-threats-prevention-s024"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s025",
+      "displayNumber": 25,
+      "title": "Цепочка ведёт от фактора к наблюдаемому отказу",
+      "anchors": {
+        "teacher": "l03-screen-025",
+        "presenter": "p-s07-03-reliability-threats-prevention-s025"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s026",
+      "displayNumber": 26,
+      "title": "Каждый переход требует наблюдения или проверяемой гипотезы",
+      "anchors": {
+        "teacher": "l03-screen-026",
+        "presenter": "p-s07-03-reliability-threats-prevention-s026"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s027",
+      "displayNumber": 27,
+      "title": "Повреждённая строка останавливает импорт через исключение",
+      "anchors": {
+        "teacher": "l03-screen-027",
+        "presenter": "p-s07-03-reliability-threats-prevention-s027"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s028",
+      "displayNumber": 28,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-028",
+        "presenter": "p-s07-03-reliability-threats-prevention-s028"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s029",
+      "displayNumber": 29,
+      "title": "Корреляция не превращается в доказанную причину",
+      "anchors": {
+        "teacher": "l03-screen-029",
+        "presenter": "p-s07-03-reliability-threats-prevention-s029"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s030",
+      "displayNumber": 30,
+      "title": "У каждого перехода есть способ проверки",
+      "anchors": {
+        "teacher": "l03-screen-030",
+        "presenter": "p-s07-03-reliability-threats-prevention-s030"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s031",
+      "displayNumber": 31,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-031",
+        "presenter": "p-s07-03-reliability-threats-prevention-s031"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s034",
+      "displayNumber": 32,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-032",
+        "presenter": "p-s07-03-reliability-threats-prevention-s034"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s032",
+      "displayNumber": 33,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "l03-screen-033",
+        "presenter": "p-s07-03-reliability-threats-prevention-s032"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s033",
+      "displayNumber": 34,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-034",
+        "presenter": "p-s07-03-reliability-threats-prevention-s033"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s035",
+      "displayNumber": 35,
+      "title": "Контроль входных данных",
+      "anchors": {
+        "teacher": "l03-screen-035",
+        "presenter": "p-s07-03-reliability-threats-prevention-s035"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s036",
+      "displayNumber": 36,
+      "title": "Валидация отсекает форматные и логические нарушения",
+      "anchors": {
+        "teacher": "l03-screen-036",
+        "presenter": "p-s07-03-reliability-threats-prevention-s036"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s037",
+      "displayNumber": 37,
+      "title": "Вход проверяется до изменения состояния системы",
+      "anchors": {
+        "teacher": "l03-screen-037",
+        "presenter": "p-s07-03-reliability-threats-prevention-s037"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s038",
+      "displayNumber": 38,
+      "title": "Пустой идентификатор отклоняется до записи",
+      "anchors": {
+        "teacher": "l03-screen-038",
+        "presenter": "p-s07-03-reliability-threats-prevention-s038"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s039",
+      "displayNumber": 39,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-039",
+        "presenter": "p-s07-03-reliability-threats-prevention-s039"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s040",
+      "displayNumber": 40,
+      "title": "Молчаливое исправление скрывает неверный ввод",
+      "anchors": {
+        "teacher": "l03-screen-040",
+        "presenter": "p-s07-03-reliability-threats-prevention-s040"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s041",
+      "displayNumber": 41,
+      "title": "Некорректные данные не меняют состояние и оставляют запись",
+      "anchors": {
+        "teacher": "l03-screen-041",
+        "presenter": "p-s07-03-reliability-threats-prevention-s041"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s042",
+      "displayNumber": 42,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-042",
+        "presenter": "p-s07-03-reliability-threats-prevention-s042"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s045",
+      "displayNumber": 43,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-043",
+        "presenter": "p-s07-03-reliability-threats-prevention-s045"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s043",
+      "displayNumber": 44,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "l03-screen-044",
+        "presenter": "p-s07-03-reliability-threats-prevention-s043"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s044",
+      "displayNumber": 45,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-045",
+        "presenter": "p-s07-03-reliability-threats-prevention-s044"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s046",
+      "displayNumber": 46,
+      "title": "Проверка состояния",
+      "anchors": {
+        "teacher": "l03-screen-046",
+        "presenter": "p-s07-03-reliability-threats-prevention-s046"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s047",
+      "displayNumber": 47,
+      "title": "Предусловия показывают, готова ли система к операции",
+      "anchors": {
+        "teacher": "l03-screen-047",
+        "presenter": "p-s07-03-reliability-threats-prevention-s047"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s048",
+      "displayNumber": 48,
+      "title": "Состояние проверяется как можно ближе к действию",
+      "anchors": {
+        "teacher": "l03-screen-048",
+        "presenter": "p-s07-03-reliability-threats-prevention-s048"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s049",
+      "displayNumber": 49,
+      "title": "Импорт начинается после проверки каталога и свободного места",
+      "anchors": {
+        "teacher": "l03-screen-049",
+        "presenter": "p-s07-03-reliability-threats-prevention-s049"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s050",
+      "displayNumber": 50,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-050",
+        "presenter": "p-s07-03-reliability-threats-prevention-s050"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s051",
+      "displayNumber": 51,
+      "title": "Одной проверки при запуске недостаточно",
+      "anchors": {
+        "teacher": "l03-screen-051",
+        "presenter": "p-s07-03-reliability-threats-prevention-s051"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s052",
+      "displayNumber": 52,
+      "title": "Нарушение предусловия останавливает операцию или ведёт к откату",
+      "anchors": {
+        "teacher": "l03-screen-052",
+        "presenter": "p-s07-03-reliability-threats-prevention-s052"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s053",
+      "displayNumber": 53,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-053",
+        "presenter": "p-s07-03-reliability-threats-prevention-s053"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s056",
+      "displayNumber": 54,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-054",
+        "presenter": "p-s07-03-reliability-threats-prevention-s056"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s054",
+      "displayNumber": 55,
+      "title": "Выполните расчёт",
+      "anchors": {
+        "teacher": "l03-screen-055",
+        "presenter": "p-s07-03-reliability-threats-prevention-s054"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s055",
+      "displayNumber": 56,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-056",
+        "presenter": "p-s07-03-reliability-threats-prevention-s055"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s057",
+      "displayNumber": 57,
+      "title": "Ограничение последствий",
+      "anchors": {
+        "teacher": "l03-screen-057",
+        "presenter": "p-s07-03-reliability-threats-prevention-s057"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s058",
+      "displayNumber": 58,
+      "title": "Изоляция уменьшает последствия, но не устраняет причину",
+      "anchors": {
+        "teacher": "l03-screen-058",
+        "presenter": "p-s07-03-reliability-threats-prevention-s058"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s059",
+      "displayNumber": 59,
+      "title": "Сначала задают допустимый ущерб и границу изоляции",
+      "anchors": {
+        "teacher": "l03-screen-059",
+        "presenter": "p-s07-03-reliability-threats-prevention-s059"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s060",
+      "displayNumber": 60,
+      "title": "Ошибочная строка уходит в карантин без остановки остальных",
+      "anchors": {
+        "teacher": "l03-screen-060",
+        "presenter": "p-s07-03-reliability-threats-prevention-s060"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s061",
+      "displayNumber": 61,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-061",
+        "presenter": "p-s07-03-reliability-threats-prevention-s061"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s062",
+      "displayNumber": 62,
+      "title": "Продолжение любой ценой скрывает частичный результат",
+      "anchors": {
+        "teacher": "l03-screen-062",
+        "presenter": "p-s07-03-reliability-threats-prevention-s062"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s063",
+      "displayNumber": 63,
+      "title": "После отказа ясно, что выполнено, отменено и ждёт повтора",
+      "anchors": {
+        "teacher": "l03-screen-063",
+        "presenter": "p-s07-03-reliability-threats-prevention-s063"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s064",
+      "displayNumber": 64,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-064",
+        "presenter": "p-s07-03-reliability-threats-prevention-s064"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s067",
+      "displayNumber": 65,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-065",
+        "presenter": "p-s07-03-reliability-threats-prevention-s067"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s065",
+      "displayNumber": 66,
+      "title": "Выполните расчёт",
+      "anchors": {
+        "teacher": "l03-screen-066",
+        "presenter": "p-s07-03-reliability-threats-prevention-s065"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s066",
+      "displayNumber": 67,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-067",
+        "presenter": "p-s07-03-reliability-threats-prevention-s066"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s068",
+      "displayNumber": 68,
+      "title": "Временная избыточность",
+      "anchors": {
+        "teacher": "l03-screen-068",
+        "presenter": "p-s07-03-reliability-threats-prevention-s068"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s069",
+      "displayNumber": 69,
+      "title": "Повтор расходует время ради преодоления краткого сбоя",
+      "anchors": {
+        "teacher": "l03-screen-069",
+        "presenter": "p-s07-03-reliability-threats-prevention-s069"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s070",
+      "displayNumber": 70,
+      "title": "Безопасный повтор ограничен и учитывает идемпотентность",
+      "anchors": {
+        "teacher": "l03-screen-070",
+        "presenter": "p-s07-03-reliability-threats-prevention-s070"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s071",
+      "displayNumber": 71,
+      "title": "Чтение повторяется один раз после сбоя связи",
+      "anchors": {
+        "teacher": "l03-screen-071",
+        "presenter": "p-s07-03-reliability-threats-prevention-s071"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s072",
+      "displayNumber": 72,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-072",
+        "presenter": "p-s07-03-reliability-threats-prevention-s072"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s073",
+      "displayNumber": 73,
+      "title": "Бесконечный повтор неидемпотентной записи создаёт риск",
+      "anchors": {
+        "teacher": "l03-screen-073",
+        "presenter": "p-s07-03-reliability-threats-prevention-s073"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s074",
+      "displayNumber": 74,
+      "title": "Попытки ограничены, дубли отсутствуют, причина сохранена",
+      "anchors": {
+        "teacher": "l03-screen-074",
+        "presenter": "p-s07-03-reliability-threats-prevention-s074"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s075",
+      "displayNumber": 75,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-075",
+        "presenter": "p-s07-03-reliability-threats-prevention-s075"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s078",
+      "displayNumber": 76,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-076",
+        "presenter": "p-s07-03-reliability-threats-prevention-s078"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s076",
+      "displayNumber": 77,
+      "title": "Выполните расчёт",
+      "anchors": {
+        "teacher": "l03-screen-077",
+        "presenter": "p-s07-03-reliability-threats-prevention-s076"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s077",
+      "displayNumber": 78,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-078",
+        "presenter": "p-s07-03-reliability-threats-prevention-s077"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s079",
+      "displayNumber": 79,
+      "title": "Информационная и программная избыточность",
+      "anchors": {
+        "teacher": "l03-screen-079",
+        "presenter": "p-s07-03-reliability-threats-prevention-s079"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s080",
+      "displayNumber": 80,
+      "title": "Контрольные данные выявляют искажение, реализация сверяет итог",
+      "anchors": {
+        "teacher": "l03-screen-080",
+        "presenter": "p-s07-03-reliability-threats-prevention-s080"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s081",
+      "displayNumber": 81,
+      "title": "Копия той же ошибки не создаёт независимости",
+      "anchors": {
+        "teacher": "l03-screen-081",
+        "presenter": "p-s07-03-reliability-threats-prevention-s081"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s082",
+      "displayNumber": 82,
+      "title": "Две реализации обнаруживают расхождение; платёж не выполняют",
+      "anchors": {
+        "teacher": "l03-screen-082",
+        "presenter": "p-s07-03-reliability-threats-prevention-s082"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s083",
+      "displayNumber": 83,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-083",
+        "presenter": "p-s07-03-reliability-threats-prevention-s083"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s084",
+      "displayNumber": 84,
+      "title": "Второй файл на том же носителе не становится резервом",
+      "anchors": {
+        "teacher": "l03-screen-084",
+        "presenter": "p-s07-03-reliability-threats-prevention-s084"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s085",
+      "displayNumber": 85,
+      "title": "Для меры названы обнаруживаемые и неподконтрольные случаи",
+      "anchors": {
+        "teacher": "l03-screen-085",
+        "presenter": "p-s07-03-reliability-threats-prevention-s085"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s086",
+      "displayNumber": 86,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-086",
+        "presenter": "p-s07-03-reliability-threats-prevention-s086"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s089",
+      "displayNumber": 87,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-087",
+        "presenter": "p-s07-03-reliability-threats-prevention-s089"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s087",
+      "displayNumber": 88,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "l03-screen-088",
+        "presenter": "p-s07-03-reliability-threats-prevention-s087"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s088",
+      "displayNumber": 89,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-089",
+        "presenter": "p-s07-03-reliability-threats-prevention-s088"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s090",
+      "displayNumber": 90,
+      "title": "Цена избыточности",
+      "anchors": {
+        "teacher": "l03-screen-090",
+        "presenter": "p-s07-03-reliability-threats-prevention-s090"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s091",
+      "displayNumber": 91,
+      "title": "Избыточность добавляет ресурсы, сложность и новые отказы",
+      "anchors": {
+        "teacher": "l03-screen-091",
+        "presenter": "p-s07-03-reliability-threats-prevention-s091"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s092",
+      "displayNumber": 92,
+      "title": "Снижение риска сравнивают с полной стоимостью меры",
+      "anchors": {
+        "teacher": "l03-screen-092",
+        "presenter": "p-s07-03-reliability-threats-prevention-s092"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s093",
+      "displayNumber": 93,
+      "title": "Повтор повышает нагрузку и требует защиты от дублей",
+      "anchors": {
+        "teacher": "l03-screen-093",
+        "presenter": "p-s07-03-reliability-threats-prevention-s093"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s094",
+      "displayNumber": 94,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "l03-screen-094",
+        "presenter": "p-s07-03-reliability-threats-prevention-s094"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s095",
+      "displayNumber": 95,
+      "title": "Большее число копий не всегда повышает надёжность",
+      "anchors": {
+        "teacher": "l03-screen-095",
+        "presenter": "p-s07-03-reliability-threats-prevention-s095"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s096",
+      "displayNumber": 96,
+      "title": "Решение фиксирует выигрыш, цену и условие пересмотра",
+      "anchors": {
+        "teacher": "l03-screen-096",
+        "presenter": "p-s07-03-reliability-threats-prevention-s096"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s097",
+      "displayNumber": 97,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "l03-screen-097",
+        "presenter": "p-s07-03-reliability-threats-prevention-s097"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s100",
+      "displayNumber": 98,
+      "title": "Выберите два обоснованных ответа",
+      "anchors": {
+        "teacher": "l03-screen-098",
+        "presenter": "p-s07-03-reliability-threats-prevention-s100"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s098",
+      "displayNumber": 99,
+      "title": "Выполните расчёт",
+      "anchors": {
+        "teacher": "l03-screen-099",
+        "presenter": "p-s07-03-reliability-threats-prevention-s098"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s099",
+      "displayNumber": 100,
+      "title": "Установите предметные соответствия",
+      "anchors": {
+        "teacher": "l03-screen-100",
+        "presenter": "p-s07-03-reliability-threats-prevention-s099"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s101",
+      "displayNumber": 101,
+      "title": "Сначала оформите паспорт работы",
+      "anchors": {
+        "teacher": "l03-screen-101",
+        "presenter": "p-s07-03-reliability-threats-prevention-s101"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s102",
+      "displayNumber": 102,
+      "title": "Соберите исходные данные без домыслов",
+      "anchors": {
+        "teacher": "l03-screen-102",
+        "presenter": "p-s07-03-reliability-threats-prevention-s102"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s103",
+      "displayNumber": 103,
+      "title": "Назначьте критерий до выполнения",
+      "anchors": {
+        "teacher": "l03-screen-103",
+        "presenter": "p-s07-03-reliability-threats-prevention-s103"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s104",
+      "displayNumber": 104,
+      "title": "Выполняйте действие и ведите журнал",
+      "anchors": {
+        "teacher": "l03-screen-104",
+        "presenter": "p-s07-03-reliability-threats-prevention-s104"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s105",
+      "displayNumber": 105,
+      "title": "Добавьте граничный или негативный сценарий",
+      "anchors": {
+        "teacher": "l03-screen-105",
+        "presenter": "p-s07-03-reliability-threats-prevention-s105"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s106",
+      "displayNumber": 106,
+      "title": "Разберите отклонение, а не скрывайте его",
+      "anchors": {
+        "teacher": "l03-screen-106",
+        "presenter": "p-s07-03-reliability-threats-prevention-s106"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s107",
+      "displayNumber": 107,
+      "title": "Сопоставьте свидетельство с критерием",
+      "anchors": {
+        "teacher": "l03-screen-107",
+        "presenter": "p-s07-03-reliability-threats-prevention-s107"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s108",
+      "displayNumber": 108,
+      "title": "Завершите отчёт выводом и ограничениями",
+      "anchors": {
+        "teacher": "l03-screen-108",
+        "presenter": "p-s07-03-reliability-threats-prevention-s108"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s109",
+      "displayNumber": 109,
+      "title": "Первые четыре опоры собираются в единую модель",
+      "anchors": {
+        "teacher": "l03-screen-109",
+        "presenter": "p-s07-03-reliability-threats-prevention-s109"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s110",
+      "displayNumber": 110,
+      "title": "Последние четыре опоры задают границы решения",
+      "anchors": {
+        "teacher": "l03-screen-110",
+        "presenter": "p-s07-03-reliability-threats-prevention-s110"
+      }
+    },
+    {
+      "lectureId": "s07-03-reliability-threats-prevention",
+      "slideId": "s07-03-reliability-threats-prevention-s112",
+      "displayNumber": 111,
+      "title": "Вопросы от аудитории",
+      "anchors": {
+        "teacher": "l03-screen-111",
+        "presenter": "p-s07-03-reliability-threats-prevention-s112"
+      }
+    }
+  ]
+}

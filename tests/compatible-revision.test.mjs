@@ -4,15 +4,20 @@ import fs from 'node:fs'
 import { migrateCompatibleSession, exportPreviousResults } from '../src/compatibility.ts'
 import { prepareTeacherNotes } from '../src/teacherNotes.ts'
 const read = p => JSON.parse(fs.readFileSync(p, 'utf8'))
-const course = read('public/course.json'), baseline = read('authoring/baseline-20260918.json')
+const course = read('public/course.json'), baseline = read('authoring/baseline-pilot-20261021.json')
 const manifest = read('public/teaching/compatibility.json'), pack = read('public/teaching/notes.json')
 const base='/2026-OKFKS-lecture/', prefix=`lecture:${base}:okfks`
 const store = () => { const values = new Map(); return {getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,v)} }
 
-test('all slide positions, IDs, notebook anchors and taught definitions remain compatible', () => {
+test('only the seven s111 summaries are removed; surviving IDs, order, notebook anchors and definitions remain compatible', () => {
+  assert.equal(course.lectures.length,7)
   for (let i=0;i<course.lectures.length;i++) {
-    const after=course.lectures[i].slides, before=baseline.course.lectures[i].slides
-    assert.equal(after.length,112)
+    const lecture=course.lectures[i],after=lecture.slides
+    const original=baseline.course.lectures[i].slides
+    const removedId=`${lecture.id}-s111`
+    assert.equal(original.filter(s=>s.id===removedId).length,1)
+    const before=original.filter(s=>s.id!==removedId)
+    assert.equal(after.length,111)
     assert.deepEqual(after.map(s=>s.id),before.map(s=>s.id))
     before.forEach((s,j)=>assert.equal(after[j].notebook,s.notebook,s.id))
     if (i===0 || i===1) before.filter(s=>s.notebook && s.kind==='theory').forEach(s=>assert.equal(after.find(a=>a.id===s.id).body,s.body,s.id))
@@ -22,7 +27,14 @@ test('all slide positions, IDs, notebook anchors and taught definitions remain c
 })
 test('same-ID revised questions do not inherit old scores; unchanged tasks and progress do', async () => {
   const s=store(), safe=manifest.unchangedTaskIds[0]
-  const changed=course.lectures[0].slides.find(s=>s.task?.type==='single').task.id
+  const changed='s07-01-quality-and-failures-q1-choice-check'
+  const bank=read('public/assessment.json')
+  const unchanged=course.lectures.flatMap(l=>l.slides).filter(s=>s.task).filter(s=>{
+    const old=baseline.course.lectures.flatMap(l=>l.slides).find(old=>old.id===s.id)
+    return JSON.stringify(s.task)===JSON.stringify(old.task)&&JSON.stringify(bank.keys[s.task.id])===JSON.stringify(baseline.bank.keys[s.task.id])
+  }).map(s=>s.task.id)
+  assert.deepEqual(manifest.unchangedTaskIds,unchanged)
+  assert.ok(!manifest.unchangedTaskIds.includes(changed))
   const oldKey=`${prefix}:${manifest.previousVersion}:attempts`,newKey=`${prefix}:${course.contentVersion}:attempts`
   const prior={ [safe]:{seed:1,attempts:2,draft:[],result:{status:'correct',score:1}}, [changed]:{seed:2,attempts:1,draft:['o1'],result:{status:'correct',score:1}} }
   s.setItem(oldKey,JSON.stringify(prior))
@@ -37,9 +49,7 @@ test('same-ID revised questions do not inherit old scores; unchanged tasks and p
   assert.equal(JSON.parse(s.getItem(newKey))[safe].attempts,5)
 })
 test('older authored fields survive while old baseline text does not hide revised notes', async () => {
-  const s=store(),id=course.lectures[0].slides.find(s=>s.task?.type==='single').id
-  const fixture=read('tests/fixtures/previous-note.json')
-  assert.equal(fixture.id,id)
+  const s=store(),fixture=read('tests/fixtures/pilot-note.json'),id=fixture.id
   s.setItem(`${prefix}:private:${manifest.previousVersion}`,JSON.stringify({[id]:{...fixture.note,questions:'Мой вопрос для этой группы'}}))
   await migrateCompatibleSession(course,base,manifest,s)
   const note=prepareTeacherNotes(course,base,pack,s)[id]
@@ -61,6 +71,8 @@ test('route covers all eight sections and fits 90 minutes with discussion reserv
   const route=read('public/teaching/route.json'),l=course.lectures.at(-1)
   assert.equal(route.estimatedCoreMinutes+route.reserveMinutes,90)
   for(const s of l.slides.filter(s=>s.kind==='section'))assert.ok(route.requiredSlideIds.includes(s.id))
-  assert.equal(new Set([...route.requiredSlideIds,...route.independentSlideIds]).size,112)
+  assert.deepEqual([...new Set([...route.requiredSlideIds,...route.independentSlideIds])].sort(),l.slides.map(s=>s.id).sort())
+  assert.equal(l.slides.length,111)
+  assert.ok(![...route.requiredSlideIds,...route.independentSlideIds].includes(`${l.id}-s111`))
   assert.ok(route.reserveMinutes>=5)
 })

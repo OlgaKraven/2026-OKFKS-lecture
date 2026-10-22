@@ -6,12 +6,23 @@ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'))
 const course = await read('public/course.json')
 const map = await read('authoring/migration-map.json')
 const workload = await read('authoring/course-map.json')
-test('every legacy slide survives under a stable ID', () => {
+test('all legacy positions retain provenance; only the seven s111 summaries have no current slide', () => {
   assert.equal(map.length, 784)
+  assert.equal(map.filter(entry => entry.slideIds.length === 0).length, 7)
   for (const lecture of course.lectures) {
     const entries = map.filter(m => m.lectureId === lecture.id)
     assert.deepEqual(entries.map(e => e.oldNumber), Array.from({ length: 112 }, (_, i) => i + 1))
-    for (const entry of entries) for (const id of entry.slideIds) assert.ok(lecture.slides.some(s => s.id === id))
+    for (const entry of entries) {
+      if (entry.oldNumber === 111) {
+        assert.deepEqual(entry.slideIds, [])
+        assert.match(entry.change, /^Удалён/)
+      } else {
+        assert.deepEqual(entry.slideIds, [`${lecture.id}-s${String(entry.oldNumber).padStart(3, '0')}`])
+        assert.ok(lecture.slides.some(s => s.id === entry.slideIds[0]))
+      }
+    }
+    assert.equal(lecture.slides.length, 111)
+    assert.deepEqual(entries.flatMap(entry => entry.slideIds).sort(), lecture.slides.map(slide => slide.id).sort())
   }
 })
 test('source workload and semester allocation remain separate', () => {

@@ -1,0 +1,177 @@
+{
+  "baselinePackage": "0.1.1-okfks.8",
+  "targetPackage": "0.1.1-okfks.9",
+  "scope": [
+    "LectureSite: optional resolveTeacherNotes API",
+    "Teaching: resolve current notes at presenter mount",
+    "Teaching: return shown slide ID when session ends",
+    "LectureSite: save shown slide ID to progress and viewer URL"
+  ],
+  "printingChanged": false,
+  "protectedFiles": [
+    {
+      "path": "lib/SlideView-CGu2NZMk.js",
+      "sha256": "edf0fd88746e85a3d389893f6b2e7f6833715f72d349b1fc3a19c551328cccb3",
+      "byteIdentical": true
+    },
+    {
+      "path": "lib/SlideView.d.ts",
+      "sha256": "130f1c9af0802f4b3281619a6c7f21e024d8d205682158a29f1834cd3a5ef1e9",
+      "byteIdentical": true
+    },
+    {
+      "path": "lib/Infographic.d.ts",
+      "sha256": "b30d2cc48ce051aa7876ecc8aa92dac90bb981c7b5e1c4059e4c89409bd84676",
+      "byteIdentical": true
+    },
+    {
+      "path": "lib/ExtendedInfographic.d.ts",
+      "sha256": "6d8611ae4eaae5830e9a1d0150abd88db66e227b5cbae8ababa6e12b02f06264",
+      "byteIdentical": true
+    },
+    {
+      "path": "lib/lecture-engine.css",
+      "sha256": "1f8e1646691f8403b82a18325ce5807d36152eb154c60b06f653f6b71f626ca0",
+      "byteIdentical": true
+    }
+  ],
+  "unchangedFiles": 30,
+  "changedFiles": [
+    "lib/LectureSite.d.ts",
+    "lib/Teaching.d.ts",
+    "lib/lecture-engine.js",
+    "package.json"
+  ],
+  "addedFiles": [
+    "lib/Teaching-B-2nw3hG.js"
+  ],
+  "removedFiles": [
+    "lib/Teaching-vdO4swsV.js"
+  ],
+  "archiveSha256": {
+    "0.1.1-okfks.8": "e658acc7ce8e61d73ce5f710b7cde52c9a1bf5fca077aeef06ebcc831b4ceb8c",
+    "0.1.1-okfks.9": "cccbfb16b925287b97c6ddb0fa5fd04f84c787450c8820bd1b1b1944c8b39d96"
+  },
+  "allUnchangedFiles": [
+    {
+      "path": "README.md",
+      "sha256": "6ec896256f1d60807925a8d724c9865b036290f4291d56e01aa1fa4078034928"
+    },
+    {
+      "path": "docs/GENERATION_GUIDE.md",
+      "sha256": "f14d12c536f46ffc169361f9963c6d3fecbe6b73c44155187a2976b358e076ba"
+    },
+    {
+      "path": "docs/INFOGRAPHICS.md",
+      "sha256": "76e763fdf05d6d3b20c90709e4fdff7228cb866e94f21d4f6409a1abe712d804"
+    },
+    {
+      "path": "docs/LECTURE_INSTRUCTION.md",
+      "sha256": "d17bbd83e86a69ebc26734b9aa2c993f44cd7a7af1791d337689ec289e8b4375"
+    },
+    {
+      "path": "docs/QA.md",
+      "sha256": "3a8a1061a78f07972c760693961f6b2bc5c749332ff8d1d5075984aa82b035d2"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "sha256": "63c4b55568ba3af8961728d4f4fb99a5b678581b2895a0ccc97e17c5b01ddf90"
+    },
+    {
+      "path": "docs/TEMPLATE_RULES.md",
+      "sha256": "0162a680170e5ff85aa2df71137d854c33f7ffcbb65796c92f22f86cb281579f"
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "sha256": "92bb0e033193cec6d2475f881c38432b152c093110ece76406849fd91e8c70ef"
+    },
+    {
+      "path": "docs/guide-content.json",
+      "sha256": "aea892ab295dd12796e3ce43773614993ab45f2955b0a186176d5aa1cf6a2026"
+    },
+    {
+      "path": "docs/repository-preview.png",
+      "sha256": "216173232d180b89bcf0f214ad617112e0e75598e8e1e33dd5f5f986a394c455"
+    },
+    {
+      "path": "lib/Assessment.d.ts",
+      "sha256": "94d2301805f12b0f0cc19043e04b7cd56ca88a03a6de94ca468a1dc4e3ae68e5"
+    },
+    {
+      "path": "lib/ExtendedInfographic.d.ts",
+      "sha256": "6d8611ae4eaae5830e9a1d0150abd88db66e227b5cbae8ababa6e12b02f06264"
+    },
+    {
+      "path": "lib/Infographic.d.ts",
+      "sha256": "b30d2cc48ce051aa7876ecc8aa92dac90bb981c7b5e1c4059e4c89409bd84676"
+    },
+    {
+      "path": "lib/Modal.d.ts",
+      "sha256": "c8dad783153b12651918d05e03805dd85d246893112dd6706bd24cddf67d04ee"
+    },
+    {
+      "path": "lib/PanelLayout.d.ts",
+      "sha256": "fed337689a64bfe89e3a262ec2317d3b64471a5d461cedb3ec020835e2ff8eff"
+    },
+    {
+      "path": "lib/Resources.d.ts",
+      "sha256": "da07c66f26e17d78c6cd0acf0d96652ddb32b119c535326530bb4f97c5319320"
+    },
+    {
+      "path": "lib/SlideView-CGu2NZMk.js",
+      "sha256": "edf0fd88746e85a3d389893f6b2e7f6833715f72d349b1fc3a19c551328cccb3"
+    },
+    {
+      "path": "lib/SlideView.d.ts",
+      "sha256": "130f1c9af0802f4b3281619a6c7f21e024d8d205682158a29f1834cd3a5ef1e9"
+    },
+    {
+      "path": "lib/index.d.ts",
+      "sha256": "ff6b3bb2754713b8ccd977510afeed362f10654e3e91aca9d90f81f26dfc2ab8"
+    },
+    {
+      "path": "lib/lecture-engine.css",
+      "sha256": "1f8e1646691f8403b82a18325ce5807d36152eb154c60b06f653f6b71f626ca0"
+    },
+    {
+      "path": "lib/model.d.ts",
+      "sha256": "01e5529ae797b61c150e6eca3ed830a3c83063c9d6b992084c6cde408bb01173"
+    },
+    {
+      "path": "lib/scoring.d.ts",
+      "sha256": "fb5dc83f19fd4c271daa1fc93de6c39363dc1008e48364933e93fa0c087d4f50"
+    },
+    {
+      "path": "lib/session.d.ts",
+      "sha256": "a0eb892f3aeebf6105026c24eb8a96ff22e89ae3463940983c14a29ec51907fd"
+    },
+    {
+      "path": "lib/storage.d.ts",
+      "sha256": "e7819b8e1b536b447ff3c875cabc250c0b9f16329d66e1266293b24c37fc8e6c"
+    },
+    {
+      "path": "public/brand/interface-callouts.png",
+      "sha256": "345d84ef555e71877ea4ab77d8f9722ea1f247338a0462d566efcb8a5416ab2d"
+    },
+    {
+      "path": "public/brand/okfks-rhino-catalog.png",
+      "sha256": "5dc4b24cc46aa1d9694b6f20fcec9c025d8bb6c256e84df6229a12657aa603f2"
+    },
+    {
+      "path": "public/brand/side-ornament.png",
+      "sha256": "bd69f172225f9a547ee399e768d54b812fcda7145bb6b31289f26fa52f19c5a1"
+    },
+    {
+      "path": "public/brand/synergy-logo.png",
+      "sha256": "f34cfbd179d8a192cbd609dc424ea8babbcad53a3afe9b4e2ac987d6c4881dc7"
+    },
+    {
+      "path": "public/brand/topic-arrow.webp",
+      "sha256": "87d8009bc3c69e4d7a79c6932c0a92bbd89e66e967ef14e256049825b2678bb3"
+    },
+    {
+      "path": "public/fonts/raleway-cyrillic.woff2",
+      "sha256": "ac99ad1c437b60ef445a7c13c958d4d574ef98050de2ccf182ba6ccdb3bfbdfd"
+    }
+  ]
+}

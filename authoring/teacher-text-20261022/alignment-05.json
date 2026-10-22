@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": 1,
+  "courseId": "okfks",
+  "contentVersion": "2.1.0-design-review-20261021",
+  "sourceKind": "local",
+  "sourceSha256": "d75c3f143f749d7ef4ace82f5380caa84cab45cbbeede8db13541b8b97657c20",
+  "lectureIds": [
+    "s08-01-threats-and-malware"
+  ],
+  "documents": {
+    "teacher": "05 — Угрозы и вредоносные программы.md",
+    "presenter": "Панель преподавателя/05 — Угрозы и вредоносные программы.md"
+  },
+  "slides": [
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s001",
+      "displayNumber": 1,
+      "title": "Угрозы и вредоносные программы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s001",
+        "presenter": "p-s08-01-threats-and-malware-s001"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s003",
+      "displayNumber": 2,
+      "title": "Основная литература",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s003",
+        "presenter": "p-s08-01-threats-and-malware-s003"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s004",
+      "displayNumber": 3,
+      "title": "Дополнительная литература",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s004",
+        "presenter": "p-s08-01-threats-and-malware-s004"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s005",
+      "displayNumber": 4,
+      "title": "Материалы к занятиям",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s005",
+        "presenter": "p-s08-01-threats-and-malware-s005"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s009",
+      "displayNumber": 5,
+      "title": "Вопросы темы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s009",
+        "presenter": "p-s08-01-threats-and-malware-s009"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s002",
+      "displayNumber": 6,
+      "title": "Защита компьютерных систем",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s002",
+        "presenter": "p-s08-01-threats-and-malware-s002"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s006",
+      "displayNumber": 7,
+      "title": "Почему без точных понятий решение нельзя проверить",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s006",
+        "presenter": "p-s08-01-threats-and-malware-s006"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s007",
+      "displayNumber": 8,
+      "title": "К концу занятия у вас будет рабочее решение",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s007",
+        "presenter": "p-s08-01-threats-and-malware-s007"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s008",
+      "displayNumber": 9,
+      "title": "От исходной ситуации — к доказанному выводу",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s008",
+        "presenter": "p-s08-01-threats-and-malware-s008"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s010",
+      "displayNumber": 10,
+      "title": "Практика проходит только в разрешённой среде",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s010",
+        "presenter": "p-s08-01-threats-and-malware-s010"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s011",
+      "displayNumber": 11,
+      "title": "Копирование архива оценивают в контексте",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s011",
+        "presenter": "p-s08-01-threats-and-malware-s011"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s012",
+      "displayNumber": 12,
+      "title": "Является ли уязвимость уже произошедшей угрозой или инцидентом?",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s012",
+        "presenter": "p-s08-01-threats-and-malware-s012"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s013",
+      "displayNumber": 13,
+      "title": "Угроза компьютерной системе",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s013",
+        "presenter": "p-s08-01-threats-and-malware-s013"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s014",
+      "displayNumber": 14,
+      "title": "Угроза — потенциальная причина воздействия, а не отказ",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s014",
+        "presenter": "p-s08-01-threats-and-malware-s014"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s015",
+      "displayNumber": 15,
+      "title": "Сценарий связывает источник, возможность, актив и последствие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s015",
+        "presenter": "p-s08-01-threats-and-malware-s015"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s016",
+      "displayNumber": 16,
+      "title": "Внешний отправитель может передать опасный файл",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s016",
+        "presenter": "p-s08-01-threats-and-malware-s016"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s017",
+      "displayNumber": 17,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s017",
+        "presenter": "p-s08-01-threats-and-malware-s017"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s018",
+      "displayNumber": 18,
+      "title": "Угроза, уязвимость, событие и инцидент — разные понятия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s018",
+        "presenter": "p-s08-01-threats-and-malware-s018"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s019",
+      "displayNumber": 19,
+      "title": "Карточка называет актив, источник, путь и последствие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s019",
+        "presenter": "p-s08-01-threats-and-malware-s019"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s020",
+      "displayNumber": 20,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s020",
+        "presenter": "p-s08-01-threats-and-malware-s020"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s023",
+      "displayNumber": 21,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s023",
+        "presenter": "p-s08-01-threats-and-malware-s023"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s021",
+      "displayNumber": 22,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s021",
+        "presenter": "p-s08-01-threats-and-malware-s021"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s022",
+      "displayNumber": 23,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s022",
+        "presenter": "p-s08-01-threats-and-malware-s022"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s024",
+      "displayNumber": 24,
+      "title": "Классификация угроз",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s024",
+        "presenter": "p-s08-01-threats-and-malware-s024"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s025",
+      "displayNumber": 25,
+      "title": "Угрозы группируют по источнику, намерению и воздействию",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s025",
+        "presenter": "p-s08-01-threats-and-malware-s025"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s026",
+      "displayNumber": 26,
+      "title": "Один сценарий допускает несколько независимых признаков",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s026",
+        "presenter": "p-s08-01-threats-and-malware-s026"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s027",
+      "displayNumber": 27,
+      "title": "Границы доверия связывают риск с контролем",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s027",
+        "presenter": "p-s08-01-threats-and-malware-s027"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s028",
+      "displayNumber": 28,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s028",
+        "presenter": "p-s08-01-threats-and-malware-s028"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s029",
+      "displayNumber": 29,
+      "title": "Классификационная метка не является мерой защиты",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s029",
+        "presenter": "p-s08-01-threats-and-malware-s029"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s030",
+      "displayNumber": 30,
+      "title": "Категория должна вести к проверяемым сценариям",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s030",
+        "presenter": "p-s08-01-threats-and-malware-s030"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s031",
+      "displayNumber": 31,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s031",
+        "presenter": "p-s08-01-threats-and-malware-s031"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s034",
+      "displayNumber": 32,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s034",
+        "presenter": "p-s08-01-threats-and-malware-s034"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s032",
+      "displayNumber": 33,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s032",
+        "presenter": "p-s08-01-threats-and-malware-s032"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s033",
+      "displayNumber": 34,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s033",
+        "presenter": "p-s08-01-threats-and-malware-s033"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s035",
+      "displayNumber": 35,
+      "title": "Источники угроз",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s035",
+        "presenter": "p-s08-01-threats-and-malware-s035"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s036",
+      "displayNumber": 36,
+      "title": "Источник угрозы не всегда действует умышленно",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s036",
+        "presenter": "p-s08-01-threats-and-malware-s036"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s037",
+      "displayNumber": 37,
+      "title": "Источник описывают через доступ, знания и путь воздействия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s037",
+        "presenter": "p-s08-01-threats-and-malware-s037"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s038",
+      "displayNumber": 38,
+      "title": "Ошибка оператора и внешний нарушитель создают разные сценарии",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s038",
+        "presenter": "p-s08-01-threats-and-malware-s038"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s039",
+      "displayNumber": 39,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s039",
+        "presenter": "p-s08-01-threats-and-malware-s039"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s040",
+      "displayNumber": 40,
+      "title": "Не каждый пользователь является нарушителем",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s040",
+        "presenter": "p-s08-01-threats-and-malware-s040"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s041",
+      "displayNumber": 41,
+      "title": "Возможности и ограничения источника требуют обоснования",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s041",
+        "presenter": "p-s08-01-threats-and-malware-s041"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s042",
+      "displayNumber": 42,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s042",
+        "presenter": "p-s08-01-threats-and-malware-s042"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s045",
+      "displayNumber": 43,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s045",
+        "presenter": "p-s08-01-threats-and-malware-s045"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s043",
+      "displayNumber": 44,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s043",
+        "presenter": "p-s08-01-threats-and-malware-s043"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s044",
+      "displayNumber": 45,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s044",
+        "presenter": "p-s08-01-threats-and-malware-s044"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s046",
+      "displayNumber": 46,
+      "title": "Модель нарушителя",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s046",
+        "presenter": "p-s08-01-threats-and-malware-s046"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s047",
+      "displayNumber": 47,
+      "title": "Модель нарушителя описывает доступ, знания, ресурсы и цели",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s047",
+        "presenter": "p-s08-01-threats-and-malware-s047"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s048",
+      "displayNumber": 48,
+      "title": "В модель входят только нужные сценарию характеристики",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s048",
+        "presenter": "p-s08-01-threats-and-malware-s048"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s049",
+      "displayNumber": 49,
+      "title": "Публичная форма доступна без локальной учётной записи",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s049",
+        "presenter": "p-s08-01-threats-and-malware-s049"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s050",
+      "displayNumber": 50,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s050",
+        "presenter": "p-s08-01-threats-and-malware-s050"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s051",
+      "displayNumber": 51,
+      "title": "Возможности нарушителя должны соответствовать архитектуре",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s051",
+        "presenter": "p-s08-01-threats-and-malware-s051"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s052",
+      "displayNumber": 52,
+      "title": "Профиль связывается со сценарием и границей доверия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s052",
+        "presenter": "p-s08-01-threats-and-malware-s052"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s053",
+      "displayNumber": 53,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s053",
+        "presenter": "p-s08-01-threats-and-malware-s053"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s056",
+      "displayNumber": 54,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s056",
+        "presenter": "p-s08-01-threats-and-malware-s056"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s054",
+      "displayNumber": 55,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s054",
+        "presenter": "p-s08-01-threats-and-malware-s054"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s055",
+      "displayNumber": 56,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s055",
+        "presenter": "p-s08-01-threats-and-malware-s055"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s057",
+      "displayNumber": 57,
+      "title": "Модель угроз как документ",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s057",
+        "presenter": "p-s08-01-threats-and-malware-s057"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s058",
+      "displayNumber": 58,
+      "title": "Модель угроз фиксирует область, активы, сценарии и меры",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s058",
+        "presenter": "p-s08-01-threats-and-malware-s058"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s059",
+      "displayNumber": 59,
+      "title": "Версия модели должна соответствовать версии системы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s059",
+        "presenter": "p-s08-01-threats-and-malware-s059"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s060",
+      "displayNumber": 60,
+      "title": "Новый канал загрузки меняет набор входных сценариев",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s060",
+        "presenter": "p-s08-01-threats-and-malware-s060"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s061",
+      "displayNumber": 61,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s061",
+        "presenter": "p-s08-01-threats-and-malware-s061"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s062",
+      "displayNumber": 62,
+      "title": "Список угроз без границ и предположений неполон",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s062",
+        "presenter": "p-s08-01-threats-and-malware-s062"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s063",
+      "displayNumber": 63,
+      "title": "Область модели должна быть понятна другому участнику",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s063",
+        "presenter": "p-s08-01-threats-and-malware-s063"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s064",
+      "displayNumber": 64,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s064",
+        "presenter": "p-s08-01-threats-and-malware-s064"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s067",
+      "displayNumber": 65,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s067",
+        "presenter": "p-s08-01-threats-and-malware-s067"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s065",
+      "displayNumber": 66,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s065",
+        "presenter": "p-s08-01-threats-and-malware-s065"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s066",
+      "displayNumber": 67,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s066",
+        "presenter": "p-s08-01-threats-and-malware-s066"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s068",
+      "displayNumber": 68,
+      "title": "Классы вредоносных программ",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s068",
+        "presenter": "p-s08-01-threats-and-malware-s068"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s069",
+      "displayNumber": 69,
+      "title": "Класс описывает поведение и способ распространения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s069",
+        "presenter": "p-s08-01-threats-and-malware-s069"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s070",
+      "displayNumber": 70,
+      "title": "Наблюдаемые свойства важнее названия файла",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s070",
+        "presenter": "p-s08-01-threats-and-malware-s070"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s071",
+      "displayNumber": 71,
+      "title": "Самораспространение и изменение данных отмечают отдельно",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s071",
+        "presenter": "p-s08-01-threats-and-malware-s071"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s072",
+      "displayNumber": 72,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s072",
+        "presenter": "p-s08-01-threats-and-malware-s072"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s073",
+      "displayNumber": 73,
+      "title": "Расширение файла не определяет класс программы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s073",
+        "presenter": "p-s08-01-threats-and-malware-s073"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s074",
+      "displayNumber": 74,
+      "title": "Категория подтверждается описанными действиями",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s074",
+        "presenter": "p-s08-01-threats-and-malware-s074"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s075",
+      "displayNumber": 75,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s075",
+        "presenter": "p-s08-01-threats-and-malware-s075"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s078",
+      "displayNumber": 76,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s078",
+        "presenter": "p-s08-01-threats-and-malware-s078"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s076",
+      "displayNumber": 77,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s076",
+        "presenter": "p-s08-01-threats-and-malware-s076"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s077",
+      "displayNumber": 78,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s077",
+        "presenter": "p-s08-01-threats-and-malware-s077"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s079",
+      "displayNumber": 79,
+      "title": "Пути проникновения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s079",
+        "presenter": "p-s08-01-threats-and-malware-s079"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s080",
+      "displayNumber": 80,
+      "title": "Путь проникновения соединяет канал доставки и условие запуска",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s080",
+        "presenter": "p-s08-01-threats-and-malware-s080"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s081",
+      "displayNumber": 81,
+      "title": "Для каждого входа проверяют источник, права и обработчик",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s081",
+        "presenter": "p-s08-01-threats-and-malware-s081"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s082",
+      "displayNumber": 82,
+      "title": "Файл проверяют до открытия в изолированной среде",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s082",
+        "presenter": "p-s08-01-threats-and-malware-s082"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s083",
+      "displayNumber": 83,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s083",
+        "presenter": "p-s08-01-threats-and-malware-s083"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s084",
+      "displayNumber": 84,
+      "title": "Почта — не единственный путь: есть обновления и носители",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s084",
+        "presenter": "p-s08-01-threats-and-malware-s084"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s085",
+      "displayNumber": 85,
+      "title": "Все входы системы должны иметь контроль",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s085",
+        "presenter": "p-s08-01-threats-and-malware-s085"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s086",
+      "displayNumber": 86,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s086",
+        "presenter": "p-s08-01-threats-and-malware-s086"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s089",
+      "displayNumber": 87,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s089",
+        "presenter": "p-s08-01-threats-and-malware-s089"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s087",
+      "displayNumber": 88,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s087",
+        "presenter": "p-s08-01-threats-and-malware-s087"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s088",
+      "displayNumber": 89,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s088",
+        "presenter": "p-s08-01-threats-and-malware-s088"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s090",
+      "displayNumber": 90,
+      "title": "Безопасное обнаружение",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s090",
+        "presenter": "p-s08-01-threats-and-malware-s090"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s091",
+      "displayNumber": 91,
+      "title": "Обнаружение опирается на сигналы, хэши и журналы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s091",
+        "presenter": "p-s08-01-threats-and-malware-s091"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s092",
+      "displayNumber": 92,
+      "title": "Проверка исключает действующий вредоносный код",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s092",
+        "presenter": "p-s08-01-threats-and-malware-s092"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s093",
+      "displayNumber": 93,
+      "title": "Изолированный стенд использует безопасный сценарий",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s093",
+        "presenter": "p-s08-01-threats-and-malware-s093"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s094",
+      "displayNumber": 94,
+      "title": "Проверим вывод при изменении условия",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s094",
+        "presenter": "p-s08-01-threats-and-malware-s094"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s095",
+      "displayNumber": 95,
+      "title": "Ради демонстрации нельзя отключать или обходить защиту",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s095",
+        "presenter": "p-s08-01-threats-and-malware-s095"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s096",
+      "displayNumber": 96,
+      "title": "Безопасный результат воспроизводим и удаляется по регламенту",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s096",
+        "presenter": "p-s08-01-threats-and-malware-s096"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s097",
+      "displayNumber": 97,
+      "title": "Примените правило к ситуации",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s097",
+        "presenter": "p-s08-01-threats-and-malware-s097"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s100",
+      "displayNumber": 98,
+      "title": "Выберите два обоснованных утверждения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s100",
+        "presenter": "p-s08-01-threats-and-malware-s100"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s098",
+      "displayNumber": 99,
+      "title": "Назовите существенное понятие",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s098",
+        "presenter": "p-s08-01-threats-and-malware-s098"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s099",
+      "displayNumber": 100,
+      "title": "Свяжите понятия и технические роли",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s099",
+        "presenter": "p-s08-01-threats-and-malware-s099"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s101",
+      "displayNumber": 101,
+      "title": "Сначала оформите паспорт работы",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s101",
+        "presenter": "p-s08-01-threats-and-malware-s101"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s102",
+      "displayNumber": 102,
+      "title": "Соберите исходные данные без домыслов",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s102",
+        "presenter": "p-s08-01-threats-and-malware-s102"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s103",
+      "displayNumber": 103,
+      "title": "Назначьте критерий до выполнения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s103",
+        "presenter": "p-s08-01-threats-and-malware-s103"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s104",
+      "displayNumber": 104,
+      "title": "Выполняйте действие и ведите журнал",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s104",
+        "presenter": "p-s08-01-threats-and-malware-s104"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s105",
+      "displayNumber": 105,
+      "title": "Добавьте граничный или негативный сценарий",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s105",
+        "presenter": "p-s08-01-threats-and-malware-s105"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s106",
+      "displayNumber": 106,
+      "title": "Разберите отклонение, а не скрывайте его",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s106",
+        "presenter": "p-s08-01-threats-and-malware-s106"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s107",
+      "displayNumber": 107,
+      "title": "Сопоставьте свидетельство с критерием",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s107",
+        "presenter": "p-s08-01-threats-and-malware-s107"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s108",
+      "displayNumber": 108,
+      "title": "Завершите отчёт выводом и ограничениями",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s108",
+        "presenter": "p-s08-01-threats-and-malware-s108"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s109",
+      "displayNumber": 109,
+      "title": "Первые четыре опоры собираются в единую модель",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s109",
+        "presenter": "p-s08-01-threats-and-malware-s109"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s110",
+      "displayNumber": 110,
+      "title": "Последние четыре опоры задают границы решения",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s110",
+        "presenter": "p-s08-01-threats-and-malware-s110"
+      }
+    },
+    {
+      "lectureId": "s08-01-threats-and-malware",
+      "slideId": "s08-01-threats-and-malware-s112",
+      "displayNumber": 111,
+      "title": "Вопросы от аудитории",
+      "anchors": {
+        "teacher": "teacher-s08-01-threats-and-malware-s112",
+        "presenter": "p-s08-01-threats-and-malware-s112"
+      }
+    }
+  ]
+}
