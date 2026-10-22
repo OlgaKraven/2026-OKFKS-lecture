@@ -17,9 +17,10 @@
     "build:pilot": "node scripts/build-pilot-preview.mjs"
   },
   "dependencies": {
-    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.4.tgz",
+    "@olgakraven/lecture-engine": "file:vendor/olgakraven-lecture-engine-0.1.1-okfks.8.tgz",
     "lucide-react": "^1.38.0",
     "motion": "^13.1.1",
+    "qrcode": "^1.5.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
@@ -36,7 +37,6 @@
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^6.3.289",
     "pngjs": "^7.0.0",
-    "qrcode": "^1.5.4",
     "sharp": "^0.35.4",
     "typescript": "~6.0.2",
     "vite": "^8.2.2",

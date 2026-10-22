@@ -4,6 +4,7 @@ import type { Note } from '@olgakraven/lecture-engine'
 import '@olgakraven/lecture-engine/style.css'
 import { prepareUpdatedTeacherNotes } from './teacherNotes'
 import { NotesStatus } from './NotesStatus'
+import { CourseCatalog } from './CourseCatalog'
 import { migrateCompatibleSession } from './compatibility'
 import './content-fixes.css'
 import { ReliabilityLab } from './lab/ReliabilityLab'
@@ -75,6 +76,6 @@ fetch(`${import.meta.env.BASE_URL}course.json`, { cache: 'no-cache' }).then(resp
   document.title = `${course.code} · ${course.discipline}`
   createRoot(document.getElementById('root')!).render(<>
     {showNotesStatus && <NotesStatus course={course} error={notesError} previousVersion={previousVersion} archiveAvailable={archiveAvailable} compatibilityError={compatibilityError} />}
-    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} />
+    <LectureSite course={course} base={import.meta.env.BASE_URL} teacherNotes={teacherNotes} renderCatalog={props => <CourseCatalog {...props} />} />
   </>)
 }).catch(error => { document.getElementById('root')!.textContent = String(error) })

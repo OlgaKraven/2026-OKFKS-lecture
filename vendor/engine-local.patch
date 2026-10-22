@@ -1,5 +1,5 @@
 diff --git a/package.json b/package.json
-index bc6aa4e..ab0f203 100644
+index bc6aa4e..6b09bc7 100644
 --- a/package.json
 +++ b/package.json
 @@ -1,7 +1,7 @@
@@ -7,32 +7,47 @@ index bc6aa4e..ab0f203 100644
    "name": "@olgakraven/lecture-engine",
    "private": true,
 -  "version": "0.1.0",
-+  "version": "0.1.1-okfks.4",
++  "version": "0.1.1-okfks.8",
    "type": "module",
    "scripts": {
      "dev": "vite",
 diff --git a/src/engine/LectureSite.tsx b/src/engine/LectureSite.tsx
-index 0f57999..f99e5a2 100644
+index 0f57999..a237337 100644
 --- a/src/engine/LectureSite.tsx
 +++ b/src/engine/LectureSite.tsx
-@@ -1,6 +1,6 @@
+@@ -1,6 +1,7 @@
  import {useEffect,useState,lazy,Suspense} from 'react'
++import type {ReactNode} from 'react'
  import {CircleHelp,ArrowLeft,ArrowRight,BarChart3,BookOpen,Download,ExternalLink,List,Maximize,Minimize,MonitorPlay,MousePointer2,Moon,Pause,Play,RotateCcw,Search,Sun,UserRound} from 'lucide-react'
 -import type {Course,Lecture,Profile} from './model'
 +import type {Course,Lecture,Profile,Note} from './model'
  import {assetUrl,safeUrl,TEMPLATE_VERSION} from './model'
  import {read,save} from './storage'
  import {Modal} from './Modal'
-@@ -12,7 +12,7 @@ import './assessment.css'
+@@ -12,7 +13,21 @@ import './assessment.css'
  import './layout-final.css'
  const Teaching=lazy(()=>import('./Teaching'))
  const blankProfile:Profile={fullName:'',position:'',department:''}
 -export function LectureSite({course,base='/'}:{course:Course;base?:string}){
-+export function LectureSite({course,base='/',teacherNotes}:{course:Course;base?:string;teacherNotes?:Record<string,Note>}){
++export type CatalogProps={
++ course:Course
++ base:string
++ profile:Profile
++ materials:string
++ theme:'light'|'dark'
++ onThemeChange:(theme:'light'|'dark')=>void
++ storagePrefix:string
++ invalidLecture:boolean
++ onOpenLecture:(lecture:Lecture)=>void
++ onPrint:(scope:string)=>void
++ onProfileChange:(profile:Profile)=>void
++ onMaterialsChange:(url:string)=>void
++}
++export function LectureSite({course,base='/',teacherNotes,renderCatalog}:{course:Course;base?:string;teacherNotes?:Record<string,Note>;renderCatalog?:(props:CatalogProps)=>ReactNode}){
   const prefix=`lecture:${base}:${course.id}`
   const [query,setQuery]=useState(()=>new URLSearchParams(location.search))
   const [theme,setTheme]=useState<'light'|'dark'>(()=>read(`${prefix}:theme`,'light'))
-@@ -40,16 +40,16 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
+@@ -40,16 +55,16 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
   const startTeaching=()=>{if(!lecture)return;const session=crypto.randomUUID();const u=new URL(location.href);u.search=new URLSearchParams({mode:'audience',lecture:lecture.id,session}).toString();const popup=window.open(u,`audience-${session}`);(window as Window&{lectureAudience?:Window|null}).lectureAudience=popup;navigate({mode:'presenter',lecture:lecture.id,slide:slide!.id,session})}
   const icon=(label:string,child:React.ReactNode,fn:()=>void,pressed?:boolean)=><button className="icon-button" title={label} aria-label={label} aria-pressed={pressed} onClick={fn}>{child}</button>
   const themeButton=icon(theme==='light'?'Включить тёмную тему':'Включить светлую тему',theme==='light'?<Moon size={19}/>:<Sun size={19}/>,()=>setTheme(theme==='light'?'dark':'light'))
@@ -40,7 +55,8 @@ index 0f57999..f99e5a2 100644
 + if((mode==='presenter'||mode==='audience')&&lecture)return <Suspense fallback={<p>Открываем занятие…</p>}><Teaching teacherNotes={mode==='presenter'?teacherNotes:undefined} course={course} lecture={lecture} base={base} profile={profile} mode={mode} session={query.get('session')||''} initialSlide={slide!.id} onExit={()=>navigate({lecture:lecture.id,slide:slide!.id})}/></Suspense>
   if(mode==='print'){const scope=query.get('scope');const list=course.lectures.filter(l=>scope==='all'||scope===l.id||scope===`semester-${l.semester}`);return <main className="print-document"><div className="print-hint"><strong>PDF · {list.length} лекций</strong><button className="button primary" onClick={()=>window.print()}>Сохранить PDF</button></div>{list.flatMap(l=>l.slides.map((s,i)=><section className="print-page" key={s.id}><SlideView course={course} lecture={l} slide={s} number={i+1} base={base} profile={profile}/></section>))}</main>}
   return <AssessmentProvider course={course} base={base}>
-  {!lecture?<main className="catalog"><header className="catalog-header"><a className="brand-lockup" href={base}><img src={assetUrl(course.logo,base)} alt="Логотип компании"/><span><strong>{course.code}</strong><small>{course.discipline}</small></span></a><nav><button className="button ghost settings-button" onClick={()=>setModal('settings')}><UserRound size={19}/><span>Настройка перед занятием</span></button>{themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a></nav></header>
+- {!lecture?<main className="catalog"><header className="catalog-header"><a className="brand-lockup" href={base}><img src={assetUrl(course.logo,base)} alt="Логотип компании"/><span><strong>{course.code}</strong><small>{course.discipline}</small></span></a><nav><button className="button ghost settings-button" onClick={()=>setModal('settings')}><UserRound size={19}/><span>Настройка перед занятием</span></button>{themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a></nav></header>
++ {!lecture?renderCatalog?renderCatalog({course,base,profile,materials,theme,onThemeChange:setTheme,storagePrefix:prefix,invalidLecture:query.has('lecture'),onOpenLecture:open,onPrint:print,onProfileChange:p=>{setProfile(p);save(`${prefix}:profile`,p)},onMaterialsChange:url=>{setMaterials(url);save(`${prefix}:materials`,url)}}):<main className="catalog"><header className="catalog-header"><a className="brand-lockup" href={base}><img src={assetUrl(course.logo,base)} alt="Логотип компании"/><span><strong>{course.code}</strong><small>{course.discipline}</small></span></a><nav><button className="button ghost settings-button" onClick={()=>setModal('settings')}><UserRound size={19}/><span>Настройка перед занятием</span></button>{themeButton}<a className="icon-button" href={assetUrl('guide.html',base)} target="_blank" rel="noopener noreferrer" title="Как пользоваться сайтом" aria-label="Как пользоваться сайтом"><CircleHelp size={19}/></a></nav></header>
   {query.has('lecture')&&<div className="notice">Лекция не найдена. Выберите тему в каталоге.</div>}
 - <section className="catalog-hero"><div className="hero-copy"><p className="eyebrow">{course.semesters.join(' и ')} семестры · {course.year}</p><h1>{course.heroTitle} <span>{course.heroAccent}</span></h1><p className="hero-lead">{course.slogan}</p><div className="teacher-summary"><span>Преподаватель</span><strong>{profile.fullName||'Ваше имя на каждой лекции'}</strong><small>{profile.position||'Заполните данные перед занятием'}</small>{profile.department&&<small>{profile.department}</small>}</div></div><div className="hero-mascot"><div className="chevron-backdrop"/><img src={assetUrl(course.mascot,base)} alt={course.mascotAlt}/></div></section>
 + <section className="catalog-hero"><div className="hero-copy"><p className="eyebrow">{course.semesters.join(' и ')} семестры{course.year?` · ${course.year}`:''}</p><h1>{course.heroTitle} <span>{course.heroAccent}</span></h1><p className="hero-lead">{course.slogan}</p><div className="teacher-summary"><span>Преподаватель</span><strong>{profile.fullName||'Ваше имя на каждой лекции'}</strong><small>{profile.position||'Заполните данные перед занятием'}</small>{profile.department&&<small>{profile.department}</small>}</div></div><div className="hero-mascot"><div className="chevron-backdrop"/><img src={assetUrl(course.mascot,base)} alt={course.mascotAlt}/></div></section>
@@ -52,7 +68,7 @@ index 0f57999..f99e5a2 100644
   <header className="deck-toolbar"><button className="button ghost" onClick={()=>navigate({})}><ArrowLeft size={18}/>Каталог</button><div className="deck-topic"><strong>{lecture.title}</strong><span>{lecture.semester} семестр</span></div><div className="toolbar-actions">
   {icon('Результаты самопроверки',<BarChart3 size={19}/>,()=>setModal('results'))}
   {icon(animations?'Отключить анимацию':'Включить анимацию',animations?<Pause size={19}/>:<Play size={19}/>,()=>setAnimations(!animations),animations)}
-@@ -76,7 +76,7 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
+@@ -76,7 +91,7 @@ export function LectureSite({course,base='/'}:{course:Course;base?:string}){
  function Settings({course,profile,materials,onSave,onClose,print}:{course:Course;profile:Profile;materials:string;onSave:(p:Profile,m:string)=>void;onClose:()=>void;print:(scope:string)=>void}){
   const [p,setP]=useState(profile);const [m,setM]=useState(materials);const [error,setError]=useState('')
   const persist=()=>{if(m&&!safeUrl(m)){setError('Укажите полный адрес папки, начинающийся с https:// или http://');return false}onSave(p,m);return true}
@@ -60,7 +76,7 @@ index 0f57999..f99e5a2 100644
 + return <Modal title="Настройка перед занятием" onClose={onClose}><form onSubmit={e=>{e.preventDefault();if(persist())onClose()}} className="settings-form"><label>ФИО преподавателя<input autoComplete="name" value={p.fullName} onChange={e=>setP({...p,fullName:e.target.value})}/></label><label>Должность<input value={p.position} onChange={e=>setP({...p,position:e.target.value})}/></label><label>Кафедра или лаборатория<input value={p.department} onChange={e=>setP({...p,department:e.target.value})}/></label><label>Ссылка на папку с материалами<input type="url" placeholder="https://…" value={m} onChange={e=>setM(e.target.value)}/></label><p className="field-help">Настройки сохраняются в этом браузере. В опубликованном курсе общая ссылка задаётся автором.</p>{error&&<p role="alert">{error}</p>}<section className="profile-downloads"><strong>Сохранить лекции в PDF</strong><div>{course.semesters.map(s=><button type="button" className="button ghost" key={s} onClick={()=>{if(persist())print(`semester-${s}`)}}><Download size={17}/>{s} семестр</button>)}<button type="button" className="button ghost" onClick={()=>{if(persist())print('all')}}><Download size={17}/>{course.year?`За ${course.year} год`:'Все лекции'}</button></div></section>
   <div className="dialog-actions"><button className="button primary" type="submit">Сохранить настройки</button></div></form></Modal>
  }
- 
+
 diff --git a/src/engine/SlideView.tsx b/src/engine/SlideView.tsx
 index c01ac92..19e7130 100644
 --- a/src/engine/SlideView.tsx
@@ -107,13 +123,23 @@ index 7886dcf..075525e 100644
   const [shown,setShown]=useState(()=>read(sessionKey,{slideId:initialSlide,black:false}))
   const [selected,setSelected]=useState(shown.slideId);const [black,setBlack]=useState(shown.black);const [replay,setReplay]=useState(0)
   const [pointerEnabled,setPointerEnabled]=useState(false);const [pointer,setPointer]=useState<{x:number;y:number}|null>(null);const [assessment,setAssessment]=useState<Record<string,Attempt>>({});const receiveAssessment=useCallback((value:Record<string,Attempt>)=>setAssessment(value),[])
+diff --git a/src/engine/index.ts b/src/engine/index.ts
+index b9688eb..39440e5 100644
+--- a/src/engine/index.ts
++++ b/src/engine/index.ts
+@@ -1,4 +1,5 @@
+ export { LectureSite } from './LectureSite'
++export type { CatalogProps } from './LectureSite'
+ export { Infographic } from './Infographic'
+ export { validateCourse, TEMPLATE_VERSION } from './model'
+ export type { Course, Lecture, Slide, TeacherPack, Note } from './model'
 diff --git a/src/engine/layout-final.css b/src/engine/layout-final.css
 index 4334fd3..a185996 100644
 --- a/src/engine/layout-final.css
 +++ b/src/engine/layout-final.css
 @@ -31,3 +31,30 @@
  .mini-stage .reading-entry p,.mini-stage .reading-entry a,.mini-stage .resource-empty,.mini-stage .materials-resource{font-size:2.1cqw}.mini-stage .materials-resource{gap:2cqw;margin-top:2cqw}
- 
+
  .topic-agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;list-style:none!important;padding:0!important;margin:1.5rem 0 0!important}.topic-agenda li{display:flex;align-items:baseline;gap:1.1rem;border-top:1px solid #c9cad0;padding:.65rem 0;line-height:1.4;min-width:0}.topic-agenda li>span{color:#e60016;font-size:1.35em;font-weight:800;flex:none}.topic-agenda li>strong{font-size:1rem;overflow-wrap:break-word}.mini-stage .topic-agenda{gap:0 2cqw;margin-top:2cqw!important}.mini-stage .topic-agenda li{gap:1cqw;padding:.7cqw 0;font-size:2.3cqw}.mini-stage .topic-agenda li>strong{font-size:2.1cqw}@media(max-width:600px){.topic-agenda{grid-template-columns:1fr}.mini-stage .topic-agenda{grid-template-columns:repeat(2,minmax(0,1fr))}}
 +
 +/* Print is a fixed 16:9 page. Do not inherit mobile viewport typography. */
