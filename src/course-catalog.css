@@ -17,7 +17,6 @@
   --ok-on-red:light-dark(#fff,#151517);
   --ok-hero:#151517;
   --ok-hero-ink:#fff;
-  --ok-hero-muted:#c8c8d0;
   --ok-radius:12px;
   --ok-hero-size:240px;
   box-sizing:border-box;
@@ -298,13 +297,6 @@
   color:#ff4352;
 }
 
-.ok-page .ok-hero-copy>p {
-  font-size:13px;
-  line-height:1.65;
-  color:var(--ok-hero-muted);
-  margin:0;
-  max-width:440px;
-}
 
 .ok-page .ok-rhino {
   align-self:center;
@@ -468,7 +460,7 @@
   display:flex;
   flex-direction:column;
   min-width:0;
-  min-height:200px;
+  min-height:164px;
   padding:21px 22px 18px;
   border:1px solid var(--ok-line);
   border-radius:var(--ok-radius);
@@ -522,12 +514,6 @@
   color:var(--ok-ink);
 }
 
-.ok-page .ok-topic p {
-  color:var(--ok-muted);
-  font-size:12px;
-  line-height:1.6;
-  margin:0 0 18px;
-}
 
 .ok-page .ok-topic-actions {
   margin-top:auto;
@@ -665,10 +651,6 @@
   margin:0 0 6px;
 }
 
-.ok-page[data-layout=list] .ok-topic p {
-  margin:0;
-  font-size:12px;
-}
 
 .ok-page[data-layout=list] .ok-topic-actions {
   display:flex;
@@ -878,7 +860,7 @@
   }
   .ok-page .ok-topic {
     padding:18px;
-    min-height:215px;
+    min-height:180px;
   }
   .ok-page .ok-topic h3 {
     font-size:17px;
@@ -949,14 +931,8 @@
     line-height:1.16;
     margin-bottom:14px;
   }
-  .ok-page .ok-hero-copy>p {
-    max-width:calc(100% - 142px);
-    font-size:12px;
-    line-height:1.55;
-  }
-  .ok-page .ok-desktop-break {
-    display:none;
-  }
+
+
   .ok-page .ok-rhino {
     position:absolute;
     width:132px;
@@ -1011,17 +987,14 @@
     gap:12px;
   }
   .ok-page .ok-topic {
-    min-height:210px;
+    min-height:174px;
     padding:19px;
   }
   .ok-page .ok-topic h3 {
     font-size:18px;
     line-height:1.35;
   }
-  .ok-page .ok-topic p {
-    font-size:13px;
-    margin-bottom:15px;
-  }
+
   .ok-page .ok-topic-meta {
     font-size:11px;
     margin-bottom:10px;
@@ -1042,7 +1015,7 @@
     grid-template-columns:minmax(0,1fr);
     gap:8px;
     padding:18px 2px;
-    min-height:190px;
+    min-height:152px;
   }
   .ok-page[data-layout=list] .ok-topic-meta {
     flex-direction:row;
@@ -1054,9 +1027,7 @@
     font-size:18px;
     margin-bottom:6px;
   }
-  .ok-page[data-layout=list] .ok-topic p {
-    font-size:12px;
-  }
+
   .ok-page[data-layout=list] .ok-topic-actions {
     flex-direction:row;
     align-items:center;
@@ -1099,9 +1070,7 @@
     width:118px;
     height:118px;
   }
-  .ok-page .ok-hero-copy>p {
-    max-width:calc(100% - 128px);
-  }
+
 }
 
 @media(pointer:coarse) {

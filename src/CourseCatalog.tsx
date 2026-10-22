@@ -7,16 +7,6 @@ import './course-catalog.css'
 type View = 'cards' | 'list'
 type Filters = { search: string; semester: string }
 
-const descriptions: Record<string, string> = {
-  's07-01-quality-and-failures': 'Отказ, сбой и работоспособность. Как описывать качество работы системы.',
-  's07-02-reliability-metrics': 'Безотказность, восстанавливаемость и готовность системы.',
-  's07-03-reliability-threats-prevention': 'Причины отказов и меры повышения устойчивости.',
-  's07-04-observing-operating-system': 'Мониторинг, журналы и признаки ухудшения работы.',
-  's08-01-threats-and-malware': 'Векторы атак и поведение вредоносного ПО.',
-  's08-02-protection-controls': 'Контроль доступа и средства защиты данных.',
-  's08-03-encryption-and-security-testing': 'Шифрование, проверка уязвимостей и оценка защищённости.',
-}
-
 function readSaved(key: string): unknown {
   try { return JSON.parse(localStorage.getItem(key) || 'null') }
   catch { return null }
@@ -83,7 +73,7 @@ export function CourseCatalog({
   const query = normalize(filters.search)
   const visibleLectures = course.lectures.filter((lecture, index) =>
     (filters.semester === 'all' || String(lecture.semester) === filters.semester) &&
-    (!query || normalize(`${lecture.title} ${descriptions[lecture.id] || ''} тема ${index + 1}`).includes(query)),
+    (!query || normalize(`${lecture.title} тема ${index + 1}`).includes(query)),
   )
 
   function closeTeacher() {
@@ -183,7 +173,6 @@ export function CourseCatalog({
         <div className="ok-hero-copy">
           <div className="ok-eyebrow">{course.code}<span>{course.semesters.join('–')} семестры</span></div>
           <h1>{course.heroTitle}<br />{course.heroAccent.startsWith('и ') && 'и '}<em>{course.heroAccent.replace(/^и /, '')}</em></h1>
-          <p>От причин отказов и показателей надёжности<br className="ok-desktop-break" /> до мониторинга и защиты данных.</p>
         </div>
         <img className="ok-rhino" src={asset('brand/mascot/okfks-rhino-catalog.png')} alt={course.mascotAlt} />
       </section>
@@ -206,7 +195,7 @@ export function CourseCatalog({
         </div>
         <div className="ok-topics" hidden={!visibleLectures.length}>{visibleLectures.map(lecture => <article className="ok-topic" key={lecture.id} data-topic={lecture.id} data-semester={lecture.semester}>
           <div className="ok-topic-meta"><span className="ok-topic-code">ТЕМА {String(course.lectures.indexOf(lecture) + 1).padStart(2, '0')}</span><span>{lecture.semester} семестр</span></div>
-          <div className="ok-topic-copy"><h3>{lecture.title}</h3>{descriptions[lecture.id] && <p>{descriptions[lecture.id]}</p>}</div>
+          <div className="ok-topic-copy"><h3>{lecture.title}</h3></div>
           <div className="ok-topic-actions">
             <button className="ok-open" type="button" aria-label={`Открыть лекцию: ${lecture.title}`} onClick={() => onOpenLecture(lecture)}>Открыть лекцию<ArrowUpRight aria-hidden="true" /></button>
             <button className="ok-pdf" type="button" aria-label={`Скачать PDF: ${lecture.title}`} onClick={() => onPrint(lecture.id)}><Download aria-hidden="true" />Скачать PDF</button>

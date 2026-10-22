@@ -10,3 +10,6 @@
 }
 .notes-status { flex-wrap: wrap; }
 .notes-status a { color: inherit; text-underline-offset: 3px; }
+
+/* Template metadata is not lecture content; retain nested slide announcements. */
+.ok-page + span.sr-only, .deck-shell ~ span.sr-only { display: none; }
