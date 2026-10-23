@@ -39,17 +39,24 @@
     },
     {
       "id": "s07-01-quality-and-failures-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "От требования к наблюдаемому отказу",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как составить запись об отказе",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s008",
@@ -60,10 +67,15 @@
     },
     {
       "id": "s07-01-quality-and-failures-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Как читать HTTP и идентификатор операции",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-01-quality-and-failures-s011",
@@ -128,7 +140,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Время и сохранение проверяются независимо",
       "changedFields": [
         "title",
         "kicker",
@@ -182,9 +194,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s023",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -256,7 +267,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Приоритет зависит и от критичности",
       "changedFields": [
         "title",
         "kicker",
@@ -310,9 +321,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s034",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -385,7 +395,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Верный расчёт не гарантирует сохранность",
       "changedFields": [
         "title",
         "kicker",
@@ -439,9 +449,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s045",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -513,7 +522,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Неактивированный дефект остаётся дефектом",
       "changedFields": [
         "title",
         "kicker",
@@ -567,9 +576,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s056",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -641,7 +649,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Расхождение часов меняет порядок записей",
       "changedFields": [
         "title",
         "kicker",
@@ -695,9 +703,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s067",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -769,7 +776,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Исправление не должно расширять допустимый диапазон",
       "changedFields": [
         "title",
         "kicker",
@@ -823,9 +830,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s078",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -898,7 +904,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Идентификатор действует в своей области",
       "changedFields": [
         "title",
         "kicker",
@@ -952,9 +958,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s089",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1026,7 +1031,7 @@
     },
     {
       "id": "s07-01-quality-and-failures-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Долю сравнивают с её собственным знаменателем",
       "changedFields": [
         "title",
         "kicker",
@@ -1080,9 +1085,8 @@
     },
     {
       "id": "s07-01-quality-and-failures-s100",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1110,10 +1114,15 @@
     },
     {
       "id": "s07-01-quality-and-failures-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Сообщение Error и отказ — разные факты",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s001",
@@ -1152,17 +1161,24 @@
     },
     {
       "id": "s07-02-reliability-metrics-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "Из журнала — к расчёту надёжности",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как вести расчётную ведомость",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s008",
@@ -1173,10 +1189,15 @@
     },
     {
       "id": "s07-02-reliability-metrics-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Что означают T, R и N",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-02-reliability-metrics-s011",
@@ -1241,7 +1262,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Календарное время делится на работу и простой",
       "changedFields": [
         "title",
         "kicker",
@@ -1295,9 +1316,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s023",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1369,7 +1389,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Больше отказов при той же наработке уменьшает MTBF",
       "changedFields": [
         "title",
         "kicker",
@@ -1423,9 +1443,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s034",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1497,7 +1516,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Восстановление функции включает ожидание",
       "changedFields": [
         "title",
         "kicker",
@@ -1551,9 +1570,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s045",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1625,7 +1643,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Повтор уведомления не начинает новый отказ",
       "changedFields": [
         "title",
         "kicker",
@@ -1679,9 +1697,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s056",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1751,7 +1768,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Разные наборы средних не образуют один цикл",
       "changedFields": [
         "title",
         "kicker",
@@ -1805,9 +1822,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s067",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -1879,7 +1895,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Минуты переводят в часы до сложения",
       "changedFields": [
         "title",
         "kicker",
@@ -1933,9 +1949,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s078",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2007,7 +2022,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Запас до порога выражают в процентных пунктах",
       "changedFields": [
         "title",
         "kicker",
@@ -2061,9 +2076,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s089",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2135,7 +2149,7 @@
     },
     {
       "id": "s07-02-reliability-metrics-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Закрытый случай добавляют и в сумму, и в количество",
       "changedFields": [
         "title",
         "kicker",
@@ -2189,9 +2203,8 @@
     },
     {
       "id": "s07-02-reliability-metrics-s100",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2219,10 +2232,15 @@
     },
     {
       "id": "s07-02-reliability-metrics-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Число без исходных данных не является расчётом",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s001",
@@ -2261,17 +2279,24 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "От фактора к выбранной мере",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как обосновать меру надёжности",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s008",
@@ -2282,10 +2307,15 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Повтор, откат и изоляция решают разные задачи",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-03-reliability-threats-prevention-s011",
@@ -2350,7 +2380,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Проверка исхода предотвращает повторную запись",
       "changedFields": [
         "title",
         "kicker",
@@ -2404,9 +2434,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s023",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2478,7 +2507,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Два независимых условия требуют двух проверок",
       "changedFields": [
         "title",
         "kicker",
@@ -2532,9 +2561,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s034",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2604,7 +2632,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Корректный формат не заменяет связь значений",
       "changedFields": [
         "title",
         "kicker",
@@ -2658,9 +2686,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s045",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2732,7 +2759,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Один выполненный пункт не гарантирует всю операцию",
       "changedFields": [
         "title",
         "kicker",
@@ -2786,9 +2813,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s056",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2860,7 +2886,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Атомарность не допускает частичного успеха",
       "changedFields": [
         "title",
         "kicker",
@@ -2914,9 +2940,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s067",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -2988,7 +3013,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Проверка и запись должны исключать гонку",
       "changedFields": [
         "title",
         "kicker",
@@ -3042,9 +3067,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s078",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3120,7 +3144,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Согласие реализаций не заменяет правильность",
       "changedFields": [
         "title",
         "kicker",
@@ -3174,9 +3198,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s089",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3249,7 +3272,7 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Число попыток и темп — разные величины",
       "changedFields": [
         "title",
         "kicker",
@@ -3303,9 +3326,8 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s100",
-      "title": "Выберите два обоснованных ответа",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3333,10 +3355,15 @@
     },
     {
       "id": "s07-03-reliability-threats-prevention-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Дополнительная попытка или копия имеет условия пользы",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s001",
@@ -3375,17 +3402,24 @@
     },
     {
       "id": "s07-04-observing-operating-system-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "Наблюдение ещё не является объяснением",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как читать наблюдение",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s07-04-observing-operating-system-s008",
@@ -3396,9 +3430,10 @@
     },
     {
       "id": "s07-04-observing-operating-system-s010",
-      "title": "Id, RecordId и ActivityId: разные роли",
+      "title": "Как получить и связать записи Windows",
       "changedFields": [
         "title",
+        "kicker",
         "body",
         "bullets",
         "columns",
@@ -3476,7 +3511,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Локальный номер не связывает независимые сервисы",
       "changedFields": [
         "title",
         "kicker",
@@ -3531,9 +3566,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s023",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3604,7 +3638,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Сброс счётчика разрывает вычисление разности",
       "changedFields": [
         "title",
         "kicker",
@@ -3659,9 +3693,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s034",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3733,7 +3766,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Загрузка оценивается вместе с полезной работой",
       "changedFields": [
         "title",
         "kicker",
@@ -3788,9 +3821,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s045",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3862,7 +3894,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Порог должен оставлять время на реакцию",
       "changedFields": [
         "title",
         "kicker",
@@ -3917,9 +3949,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s056",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -3991,7 +4022,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Новая нагрузка меняет основание прогноза",
       "changedFields": [
         "title",
         "kicker",
@@ -4046,9 +4077,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s067",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4120,7 +4150,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Одна исправленная причина не объясняет все симптомы",
       "changedFields": [
         "title",
         "kicker",
@@ -4175,9 +4205,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s078",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4249,7 +4278,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Ресурсная мера проверяется целевой функцией",
       "changedFields": [
         "title",
         "kicker",
@@ -4304,9 +4333,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s089",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4378,7 +4406,7 @@
     },
     {
       "id": "s07-04-observing-operating-system-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Уменьшение очереди не оправдывает потерю задач",
       "changedFields": [
         "title",
         "kicker",
@@ -4433,9 +4461,8 @@
     },
     {
       "id": "s07-04-observing-operating-system-s100",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4463,10 +4490,15 @@
     },
     {
       "id": "s07-04-observing-operating-system-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Совпадение графиков не доказывает причину",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s001",
@@ -4505,17 +4537,24 @@
     },
     {
       "id": "s08-01-threats-and-malware-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "От актива к сценарию угрозы",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как читать модель угроз",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s008",
@@ -4526,10 +4565,15 @@
     },
     {
       "id": "s08-01-threats-and-malware-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Как отличить тест обнаружения от вредоносного кода",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-01-threats-and-malware-s011",
@@ -4596,7 +4640,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Уязвимость и её использование требуют разных свидетельств",
       "changedFields": [
         "title",
         "kicker",
@@ -4651,9 +4695,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s023",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4723,7 +4766,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Внешнее положение не означает намеренное действие",
       "changedFields": [
         "title",
         "kicker",
@@ -4778,9 +4821,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s034",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4852,7 +4894,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Один источник может иметь разные эпизоды",
       "changedFields": [
         "title",
         "kicker",
@@ -4907,9 +4949,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s045",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -4981,7 +5022,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Новая роль меняет доступный путь воздействия",
       "changedFields": [
         "title",
         "kicker",
@@ -5036,9 +5077,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s056",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5110,7 +5150,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Удаление канала не удаляет остальные входы",
       "changedFields": [
         "title",
         "kicker",
@@ -5165,9 +5205,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s067",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5210,6 +5249,7 @@
         "kind",
         "kicker",
         "notebook",
+        "body",
         "source",
         "definitionEntries"
       ],
@@ -5239,7 +5279,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Маскировка и воздействие — разные признаки",
       "changedFields": [
         "title",
         "kicker",
@@ -5294,9 +5334,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s078",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5368,7 +5407,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Контроль формата не ограничивает права обработчика",
       "changedFields": [
         "title",
         "kicker",
@@ -5423,9 +5462,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s089",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5497,7 +5535,7 @@
     },
     {
       "id": "s08-01-threats-and-malware-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Один режим обнаружения не подтверждает другой",
       "changedFields": [
         "title",
         "kicker",
@@ -5552,9 +5590,8 @@
     },
     {
       "id": "s08-01-threats-and-malware-s100",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5582,10 +5619,15 @@
     },
     {
       "id": "s08-01-threats-and-malware-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Уязвимость не означает уже состоявшийся инцидент",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s001",
@@ -5624,17 +5666,24 @@
     },
     {
       "id": "s08-02-protection-controls-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "Установка средства и проверенная защита различаются",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как составить протокол средства защиты",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s008",
@@ -5645,10 +5694,15 @@
     },
     {
       "id": "s08-02-protection-controls-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Как читать статус защитных средств",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-02-protection-controls-s011",
@@ -5715,7 +5769,7 @@
     },
     {
       "id": "s08-02-protection-controls-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Актуальная настройка и реакция сегодня — разные факты",
       "changedFields": [
         "title",
         "kicker",
@@ -5770,9 +5824,8 @@
     },
     {
       "id": "s08-02-protection-controls-s023",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5844,7 +5897,7 @@
     },
     {
       "id": "s08-02-protection-controls-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Расписание не подтверждает реакцию при поступлении",
       "changedFields": [
         "title",
         "kicker",
@@ -5899,9 +5952,8 @@
     },
     {
       "id": "s08-02-protection-controls-s034",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -5975,7 +6027,7 @@
     },
     {
       "id": "s08-02-protection-controls-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Изменённую версию сравнивают в сопоставимых условиях",
       "changedFields": [
         "title",
         "kicker",
@@ -6030,9 +6082,8 @@
     },
     {
       "id": "s08-02-protection-controls-s045",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6104,7 +6155,7 @@
     },
     {
       "id": "s08-02-protection-controls-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Проверяют итоговую политику, а не отдельную строку",
       "changedFields": [
         "title",
         "kicker",
@@ -6159,9 +6210,8 @@
     },
     {
       "id": "s08-02-protection-controls-s056",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6233,7 +6283,7 @@
     },
     {
       "id": "s08-02-protection-controls-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Профиль сети входит в условие применения",
       "changedFields": [
         "title",
         "kicker",
@@ -6288,9 +6338,8 @@
     },
     {
       "id": "s08-02-protection-controls-s067",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6362,7 +6411,7 @@
     },
     {
       "id": "s08-02-protection-controls-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Неудачный вход не является тестом прав на отчёт",
       "changedFields": [
         "title",
         "kicker",
@@ -6417,9 +6466,8 @@
     },
     {
       "id": "s08-02-protection-controls-s078",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6491,7 +6539,7 @@
     },
     {
       "id": "s08-02-protection-controls-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Проверка границы требует изолированного условия",
       "changedFields": [
         "title",
         "kicker",
@@ -6546,9 +6594,8 @@
     },
     {
       "id": "s08-02-protection-controls-s089",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6623,7 +6670,7 @@
     },
     {
       "id": "s08-02-protection-controls-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Минимальные права должны сохранять нужную функцию",
       "changedFields": [
         "title",
         "kicker",
@@ -6678,9 +6725,8 @@
     },
     {
       "id": "s08-02-protection-controls-s100",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6708,10 +6754,15 @@
     },
     {
       "id": "s08-02-protection-controls-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Наличие средства не подтверждает нужное поведение",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s001",
@@ -6752,17 +6803,24 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s006",
-      "title": "Почему без точных понятий решение нельзя проверить",
-      "changedFields": [],
+      "title": "Защита зависит от состояния данных и ключа",
+      "changedFields": [
+        "title",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s007",
-      "title": "К концу занятия у вас будет рабочее решение",
-      "changedFields": [],
+      "title": "Как ограничить вывод о защищённости",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s008",
@@ -6773,10 +6831,15 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s010",
-      "title": "Практика проходит только в разрешённой среде",
-      "changedFields": [],
+      "title": "Хэш, ключ и права доступа не взаимозаменяемы",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     },
     {
       "id": "s08-03-encryption-and-security-testing-s011",
@@ -6843,7 +6906,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s017",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Закрытый файл и заблокированный том — разные состояния",
       "changedFields": [
         "title",
         "kicker",
@@ -6898,9 +6961,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s023",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -6974,7 +7036,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s028",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Успешный TLS-сеанс не шифрует сохранённую копию",
       "changedFields": [
         "title",
         "kicker",
@@ -7029,9 +7091,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s034",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7108,7 +7169,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s039",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Возможность клиента не определяет текущий сеанс",
       "changedFields": [
         "title",
         "kicker",
@@ -7163,9 +7224,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s045",
-      "title": "Различите роли в защищённом обмене",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7237,7 +7297,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s050",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Резерв должен быть доступен законному владельцу",
       "changedFields": [
         "title",
         "kicker",
@@ -7292,9 +7352,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s056",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7366,7 +7425,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s061",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Совпадение с недоверенным эталоном ограничено",
       "changedFields": [
         "title",
         "kicker",
@@ -7421,9 +7480,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s067",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7495,7 +7553,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s072",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Покрытие считают по требованиям, а не запускам",
       "changedFields": [
         "title",
         "kicker",
@@ -7550,9 +7608,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s078",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7624,7 +7681,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s083",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Граница снимка ограничивает действие отката",
       "changedFields": [
         "title",
         "kicker",
@@ -7679,9 +7736,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s089",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7753,7 +7809,7 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s094",
-      "title": "Проверим вывод при изменении условия",
+      "title": "Тесты версии 1 не подтверждают исправление версии 2",
       "changedFields": [
         "title",
         "kicker",
@@ -7808,9 +7864,8 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s100",
-      "title": "Выберите два обоснованных утверждения",
+      "title": "Выберите два ответа",
       "changedFields": [
-        "title",
         "task"
       ],
       "notebook": "Сохранён",
@@ -7838,10 +7893,15 @@
     },
     {
       "id": "s08-03-encryption-and-security-testing-s112",
-      "title": "Вопросы от аудитории",
-      "changedFields": [],
+      "title": "Отметка «зашифровано» не заменяет испытаний",
+      "changedFields": [
+        "title",
+        "kicker",
+        "body",
+        "bullets"
+      ],
       "notebook": "Сохранён",
-      "action": "Без изменений"
+      "action": "Дополнение пояснений или задания; опорная запись сохраняется"
     }
   ],
   "removedSlides": [

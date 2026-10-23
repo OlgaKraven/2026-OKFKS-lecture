@@ -195,3 +195,12 @@
 .slide-frame[data-definition-count]:not([data-definition-count="1"]) .slide-body-copy{grid-column:1;grid-row:3;font-size:1.8cqw;line-height:1.45}
 .slide-frame[data-definition-count]:not([data-definition-count="1"]) .write-note{grid-column:2;grid-row:3;align-self:start;margin-top:1.2cqw;padding:1cqw;min-width:0}
 @media(max-width:820px){.active-slide .slide-frame[data-definition-count] .slide-copy{display:block}.active-slide .slide-frame[data-definition-count] .slide-body-copy{font-size:18px}.active-slide .slide-frame[data-definition-count] .write-note{margin-top:18px;padding:14px}}
+/* Preserve readable type while fitting five choices in a low slide viewport. */
+@media (min-width:821px),print{
+ .slide-frame.kind-test .choice-grid{align-content:start;gap:8px;grid-auto-rows:minmax(44px,max-content)}
+ .slide-frame.kind-test .choice-grid label{padding:8px 10px;min-height:44px}
+}
+@media (min-width:821px),print{
+ .slide-frame.kind-test .task-prompt{margin:0}
+ .slide-frame.kind-test .choice-grid>label:last-child:nth-child(odd){grid-column:1/-1}
+}

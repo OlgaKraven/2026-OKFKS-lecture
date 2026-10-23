@@ -13,6 +13,7 @@ import {applyDefinitions,definitions} from '../authoring/definitions.mjs'
 import {addQuestionSupplements} from '../authoring/question-supplements.mjs'
 import { applyPresentationCleanup } from '../authoring/presentation-cleanup.mjs'
 import { applyTeacherText } from '../authoring/publish-teacher-text.mjs'
+import {applyStudentReading} from '../authoring/student-reading.mjs'
 
 // Compile the preserved authoring sources; they are never imported by the site.
 const sourceRoot = 'authoring/legacy/src'
@@ -233,6 +234,7 @@ await applyTeacherText(course, bank, pack)
 applyPresentationCleanup(course, pack, mapping)
 applyDefinitions(course,pack)
 const questionSupplements=addQuestionSupplements(course,pack,questionMap)
+applyStudentReading(course,pack)
 // Counts and timing describe the final authored revision, including overrides.
 for (const row of registry) {
   const lecture = course.lectures.find(lecture => lecture.id === row.lectureId)

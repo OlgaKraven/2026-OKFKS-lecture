@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { migrateCompatibleSession, exportPreviousResults } from '../src/compatibility.ts'
 import { prepareTeacherNotes } from '../src/teacherNotes.ts'
+import {methods} from '../authoring/student-reading.mjs'
 const read = p => JSON.parse(fs.readFileSync(p, 'utf8'))
 const course = read('public/course.json'), baseline = read('authoring/baseline-pilot-20261021.json')
 const manifest = read('public/teaching/compatibility.json'), pack = read('public/teaching/notes.json')
@@ -20,7 +21,7 @@ test('the retired s002 semester overviews and s111 summaries are removed; surviv
     assert.equal(after.length,108)
     assert.deepEqual(after.filter(s=>!s.activityPassport).map(s=>s.id),before.map(s=>s.id))
     before.forEach(s=>{const current=after.find(x=>x.id===s.id);if(!current.definitionEntries)assert.equal(current.notebook,s.notebook,s.id)})
-    if (i===0 || i===1) before.filter(s=>s.notebook && s.kind==='theory').forEach(s=>assert.equal(after.find(a=>a.id===s.id).body,s.body,s.id))
+    if (i===0 || i===1) before.filter(s=>s.notebook && s.kind==='theory').forEach(s=>assert.equal(after.find(a=>a.id===s.id).body,s.id.endsWith('-s007')?methods[i][1]:s.body,s.id))
   }
   const text=JSON.stringify(course.lectures[1])
   for(const anchor of ['120','40','MTBF','MTTR','0,9524']) assert.ok(text.includes(anchor))
